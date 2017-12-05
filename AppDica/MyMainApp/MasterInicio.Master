@@ -54,7 +54,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="<%= Page.ResolveUrl("~/ASP/ASPP0001.aspx")%>">Registro de Aspirantes</a></li>
+                        <li><a href="<%= Page.ResolveUrl("~/Registro.aspx")%>">Registro de Aspirantes </a></li>
                         <li><a href="http://www.innovacion.gob.sv/pixels/index.php/inicio">Regresar a Pixels</a></li>
 
                         <%--<li class="dropdown">
