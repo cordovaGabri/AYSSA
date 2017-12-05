@@ -34,7 +34,6 @@
 			</div>		 
 		</div>
 		<!-- Fin Contenedor Header -->
-		&nbsp;
 		<!-- Inicio Contenedor NAVBAR -->
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
@@ -77,7 +76,7 @@
 		<!-- Fin Contenedor NAVBAR -->
 		
 		<!-- Inicio Contenedor Informacion -->	
-		<div class="container-fluid" style="background-color:#fff;">
+		<div style="background-color:#fff;">
 					
 				
 				
