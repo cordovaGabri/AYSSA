@@ -3,7 +3,7 @@
 
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CPHPrincipal">
-   
+
 
     <asp:Panel ID="Panel1" runat="server" Width="100%">
         <form id="form1" runat="server">
@@ -11,7 +11,7 @@
                 <asp:Label ID="LblTitulo" runat="server" Text="Titulo" Font-Bold="True" Font-Size="20pt"></asp:Label>
             </div>
             <br />
-            <div id="content">
+            <div class="container-fluid">
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#Datos" data-toggle="tab">DATOS GENERALES</a></li>
                     <li><a href="#Infor" data-toggle="tab">INFORMACIÓN ADICIONAL</a></li>
@@ -56,12 +56,12 @@
                                     <td style="padding: 2px">
                                         <asp:TextBox ID="TextBox6" runat="server" Width="100%"></asp:TextBox>
                                     </td>
-                                     <td>
-                                            <asp:Label ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="TextBox1" runat="server" Width="100%"></asp:TextBox>
-                                        </td>
+                                    <td>
+                                        <asp:Label ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TextBox1" runat="server" Width="100%"></asp:TextBox>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -132,26 +132,27 @@
                                 </table>
                             </asp:Panel>
                             <br />
-                            <div align="center" >
-                                <asp:Button ID="Button1" runat="server" Text="GUARDAR" /><asp:Button ID="Button2" runat="server" Text="CANCELAR" /></div>
+                            <div align="center">
+                                <asp:Button ID="Button1" runat="server" Text="GUARDAR" /><asp:Button ID="Button2" runat="server" Text="CANCELAR" />
+                            </div>
                             <br />
                         </asp:Panel>
                     </div>
-                    <div  class="tab-pane active"  id="Infor">
+                    <div class="tab-pane active" id="Infor">
                         <asp:Panel ID="PanInfor" runat="server">
                             &nbsp;<table cellpadding="2" style="width: 100%">
                                 <tr>
-                                    <td style="height: 22px;width:15%">
+                                    <td style="height: 22px; width: 15%">
                                         <asp:Label ID="Label17" runat="server" Font-Bold="True" Text="DEPARTAMENTO:"></asp:Label>
                                     </td>
-                                    <td style="height: 22px;width:35%;padding: 2px" >
+                                    <td style="height: 22px; width: 35%; padding: 2px">
                                         <asp:DropDownList ID="DropDownList2" runat="server" Width="100%">
                                         </asp:DropDownList>
                                     </td>
-                                    <td style="height: 22px;width:15%">
+                                    <td style="height: 22px; width: 15%">
                                         <asp:Label ID="Label23" runat="server" Font-Bold="True" Text="MUNICIPIO:"></asp:Label>
                                     </td>
-                                    <td style="height: 22px;width:35%;padding: 2px"> 
+                                    <td style="height: 22px; width: 35%; padding: 2px">
                                         <asp:DropDownList ID="DropDownList3" runat="server" Width="100%">
                                         </asp:DropDownList>
                                     </td>
@@ -163,7 +164,7 @@
                                     <td colspan="3" style="padding: 2px">
                                         <asp:TextBox ID="TextBox13" runat="server" TextMode="MultiLine" Width="100%"></asp:TextBox>
                                     </td>
-                                 
+
                                 </tr>
                                 <tr>
                                     <td>
@@ -172,7 +173,7 @@
                                     <td style="padding: 2px" colspan="3">
                                         <asp:TextBox ID="TextBox14" runat="server" Width="100%"></asp:TextBox>
                                     </td>
-                                     
+
                                     <td>&nbsp;</td>
                                 </tr>
                                 <tr>
@@ -211,20 +212,20 @@
                                     <td style="padding: 2px">
                                         <input type="button" value="Adjuntar" onclick="open_win_doc">
                                     </td>
-                                    <td>
-                                        &nbsp;</td>
+                                    <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                 </tr>
                             </table>
-                             <script type="text/javascript">
-                                 function open_win_doc() {
-                                     alert("hola");
-                                     var myWindow = window.open("DetalleSolicitud.aspx", "Dates", "scrollbars=yes,resizable=yes", "width=950,height=650");
-                                 }
-     </script>
-                             <br />
-                            <div align="center" >
-                                <asp:Button ID="Button4" runat="server" Text="GUARDAR" /><asp:Button ID="Button5" runat="server" Text="CANCELAR" /></div>
+                            <script type="text/javascript">
+                                function open_win_doc() {
+                                    alert("hola");
+                                    var myWindow = window.open("DetalleSolicitud.aspx", "Dates", "scrollbars=yes,resizable=yes", "width=950,height=650");
+                                }
+                            </script>
+                            <br />
+                            <div align="center">
+                                <asp:Button ID="Button4" runat="server" Text="GUARDAR" /><asp:Button ID="Button5" runat="server" Text="CANCELAR" />
+                            </div>
                             <br />
                         </asp:Panel>
                     </div>

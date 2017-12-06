@@ -67,15 +67,6 @@
     <Content Include="images\333.jpg" />
     <Content Include="images\444.jpg" />
     <Content Include="images\555.jpg" />
-    <Content Include="images\ASPxRoundPanel\829145791\BottomLeftCorner.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\BottomRightCorner.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\HeaderContent.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\HeaderLeftEdge.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\HeaderRightEdge.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\NoHeaderTopLeftCorner.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\NoHeaderTopRightCorner.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\TopLeftCorner.png" />
-    <Content Include="images\ASPxRoundPanel\829145791\TopRightCorner.png" />
     <Content Include="images\client1.png" />
     <Content Include="images\client2.png" />
     <Content Include="images\client3.png" />

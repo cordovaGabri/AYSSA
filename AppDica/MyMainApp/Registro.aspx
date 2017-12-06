@@ -2,14 +2,32 @@
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CPHPrincipal">
     <form id="form1" runat="server" class="form-horizontal">
-        <div align="center">
-            <asp:Label ID="LblTitulo" runat="server" Text="Titulo" Font-Bold="True" Font-Size="20pt"></asp:Label>
+        <div align="center"><br />
+            <asp:Label ID="LblTitulo" runat="server" Text="Registro Aspirantes" Font-Bold="True" Font-Size="20pt"></asp:Label>
         </div>
         <br />
         <asp:Panel ID="Panel1" runat="server">
-            <asp:Label ID="Label1" runat="server" Text="Para iniciar proceso..."></asp:Label>
+            <div class="container-fluid"> <%--contenido de todo el texto  --%>  
+            <asp:Label ID="Label1" runat="server" Text="Para iniciar su proceso de inscripción es necesario que tome en cuenta las indicaciones siguientes:"></asp:Label>
             <br />
-            
+            <p class="text-justify">
+                <ol><%--inicio numerales--%>
+                    <li>Contar con la siguiente documentación al momento de inscripción:</li>
+                    <ul>
+                        <li>Certificación de notas</li>
+                        <li>Título universitario</li>
+                        <li>Curriculum</li>
+                    </ul><br />
+                    <li>Si es menor de edad, contar con los documentos del representante legal:</li>
+                    <ul>
+                        <li>DUI</li>
+                        <li>NIT</li>
+                        <li>Teléfono</li>
+                        <li>Correo</li>
+                    </ul><br />
+                    <li>Cuenta con 15 días para completar su información, de lo contrario deberá registrarse nuevamente.</li>
+                </ol><%--fin numerales--%><br />
+            </p></div>
           
             <div class="form-group">
 
