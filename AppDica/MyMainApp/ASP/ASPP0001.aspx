@@ -6,82 +6,71 @@
 
 
     <asp:Panel ID="Panel1" runat="server" Width="100%">
-        <form id="form1" runat="server">
-            <div align="center">
+        <form id="form1" runat="server" class="form-horizontal">
+            <%--inicio formulario--%>
+            <div class="text-center">
+                <%--  div titulo--%>
                 <asp:Label ID="LblTitulo" runat="server" Text="Titulo" Font-Bold="True" Font-Size="20pt"></asp:Label>
             </div>
+            <%--fin div titulo--%>
             <br />
             <div class="container-fluid">
+                <%--inicio container-fluid--%>
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                     <li class="active"><a href="#Datos" data-toggle="tab">DATOS GENERALES</a></li>
                     <li><a href="#Infor" data-toggle="tab">INFORMACIÓN ADICIONAL</a></li>
                 </ul>
                 <div id="my-tab-content" class="tab-content">
+                    <%--inicio contenido tab--%>
                     <div id="Datos" class="tab-pane">
+                        <%--inicio tab 1--%>
                         <br />
                         <asp:Panel ID="PanDatos" runat="server">
-                            <table style="width: 100%; padding: 1px">
-                                <tr>
-                                    <td style="height: 22px; width: 15%">
-                                        <asp:Label ID="Label1" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td style="height: 22px; width: 35%; padding: 2px">
-                                        <asp:TextBox ID="TextBox2" runat="server" Width="100%"></asp:TextBox>
-                                    </td>
-                                    <td style="height: 22px; width: 15%">
-                                        <asp:Label ID="Label3" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td style="height: 22px; width: 35%">
-                                        <asp:TextBox ID="TextBox3" runat="server" Width="100%"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="Label2" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td style="padding: 2px">
-                                        <asp:TextBox ID="TextBox4" runat="server" Width="100%"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="Label5" runat="server" Text="EDAD:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="TextBox5" runat="server" Width="100%"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="Label4" runat="server" Text="TELÉFONO:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td style="padding: 2px">
-                                        <asp:TextBox ID="TextBox6" runat="server" Width="100%"></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:TextBox ID="TextBox1" runat="server" Width="100%"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="Label7" runat="server" Text="SEXO:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td>
+                             <div class="form-group">
+                                  <asp:Label class="control-label  col-sm-2" ID="Label1" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox class="form-control" ID="TextBox2" runat="server" Width="100%"></asp:TextBox>
+                                    </div>
+                                        <asp:Label class="control-label  col-sm-2" ID="Label3" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox class="form-control" ID="TextBox3" runat="server" Width="100%"></asp:TextBox>
+                                    </div>
+                              </div>
+                               <div class="form-group">
+                                        <asp:Label class="control-label  col-sm-2" ID="Label2" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox class="form-control" ID="TextBox4" runat="server" Width="100%"></asp:TextBox>
+                                    </div>
+                                        <asp:Label class="control-label  col-sm-2" ID="Label5" runat="server" Text="EDAD:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox class="form-control" ID="TextBox5" runat="server" Width="100%"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                      <asp:Label class="control-label  col-sm-2" ID="Label4" runat="server" Text="TELÉFONO:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox class="form-control" ID="TextBox6" runat="server" Width="100%"></asp:TextBox>
+                                    </div>
+                                        <asp:Label class="control-label  col-sm-2" ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:TextBox class="form-control" ID="TextBox1" runat="server" Width="100%"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                     <asp:Label class="control-label  col-sm-2" ID="Label7" runat="server" Text="SEXO:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
                                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
                                             <asp:ListItem Value="F">FEMENINO</asp:ListItem>
                                             <asp:ListItem Value="M">MASCULINO</asp:ListItem>
                                         </asp:RadioButtonList>
-                                    </td>
-                                    <td>
-                                        <asp:Label ID="Label8" runat="server" Text="TITULO:" Font-Bold="True"></asp:Label>
-                                    </td>
-                                    <td style="padding: 2px">
-                                        <asp:DropDownList ID="DropDownList1" runat="server" Width="100%">
+                                    </div>
+                                        <asp:Label class="control-label  col-sm-2" ID="Label8" runat="server" Text="TITULO:" Font-Bold="True"></asp:Label>
+                                    <div class="col-md-3">
+                                        <asp:DropDownList ID="DropDownList1" runat="server" Width="100%" class="form-control">
                                         </asp:DropDownList>
-                                    </td>
-                                </tr>
-                            </table>
+                                    </div>
+                                </div>
+                            
                             <asp:Panel ID="Panel2" runat="server">
                                 <div align="center">
                                     <asp:Label ID="LblTitulo0" runat="server" Font-Bold="True" Font-Size="14pt" Text="DATOS REPRESENTANTE LEGAL"></asp:Label>
@@ -138,7 +127,9 @@
                             <br />
                         </asp:Panel>
                     </div>
+                    <%--fin tab 1--%>
                     <div class="tab-pane active" id="Infor">
+                        <%--inicio tab 2--%>
                         <asp:Panel ID="PanInfor" runat="server">
                             &nbsp;<table cellpadding="2" style="width: 100%">
                                 <tr>
@@ -229,11 +220,13 @@
                             <br />
                         </asp:Panel>
                     </div>
-
+                    <%--fin tab 2--%>
                 </div>
-
+                <%--fin contenido tab--%>
             </div>
+            <%--fin container-fluid--%>
         </form>
+        <%--fin formulario--%>
     </asp:Panel>
 </asp:Content>
 
