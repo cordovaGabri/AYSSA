@@ -88,7 +88,6 @@
 
         <!-- Inicio Contenedor Informacion -->
         <div class="container-fluid" style="background-color: #fff;">
-            <div class="row">
                 <!-- INICIO CONTENTPLACEHOLDER -->
                 <asp:ContentPlaceHolder ID="CPHPrincipal" runat="server">
                     <div align="center">
@@ -96,7 +95,6 @@
                     </div>
                 </asp:ContentPlaceHolder>
                 <!-- FIN CONTENTPLACEHOLDER -->
-            </div>
         </div>
         <!-- Fin Contenedor Informacion -->
 
