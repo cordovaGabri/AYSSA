@@ -7,9 +7,11 @@
         </div>
         <br />
         <asp:Panel ID="Panel1" runat="server">
-            <div class="container-fluid"> <%--contenido de todo el texto  --%>  
-            <asp:Label ID="Label1" runat="server" Text="Para iniciar su proceso de inscripción es necesario que tome en cuenta las indicaciones siguientes:"></asp:Label>
+            <div class="container-fluid"> <%--contenido de todo el texto  --%>
+                <div  class="col-md-6">
+                    <asp:Label ID="Label1" runat="server" Text="Para iniciar su proceso de inscripción es necesario que tome en cuenta las indicaciones siguientes:"></asp:Label>
             <br />
+                
             <p class="text-justify">
                 <ol><%--inicio numerales--%>
                     <li>Contar con la siguiente documentación al momento de inscripción:</li>
@@ -28,52 +30,42 @@
                     <li>Cuenta con 15 días para completar su información, de lo contrario deberá registrarse nuevamente.</li>
                 </ol><%--fin numerales--%><br />
             </p></div>
-          
-            <div class="form-group">
-
-                <asp:Label class="control-label  col-sm-2" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
-
-                <div class="col-md-3">
+            <div  class="col-md-6">
+                <div class="form-group">
+                     <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
+                <div class="col-md-5">
                     <asp:TextBox class="form-control" ID="TextBox1" runat="server"></asp:TextBox>
                 </div>
-                    <asp:Label class="control-label  col-sm-2" ID="Label6" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
-
-                    <div class="col-md-3">
-                        <asp:TextBox class="form-control" ID="TextBox5" runat="server"></asp:TextBox>
                     </div>
-
-               
-            </div>
-
                 <div class="form-group">
-
-                     <asp:Label class="control-label  col-sm-2" ID="Label3" runat="server" Text="NOMBRE:" Font-Bold="True"></asp:Label>
-
-                <div class="col-md-3">
+                    <asp:Label class="control-label  col-sm-3" ID="Label6" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
+                    <div class="col-md-5">
+                        <asp:TextBox class="form-control" ID="TextBox5" runat="server"></asp:TextBox>
+                    </div>                
+                 </div>
+                <div class="form-group">
+                     <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="NOMBRE:" Font-Bold="True"></asp:Label>
+                <div class="col-md-5">
                     <asp:TextBox class="form-control" ID="TextBox4" runat="server"></asp:TextBox>
                 </div>
-                    <asp:Label class="control-label  col-sm-2" ID="Label4" runat="server" Text="APELLIDO:" Font-Bold="True"></asp:Label>
-
-                    <div class="col-md-3">
+                     </div>
+                <div class="form-group">
+                    <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="APELLIDO:" Font-Bold="True"></asp:Label>
+                    <div class="col-md-5">
                         <asp:TextBox class="form-control" ID="TextBox2" runat="server"></asp:TextBox>
-                    </div>
-
-
-                
+                    </div>               
                 </div>
                 <div class="form-group">
-
-
-                    <asp:Label class="control-label  col-sm-2" ID="Label5" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
-
-                    <div class="col-md-3">
+                    <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
+                    <div class="col-md-5">
                         <asp:TextBox class="form-control" ID="TextBox3" runat="server"></asp:TextBox>
                     </div>
-
+                    </div>
                 </div>
+            <div class="form-group">
             <div align="center">
-                <asp:Button ID="Button1" runat="server" Text="REGISTRARSE" class="btn btn-default"/></div>
-            <br />
+                <asp:Button ID="Button1" runat="server" Text="REGISTRARSE" class="btn btn-default"/></div></div>  
+           <br /></div>
         </asp:Panel>
     </form>
 
