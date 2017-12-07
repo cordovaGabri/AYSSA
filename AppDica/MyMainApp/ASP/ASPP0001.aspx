@@ -13,17 +13,19 @@
                 <asp:Label ID="LblTitulo" runat="server" Text="Registro Aspirante" Font-Bold="True" Font-Size="20pt"></asp:Label>
             </div>
             <%--fin div titulo--%>
-            <br />
+            
             <div class="container-fluid">
+                 <div id="content">
                 <%--inicio container-fluid--%>
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                    <li><a href="#Datos" data-toggle="tab">DATOS GENERALES</a></li>
+                    <li  class="active"><a href="#Datos" data-toggle="tab">DATOS GENERALES</a></li>
                     <li><a href="#Infor" data-toggle="tab">INFORMACIÓN ADICIONAL</a></li>
-                    <li class="active"><a href="#Habilidad" data-toggle="tab">HABILIDADES</a></li>
-                </ul>
-                <div id="my-tab-content" class="tab-content">
+                    <li  ><a href="#Habilidad" data-toggle="tab">HABILIDADES</a></li>
+                </ul>   
+                <div id="my-tab-content" class="tab-content ">
+        
                     <%--inicio contenido tab--%>
-                    <div id="Datos" class="tab-pane">
+                    <div id="Datos" class="tab-pane active">
                         <%--inicio tab datos--%>
                         <br />
                         <asp:Panel ID="PanDatos" runat="server">
@@ -117,7 +119,7 @@
                         </asp:Panel>
                     </div>
                     <%--fin tab datos--%>
-                    <div class="tab-pane" id="Infor">
+                    <div class="tab-pane " id="Infor">
                         <%--inicio tab informacion adicional--%>
                         <asp:Panel ID="PanInfor" runat="server">
                             <br />
@@ -190,7 +192,7 @@
                         </asp:Panel>
                     </div>
                     <%--fin tab informacion adicional--%>
-                    <div class="tab-pane active" id="Habilidad">
+                    <div class="tab-pane" id="Habilidad">
                         <%--inicio tab habilidades--%>
                         <asp:Panel ID="Panel3" runat="server">
                             <br />
@@ -200,19 +202,19 @@
                                     <asp:DropDownList ID="DropDownList5" runat="server" class="form-control">
                                     </asp:DropDownList>
                                 </div>
-                                
+
                                 <asp:Label class="control-label  col-sm-2" ID="Label12" runat="server" Font-Bold="True" Text="HABILIDAD:"></asp:Label>
                                 <div class="col-md-3">
                                     <asp:DropDownList ID="DropDownList6" runat="server" class="form-control">
                                     </asp:DropDownList>
                                 </div>
-                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label33" runat="server" Font-Bold="True" Text="NIVEL:"></asp:Label>
                                 <div class="col-md-3">
                                     <asp:DropDownList ID="DropDownList7" runat="server" class="form-control">
                                     </asp:DropDownList>
-                                    
+
                                 </div>
                             </div>
                             <div align="center">
@@ -220,16 +222,16 @@
                             </div>
                             <br />
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
-                                        <Columns>
-                                            <asp:BoundField HeaderText="Conocimientos" />
-                                            <asp:BoundField HeaderText="Habilidades" />
-                                            <asp:BoundField HeaderText="Nivel" />
-                                        </Columns>
-                                    </asp:GridView>
+                                <Columns>
+                                    <asp:BoundField HeaderText="Conocimientos" />
+                                    <asp:BoundField HeaderText="Habilidades" />
+                                    <asp:BoundField HeaderText="Nivel" />
+                                </Columns>
+                            </asp:GridView>
                         </asp:Panel>
                     </div>
                     <%--fin tab habilidades--%>
-
+                </div>
                 </div>
                 <%--fin contenido tab--%>
             </div>

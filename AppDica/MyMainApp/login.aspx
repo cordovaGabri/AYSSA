@@ -10,7 +10,7 @@
                     <asp:TextBox ID="txtUsuario" runat="server" class="form-control input-lg" placeholder="Ingrese su Usuario"></asp:TextBox>
 				</div>
 				<div class="form-group">
-                    <asp:TextBox ID="txtPassword" runat="server" class="form-control input-lg" placeholder="Ingrese su Password"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" class="form-control input-lg" placeholder="Ingrese su Password" TextMode="Password"></asp:TextBox>
 				</div>
 				<%--<span class="button-checkbox">
                     <asp:Button ID="Button4" class="btn" data-color="info" runat="server" Text="Recordarme" />
@@ -20,10 +20,10 @@
 				<hr class="colorgraph">
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <asp:Button ID="Button1" class="btn btn-lg btn-success btn-block" data-color="info" runat="server" Text="Iniciar Sesión" />
+                        <asp:Button ID="BtnInicioSesion" class="btn btn-lg btn-success btn-block" data-color="info" runat="server" Text="Iniciar Sesión" OnClick="BtnInicioSesion_Click" />
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <asp:Button ID="Button2" class="btn btn-lg btn-primary btn-block" data-color="info" runat="server" Text="Registrarme" />
+                        <asp:Button ID="BtnRegistrarme" class="btn btn-lg btn-primary btn-block" data-color="info" runat="server" Text="Registrarme" OnClick="BtnRegistrarme_Click" />
 					</div>
 				</div>
 			</fieldset>

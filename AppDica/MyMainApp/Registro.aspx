@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CPHPrincipal">
     <form id="form1" runat="server" class="form-horizontal">
-        <div align="center"><br />
+        <div align="center">
             <asp:Label ID="LblTitulo" runat="server" Text="Registro Aspirantes" Font-Bold="True" Font-Size="20pt"></asp:Label>
         </div>
         <br />
@@ -29,43 +29,47 @@
                     </ul><br />
                     <li>Cuenta con 15 días para completar su información, de lo contrario deberá registrarse nuevamente.</li>
                 </ol><%--fin numerales--%><br />
+                <p>
+                </p>
+                <p>
+                </p>
             </p></div>
             <div  class="col-md-6">
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
-                <div class="col-md-5">
+                <div class="col-md-8">
                     <asp:TextBox class="form-control" ID="TextBox1" runat="server"></asp:TextBox>
                 </div>
                     </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label6" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
-                    <div class="col-md-5">
-                        <asp:TextBox class="form-control" ID="TextBox5" runat="server"></asp:TextBox>
+                    <div class="col-md-8">
+                        <asp:TextBox class="form-control" ID="TextBox5" runat="server" TextMode="Date"></asp:TextBox>
                     </div>                
                  </div>
                 <div class="form-group">
-                     <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="NOMBRE:" Font-Bold="True"></asp:Label>
-                <div class="col-md-5">
+                     <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
+                <div class="col-md-8">
                     <asp:TextBox class="form-control" ID="TextBox4" runat="server"></asp:TextBox>
                 </div>
                      </div>
                 <div class="form-group">
-                    <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="APELLIDO:" Font-Bold="True"></asp:Label>
-                    <div class="col-md-5">
+                    <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
+                    <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TextBox2" runat="server"></asp:TextBox>
                     </div>               
                 </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
-                    <div class="col-md-5">
-                        <asp:TextBox class="form-control" ID="TextBox3" runat="server"></asp:TextBox>
+                    <div class="col-md-8">
+                        <asp:TextBox class="form-control" ID="TextBox3" runat="server" TextMode="Email"></asp:TextBox>
                     </div>
                     </div>
                 </div>
             <div class="form-group">
             <div align="center">
-                <asp:Button ID="Button1" runat="server" Text="REGISTRARSE" class="btn btn-default"/></div></div>  
-           <br /></div>
+                <asp:Button ID="Button1" runat="server" Text="INICIAR REGISTRO" class="btn btn-default"/></div></div>  
+           </div>
         </asp:Panel>
     </form>
 

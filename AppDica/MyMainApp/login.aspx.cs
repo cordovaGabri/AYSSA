@@ -13,5 +13,15 @@ namespace MyMainApp
         {
 
         }
+
+        protected void BtnRegistrarme_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registro.aspx");
+        }
+
+        protected void BtnInicioSesion_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ASP/ASPP0001.aspx");
+        }
     }
 }

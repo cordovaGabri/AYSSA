@@ -3,9 +3,8 @@
 <asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CPHPrincipal">
    
         <div align="center">
-            <br /> 
             <asp:Label ID="LblTitulo" runat="server" Text="BIENVENIDO A PIXELS CAPS" Font-Bold="True" Font-Size="30pt" ForeColor="#FF6A00"></asp:Label>
-            <br /> 
+           
           </div>  <%--titulo--%>
     <asp:Panel ID="Panel1" runat="server">
          
