@@ -33,42 +33,44 @@
                 </p>
                 <p>
                 </p>
+                <p>
+                </p>
             </p></div>
             <div  class="col-md-6">
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
-                    <asp:TextBox class="form-control" ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox class="form-control" ID="TxtNIT" runat="server"></asp:TextBox>
                 </div>
                     </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label6" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
-                        <asp:TextBox class="form-control" ID="TextBox5" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="TxtFechaNacimiento" runat="server" TextMode="Date"></asp:TextBox>
                     </div>                
                  </div>
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
-                    <asp:TextBox class="form-control" ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox class="form-control" ID="TxtNombres" runat="server"></asp:TextBox>
                 </div>
                      </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
-                        <asp:TextBox class="form-control" ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="TxtApellidos" runat="server"></asp:TextBox>
                     </div>               
                 </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
-                        <asp:TextBox class="form-control" ID="TextBox3" runat="server" TextMode="Email"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="TxtEmail" runat="server" TextMode="Email"></asp:TextBox>
                     </div>
                     </div>
                 </div>
             <div class="form-group">
             <div align="center">
-                <asp:Button ID="Button1" runat="server" Text="INICIAR REGISTRO" class="btn btn-default"/></div></div>  
+                <asp:Button ID="BtnInicioRegistro" runat="server" Text="INICIAR REGISTRO" class="btn btn-default" OnClick="BtnInicioRegistro_Click"/></div></div>  
            </div>
         </asp:Panel>
     </form>

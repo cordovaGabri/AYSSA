@@ -13,5 +13,10 @@ namespace MyMainApp
         {
 
         }
+
+        protected void BtnInicioRegistro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
