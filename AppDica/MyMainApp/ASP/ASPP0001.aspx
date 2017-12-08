@@ -42,11 +42,11 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label2" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox4" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextBox4" runat="server" readonly></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-2" ID="Label5" runat="server" Text="EDAD:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox5" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextBox5" runat="server" readonly></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -56,7 +56,7 @@
                                 </div>
                                 <asp:Label class="control-label  col-sm-2" ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox1" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextBox1" runat="server" readonly></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -144,7 +144,8 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label19" runat="server" Font-Bold="True" Text="INSTITUCIÓN EDUCATIVA:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox14" runat="server"></asp:TextBox>
+                                    <asp:DropDownList ID="DropDownList10" runat="server" class="form-control">
+                                    </asp:DropDownList>
                                 </div>
                                 <asp:Label class="control-label  col-sm-2" ID="Label28" runat="server" Font-Bold="True" Text="OTRO:"></asp:Label>
                                 <div class="col-md-3">
