@@ -113,7 +113,7 @@
                             </asp:Panel>
                             <br />
                             <div align="center">
-                                <asp:Button ID="Button1" runat="server" class="btn btn-default" Text="GUARDAR" /><asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-default"/>
+                                <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="GUARDAR" />&nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
                         </asp:Panel>
@@ -186,7 +186,7 @@
                             </script>
                             <br />
                             <div align="center">
-                                <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-default"/><asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-default"/>
+                                <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
                         </asp:Panel>
@@ -218,7 +218,7 @@
                                 </div>
                             </div>
                             <div align="center">
-                                <asp:Button ID="Button3" runat="server" Text="GUARDAR" class="btn btn-default"/><asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-default"/>
+                                <asp:Button ID="Button3" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
                             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
