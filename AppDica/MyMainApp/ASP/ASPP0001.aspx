@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label2" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox4" runat="server" readonly></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextBox4" runat="server" readonly TextMode="Date"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-2" ID="Label5" runat="server" Text="EDAD:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
@@ -103,7 +103,7 @@
                                 <div class="form-group">
                                     <asp:Label class="control-label  col-sm-2" ID="Label11" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox9" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextBox9" runat="server" TextMode="Email"></asp:TextBox>
                                     </div>
                                     <asp:Label class="control-label  col-sm-2" ID="Label14" runat="server" Text="TELÉFONO:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
@@ -155,7 +155,7 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label20" runat="server" Font-Bold="True" Text="EMAIL:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox15" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextBox15" runat="server" TextMode="Email"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-2" ID="Label26" runat="server" Font-Bold="True" Text="DISCAPACIDAD:"></asp:Label>
                                 <div class="col-md-3">
