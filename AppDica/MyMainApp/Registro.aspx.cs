@@ -16,7 +16,12 @@ namespace MyMainApp
 
         protected void BtnInicioRegistro_Click(object sender, EventArgs e)
         {
-
+            string nit,fechaNacimiento,nombres,apellidos,email;
+            nit = TxtNIT.Text;
+            fechaNacimiento = TxtFechaNacimiento.Text;
+            nombres = TxtNombres.Text;
+            apellidos = TxtApellidos.Text;
+            email = TxtEmail.Text;
         }
     }
 }

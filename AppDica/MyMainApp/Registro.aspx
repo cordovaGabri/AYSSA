@@ -70,7 +70,7 @@
                 </div>
             <div class="form-group">
             <div align="center">
-                <asp:Button ID="BtnInicioRegistro" runat="server" Text="INICIAR REGISTRO" class="btn btn-default" OnClick="BtnInicioRegistro_Click"/></div></div>  
+                <asp:Button ID="BtnInicioRegistro" runat="server" Text="INICIAR REGISTRO" class="btn btn-primary" OnClick="BtnInicioRegistro_Click"/></div></div>  
            </div>
         </asp:Panel>
     </form>

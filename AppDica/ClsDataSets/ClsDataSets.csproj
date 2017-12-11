@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_TBC_SIS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_TB_ASP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TB_ASP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +99,17 @@
     </None>
     <Content Include="DS_TBC_SIS.xss">
       <DependentUpon>DS_TBC_SIS.xsd</DependentUpon>
+    </Content>
+    <Content Include="DS_TB_ASP.xsc">
+      <DependentUpon>DS_TB_ASP.xsd</DependentUpon>
+    </Content>
+    <None Include="DS_TB_ASP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TB_ASP.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DS_TB_ASP.xss">
+      <DependentUpon>DS_TB_ASP.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
