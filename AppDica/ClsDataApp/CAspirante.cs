@@ -14,36 +14,46 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TB_ASP Detalle(string Empresa, string Ejercicio, string Periodo, string Estado, decimal CodigoOrdenCompra,
-           string NumeroOrdenContrato, int CodigoTipoCompra, int CodigoUnidadReceptora,
-           decimal CodigoProveedor, int CodigoTipoDocRespaldo, string LoginUsuario,
-           int OpcionConsulta)
+        public ClsDataSets.DS_TB_ASP Detalle(string Id, string Nombre, string Apellido, DateTime FechaNacimiento, char Sexo,
+           string Telefono, string Direccion, string email,string Dui, string Nit,char EstadoAspirante,int IdTipoAspirante,
+            int IdDepartamento, int IdMunicipio,int IdEscolaridad, int IdCentroEscolar, int IdDiscapacidad
+            , string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu,int OpcionConsulta)
         {
+
             ClsDataSets.DS_TB_ASP objDataSet = new ClsDataSets.DS_TB_ASP();
 
             try
-            {
-
+            { 
                 ObjConnection = new SqlConnection(_ConexionData);
-                ObjAdapter = new SqlDataAdapter("PRAL_DATA_ADQ_ENCA_ORD_COMPRA", ObjConnection);
+                ObjAdapter = new SqlDataAdapter("SP_TB_ASPIRANTE_GetByAll", ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_EMPRESA", Empresa);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_EJERCICIO", Ejercicio);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_PERIODO", Periodo);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO", Estado);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ORDEN_COMPRA", CodigoOrdenCompra);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_NUM_ORDEN", NumeroOrdenContrato);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_TIPO_COMPRA", CodigoTipoCompra);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_UNIDAD_RECEPTORA", CodigoUnidadReceptora);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_PROVEEDOR", CodigoProveedor);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_TIPO_DOC_RESPALDO", CodigoTipoDocRespaldo);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NOMBRE", Nombre);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_APELLIDO", Apellido);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_NACIMIENTO", FechaNacimiento);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_SEXO", Sexo);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_TELEFONO", Telefono);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DIRECCION", Direccion);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_EMAIL", email);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DUI", Dui);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NIT", Nit);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO_ASPIRANTE", EstadoAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_TIPO_ASPIRANTE", TipoAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DEPARTAMENTO", Departamento);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_MUNICIPIO", Municipio);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", Escolaridad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", CentroEscolar);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DISCAPACIDAD", Discapacidad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ACTU", FechActu);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
 
 
-                ObjAdapter.Fill(objDataSet, "ADQ_ENCA_ORD_COMPRA");
+                ObjAdapter.Fill(objDataSet, "TB_ASPIRANTE");
 
                 ObjConnection.Close();
 

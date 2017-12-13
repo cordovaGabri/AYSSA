@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClsInterface
 {
-    interface IAcciones
+   public interface IAcciones
     {
         void Consultar();
         void Adicionar();

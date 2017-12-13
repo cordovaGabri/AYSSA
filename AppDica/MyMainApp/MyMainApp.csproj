@@ -193,6 +193,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClsDataApp\ClsDataApp.csproj">
+      <Project>{4d8be78a-b8d4-4a00-bfa8-1f03056cc047}</Project>
+      <Name>ClsDataApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClsDataSets\ClsDataSets.csproj">
       <Project>{6a91496c-d490-4996-8193-9e9c5351b660}</Project>
       <Name>ClsDataSets</Name>

@@ -379,7 +379,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ASPIRANTERow AddTB_ASPIRANTERow(int ID, string DS_NOMBRE, string DS_APELLIDO) {
+            public TB_ASPIRANTERow AddTB_ASPIRANTERow(string ID, string DS_NOMBRE, string DS_APELLIDO) {
                 TB_ASPIRANTERow rowTB_ASPIRANTERow = ((TB_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -415,7 +415,7 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
                 this.columnDS_NOMBRE = new global::System.Data.DataColumn("DS_NOMBRE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDS_NOMBRE);
@@ -566,10 +566,10 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID {
+            public string ID {
                 get {
                     try {
-                        return ((int)(this[this.tableTB_ASPIRANTE.IDColumn]));
+                        return ((string)(this[this.tableTB_ASPIRANTE.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_ASPIRANTE\' es DBNull.", e);
