@@ -14,6 +14,8 @@
                 
             <p class="text-justify">
                 <ol><%--inicio numerales--%>
+                    <li>Debe tomar en cuenta que para el perfil Estudiante solo puede aplicar si se encuentra entre 16 y 30 años; y para el 
+                        perfil Profesor entre 25 y 35 años de edad.</li><br />
                     <li>Contar con la siguiente documentación al momento de inscripción:</li>
                     <ul>
                         <li>Certificación de notas</li>
@@ -37,6 +39,13 @@
                 </p>
             </p></div>
             <div  class="col-md-6">
+                <div class="form-group">
+                    <asp:Label class="control-label  col-sm-3" ID="Label8" runat="server" Text="TIPO ASPIRANTE:" Font-Bold="True"></asp:Label>
+                                <div class="col-md-8">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control">
+                                    </asp:DropDownList>
+                                </div>
+                    </div>
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
