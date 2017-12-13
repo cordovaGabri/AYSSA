@@ -29,6 +29,7 @@ namespace MyMainApp
             apellidos = TxtApellidos.Text;
             email = TxtEmail.Text;
            bool Sigue= VerificarUsuario(nit, fechaNacimiento);
+            // Si sigue=true se procesa el ingreso
             if (Sigue== true)
             {
                 CUsuario objUsuario = new CUsuario(_DataSistema.ConexionBaseDato);

@@ -14,8 +14,6 @@
                 
             <p class="text-justify">
                 <ol><%--inicio numerales--%>
-                    <li>Debe tomar en cuenta que para el perfil Estudiante solo puede aplicar si se encuentra entre 16 y 30 años; y para el 
-                        perfil Profesor entre 25 y 35 años de edad.</li><br />
                     <li>Contar con la siguiente documentación al momento de inscripción:</li>
                     <ul>
                         <li>Certificación de notas</li>
@@ -37,43 +35,43 @@
                 </p>
                 <p>
                 </p>
+                <p>
+                </p>
             </p></div>
             <div  class="col-md-6">
-                <div class="form-group">
-                    <asp:Label class="control-label  col-sm-3" ID="Label8" runat="server" Text="TIPO ASPIRANTE:" Font-Bold="True"></asp:Label>
-                                <div class="col-md-8">
-                                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control">
-                                    </asp:DropDownList>
-                                </div>
-                    </div>
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
                     <asp:TextBox class="form-control" ID="TxtNIT" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                 </div>
                     </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label6" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TxtFechaNacimiento" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                     </div>                
                  </div>
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
                     <asp:TextBox class="form-control" ID="TxtNombres" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                 </div>
                      </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TxtApellidos" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                     </div>               
                 </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TxtEmail" runat="server" TextMode="Email"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                     </div>
                     </div>
                 </div>
