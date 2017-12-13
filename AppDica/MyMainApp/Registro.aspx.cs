@@ -16,7 +16,7 @@ namespace MyMainApp
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            _DataSistema = (ClsSistema)Session["MyDataSistema"];
         }
 
         protected void BtnInicioRegistro_Click(object sender, EventArgs e)

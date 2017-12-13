@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
+using ClsInterface;
 
 namespace MyMainApp
 {
     public class Global : System.Web.HttpApplication
     {
-       
 
+        ClsSistema MyDataSistema;
         protected void Application_Start(object sender, EventArgs e)
         {
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
@@ -24,7 +25,11 @@ namespace MyMainApp
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            MyDataSistema = new ClsSistema();
+            MyDataSistema.ConexionBaseDato = System.Configuration.ConfigurationManager.AppSettings.Get("ConexionSIS");
+            MyDataSistema.CodigoEmpresa = "0001";
 
+            Session["MyDataSistema"] = MyDataSistema;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
