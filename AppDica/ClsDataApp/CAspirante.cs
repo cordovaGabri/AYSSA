@@ -40,12 +40,12 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DUI", Dui);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NIT", Nit);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO_ASPIRANTE", EstadoAspirante);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_TIPO_ASPIRANTE", TipoAspirante);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DEPARTAMENTO", Departamento);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_MUNICIPIO", Municipio);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", Escolaridad);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", CentroEscolar);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DISCAPACIDAD", Discapacidad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_TIPO_ASPIRANTE", IdTipoAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DEPARTAMENTO", IdDepartamento);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_MUNICIPIO", IdMunicipio);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", IdCentroEscolar);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DISCAPACIDAD", IdDiscapacidad);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);

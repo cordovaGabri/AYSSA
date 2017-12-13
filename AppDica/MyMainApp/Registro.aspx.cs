@@ -6,12 +6,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClsDataApp;
+using ClsInterface;
 using dica;
 
 namespace MyMainApp
 {
     public partial class Registro : FormaSISWeb
     {
+        DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,7 +21,8 @@ namespace MyMainApp
 
         protected void BtnInicioRegistro_Click(object sender, EventArgs e)
         {
-            string nit,fechaNacimiento,nombres,apellidos,email;
+            string nit,fechaNacimiento,nombres,apellidos,email,password;
+            password = "";
             nit = TxtNIT.Text;
             fechaNacimiento = TxtFechaNacimiento.Text;
             nombres = TxtNombres.Text;
@@ -28,6 +31,26 @@ namespace MyMainApp
            bool Sigue= VerificarUsuario(nit, fechaNacimiento);
             if (Sigue== true)
             {
+                CUsuario objUsuario = new CUsuario(_DataSistema.ConexionBaseDato);
+                
+                try
+                {
+                    objResultado = objUsuario.Actualizacion(nit, nombres,  password, "ASPIRANTE",
+            email, 'P', nit, TipoActualizacion.Adicionar);
+
+                    if (objResultado.CodigoError == 0)
+                    {
+                        DespliegaMensaje("Usuario y Contraseña enviado al correo");
+                    }
+                    else
+                    {
+                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    DespliegaMensaje(ex.Message);
+                }
             }
             else{
             DespliegaMensaje("Usuario ya existe o no cumple rango de edades");

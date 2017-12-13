@@ -65,14 +65,10 @@ namespace ClsDataApp
         }
 
         public DataQuery Actualizacion(string Id, string NombreUsuario, string Password, string IdPerfil,
-            string FechaPreparacion, string IndicaContrato, string FechaCompra, string NumeroOrden,
             string Email, char EstadoUsuario, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
-           
-
             try
             {
-
                 string StrCommand = "";
 
                 switch (OpcionActualizacion)
@@ -93,15 +89,8 @@ namespace ClsDataApp
                         break;
                 }
 
-
-
                 ObjConnection = new SqlConnection(_ConexionData);
                 
-	@CD_CLAVE_USUARIO VARBINARY(100),
-	@ID_PERFIL_PERFIL VARCHAR(30),
-	@DS_DIRE_EMAIL VARCHAR(100),
-	@CD_ESTADO_USUARIO VARCHAR(1),
-	@LOGIN_USUARIO VARCHAR(30),
                 ObjCommand = new SqlCommand(StrCommand, ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjCommand.CommandType = CommandType.StoredProcedure;
@@ -116,13 +105,11 @@ namespace ClsDataApp
                 }
                 else
                 {
-                    //ObjCommand.Parameters.AddWithValue("@CD_CLAVE_USUARIO", System.DBNull.Value);
                     ObjCommand.Parameters.Add("@CD_CLAVE_USUARIO", System.Data.SqlDbType.VarBinary).Value = DBNull.Value;
                 }
-                ObjCommand.Parameters.AddWithValue("@ID_PERFIL_PERFIL", NumeroOrden);
-                ObjCommand.Parameters.AddWithValue("@ID_PERFIL_PERFIL", CodigoTipoCompra);
-                ObjCommand.Parameters.AddWithValue("@CD_ESTADO_USUARIO", CodigoUnidadReceptora);
-
+                ObjCommand.Parameters.AddWithValue("@ID_PERFIL_PERFIL", IdPerfil);
+                ObjCommand.Parameters.AddWithValue("@DS_DIRE_EMAIL", Email);
+                ObjCommand.Parameters.AddWithValue("@CD_ESTADO_USUARIO", EstadoUsuario);
 
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
@@ -140,7 +127,7 @@ namespace ClsDataApp
                 ObjConnection.Open();
                 ObjCommand.ExecuteNonQuery();
 
-                objResultado.CodigoAuxiliar = (object)ObjCommand.Parameters["@CD_ORDEN_COMPRA"].Value;
+                objResultado.CodigoAuxiliar = Id;
                 objResultado.FilasAfectadas = (int)ObjCommand.Parameters["@FILAS_AFECTADAS"].Value;
                 objResultado.CodigoError = (decimal)ObjCommand.Parameters["@NumeroError"].Value;
                 objResultado.MensajeError = (string)ObjCommand.Parameters["@MensajeError"].Value;
@@ -151,7 +138,6 @@ namespace ClsDataApp
                 {
                     ObjConnection.Close();
                 }
-
 
             }
             catch (Exception ex)
