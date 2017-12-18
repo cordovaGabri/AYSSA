@@ -60,10 +60,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS_TBC.cs">
+      <DependentUpon>DS_TBC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_TBC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_TBC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TBC_SIS.cs">
+      <DependentUpon>DS_TBC_SIS.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_TBC_SIS.Designer.cs">
       <AutoGen>True</AutoGen>

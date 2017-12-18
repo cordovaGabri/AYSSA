@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="CAspirante.cs" />
     <Compile Include="CSqlvars.cs" />
+    <Compile Include="CTipoAspirante.cs" />
     <Compile Include="CUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

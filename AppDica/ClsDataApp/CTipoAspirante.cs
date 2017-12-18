@@ -5,48 +5,41 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using ClsInterface;
-using SIS.Framework.Common;
 
 namespace ClsDataApp
 {
-    public class CUsuario :CSqlvars
+    public class CTipoAspirante : CSqlvars
     {
-        DataQuery objResultado = new DataQuery();
-        public CUsuario(string ConexionData)
+        public CTipoAspirante(string ConexionData)
         {
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TB_ASP Detalle(string Empresa, string Ejercicio, string Periodo, string Estado, decimal CodigoOrdenCompra,
-           string NumeroOrdenContrato, int CodigoTipoCompra, int CodigoUnidadReceptora,
-           decimal CodigoProveedor, int CodigoTipoDocRespaldo, string LoginUsuario,
-           int OpcionConsulta)
+        public ClsDataSets.DS_TBC Detalle(string Id, string TipoAspirante, string Descripcion,char Estado,
+           string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
-            ClsDataSets.DS_TB_ASP objDataSet = new ClsDataSets.DS_TB_ASP();
+
+            ClsDataSets.DS_TBC objDataSet = new ClsDataSets.DS_TBC();
 
             try
             {
-
                 ObjConnection = new SqlConnection(_ConexionData);
-                ObjAdapter = new SqlDataAdapter("PRAL_DATA_ADQ_ENCA_ORD_COMPRA", ObjConnection);
+                ObjAdapter = new SqlDataAdapter("SP_TBC_TIPO_ASPIRANTE_GetByAll", ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_EMPRESA", Empresa);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_EJERCICIO", Ejercicio);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_PERIODO", Periodo);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_TIPO_ASPIRANTE", TipoAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO", Estado);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ORDEN_COMPRA", CodigoOrdenCompra);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_NUM_ORDEN", NumeroOrdenContrato);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_TIPO_COMPRA", CodigoTipoCompra);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_UNIDAD_RECEPTORA", CodigoUnidadReceptora);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_PROVEEDOR", CodigoProveedor);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_TIPO_DOC_RESPALDO", CodigoTipoDocRespaldo);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ACTU", FechActu);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
 
 
-                ObjAdapter.Fill(objDataSet, "ADQ_ENCA_ORD_COMPRA");
+                ObjAdapter.Fill(objDataSet, "TBC_TIPO_ASPIRANTE");
 
                 ObjConnection.Close();
 
@@ -64,17 +57,21 @@ namespace ClsDataApp
             return objDataSet;
         }
 
-        public DataQuery Actualizacion(string Id, string NombreUsuario, string Password, string IdPerfil,
-            string Email, char EstadoUsuario, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+        public DataQuery Actualizacion(string Id, string TipoAspirante, string Descripcion, char Estado,
+            string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
+
+            DataQuery objResultado = new DataQuery();
+
             try
             {
+
                 string StrCommand = "";
 
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "SP_TBC_USUARIO_INSERT";
+                        StrCommand = "";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = "";
@@ -90,27 +87,24 @@ namespace ClsDataApp
                 }
 
                 ObjConnection = new SqlConnection(_ConexionData);
-                
+
                 ObjCommand = new SqlCommand(StrCommand, ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjCommand.CommandType = CommandType.StoredProcedure;
-                
-                ObjCommand.Parameters.AddWithValue("@ID", Id);
-                ObjCommand.Parameters.AddWithValue("@DS_NOMBRE_USUARIO", NombreUsuario);
-                ObjCommand.Parameters.AddWithValue("@DS_PASSWORD", Password);
-                 byte[] ClaveUsuarioE;
-                if (Password.Trim().Length > 0)
+
+                if (OpcionActualizacion == TipoActualizacion.Adicionar)
                 {
-                    ClaveUsuarioE = GeneraClave(Password.Trim());
-                    ObjCommand.Parameters.AddWithValue("@CD_CLAVE_USUARIO", ClaveUsuarioE);
+                    ObjParam = ObjCommand.Parameters.Add("@ID", SqlDbType.Int, 0);
+                    ObjParam.Direction = ParameterDirection.Output;
                 }
                 else
                 {
-                    ObjCommand.Parameters.Add("@CD_CLAVE_USUARIO", System.Data.SqlDbType.VarBinary).Value = DBNull.Value;
+                    ObjCommand.Parameters.AddWithValue("@ID", Id);
                 }
-                ObjCommand.Parameters.AddWithValue("@ID_PERFIL_PERFIL", IdPerfil);
-                ObjCommand.Parameters.AddWithValue("@DS_DIRE_EMAIL", Email);
-                ObjCommand.Parameters.AddWithValue("@CD_ESTADO_USUARIO", EstadoUsuario);
+
+                ObjCommand.Parameters.AddWithValue("@DS_TIPO_ASPIRANTE", TipoAspirante);
+                ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
+                ObjCommand.Parameters.AddWithValue("@CD_ESTADO", Estado);
 
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
@@ -128,7 +122,7 @@ namespace ClsDataApp
                 ObjConnection.Open();
                 ObjCommand.ExecuteNonQuery();
 
-                objResultado.CodigoAuxiliar = Id;
+                objResultado.CodigoAuxiliar = (object)ObjCommand.Parameters["@ID"].Value;
                 objResultado.FilasAfectadas = (int)ObjCommand.Parameters["@FILAS_AFECTADAS"].Value;
                 objResultado.CodigoError = (decimal)ObjCommand.Parameters["@NumeroError"].Value;
                 objResultado.MensajeError = (string)ObjCommand.Parameters["@MensajeError"].Value;
@@ -140,6 +134,7 @@ namespace ClsDataApp
                     ObjConnection.Close();
                 }
 
+
             }
             catch (Exception ex)
             {
@@ -149,16 +144,6 @@ namespace ClsDataApp
 
             return objResultado;
 
-        }
-
-
-        private byte[] GeneraClave(string Contrasena)
-        {
-            byte[] ClaveEncriptada;
-            CEncriptacion objEncripcion = new CEncriptacion();
-            ClaveEncriptada = objEncripcion.Encrypt(CEncriptacion.ToBase64(Contrasena));
-
-            return ClaveEncriptada;
         }
     }
 }

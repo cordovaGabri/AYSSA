@@ -21,13 +21,17 @@ namespace MyMainApp
 
         protected void BtnInicioRegistro_Click(object sender, EventArgs e)
         {
-            string nit,fechaNacimiento,nombres,apellidos,email,password;
-            password = "";
+            string nit,fechaNacimiento,nombres,apellidos,email;
+           
             nit = TxtNIT.Text;
             fechaNacimiento = TxtFechaNacimiento.Text;
             nombres = TxtNombres.Text;
             apellidos = TxtApellidos.Text;
             email = TxtEmail.Text;
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789./$";
+            var random = new Random();
+            string password = new string(Enumerable.Repeat(chars, 10)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
            bool Sigue= VerificarUsuario(nit, fechaNacimiento);
             // Si sigue=true se procesa el ingreso
             if (Sigue== true)
