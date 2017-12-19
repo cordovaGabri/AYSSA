@@ -37,12 +37,14 @@
                 </p>
                 <p>
                 </p>
+                <p>
+                </p>
                 </p></div>
             <div  class="col-md-6">
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label8" runat="server" Text="TIPO PERSONA:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:DropDownList ID="CboTipoAspitante" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboTipoAspitante" runat="server" class="form-control" DataTextField="DS_TIPO_ASPIRANTE" DataValueField="ID">
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="CboTipoAspitante" ErrorMessage="Seleccionar Tipo Persona" ForeColor="Red"></asp:RequiredFieldValidator>
                                 </div>

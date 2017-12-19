@@ -13,26 +13,30 @@ namespace MyMainApp
 {
     public partial class Registro : FormaSISWeb
     {
+
+        private DataView dvTipoAspirante;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
+            FillCboTipoAspitante();
         }
 
         protected void BtnInicioRegistro_Click(object sender, EventArgs e)
         {
-            string nit,fechaNacimiento,nombres,apellidos,email;
+            string nit,fechaNacimiento,nombres,apellidos,email,perfil;
            
             nit = TxtNIT.Text;
             fechaNacimiento = TxtFechaNacimiento.Text;
             nombres = TxtNombres.Text;
             apellidos = TxtApellidos.Text;
             email = TxtEmail.Text;
+            perfil = CboTipoAspitante.SelectedValue;
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789./$";
             var random = new Random();
             string password = new string(Enumerable.Repeat(chars, 10)
               .Select(s => s[random.Next(s.Length)]).ToArray());
-           bool Sigue= VerificarUsuario(nit, fechaNacimiento);
+            bool Sigue = VerificarUsuario(nit, fechaNacimiento, Convert.ToInt32(perfil));
             // Si sigue=true se procesa el ingreso
             if (Sigue== true)
             {
@@ -40,7 +44,8 @@ namespace MyMainApp
                 
                 try
                 {
-                    objResultado = objUsuario.Actualizacion(nit, nombres,  password, "ASPIRANTE",
+
+                    objResultado = objUsuario.Actualizacion(nit, nombres, password, perfil,
             email, 'P', nit, TipoActualizacion.Adicionar);
 
                     if (objResultado.CodigoError == 0)
@@ -63,17 +68,26 @@ namespace MyMainApp
         }
 
 
-        protected bool VerificarUsuario(string Nit, string FechaNacimiento)
+        protected bool VerificarUsuario(string Nit, string FechaNacimiento,int IdTipoAspirante)
         {   // Si retorna Falso no se procedera a el registro
             bool resultado = true;
             CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
             DataView dvAspirante = new DataView(objAspirante.Detalle(Nit, "", "", Convert.ToDateTime(FechaNacimiento), 'X',
-           "", "", "", "", Nit, 'X', 0, 0, 0, 0, 0, 0, "", DateTime.Today, "", DateTime.Today, 2).TB_ASPIRANTE);
+           "", "", "", "", Nit, 'X',IdTipoAspirante, 0, 0, 0, 0, 0, "", DateTime.Today, "", DateTime.Today, 2).TB_ASPIRANTE);
             if (dvAspirante.Count > 0)
             {
                 resultado = false;
             }
             return resultado;
+        }
+
+        protected void FillCboTipoAspitante()
+        {
+            CTipoAspirante objTipoAspirante = new CTipoAspirante(_DataSistema.ConexionBaseDato);
+            dvTipoAspirante = new DataView(objTipoAspirante.Detalle(0, "","",'A',"", DateTime.Now, "",DateTime.Now, 0).TBC_TIPO_ASPIRANTE);
+
+            CboTipoAspitante.DataSource = dvTipoAspirante;
+            CboTipoAspitante.DataBind();
         }
     }
 }
