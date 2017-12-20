@@ -58,7 +58,7 @@ namespace MyMainApp
             if (dvUsuario.Count > 0)
             {
                 _DataSistema.NombreUsuario = dvUsuario.Table.Rows[0]["DS_NOMBRE_USUARIO"].ToString();
-                _DataSistema.CPerfilusuario = dvUsuario.Table.Rows[0]["ID"].ToString();
+                _DataSistema.CPerfilusuario = dvUsuario.Table.Rows[0]["ID_PERFIL_USUARIO"].ToString();
                 _DataSistema.PerfilUsuario = dvUsuario.Table.Rows[0]["DS_NOMBRE_PERFIL"].ToString();
                 _DataSistema.EstadoUsuario = dvUsuario.Table.Rows[0]["CD_ESTADO_USUARIO"].ToString();
               /*  if (_DataSistema.EstadoUsuario == "A")
@@ -74,9 +74,20 @@ namespace MyMainApp
              Response.Redirect("Registro.aspx");
          }
 
-        
+      /*   private void CargaParametrosInterfaz()
+         {
+             CParametrosInterfaz objParametros = new CParametrosInterfaz(_DataSistema.ConexionBaseDato);
+             objParametros.ObtenerParametros();
+             _DataSistema.NombreAplicacion = objParametros.NombreSistema;
+             _DataSistema.NombreCortoAplicacion = objParametros.NombreCortoSistema;
+             _DataSistema.ColorTextoSistema = objParametros.ColorTextoSistema;
+             _DataSistema.UnidadUsuaria = objParametros.UnidadUsuaria;
+             _DataSistema.ColorPrincipal = objParametros.ColorPrincipal;
+             _DataSistema.ColorSecundario = objParametros.ColorSecundario;
+             _DataSistema.ColorAuxiliar = objParametros.ColorAuxiliar;
+             _DataSistema.ImagenSistema = objParametros.ImagenSistema;
 
-
-
+             Session["MyDataSistema"] = _DataSistema;
+         }*/
     }
 }

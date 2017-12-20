@@ -32,7 +32,6 @@
                         <br />
                         <asp:Panel ID="PanDatos" runat="server">
                             <div class="form-group">
-                                <asp:Label class="control-label  col-sm-2" ID="Label38" runat="server" Text="" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">&nbsp;
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label37" runat="server" Text="ESTADO:" Font-Bold="True"></asp:Label>
