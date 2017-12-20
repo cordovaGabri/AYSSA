@@ -21,6 +21,7 @@ namespace ClsInterface
     public class ClsSistema
     { 
           private string _Cusuario;
+          private bool _Autenticado;
         private string _NombreUsuario;
         private string _CPerfilusuario;
         private string _PerfilUsuario;
@@ -303,6 +304,18 @@ namespace ClsInterface
             set
             {
                 _Cusuario = value;
+            }
+        }
+
+        public bool Autenticado
+        {
+            get
+            {
+                return _Autenticado;
+            }
+            set
+            {
+                _Autenticado = value;
             }
         }
         public string NombreUsuario

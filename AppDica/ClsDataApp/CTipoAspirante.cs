@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using ClsDataSets;
 using ClsInterface;
 
 namespace ClsDataApp
@@ -15,11 +16,11 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TBC Detalle(int Id, string TipoAspirante, string Descripcion,char Estado,
+        public DS_TBC Detalle(int Id, string TipoAspirante, string Descripcion,char Estado,
            string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
 
-            ClsDataSets.DS_TBC objDataSet = new ClsDataSets.DS_TBC();
+            DS_TBC objDataSet = new DS_TBC();
 
             try
             {

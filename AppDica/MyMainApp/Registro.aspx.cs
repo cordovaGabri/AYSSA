@@ -66,10 +66,11 @@ namespace MyMainApp
             DespliegaMensaje("Usuario ya existe o no cumple rango de edades");
             }
         }
-
+        
 
         protected bool VerificarUsuario(string Nit, string FechaNacimiento,int IdTipoAspirante)
         {   // Si retorna Falso no se procedera a el registro
+           
             bool resultado = true;
             CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
             DataView dvAspirante = new DataView(objAspirante.Detalle(Nit, "", "", Convert.ToDateTime(FechaNacimiento), 'X',

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ClsDataApp;
@@ -13,59 +14,67 @@ namespace MyMainApp
 {
     public partial class Login : FormaSISWeb
     {
+        DataView dvUsuario;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-
-        protected void BtnRegistrarme_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Registro.aspx");
+            _DataSistema = (ClsSistema)Session["MyDataSistema"];
         }
 
         protected void BtnInicioSesion_Click(object sender, EventArgs e)
         {
-          /*  bool bAutenticado = false;
-            CUsuarios objUsuario = new CUsuarios(_DataSistema.ConexionBaseDato);
-            bAutenticado = objUsuario.Autenticar(Login1.UserName.ToString(), Login1.Password.ToString());
-
-            e.Authenticated = bAutenticado;
+            bool bAutenticado = false;
+            CUsuario objUsuario = new CUsuario(_DataSistema.ConexionBaseDato);
+            bAutenticado = objUsuario.Autenticar(txtUsuario.Text, txtPassword.Text);
+            _DataSistema.Autenticado = bAutenticado;
             if (bAutenticado)
             {
-                _DataSistema.Cusuario = Login1.UserName.ToString().ToUpper();
+                _DataSistema.Cusuario = txtUsuario.Text;
                 if (CargaDatosUsuarioActivo(_DataSistema.Cusuario))
                 {
+                    _DataSistema.Autenticado = true;
                     Session["MyDataSistema"] = _DataSistema;
-                    FormsAuthentication.RedirectFromLoginPage(Login1.UserName, false);
+                    FormsAuthentication.RedirectFromLoginPage(txtUsuario.Text, false);
+                    Response.Redirect("ASP/ASPP0001.aspx");
                 }
                 else
                 {
-                    e.Authenticated = false;
+                    _DataSistema.Autenticado = false;
                     DespliegaMensaje("Usuario no se encuentra Activo. Favor Verifique.");
                 }
 
-            }*/
-            Response.Redirect("ASP/ASPP0001.aspx");
+            }
+            else
+            {
+                _DataSistema.Autenticado = false;
+                DespliegaMensaje("Usuario o Contraseña incorrecta.");
+            }
         }
 
-       /* protected bool CargaDatosUsuarioActivo(string CodigoUsuario)
+         protected bool CargaDatosUsuarioActivo(string Usuario)
         {
             bool resultado = false;
-            CUsuarios objUsuario = new CUsuarios(_DataSistema.ConexionBaseDato);
-            DataView dvUsuario = new DataView(objUsuario.Detalle(CodigoUsuario, "", "", 1).GLB_USUARIOS);
+            CUsuario objUsuario = new CUsuario(_DataSistema.ConexionBaseDato);
+            dvUsuario = new DataView(objUsuario.Detalle(Usuario, "", "","","",'X', 2).TBC_USUARIO);
             if (dvUsuario.Count > 0)
             {
                 _DataSistema.NombreUsuario = dvUsuario.Table.Rows[0]["DS_NOMBRE_USUARIO"].ToString();
-                _DataSistema.CPerfilusuario = dvUsuario.Table.Rows[0]["CD_CODIGO_PERFIL"].ToString();
+                _DataSistema.CPerfilusuario = dvUsuario.Table.Rows[0]["ID"].ToString();
                 _DataSistema.PerfilUsuario = dvUsuario.Table.Rows[0]["DS_NOMBRE_PERFIL"].ToString();
                 _DataSistema.EstadoUsuario = dvUsuario.Table.Rows[0]["CD_ESTADO_USUARIO"].ToString();
-                if (_DataSistema.EstadoUsuario == "A")
-                {
+              /*  if (_DataSistema.EstadoUsuario == "A")
+                {*/
                     resultado = true;
-                }
+              //  }
             }
             return resultado;
-        }*/
+        }
+
+         protected void BtnRegistrarme_Click(object sender, EventArgs e)
+         {
+             Response.Redirect("Registro.aspx");
+         }
+
+        
 
 
 
