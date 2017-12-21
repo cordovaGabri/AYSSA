@@ -15,7 +15,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TBC Detalle(int Id, int IdPais,
+        public ClsDataSets.DS_TBC Detalle(int Id, int IdPais, string Departamento,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
 
         {
@@ -30,6 +30,7 @@ namespace ClsDataApp
 
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_PAIS", IdPais);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DEPARTAMENTO", Departamento);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
@@ -51,7 +52,7 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-        public DataQuery Actualizacion(int Id, int IdPais, 
+        public DataQuery Actualizacion(int Id, int IdPais, string Departamento,
              int OpcionConsulta, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
@@ -93,6 +94,7 @@ namespace ClsDataApp
                     ObjCommand.Parameters.AddWithValue("@ID", Id);
                 }
                 ObjCommand.Parameters.AddWithValue("@ID_PAIS", IdPais);
+                ObjCommand.Parameters.AddWithValue("@DS_DEPARTAMENTO", Departamento);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
                 ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);

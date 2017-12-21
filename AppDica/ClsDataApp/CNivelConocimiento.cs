@@ -9,28 +9,27 @@ using ClsInterface;
 
 namespace ClsDataApp
 {
-    public class CTipoAspirante : CSqlvars
+    public class CNivelConocimiento : CSqlvars
     {
-        public CTipoAspirante(string ConexionData)
+        public CNivelConocimiento(string ConexionData)
         {
             _ConexionData = ConexionData;
         }
 
-        public DS_TBC Detalle(int Id, string TipoAspirante, string Descripcion,string Estado,
-           string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
+        public ClsDataSets.DS_TBC Detalle(int Id, string Nivel, string Descripcion, string Estado,
+            string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
-
             DS_TBC objDataSet = new DS_TBC();
 
             try
             {
                 ObjConnection = new SqlConnection(_ConexionData);
-                ObjAdapter = new SqlDataAdapter("SP_TBC_TIPO_ASPIRANTE_GetByAll", ObjConnection);
+                ObjAdapter = new SqlDataAdapter("SP_TBC_NIVEL_CONOCIMIENTO_GetByAll", ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_TIPO_ASPIRANTE", TipoAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NIVEL_CONOCIMIENTO", Nivel);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO", Estado);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
@@ -40,7 +39,7 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
 
 
-                ObjAdapter.Fill(objDataSet, "TBC_TIPO_ASPIRANTE");
+                ObjAdapter.Fill(objDataSet, "TBC_NIVEL_CONOCIMIENTO");
 
                 ObjConnection.Close();
 
@@ -58,10 +57,9 @@ namespace ClsDataApp
             return objDataSet;
         }
 
-        public DataQuery Actualizacion(string Id, string TipoAspirante, string Descripcion, string Estado,
+        public DataQuery Actualizacion(int Id, string Nivel, string Descripcion, string Estado,
             string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
-
             DataQuery objResultado = new DataQuery();
 
             try
@@ -103,7 +101,7 @@ namespace ClsDataApp
                     ObjCommand.Parameters.AddWithValue("@ID", Id);
                 }
 
-                ObjCommand.Parameters.AddWithValue("@DS_TIPO_ASPIRANTE", TipoAspirante);
+                ObjCommand.Parameters.AddWithValue("@DS_NIVEL_CONOCIMIENTO", Nivel);
                 ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
                 ObjCommand.Parameters.AddWithValue("@CD_ESTADO", Estado);
 
