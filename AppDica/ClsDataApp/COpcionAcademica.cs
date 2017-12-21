@@ -15,7 +15,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TBC Detalle(int Id, int IdEscolaridad, string Carrera, string Descripcion, char Estado,
+        public ClsDataSets.DS_TBC Detalle(int Id, int IdCategoriaEscolaridad, string Carrera, string Descripcion, char Estado,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TBC objDataSet = new ClsDataSets.DS_TBC();
@@ -28,7 +28,7 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_CATEGORIA_ESCOLARIDAD", IdCategoriaEscolaridad);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_CARRERA", Carrera);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO", Estado);

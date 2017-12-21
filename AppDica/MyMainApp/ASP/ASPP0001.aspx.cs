@@ -18,6 +18,52 @@ namespace MyMainApp
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
+            if (_DataSistema.Cusuario == null)
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+              CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
+              DataView dvAspirante = new DataView(objAspirante.Detalle(_DataSistema.Cusuario, "", "", DateTime.Today, 'X',
+           "","", "", "", "", "", 'X',0, 0, 0, 0, 0 ,0,0, "","","","","", DateTime.Today, "", DateTime.Today, 3).TB_ASPIRANTE);
+            if (dvAspirante.Count > 0)
+            {   /* CARGA DE DATOS DE EL PRIMER REGISTRO */
+                TxtNombre.Text = dvAspirante.Table.Rows[0]["DS_NOMBRE"].ToString();
+                TxtApellido.Text = dvAspirante.Table.Rows[0]["DS_APELLIDO"].ToString();
+                TxtEstado.Text = dvAspirante.Table.Rows[0]["CD_ESTADO_ASPIRANTE"].ToString();
+                TxtFechNac.Text = dvAspirante.Table.Rows[0]["FECH_NACIMIENTO"].ToString();
+                TxtEdad.Text = dvAspirante.Table.Rows[0]["EDAD"].ToString();
+                TxtNit.Text = dvAspirante.Table.Rows[0]["DS_NIT"].ToString();
+                TxtTipoAspirante.Text = dvAspirante.Table.Rows[0]["DS_TIPO_ASPIRANTE"].ToString();
+                TxtEmail.Text = dvAspirante.Table.Rows[0]["DS_EMAIL"].ToString();
+
+                /* CARGA DE DATOS DE EL POSTERIORES REGISTROS */
+
+                TxtTelCasa.Text= dvAspirante.Table.Rows[0]["DS_TELEFONO_CASA"].ToString();
+                TxtTelCel.Text = dvAspirante.Table.Rows[0]["DS_TELEFONO_CELULAR"].ToString();
+                TxtDui.Text = dvAspirante.Table.Rows[0]["DS_DUI"].ToString();
+                RadioSexo.SelectedValue = dvAspirante.Table.Rows[0]["DS_SEXO"].ToString();
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString()) > 0)
+                {
+                    CboTratamiento.SelectedValue = dvAspirante.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString();
+                }
+                TxtDiscapacidad1.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD1"].ToString();
+                TxtDiscapacidad2.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD2"].ToString();
+                TxtDiscapacidad3.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD3"].ToString();
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_PAIS"].ToString()) > 0)
+                {
+                    CboPais.SelectedValue = dvAspirante.Table.Rows[0]["ID_PAIS"].ToString();
+                }
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_DEPARTAMENTO"].ToString()) > 0)
+                {
+                    CboDepartamento.SelectedValue = dvAspirante.Table.Rows[0]["ID_DEPARTAMENTO"].ToString();
+                }
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_MUNICIPIO"].ToString()) > 0)
+                {
+                    CboMunicipio.SelectedValue = dvAspirante.Table.Rows[0]["ID_MUNICIPIO"].ToString();
+                }
+                TxtDireccion.Text = dvAspirante.Table.Rows[0]["DS_DIRECCION"].ToString();
+                 
+            }
             if (!IsPostBack)
             {
                 Consultar();
@@ -143,7 +189,7 @@ namespace MyMainApp
         protected void FillCboNivelEducativo()
         {
             CEscolaridad objNivelEducativo = new CEscolaridad(_DataSistema.ConexionBaseDato);
-            dvNivelEducativo = new DataView(objNivelEducativo.Detalle(0, "", "", 'A', "", DateTime.Now, "", DateTime.Now, 0).TBC_ESCOLARIDAD);
+            dvNivelEducativo = new DataView(objNivelEducativo.Detalle(0,0, "", "", 'A', "", DateTime.Now, "", DateTime.Now, 0).TBC_ESCOLARIDAD);
 
             CboNivelEducativo.DataSource = dvNivelEducativo;
             CboNivelEducativo.DataBind();
@@ -166,5 +212,14 @@ namespace MyMainApp
             CboInstitucion.DataSource = dvInstitucion;
             CboInstitucion.DataBind();
         }
+
+        protected void BtnGuardarDatoGeneral_Click(object sender, EventArgs e)
+        {
+           /* CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
+            objResultado = objAspirante.Actualizacion(nit, nombres, apellidos, Convert.ToDateTime(fechaNacimiento), 'X',
+             "", "", "", email, "", nit, 'P', Convert.ToInt32(perfil), 0, 0, 0, 0, 0, 0, nit, "", "", "", nit,
+             TipoActualizacion.Adicionar);*/
+        }
+
     }
 }
