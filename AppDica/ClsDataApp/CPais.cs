@@ -55,81 +55,82 @@ namespace ClsDataApp
             int OpcionConsulta, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             {
-            DataQuery objResultado = new DataQuery();
-            try
-            {
-                string StrCommand = "";
-
-                switch (OpcionActualizacion)
+                DataQuery objResultado = new DataQuery();
+                try
                 {
-                    case TipoActualizacion.Adicionar:
-                        StrCommand = " ";
-                        break;
-                    case TipoActualizacion.Actualizar:
-                        StrCommand = " ";
-                        break;
-                    case TipoActualizacion.Eliminar:
-                        StrCommand = " ";
-                        break;
-                    case TipoActualizacion.No_Definida:
-                        objResultado.CodigoError = -1;
-                        objResultado.MensajeError = "Opcion de Actualizacion No Definida. Objeto COpcionesSistemas. Metodo Actualizacion";
-                        //return objResultado;
-                        break;
-                }
+                    string StrCommand = "";
 
-                ObjConnection = new SqlConnection(_ConexionData);
+                    switch (OpcionActualizacion)
+                    {
+                        case TipoActualizacion.Adicionar:
+                            StrCommand = " ";
+                            break;
+                        case TipoActualizacion.Actualizar:
+                            StrCommand = " ";
+                            break;
+                        case TipoActualizacion.Eliminar:
+                            StrCommand = " ";
+                            break;
+                        case TipoActualizacion.No_Definida:
+                            objResultado.CodigoError = -1;
+                            objResultado.MensajeError = "Opcion de Actualizacion No Definida. Objeto COpcionesSistemas. Metodo Actualizacion";
+                            //return objResultado;
+                            break;
+                    }
 
-                ObjCommand = new SqlCommand(StrCommand, ObjConnection);
-                ObjParam = new SqlParameter();
-                ObjCommand.CommandType = CommandType.StoredProcedure;
+                    ObjConnection = new SqlConnection(_ConexionData);
 
-                if (OpcionActualizacion == TipoActualizacion.Adicionar)
-                {
-                    ObjParam = ObjCommand.Parameters.Add("@ID", SqlDbType.Int, 0);
+                    ObjCommand = new SqlCommand(StrCommand, ObjConnection);
+                    ObjParam = new SqlParameter();
+                    ObjCommand.CommandType = CommandType.StoredProcedure;
+
+                    if (OpcionActualizacion == TipoActualizacion.Adicionar)
+                    {
+                        ObjParam = ObjCommand.Parameters.Add("@ID", SqlDbType.Int, 0);
+                        ObjParam.Direction = ParameterDirection.Output;
+                    }
+                    else
+                    {
+                        ObjCommand.Parameters.AddWithValue("@ID", Id);
+                    }
+                    ObjCommand.Parameters.AddWithValue("@DS_PAIS", Pais);
+                    ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
+                    ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
+
+                    ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);
                     ObjParam.Direction = ParameterDirection.Output;
-                }
-                else
-                {
-                    ObjCommand.Parameters.AddWithValue("@ID", Id);
-                }
-                ObjCommand.Parameters.AddWithValue("@DS_PAIS", Pais);
-                ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
-                ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
-                ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);
-                ObjParam.Direction = ParameterDirection.Output;
+                    ObjParam = ObjCommand.Parameters.Add("@NumeroError", SqlDbType.Decimal);
+                    ObjParam.Precision = 38;
+                    ObjParam.Scale = 0;
+                    ObjParam.Direction = ParameterDirection.Output;
 
-                ObjParam = ObjCommand.Parameters.Add("@NumeroError", SqlDbType.Decimal);
-                ObjParam.Precision = 38;
-                ObjParam.Scale = 0;
-                ObjParam.Direction = ParameterDirection.Output;
+                    ObjParam = ObjCommand.Parameters.Add("@MensajeError", SqlDbType.NVarChar, 4000);
+                    ObjParam.Direction = ParameterDirection.Output;
 
-                ObjParam = ObjCommand.Parameters.Add("@MensajeError", SqlDbType.NVarChar, 4000);
-                ObjParam.Direction = ParameterDirection.Output;
+                    ObjConnection.Open();
+                    ObjCommand.ExecuteNonQuery();
 
-                ObjConnection.Open();
-                ObjCommand.ExecuteNonQuery();
+                    objResultado.CodigoAuxiliar = (object)ObjCommand.Parameters["@ID"].Value;
+                    objResultado.FilasAfectadas = (int)ObjCommand.Parameters["@FILAS_AFECTADAS"].Value;
+                    objResultado.CodigoError = (decimal)ObjCommand.Parameters["@NumeroError"].Value;
+                    objResultado.MensajeError = (string)ObjCommand.Parameters["@MensajeError"].Value;
 
-                objResultado.CodigoAuxiliar = (object)ObjCommand.Parameters["@ID"].Value;
-                objResultado.FilasAfectadas = (int)ObjCommand.Parameters["@FILAS_AFECTADAS"].Value;
-                objResultado.CodigoError = (decimal)ObjCommand.Parameters["@NumeroError"].Value;
-                objResultado.MensajeError = (string)ObjCommand.Parameters["@MensajeError"].Value;
-
-                ObjConnection.Close();
-
-                if (ObjConnection.State != ConnectionState.Closed)
-                {
                     ObjConnection.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                objResultado.CodigoError = -1;
-                objResultado.MensajeError = ex.Message;
-            }
 
-            return objResultado;
+                    if (ObjConnection.State != ConnectionState.Closed)
+                    {
+                        ObjConnection.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    objResultado.CodigoError = -1;
+                    objResultado.MensajeError = ex.Message;
+                }
+
+                return objResultado;
+            }
         }
     }
 }

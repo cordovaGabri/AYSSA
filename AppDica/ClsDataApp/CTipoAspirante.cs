@@ -16,7 +16,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public DS_TBC Detalle(int Id, string TipoAspirante, string Descripcion,string Estado,
+        public DS_TBC Detalle(int Id, string TipoAspirante, string Descripcion,char Estado,
            string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
 
@@ -58,7 +58,7 @@ namespace ClsDataApp
             return objDataSet;
         }
 
-        public DataQuery Actualizacion(string Id, string TipoAspirante, string Descripcion, string Estado,
+        public DataQuery Actualizacion(string Id, string TipoAspirante, string Descripcion, char Estado,
             string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
 

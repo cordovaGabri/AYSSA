@@ -61,8 +61,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAspirante.cs" />
+    <Compile Include="CCategoriaHabilidad.cs" />
+    <Compile Include="CCentroEscolar.cs" />
     <Compile Include="CDepartamento.cs" />
+    <Compile Include="CDestreza.cs" />
+    <Compile Include="CDocumento.cs" />
+    <Compile Include="CEscolaridad.cs" />
+    <Compile Include="CHabilidadConocimiento.cs" />
     <Compile Include="CMunicipio.cs" />
+    <Compile Include="CNivelConocimiento.cs" />
+    <Compile Include="COpcionAcademica.cs" />
+    <Compile Include="CPais.cs" />
     <Compile Include="CSqlvars.cs" />
     <Compile Include="CTipoAspirante.cs" />
     <Compile Include="CTituloAcademico.cs" />
