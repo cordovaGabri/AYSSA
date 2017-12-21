@@ -112,13 +112,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control TextBox4.
+        /// Control TextFechNac.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox TextFechNac;
         
         /// <summary>
         /// Control Label5.
@@ -130,13 +130,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// Control TextBox5.
+        /// Control TextEdad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox TextEdad;
         
         /// <summary>
         /// Control Label4.
@@ -148,13 +148,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// Control TextBox6.
+        /// Control TextTelCasa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox TextTelCasa;
         
         /// <summary>
         /// Control Label41.
@@ -166,13 +166,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label41;
         
         /// <summary>
-        /// Control TextBox25.
+        /// Control TextTelCel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox25;
+        protected global::System.Web.UI.WebControls.TextBox TextTelCel;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// Control Label6.
@@ -184,13 +193,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control TextNit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TextNit;
         
         /// <summary>
         /// Control Label29.
@@ -202,13 +211,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label29;
         
         /// <summary>
-        /// Control TextBox20.
+        /// Control TextDui.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox20;
+        protected global::System.Web.UI.WebControls.TextBox TextDui;
         
         /// <summary>
         /// Control Label30.
@@ -220,13 +229,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label30;
         
         /// <summary>
-        /// Control TextBox21.
+        /// Control TextEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox21;
+        protected global::System.Web.UI.WebControls.TextBox TextEmail;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// Control Label7.
@@ -238,13 +256,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// Control RadioButtonList1.
+        /// Control RadioSexo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioSexo;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// Control Label31.
@@ -256,13 +283,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label31;
         
         /// <summary>
-        /// Control TextBox34.
+        /// Control TextTipoAspirante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox34;
+        protected global::System.Web.UI.WebControls.TextBox TextTipoAspirante;
         
         /// <summary>
         /// Control Label8.
@@ -292,13 +319,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label26;
         
         /// <summary>
-        /// Control TextBox17.
+        /// Control TextDiscapacidad1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox17;
+        protected global::System.Web.UI.WebControls.TextBox TextDiscapacidad1;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// Control Label32.
@@ -310,13 +346,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label32;
         
         /// <summary>
-        /// Control TextBox22.
+        /// Control TextDiscapacidad2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox22;
+        protected global::System.Web.UI.WebControls.TextBox TextDiscapacidad2;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
         /// Control Label34.
@@ -328,13 +373,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label34;
         
         /// <summary>
-        /// Control TextBox23.
+        /// Control TextDiscapacidad3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox23;
+        protected global::System.Web.UI.WebControls.TextBox TextDiscapacidad3;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
         
         /// <summary>
         /// Control Label38.
@@ -400,13 +454,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label18;
         
         /// <summary>
-        /// Control TextBox13.
+        /// Control TextDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox TextDireccion;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
         /// Control Panel2.
@@ -436,13 +499,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label15;
         
         /// <summary>
-        /// Control TextBox7.
+        /// Control TextNombreR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox TextNombreR;
         
         /// <summary>
         /// Control Label16.
@@ -454,13 +517,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label16;
         
         /// <summary>
-        /// Control TextBox10.
+        /// Control TextApellidoR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox TextApellidoR;
         
         /// <summary>
         /// Control Label24.
@@ -472,13 +535,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label24;
         
         /// <summary>
-        /// Control RadioButtonList3.
+        /// Control RadioSexoR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioSexoR;
         
         /// <summary>
         /// Control Label35.
@@ -490,13 +553,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label35;
         
         /// <summary>
-        /// Control TextBox14.
+        /// Control TextFechNacR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox TextFechNacR;
         
         /// <summary>
         /// Control Label10.
@@ -508,13 +571,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// Control TextBox8.
+        /// Control TextDuiR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox TextDuiR;
         
         /// <summary>
         /// Control Label13.
@@ -526,13 +589,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// Control TextBox11.
+        /// Control TextNitR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox TextNitR;
         
         /// <summary>
         /// Control Label11.
@@ -544,13 +607,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// Control TextBox9.
+        /// Control TextEmailR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox TextEmailR;
         
         /// <summary>
         /// Control Label14.
@@ -562,13 +625,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label14;
         
         /// <summary>
-        /// Control TextBox12.
+        /// Control TextTelR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox TextTelR;
         
         /// <summary>
         /// Control Label25.
@@ -580,13 +643,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label25;
         
         /// <summary>
-        /// Control TextBox24.
+        /// Control TextDireccionR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox24;
+        protected global::System.Web.UI.WebControls.TextBox TextDireccionR;
         
         /// <summary>
         /// Control Label36.
@@ -697,13 +760,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label21;
         
         /// <summary>
-        /// Control TextBox15.
+        /// Control TextOtra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox TextOtra;
         
         /// <summary>
         /// Control Label27.
@@ -733,13 +796,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label39;
         
         /// <summary>
-        /// Control TextBox16.
+        /// Control TextAnioFin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+        protected global::System.Web.UI.WebControls.TextBox TextAnioFin;
         
         /// <summary>
         /// Control Button4.
@@ -958,13 +1021,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label40;
         
         /// <summary>
-        /// Control TextBox18.
+        /// Control TextDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox18;
+        protected global::System.Web.UI.WebControls.TextBox TextDescripcion;
         
         /// <summary>
         /// Control Button9.

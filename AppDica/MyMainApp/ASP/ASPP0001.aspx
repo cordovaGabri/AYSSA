@@ -42,60 +42,63 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label1" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TxtNombre" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtNombre" readonly runat="server"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TxtApellido" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtApellido" readonly runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label2" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox4" runat="server" readonly TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextFechNac" runat="server" readonly TextMode="Date"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EDAD:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox5" runat="server" readonly></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextEdad" runat="server" readonly></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label4" runat="server" Text="TELÉFONO (CASA):" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox6" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextTelCasa" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label41" runat="server" Text="TELÉFONO (CELULAR):" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox25" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextTelCel" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextTelCel" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Telefono Celular</asp:RequiredFieldValidator>
                                 </div>
                                 </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox1" runat="server" readonly></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextNit" runat="server" readonly></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label29" runat="server" Text="DUI:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox20" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDui" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label30" runat="server" Text="EMAIL:" Font-Bold="True" readonly></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox21" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextEmail" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar email</asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label7" runat="server" Text="SEXO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                                    <asp:RadioButtonList ID="RadioSexo" runat="server" RepeatDirection="Horizontal">
                                         <asp:ListItem Value="F">&nbsp;FEMENINO&nbsp;&nbsp;&nbsp;</asp:ListItem>
                                         <asp:ListItem Value="M">&nbsp;MASCULINO</asp:ListItem>
                                     </asp:RadioButtonList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label31" runat="server" Text="TIPO ASPIRANTE:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox34" runat="server" readonly></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextTipoAspirante" runat="server" readonly></asp:TextBox>
                                 </div>
                                 </div>
                                 <div class="form-group">
@@ -106,17 +109,20 @@
                                 </div>
                                     <asp:Label class="control-label  col-sm-3" ID="Label26" runat="server" Font-Bold="True" Text="DISCAPACIDAD 1:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox17" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDiscapacidad1" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextDiscapacidad1" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Discapacidad 1</asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label32" runat="server" Font-Bold="True" Text="DISCAPACIDAD 2:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox22" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDiscapacidad2" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextDiscapacidad2" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Discapacidad 2</asp:RequiredFieldValidator>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label34" runat="server" Font-Bold="True" Text="DISCAPACIDAD 3:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox23" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDiscapacidad3" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextDiscapacidad3" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Discapacidad 3</asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             
@@ -142,7 +148,8 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label18" runat="server" Font-Bold="True" Text="DIRECCIÓN:"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox class="form-control" ID="TextBox13" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDireccion" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextDireccion" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Direccion</asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <%-- representante legal--%>
@@ -155,50 +162,50 @@
                                 <div class="form-group">
                                     <asp:Label class="control-label  col-sm-2" ID="Label15" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox7" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextNombreR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                     </div>
                                     <asp:Label class="control-label  col-sm-3" ID="Label16" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox10" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextApellidoR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label24" runat="server" Text="SEXO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:RadioButtonList ID="RadioButtonList3" runat="server" RepeatDirection="Horizontal">
+                                    <asp:RadioButtonList ID="RadioSexoR" runat="server" RepeatDirection="Horizontal">
                                         <asp:ListItem Value="F">&nbsp;FEMENINO&nbsp;&nbsp;&nbsp;</asp:ListItem>
                                         <asp:ListItem Value="M">&nbsp;MASCULINO</asp:ListItem>
                                     </asp:RadioButtonList>
                                 </div>
                                     <asp:Label class="control-label  col-sm-3" ID="Label35" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox14" runat="server" TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextFechNacR" runat="server" TextMode="Date" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                                  </div>
                                 <div class="form-group">
                                     <asp:Label class="control-label  col-sm-2" ID="Label10" runat="server" Text="DUI:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox8" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextDuiR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                     </div>
                                     <asp:Label class="control-label  col-sm-3" ID="Label13" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox11" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextNitR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <asp:Label class="control-label  col-sm-2" ID="Label11" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox9" runat="server" TextMode="Email"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextEmailR" runat="server" TextMode="Email" AutoCompleteType="Disabled"></asp:TextBox>
                                     </div>
                                     <asp:Label class="control-label  col-sm-3" ID="Label14" runat="server" Text="TELÉFONO:" Font-Bold="True"></asp:Label>
                                     <div class="col-md-3">
-                                        <asp:TextBox class="form-control" ID="TextBox12" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" ID="TextTelR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label25" runat="server" Font-Bold="True" Text="DIRECCIÓN:"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox class="form-control" ID="TextBox24" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDireccionR" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                             </div>
                                 <div class="form-group">
@@ -211,7 +218,7 @@
                             </asp:Panel>
                             <br />
                             <div align="center">
-                                <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="GUARDAR" />&nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary"/>
+                                <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="GUARDAR" />&nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False"/>
                             </div>
                             <br />
                         </asp:Panel>
@@ -241,7 +248,7 @@
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label21" runat="server" Font-Bold="True" Text="OTRA:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox15" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextOtra" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -252,7 +259,7 @@
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label39" runat="server" Font-Bold="True" Text="AÑO DE FINALIZACION:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox16" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextAnioFin" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                             </div>
                            
@@ -369,7 +376,7 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label40" runat="server" Font-Bold="True" Text="DESCRIPCION:"></asp:Label>
                                 <div class="col-md-8">
-                                    <asp:TextBox class="form-control" ID="TextBox18" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TextDescripcion" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                             </div>
                             <div align="center">
