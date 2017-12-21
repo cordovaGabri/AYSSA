@@ -61,10 +61,10 @@ namespace MyMainApp
                 _DataSistema.CPerfilusuario = dvUsuario.Table.Rows[0]["ID_PERFIL_USUARIO"].ToString();
                 _DataSistema.PerfilUsuario = dvUsuario.Table.Rows[0]["DS_NOMBRE_PERFIL"].ToString();
                 _DataSistema.EstadoUsuario = dvUsuario.Table.Rows[0]["CD_ESTADO_USUARIO"].ToString();
-              /*  if (_DataSistema.EstadoUsuario == "A")
-                {*/
+                if (_DataSistema.EstadoUsuario == "A")
+                { 
                     resultado = true;
-              //  }
+                }
             }
             return resultado;
         }

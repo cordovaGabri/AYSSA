@@ -19,7 +19,10 @@ namespace MyMainApp
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
-            FillCboTipoAspitante();
+            if (!IsPostBack)
+            {
+                FillCboTipoAspitante();
+            }
         }
 
         protected void BtnInicioRegistro_Click(object sender, EventArgs e)
@@ -45,12 +48,17 @@ namespace MyMainApp
                 try
                 {
 
-                    objResultado = objUsuario.Actualizacion(nit, nombres, password, perfil,
-            email, 'P', nit, TipoActualizacion.Adicionar);
+                    objResultado = objUsuario.Actualizacion(nit, nombres+" "+apellidos, password, perfil,
+            email, 'A', nit, TipoActualizacion.Adicionar);
 
                     if (objResultado.CodigoError == 0)
                     {
-                        DespliegaMensaje("Usuario y Contraseña enviado al correo");
+                        CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
+                        objResultado = objAspirante.Actualizacion(nit,nombres, apellidos, Convert.ToDateTime(fechaNacimiento), 'X',
+                         "", "", "", email, "", nit, 'P', Convert.ToInt32(perfil), 0, 0, 0, 0, 0, 0, nit, "", "", "", nit,
+                         TipoActualizacion.Adicionar);
+                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                      //  DespliegaMensaje("Usuario y Contraseña enviado al correo");
                     }
                     else
                     {
@@ -74,7 +82,7 @@ namespace MyMainApp
             bool resultado = true;
             CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
             DataView dvAspirante = new DataView(objAspirante.Detalle(Nit, "", "", Convert.ToDateTime(FechaNacimiento), 'X',
-           "", "", "", "", Nit, 'X',IdTipoAspirante, 0, 0, 0, 0, 0, "", DateTime.Today, "", DateTime.Today, 2).TB_ASPIRANTE);
+           "","", "", "", "", Nit, 'X',IdTipoAspirante, 0, 0, 0, 0 ,0,0, "","","","","", DateTime.Today, "", DateTime.Today, 2).TB_ASPIRANTE);
             if (dvAspirante.Count > 0)
             {
                 resultado = false;

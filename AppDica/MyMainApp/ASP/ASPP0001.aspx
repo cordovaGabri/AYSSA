@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                             <%-- representante legal--%>
-                            <asp:Panel ID="Panel2" runat="server">
+                            <asp:Panel ID="Panel2" runat="server" Visible="False">
                                 <div align="center">
                                     <%--inicio titulo 2--%>
                                     <asp:Label ID="LblTitulo0" runat="server" Font-Bold="True" Font-Size="14pt" Text="DATOS REPRESENTANTE LEGAL"></asp:Label>
