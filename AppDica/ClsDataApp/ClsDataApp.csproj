@@ -65,8 +65,12 @@
     <Compile Include="CCentroEscolar.cs" />
     <Compile Include="CDepartamento.cs" />
     <Compile Include="CDestreza.cs" />
+    <Compile Include="CDestrezaAspirante.cs" />
     <Compile Include="CDocumento.cs" />
+    <Compile Include="CDocumentoAspirante.cs" />
     <Compile Include="CEscolaridad.cs" />
+    <Compile Include="CEscolaridadAspirante.cs" />
+    <Compile Include="CHabilidadAspirante.cs" />
     <Compile Include="CHabilidadConocimiento.cs" />
     <Compile Include="CMunicipio.cs" />
     <Compile Include="CNivelConocimiento.cs" />
