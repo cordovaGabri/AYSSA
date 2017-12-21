@@ -12,7 +12,7 @@
   <xs:element name="DS_TB_ASP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_TB_ASP" msprop:Generator_UserDSName="DS_TB_ASP">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TB_ASPIRANTE" msprop:Generator_TableClassName="TB_ASPIRANTEDataTable" msprop:Generator_TableVarName="tableTB_ASPIRANTE" msprop:Generator_RowChangedName="TB_ASPIRANTERowChanged" msprop:Generator_TablePropName="TB_ASPIRANTE" msprop:Generator_RowDeletingName="TB_ASPIRANTERowDeleting" msprop:Generator_RowChangingName="TB_ASPIRANTERowChanging" msprop:Generator_RowEvHandlerName="TB_ASPIRANTERowChangeEventHandler" msprop:Generator_RowDeletedName="TB_ASPIRANTERowDeleted" msprop:Generator_RowClassName="TB_ASPIRANTERow" msprop:Generator_UserTableName="TB_ASPIRANTE" msprop:Generator_RowEvArgName="TB_ASPIRANTERowChangeEvent">
+        <xs:element name="TB_ASPIRANTE" msprop:Generator_TableClassName="TB_ASPIRANTEDataTable" msprop:Generator_TableVarName="tableTB_ASPIRANTE" msprop:Generator_TablePropName="TB_ASPIRANTE" msprop:Generator_RowDeletingName="TB_ASPIRANTERowDeleting" msprop:Generator_RowChangingName="TB_ASPIRANTERowChanging" msprop:Generator_RowEvHandlerName="TB_ASPIRANTERowChangeEventHandler" msprop:Generator_RowDeletedName="TB_ASPIRANTERowDeleted" msprop:Generator_UserTableName="TB_ASPIRANTE" msprop:Generator_RowChangedName="TB_ASPIRANTERowChanged" msprop:Generator_RowEvArgName="TB_ASPIRANTERowChangeEvent" msprop:Generator_RowClassName="TB_ASPIRANTERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
@@ -21,10 +21,68 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TB_ESCOLARIDAD" msprop:Generator_TableClassName="TB_ESCOLARIDADDataTable" msprop:Generator_TableVarName="tableTB_ESCOLARIDAD" msprop:Generator_TablePropName="TB_ESCOLARIDAD" msprop:Generator_RowDeletingName="TB_ESCOLARIDADRowDeleting" msprop:Generator_RowChangingName="TB_ESCOLARIDADRowChanging" msprop:Generator_RowEvHandlerName="TB_ESCOLARIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="TB_ESCOLARIDADRowDeleted" msprop:Generator_UserTableName="TB_ESCOLARIDAD" msprop:Generator_RowChangedName="TB_ESCOLARIDADRowChanged" msprop:Generator_RowEvArgName="TB_ESCOLARIDADRowChangeEvent" msprop:Generator_RowClassName="TB_ESCOLARIDADRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_ESCOLARIDAD" msprop:Generator_ColumnVarNameInTable="columnDS_ESCOLARIDAD" msprop:Generator_ColumnPropNameInRow="DS_ESCOLARIDAD" msprop:Generator_ColumnPropNameInTable="DS_ESCOLARIDADColumn" msprop:Generator_UserColumnName="DS_ESCOLARIDAD" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CARRERA" msprop:Generator_ColumnVarNameInTable="columnDS_CARRERA" msprop:Generator_ColumnPropNameInRow="DS_CARRERA" msprop:Generator_ColumnPropNameInTable="DS_CARRERAColumn" msprop:Generator_UserColumnName="DS_CARRERA" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CENTRO_ESCOLAR" msprop:Generator_ColumnVarNameInTable="columnDS_CENTRO_ESCOLAR" msprop:Generator_ColumnPropNameInRow="DS_CENTRO_ESCOLAR" msprop:Generator_ColumnPropNameInTable="DS_CENTRO_ESCOLARColumn" msprop:Generator_UserColumnName="DS_CENTRO_ESCOLAR" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_PAIS" msprop:Generator_ColumnVarNameInTable="columnDS_PAIS" msprop:Generator_ColumnPropNameInRow="DS_PAIS" msprop:Generator_ColumnPropNameInTable="DS_PAISColumn" msprop:Generator_UserColumnName="DS_PAIS" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_OTRA" msprop:Generator_ColumnVarNameInTable="columnDS_OTRA" msprop:Generator_ColumnPropNameInRow="DS_OTRA" msprop:Generator_ColumnPropNameInTable="DS_OTRAColumn" msprop:Generator_UserColumnName="DS_OTRA" type="xs:string" minOccurs="0" />
+              <xs:element name="NM_ANIO_FIN" msprop:Generator_ColumnVarNameInTable="columnNM_ANIO_FIN" msprop:Generator_ColumnPropNameInRow="NM_ANIO_FIN" msprop:Generator_ColumnPropNameInTable="NM_ANIO_FINColumn" msprop:Generator_UserColumnName="NM_ANIO_FIN" type="xs:string" minOccurs="0" />
+              <xs:element name="NM_PROMEDIO_NOTA" msprop:Generator_ColumnVarNameInTable="columnNM_PROMEDIO_NOTA" msprop:Generator_ColumnPropNameInRow="NM_PROMEDIO_NOTA" msprop:Generator_ColumnPropNameInTable="NM_PROMEDIO_NOTAColumn" msprop:Generator_UserColumnName="NM_PROMEDIO_NOTA" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_HABILIDAD" msprop:Generator_TableClassName="TB_HABILIDADDataTable" msprop:Generator_TableVarName="tableTB_HABILIDAD" msprop:Generator_TablePropName="TB_HABILIDAD" msprop:Generator_RowDeletingName="TB_HABILIDADRowDeleting" msprop:Generator_RowChangingName="TB_HABILIDADRowChanging" msprop:Generator_RowEvHandlerName="TB_HABILIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="TB_HABILIDADRowDeleted" msprop:Generator_UserTableName="TB_HABILIDAD" msprop:Generator_RowChangedName="TB_HABILIDADRowChanged" msprop:Generator_RowEvArgName="TB_HABILIDADRowChangeEvent" msprop:Generator_RowClassName="TB_HABILIDADRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_HABILIDAD_CONOCIMIENTO" msprop:Generator_ColumnVarNameInTable="columnDS_HABILIDAD_CONOCIMIENTO" msprop:Generator_ColumnPropNameInRow="DS_HABILIDAD_CONOCIMIENTO" msprop:Generator_ColumnPropNameInTable="DS_HABILIDAD_CONOCIMIENTOColumn" msprop:Generator_UserColumnName="DS_HABILIDAD_CONOCIMIENTO" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CATEGORIA_HABILIDAD" msprop:Generator_ColumnVarNameInTable="columnDS_CATEGORIA_HABILIDAD" msprop:Generator_ColumnPropNameInRow="DS_CATEGORIA_HABILIDAD" msprop:Generator_ColumnPropNameInTable="DS_CATEGORIA_HABILIDADColumn" msprop:Generator_UserColumnName="DS_CATEGORIA_HABILIDAD" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_NIVEL_CONOCIMIENTO" msprop:Generator_ColumnVarNameInTable="columnDS_NIVEL_CONOCIMIENTO" msprop:Generator_ColumnPropNameInRow="DS_NIVEL_CONOCIMIENTO" msprop:Generator_ColumnPropNameInTable="DS_NIVEL_CONOCIMIENTOColumn" msprop:Generator_UserColumnName="DS_NIVEL_CONOCIMIENTO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DESTREZA" msprop:Generator_TableClassName="TB_DESTREZADataTable" msprop:Generator_TableVarName="tableTB_DESTREZA" msprop:Generator_TablePropName="TB_DESTREZA" msprop:Generator_RowDeletingName="TB_DESTREZARowDeleting" msprop:Generator_RowChangingName="TB_DESTREZARowChanging" msprop:Generator_RowEvHandlerName="TB_DESTREZARowChangeEventHandler" msprop:Generator_RowDeletedName="TB_DESTREZARowDeleted" msprop:Generator_UserTableName="TB_DESTREZA" msprop:Generator_RowChangedName="TB_DESTREZARowChanged" msprop:Generator_RowEvArgName="TB_DESTREZARowChangeEvent" msprop:Generator_RowClassName="TB_DESTREZARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_DESTREZA" msprop:Generator_ColumnVarNameInTable="columnDS_DESTREZA" msprop:Generator_ColumnPropNameInRow="DS_DESTREZA" msprop:Generator_ColumnPropNameInTable="DS_DESTREZAColumn" msprop:Generator_UserColumnName="DS_DESTREZA" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TB_DOCUMENTO" msprop:Generator_TableClassName="TB_DOCUMENTODataTable" msprop:Generator_TableVarName="tableTB_DOCUMENTO" msprop:Generator_TablePropName="TB_DOCUMENTO" msprop:Generator_RowDeletingName="TB_DOCUMENTORowDeleting" msprop:Generator_RowChangingName="TB_DOCUMENTORowChanging" msprop:Generator_RowEvHandlerName="TB_DOCUMENTORowChangeEventHandler" msprop:Generator_RowDeletedName="TB_DOCUMENTORowDeleted" msprop:Generator_UserTableName="TB_DOCUMENTO" msprop:Generator_RowChangedName="TB_DOCUMENTORowChanged" msprop:Generator_RowEvArgName="TB_DOCUMENTORowChangeEvent" msprop:Generator_RowClassName="TB_DOCUMENTORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_DOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnDS_DOCUMENTO" msprop:Generator_ColumnPropNameInRow="DS_DOCUMENTO" msprop:Generator_ColumnPropNameInTable="DS_DOCUMENTOColumn" msprop:Generator_UserColumnName="DS_DOCUMENTO" type="xs:string" minOccurs="0" />
+              <xs:element name="URL_DOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnURL_DOCUMENTO" msprop:Generator_ColumnPropNameInRow="URL_DOCUMENTO" msprop:Generator_ColumnPropNameInTable="URL_DOCUMENTOColumn" msprop:Generator_UserColumnName="URL_DOCUMENTO" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_TIPO_DOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnDS_TIPO_DOCUMENTO" msprop:Generator_ColumnPropNameInRow="DS_TIPO_DOCUMENTO" msprop:Generator_ColumnPropNameInTable="DS_TIPO_DOCUMENTOColumn" msprop:Generator_UserColumnName="DS_TIPO_DOCUMENTO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="TB_ASPIRANTEKey1">
       <xs:selector xpath=".//mstns:TB_ASPIRANTE" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TB_ESCOLARIDADKey1">
+      <xs:selector xpath=".//mstns:TB_ESCOLARIDAD" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TB_HABILIDADKey1">
+      <xs:selector xpath=".//mstns:TB_HABILIDAD" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TB_DESTREZAKey1">
+      <xs:selector xpath=".//mstns:TB_DESTREZA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TB_DOCUMENTOKey1">
+      <xs:selector xpath=".//mstns:TB_DOCUMENTO" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
