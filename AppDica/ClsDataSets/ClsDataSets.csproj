@@ -60,10 +60,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DS_TBC.cs">
-      <DependentUpon>DS_TBC.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DS_TBC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,8 +86,8 @@
       <DependentUpon>DS_TBC.xsd</DependentUpon>
     </Content>
     <None Include="DS_TBC.xsd">
-      <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DS_TBC.Designer.cs</LastGenOutput>
     </None>
     <Content Include="DS_TBC.xss">

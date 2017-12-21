@@ -15,7 +15,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TBC Detalle(int Id, string Categoria, string Descripcion, string Estado,
+        public ClsDataSets.DS_TBC Detalle(int Id, string Categoria, string Descripcion, char Estado,
              string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TBC objDataSet = new ClsDataSets.DS_TBC();
@@ -52,7 +52,7 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-        public DataQuery Actualizacion(int Id, string Categoria, string Descripcion, string Estado,
+        public DataQuery Actualizacion(int Id, string Categoria, string Descripcion, char Estado,
             string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();

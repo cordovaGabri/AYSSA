@@ -36,17 +36,17 @@
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label37" runat="server" Text="ESTADO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox19" runat="server" ReadOnly></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtEstado" runat="server" ReadOnly></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label1" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox2" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtNombre" runat="server"></asp:TextBox>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextBox3" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtApellido" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -101,7 +101,7 @@
                                 <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label8" runat="server" Text="TRATAMIENTO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboTratamiento" runat="server" class="form-control" DataTextField="DS_TITULO" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                                     <asp:Label class="control-label  col-sm-3" ID="Label26" runat="server" Font-Bold="True" Text="DISCAPACIDAD 1:"></asp:Label>
@@ -119,15 +119,23 @@
                                     <asp:TextBox class="form-control" ID="TextBox23" runat="server"></asp:TextBox>
                                 </div>
                             </div>
+                            
+                            <div class="form-group">
+                                <asp:Label class="control-label  col-sm-2" ID="Label38" runat="server" Text="PAIS:" Font-Bold="True"></asp:Label>
+                                <div class="col-md-3">
+                                     <asp:DropDownList ID="CboPais" runat="server" class="form-control" DataTextField="DS_PAIS" DataValueField="ID">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
                              <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label17" runat="server" Font-Bold="True" Text="DEPARTAMENTO:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList2" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboDepartamento" runat="server" class="form-control" DataTextField="DS_DEPARTAMENTO" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label23" runat="server" Font-Bold="True" Text="MUNICIPIO:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList3" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboMunicipio" runat="server" class="form-control" DataTextField="DS_MUNICIPIO" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                             </div>
@@ -196,7 +204,7 @@
                                 <div class="form-group">
                                 <asp:Label class="control-label  col-sm-3" ID="Label36" runat="server" Text="TRATAMIENTO:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList9" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboTratamientoRepresentante" runat="server" class="form-control" DataTextField="DS_TITULO" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                                 </div>
@@ -216,19 +224,19 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label19" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList10" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label28" runat="server" Font-Bold="True" Text="OPCION ACADEMICA:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList8" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboOpcionAcademica" runat="server" class="form-control" DataTextField="DS_CARRERA" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label20" runat="server" Font-Bold="True" Text="INSTITUCION EDUCATIVA:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList4" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboInstitucion" runat="server" class="form-control" DataTextField="DS_CENTRO_ESCOLAR" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label21" runat="server" Font-Bold="True" Text="OTRA:"></asp:Label>
@@ -239,7 +247,7 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label27" runat="server" Font-Bold="True" Text="PAIS:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList11" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboPaisEscolaridad" runat="server" class="form-control" DataTextField="DS_PAIS" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label39" runat="server" Font-Bold="True" Text="AÑO DE FINALIZACION:"></asp:Label>
@@ -275,20 +283,20 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label9" runat="server" Font-Bold="True" Text="CONOCIMIENTO EN:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList5" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboCategoriaHabilidad" runat="server" class="form-control" DataTextField="DS_CATEGORIA_HABILIDAD" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
 
                                 <asp:Label class="control-label  col-sm-2" ID="Label12" runat="server" Font-Bold="True" Text="TIPO DE CONOCIMIENTO:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList6" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboConocimiento" runat="server" class="form-control" DataTextField="DS_HABILIDAD_CONOCIMIENTO" DataValueField="ID">
                                     </asp:DropDownList>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label33" runat="server" Font-Bold="True" Text="NIVEL:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList7" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboNivel" runat="server" class="form-control" DataTextField="DS_NIVEL_CONOCIMIENTO" DataValueField="ID">
                                     </asp:DropDownList>
 
                                 </div>
@@ -315,7 +323,7 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label42" runat="server" Font-Bold="True" Text="DESTREZA:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList14" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboDestreza" runat="server" class="form-control" DataTextField="DS_DESTREZA" DataValueField="ID">
                                     </asp:DropDownList>
 
                                 </div>
@@ -341,7 +349,7 @@
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label43" runat="server" Font-Bold="True" Text="TIPO DOCUMENTO:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="DropDownList15" runat="server" class="form-control">
+                                    <asp:DropDownList ID="CboTipoDocumento" runat="server" class="form-control" DataTextField="DS_TIPO_DOCUMENTO" DataValueField="ID">
                                     </asp:DropDownList>
 
                                 </div>

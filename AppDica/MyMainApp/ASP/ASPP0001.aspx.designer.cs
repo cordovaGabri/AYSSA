@@ -58,13 +58,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label37;
         
         /// <summary>
-        /// Control TextBox19.
+        /// Control TxtEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox19;
+        protected global::System.Web.UI.WebControls.TextBox TxtEstado;
         
         /// <summary>
         /// Control Label1.
@@ -76,13 +76,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control TextBox2.
+        /// Control TxtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TxtNombre;
         
         /// <summary>
         /// Control Label3.
@@ -94,13 +94,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// Control TextBox3.
+        /// Control TxtApellido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox TxtApellido;
         
         /// <summary>
         /// Control Label2.
@@ -274,13 +274,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control CboTratamiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList CboTratamiento;
         
         /// <summary>
         /// Control Label26.
@@ -337,6 +337,24 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.TextBox TextBox23;
         
         /// <summary>
+        /// Control Label38.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label38;
+        
+        /// <summary>
+        /// Control CboPais.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList CboPais;
+        
+        /// <summary>
         /// Control Label17.
         /// </summary>
         /// <remarks>
@@ -346,13 +364,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label17;
         
         /// <summary>
-        /// Control DropDownList2.
+        /// Control CboDepartamento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList CboDepartamento;
         
         /// <summary>
         /// Control Label23.
@@ -364,13 +382,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label23;
         
         /// <summary>
-        /// Control DropDownList3.
+        /// Control CboMunicipio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList CboMunicipio;
         
         /// <summary>
         /// Control Label18.
@@ -580,13 +598,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label36;
         
         /// <summary>
-        /// Control DropDownList9.
+        /// Control CboTratamientoRepresentante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList9;
+        protected global::System.Web.UI.WebControls.DropDownList CboTratamientoRepresentante;
         
         /// <summary>
         /// Control Button1.
@@ -625,13 +643,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
-        /// Control DropDownList10.
+        /// Control CboNivelEducativo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList10;
+        protected global::System.Web.UI.WebControls.DropDownList CboNivelEducativo;
         
         /// <summary>
         /// Control Label28.
@@ -643,13 +661,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label28;
         
         /// <summary>
-        /// Control DropDownList8.
+        /// Control CboOpcionAcademica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList8;
+        protected global::System.Web.UI.WebControls.DropDownList CboOpcionAcademica;
         
         /// <summary>
         /// Control Label20.
@@ -661,13 +679,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label20;
         
         /// <summary>
-        /// Control DropDownList4.
+        /// Control CboInstitucion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList CboInstitucion;
         
         /// <summary>
         /// Control Label21.
@@ -697,13 +715,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label27;
         
         /// <summary>
-        /// Control DropDownList11.
+        /// Control CboPaisEscolaridad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList11;
+        protected global::System.Web.UI.WebControls.DropDownList CboPaisEscolaridad;
         
         /// <summary>
         /// Control Label39.
@@ -769,13 +787,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// Control DropDownList5.
+        /// Control CboCategoriaHabilidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList5;
+        protected global::System.Web.UI.WebControls.DropDownList CboCategoriaHabilidad;
         
         /// <summary>
         /// Control Label12.
@@ -787,13 +805,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// Control DropDownList6.
+        /// Control CboConocimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList6;
+        protected global::System.Web.UI.WebControls.DropDownList CboConocimiento;
         
         /// <summary>
         /// Control Label33.
@@ -805,13 +823,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label33;
         
         /// <summary>
-        /// Control DropDownList7.
+        /// Control CboNivel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList7;
+        protected global::System.Web.UI.WebControls.DropDownList CboNivel;
         
         /// <summary>
         /// Control Button3.
@@ -859,13 +877,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label42;
         
         /// <summary>
-        /// Control DropDownList14.
+        /// Control CboDestreza.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList14;
+        protected global::System.Web.UI.WebControls.DropDownList CboDestreza;
         
         /// <summary>
         /// Control Button7.
@@ -913,13 +931,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label43;
         
         /// <summary>
-        /// Control DropDownList15.
+        /// Control CboTipoDocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList15;
+        protected global::System.Web.UI.WebControls.DropDownList CboTipoDocumento;
         
         /// <summary>
         /// Control Label22.

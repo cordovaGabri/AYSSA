@@ -15,7 +15,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-        public ClsDataSets.DS_TBC Detalle(int Id, string Escolaridad, string Descripcion,string Estado,
+        public ClsDataSets.DS_TBC Detalle(int Id, string Escolaridad, string Descripcion,char Estado,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TBC objDataSet = new ClsDataSets.DS_TBC();

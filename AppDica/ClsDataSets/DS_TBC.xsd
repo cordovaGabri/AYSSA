@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="DS_GLB" targetNamespace="http://tempuri.org/DS_GLB.xsd" xmlns:mstns="http://tempuri.org/DS_GLB.xsd" xmlns="http://tempuri.org/DS_GLB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DS_TBC" targetNamespace="http://tempuri.org/DS_TBC.xsd" xmlns:mstns="http://tempuri.org/DS_TBC.xsd" xmlns="http://tempuri.org/DS_TBC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DS_GLB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_GLB" msprop:Generator_UserDSName="DS_GLB">
+  <xs:element name="DS_TBC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_TBC" msprop:Generator_UserDSName="DS_TBC">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TBC_PERIODO" msprop:Generator_TableClassName="TBC_PERIODODataTable" msprop:Generator_TableVarName="tableTBC_PERIODO" msprop:Generator_RowChangedName="TBC_PERIODORowChanged" msprop:Generator_TablePropName="TBC_PERIODO" msprop:Generator_RowDeletingName="TBC_PERIODORowDeleting" msprop:Generator_RowChangingName="TBC_PERIODORowChanging" msprop:Generator_RowEvHandlerName="TBC_PERIODORowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_PERIODORowDeleted" msprop:Generator_RowClassName="TBC_PERIODORow" msprop:Generator_UserTableName="TBC_PERIODO" msprop:Generator_RowEvArgName="TBC_PERIODORowChangeEvent">
+        <xs:element name="TBC_PERIODO" msprop:Generator_TableClassName="TBC_PERIODODataTable" msprop:Generator_TableVarName="tableTBC_PERIODO" msprop:Generator_TablePropName="TBC_PERIODO" msprop:Generator_RowDeletingName="TBC_PERIODORowDeleting" msprop:Generator_RowChangingName="TBC_PERIODORowChanging" msprop:Generator_RowEvHandlerName="TBC_PERIODORowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_PERIODORowDeleted" msprop:Generator_UserTableName="TBC_PERIODO" msprop:Generator_RowChangedName="TBC_PERIODORowChanged" msprop:Generator_RowEvArgName="TBC_PERIODORowChangeEvent" msprop:Generator_RowClassName="TBC_PERIODORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_EJERCICIO" msprop:Generator_ColumnVarNameInTable="columnID_EJERCICIO" msprop:Generator_ColumnPropNameInRow="ID_EJERCICIO" msprop:Generator_ColumnPropNameInTable="ID_EJERCICIOColumn" msprop:Generator_UserColumnName="ID_EJERCICIO" type="xs:string" />
@@ -21,7 +21,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GLB_COLORES" msprop:Generator_TableClassName="GLB_COLORESDataTable" msprop:Generator_TableVarName="tableGLB_COLORES" msprop:Generator_RowChangedName="GLB_COLORESRowChanged" msprop:Generator_TablePropName="GLB_COLORES" msprop:Generator_RowDeletingName="GLB_COLORESRowDeleting" msprop:Generator_RowChangingName="GLB_COLORESRowChanging" msprop:Generator_RowEvHandlerName="GLB_COLORESRowChangeEventHandler" msprop:Generator_RowDeletedName="GLB_COLORESRowDeleted" msprop:Generator_RowClassName="GLB_COLORESRow" msprop:Generator_UserTableName="GLB_COLORES" msprop:Generator_RowEvArgName="GLB_COLORESRowChangeEvent">
+        <xs:element name="GLB_COLORES" msprop:Generator_TableClassName="GLB_COLORESDataTable" msprop:Generator_TableVarName="tableGLB_COLORES" msprop:Generator_TablePropName="GLB_COLORES" msprop:Generator_RowDeletingName="GLB_COLORESRowDeleting" msprop:Generator_RowChangingName="GLB_COLORESRowChanging" msprop:Generator_RowEvHandlerName="GLB_COLORESRowChangeEventHandler" msprop:Generator_RowDeletedName="GLB_COLORESRowDeleted" msprop:Generator_UserTableName="GLB_COLORES" msprop:Generator_RowChangedName="GLB_COLORESRowChanged" msprop:Generator_RowEvArgName="GLB_COLORESRowChangeEvent" msprop:Generator_RowClassName="GLB_COLORESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CD_COLOR" msprop:Generator_ColumnVarNameInTable="columnCD_COLOR" msprop:Generator_ColumnPropNameInRow="CD_COLOR" msprop:Generator_ColumnPropNameInTable="CD_COLORColumn" msprop:Generator_UserColumnName="CD_COLOR" type="xs:int" minOccurs="0" />
@@ -55,13 +55,85 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TBC_TIPO_ASPIRANTE" msprop:Generator_TableClassName="TBC_TIPO_ASPIRANTEDataTable" msprop:Generator_TableVarName="tableTBC_TIPO_ASPIRANTE" msprop:Generator_RowChangedName="TBC_TIPO_ASPIRANTERowChanged" msprop:Generator_TablePropName="TBC_TIPO_ASPIRANTE" msprop:Generator_RowDeletingName="TBC_TIPO_ASPIRANTERowDeleting" msprop:Generator_RowChangingName="TBC_TIPO_ASPIRANTERowChanging" msprop:Generator_RowEvHandlerName="TBC_TIPO_ASPIRANTERowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_TIPO_ASPIRANTERowDeleted" msprop:Generator_RowClassName="TBC_TIPO_ASPIRANTERow" msprop:Generator_UserTableName="TBC_TIPO_ASPIRANTE" msprop:Generator_RowEvArgName="TBC_TIPO_ASPIRANTERowChangeEvent">
+        <xs:element name="TBC_TIPO_ASPIRANTE" msprop:Generator_TableClassName="TBC_TIPO_ASPIRANTEDataTable" msprop:Generator_TableVarName="tableTBC_TIPO_ASPIRANTE" msprop:Generator_TablePropName="TBC_TIPO_ASPIRANTE" msprop:Generator_RowDeletingName="TBC_TIPO_ASPIRANTERowDeleting" msprop:Generator_RowChangingName="TBC_TIPO_ASPIRANTERowChanging" msprop:Generator_RowEvHandlerName="TBC_TIPO_ASPIRANTERowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_TIPO_ASPIRANTERowDeleted" msprop:Generator_UserTableName="TBC_TIPO_ASPIRANTE" msprop:Generator_RowChangedName="TBC_TIPO_ASPIRANTERowChanged" msprop:Generator_RowEvArgName="TBC_TIPO_ASPIRANTERowChangeEvent" msprop:Generator_RowClassName="TBC_TIPO_ASPIRANTERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
               <xs:element name="DS_TIPO_ASPIRANTE" msprop:Generator_ColumnVarNameInTable="columnDS_TIPO_ASPIRANTE" msprop:Generator_ColumnPropNameInRow="DS_TIPO_ASPIRANTE" msprop:Generator_ColumnPropNameInTable="DS_TIPO_ASPIRANTEColumn" msprop:Generator_UserColumnName="DS_TIPO_ASPIRANTE" type="xs:string" minOccurs="0" />
               <xs:element name="DS_DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDS_DESCRIPCION" msprop:Generator_ColumnPropNameInRow="DS_DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DS_DESCRIPCIONColumn" msprop:Generator_UserColumnName="DS_DESCRIPCION" type="xs:string" minOccurs="0" />
               <xs:element name="CD_ESTADO" msprop:Generator_ColumnVarNameInTable="columnCD_ESTADO" msprop:Generator_ColumnPropNameInRow="CD_ESTADO" msprop:Generator_ColumnPropNameInTable="CD_ESTADOColumn" msprop:Generator_UserColumnName="CD_ESTADO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_PAIS" msprop:Generator_TableClassName="TBC_PAISDataTable" msprop:Generator_TableVarName="tableTBC_PAIS" msprop:Generator_TablePropName="TBC_PAIS" msprop:Generator_RowDeletingName="TBC_PAISRowDeleting" msprop:Generator_RowChangingName="TBC_PAISRowChanging" msprop:Generator_RowEvHandlerName="TBC_PAISRowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_PAISRowDeleted" msprop:Generator_UserTableName="TBC_PAIS" msprop:Generator_RowChangedName="TBC_PAISRowChanged" msprop:Generator_RowEvArgName="TBC_PAISRowChangeEvent" msprop:Generator_RowClassName="TBC_PAISRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_PAIS" msprop:Generator_ColumnVarNameInTable="columnDS_PAIS" msprop:Generator_ColumnPropNameInRow="DS_PAIS" msprop:Generator_ColumnPropNameInTable="DS_PAISColumn" msprop:Generator_UserColumnName="DS_PAIS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_DOCUMENTO" msprop:Generator_TableClassName="TBC_DOCUMENTODataTable" msprop:Generator_TableVarName="tableTBC_DOCUMENTO" msprop:Generator_TablePropName="TBC_DOCUMENTO" msprop:Generator_RowDeletingName="TBC_DOCUMENTORowDeleting" msprop:Generator_RowChangingName="TBC_DOCUMENTORowChanging" msprop:Generator_RowEvHandlerName="TBC_DOCUMENTORowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_DOCUMENTORowDeleted" msprop:Generator_UserTableName="TBC_DOCUMENTO" msprop:Generator_RowChangedName="TBC_DOCUMENTORowChanged" msprop:Generator_RowEvArgName="TBC_DOCUMENTORowChangeEvent" msprop:Generator_RowClassName="TBC_DOCUMENTORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_TIPO_DOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnDS_TIPO_DOCUMENTO" msprop:Generator_ColumnPropNameInRow="DS_TIPO_DOCUMENTO" msprop:Generator_ColumnPropNameInTable="DS_TIPO_DOCUMENTOColumn" msprop:Generator_UserColumnName="DS_TIPO_DOCUMENTO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_DESTREZA" msprop:Generator_TableClassName="TBC_DESTREZADataTable" msprop:Generator_TableVarName="tableTBC_DESTREZA" msprop:Generator_TablePropName="TBC_DESTREZA" msprop:Generator_RowDeletingName="TBC_DESTREZARowDeleting" msprop:Generator_RowChangingName="TBC_DESTREZARowChanging" msprop:Generator_RowEvHandlerName="TBC_DESTREZARowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_DESTREZARowDeleted" msprop:Generator_UserTableName="TBC_DESTREZA" msprop:Generator_RowChangedName="TBC_DESTREZARowChanged" msprop:Generator_RowEvArgName="TBC_DESTREZARowChangeEvent" msprop:Generator_RowClassName="TBC_DESTREZARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_DESTREZA" msprop:Generator_ColumnVarNameInTable="columnDS_DESTREZA" msprop:Generator_ColumnPropNameInRow="DS_DESTREZA" msprop:Generator_ColumnPropNameInTable="DS_DESTREZAColumn" msprop:Generator_UserColumnName="DS_DESTREZA" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_CATEGORIA_HABILIDAD" msprop:Generator_TableClassName="TBC_CATEGORIA_HABILIDADDataTable" msprop:Generator_TableVarName="tableTBC_CATEGORIA_HABILIDAD" msprop:Generator_TablePropName="TBC_CATEGORIA_HABILIDAD" msprop:Generator_RowDeletingName="TBC_CATEGORIA_HABILIDADRowDeleting" msprop:Generator_RowChangingName="TBC_CATEGORIA_HABILIDADRowChanging" msprop:Generator_RowEvHandlerName="TBC_CATEGORIA_HABILIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_CATEGORIA_HABILIDADRowDeleted" msprop:Generator_UserTableName="TBC_CATEGORIA_HABILIDAD" msprop:Generator_RowChangedName="TBC_CATEGORIA_HABILIDADRowChanged" msprop:Generator_RowEvArgName="TBC_CATEGORIA_HABILIDADRowChangeEvent" msprop:Generator_RowClassName="TBC_CATEGORIA_HABILIDADRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CATEGORIA_HABILIDAD" msprop:Generator_ColumnVarNameInTable="columnDS_CATEGORIA_HABILIDAD" msprop:Generator_ColumnPropNameInRow="DS_CATEGORIA_HABILIDAD" msprop:Generator_ColumnPropNameInTable="DS_CATEGORIA_HABILIDADColumn" msprop:Generator_UserColumnName="DS_CATEGORIA_HABILIDAD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_HABILIDAD_CONOCIMIENTO" msprop:Generator_TableClassName="TBC_HABILIDAD_CONOCIMIENTODataTable" msprop:Generator_TableVarName="tableTBC_HABILIDAD_CONOCIMIENTO" msprop:Generator_TablePropName="TBC_HABILIDAD_CONOCIMIENTO" msprop:Generator_RowDeletingName="TBC_HABILIDAD_CONOCIMIENTORowDeleting" msprop:Generator_RowChangingName="TBC_HABILIDAD_CONOCIMIENTORowChanging" msprop:Generator_RowEvHandlerName="TBC_HABILIDAD_CONOCIMIENTORowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_HABILIDAD_CONOCIMIENTORowDeleted" msprop:Generator_UserTableName="TBC_HABILIDAD_CONOCIMIENTO" msprop:Generator_RowChangedName="TBC_HABILIDAD_CONOCIMIENTORowChanged" msprop:Generator_RowEvArgName="TBC_HABILIDAD_CONOCIMIENTORowChangeEvent" msprop:Generator_RowClassName="TBC_HABILIDAD_CONOCIMIENTORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_HABILIDAD_CONOCIMIENTO" msprop:Generator_ColumnVarNameInTable="columnDS_HABILIDAD_CONOCIMIENTO" msprop:Generator_ColumnPropNameInRow="DS_HABILIDAD_CONOCIMIENTO" msprop:Generator_ColumnPropNameInTable="DS_HABILIDAD_CONOCIMIENTOColumn" msprop:Generator_UserColumnName="DS_HABILIDAD_CONOCIMIENTO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_NIVEL_CONOCIMIENTO" msprop:Generator_TableClassName="TBC_NIVEL_CONOCIMIENTODataTable" msprop:Generator_TableVarName="tableTBC_NIVEL_CONOCIMIENTO" msprop:Generator_TablePropName="TBC_NIVEL_CONOCIMIENTO" msprop:Generator_RowDeletingName="TBC_NIVEL_CONOCIMIENTORowDeleting" msprop:Generator_RowChangingName="TBC_NIVEL_CONOCIMIENTORowChanging" msprop:Generator_RowEvHandlerName="TBC_NIVEL_CONOCIMIENTORowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_NIVEL_CONOCIMIENTORowDeleted" msprop:Generator_UserTableName="TBC_NIVEL_CONOCIMIENTO" msprop:Generator_RowChangedName="TBC_NIVEL_CONOCIMIENTORowChanged" msprop:Generator_RowEvArgName="TBC_NIVEL_CONOCIMIENTORowChangeEvent" msprop:Generator_RowClassName="TBC_NIVEL_CONOCIMIENTORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_NIVEL_CONOCIMIENTO" msprop:Generator_ColumnVarNameInTable="columnDS_NIVEL_CONOCIMIENTO" msprop:Generator_ColumnPropNameInRow="DS_NIVEL_CONOCIMIENTO" msprop:Generator_ColumnPropNameInTable="DS_NIVEL_CONOCIMIENTOColumn" msprop:Generator_UserColumnName="DS_NIVEL_CONOCIMIENTO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_ESCOLARIDAD" msprop:Generator_TableClassName="TBC_ESCOLARIDADDataTable" msprop:Generator_TableVarName="tableTBC_ESCOLARIDAD" msprop:Generator_TablePropName="TBC_ESCOLARIDAD" msprop:Generator_RowDeletingName="TBC_ESCOLARIDADRowDeleting" msprop:Generator_RowChangingName="TBC_ESCOLARIDADRowChanging" msprop:Generator_RowEvHandlerName="TBC_ESCOLARIDADRowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_ESCOLARIDADRowDeleted" msprop:Generator_UserTableName="TBC_ESCOLARIDAD" msprop:Generator_RowChangedName="TBC_ESCOLARIDADRowChanged" msprop:Generator_RowEvArgName="TBC_ESCOLARIDADRowChangeEvent" msprop:Generator_RowClassName="TBC_ESCOLARIDADRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_ESCOLARIDAD" msprop:Generator_ColumnVarNameInTable="columnDS_ESCOLARIDAD" msprop:Generator_ColumnPropNameInRow="DS_ESCOLARIDAD" msprop:Generator_ColumnPropNameInTable="DS_ESCOLARIDADColumn" msprop:Generator_UserColumnName="DS_ESCOLARIDAD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_OPCION_ACADEMICA" msprop:Generator_TableClassName="TBC_OPCION_ACADEMICADataTable" msprop:Generator_TableVarName="tableTBC_OPCION_ACADEMICA" msprop:Generator_TablePropName="TBC_OPCION_ACADEMICA" msprop:Generator_RowDeletingName="TBC_OPCION_ACADEMICARowDeleting" msprop:Generator_RowChangingName="TBC_OPCION_ACADEMICARowChanging" msprop:Generator_RowEvHandlerName="TBC_OPCION_ACADEMICARowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_OPCION_ACADEMICARowDeleted" msprop:Generator_UserTableName="TBC_OPCION_ACADEMICA" msprop:Generator_RowChangedName="TBC_OPCION_ACADEMICARowChanged" msprop:Generator_RowEvArgName="TBC_OPCION_ACADEMICARowChangeEvent" msprop:Generator_RowClassName="TBC_OPCION_ACADEMICARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CARRERA" msprop:Generator_ColumnVarNameInTable="columnDS_CARRERA" msprop:Generator_ColumnPropNameInRow="DS_CARRERA" msprop:Generator_ColumnPropNameInTable="DS_CARRERAColumn" msprop:Generator_UserColumnName="DS_CARRERA" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBC_CENTRO_ESCOLAR" msprop:Generator_TableClassName="TBC_CENTRO_ESCOLARDataTable" msprop:Generator_TableVarName="tableTBC_CENTRO_ESCOLAR" msprop:Generator_TablePropName="TBC_CENTRO_ESCOLAR" msprop:Generator_RowDeletingName="TBC_CENTRO_ESCOLARRowDeleting" msprop:Generator_RowChangingName="TBC_CENTRO_ESCOLARRowChanging" msprop:Generator_RowEvHandlerName="TBC_CENTRO_ESCOLARRowChangeEventHandler" msprop:Generator_RowDeletedName="TBC_CENTRO_ESCOLARRowDeleted" msprop:Generator_UserTableName="TBC_CENTRO_ESCOLAR" msprop:Generator_RowChangedName="TBC_CENTRO_ESCOLARRowChanged" msprop:Generator_RowEvArgName="TBC_CENTRO_ESCOLARRowChangeEvent" msprop:Generator_RowClassName="TBC_CENTRO_ESCOLARRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CENTRO_ESCOLAR" msprop:Generator_ColumnVarNameInTable="columnDS_CENTRO_ESCOLAR" msprop:Generator_ColumnPropNameInRow="DS_CENTRO_ESCOLAR" msprop:Generator_ColumnPropNameInTable="DS_CENTRO_ESCOLARColumn" msprop:Generator_UserColumnName="DS_CENTRO_ESCOLAR" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -84,16 +156,44 @@
       <xs:selector xpath=".//mstns:TBC_DEPARTAMENTO" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
-    <xs:unique name="TBC_MUNICIPIOKey2">
-      <xs:selector xpath=".//mstns:TBC_MUNICIPIO" />
-      <xs:field xpath="mstns:ID_DEPARTAMENTO" />
-    </xs:unique>
     <xs:unique name="TBC_MUNICIPIOKey1">
       <xs:selector xpath=".//mstns:TBC_MUNICIPIO" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
     <xs:unique name="TBC_TIPO_ASPIRANTEKey1">
       <xs:selector xpath=".//mstns:TBC_TIPO_ASPIRANTE" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_PAISKey1">
+      <xs:selector xpath=".//mstns:TBC_PAIS" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_DESTREZAKey1">
+      <xs:selector xpath=".//mstns:TBC_DESTREZA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_CATEGORIA_HABILIDADKey1">
+      <xs:selector xpath=".//mstns:TBC_CATEGORIA_HABILIDAD" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_HABILIDAD_CONOCIMIENTOKey1">
+      <xs:selector xpath=".//mstns:TBC_HABILIDAD_CONOCIMIENTO" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_NIVEL_CONOCIMIENTOKey1">
+      <xs:selector xpath=".//mstns:TBC_NIVEL_CONOCIMIENTO" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_ESCOLARIDADKey1">
+      <xs:selector xpath=".//mstns:TBC_ESCOLARIDAD" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_OPCION_ACADEMICAKey1">
+      <xs:selector xpath=".//mstns:TBC_OPCION_ACADEMICA" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TBC_CENTRO_ESCOLARKey1">
+      <xs:selector xpath=".//mstns:TBC_CENTRO_ESCOLAR" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

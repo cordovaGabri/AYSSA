@@ -13,7 +13,6 @@ namespace MyMainApp
 {
     public partial class Registro : FormaSISWeb
     {
-
         private DataView dvTipoAspirante;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
