@@ -41,6 +41,7 @@
     <Reference Include="Microsoft.CSharp">
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData">
       <Private>True</Private>
     </Reference>
@@ -92,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ASP\ASPP0001.aspx" />
+    <Content Include="ASP\FichaAspirante.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -121,6 +123,13 @@
     </Compile>
     <Compile Include="ASP\ASPP0001.aspx.designer.cs">
       <DependentUpon>ASPP0001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASP\FichaAspirante.aspx.cs">
+      <DependentUpon>FichaAspirante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASP\FichaAspirante.aspx.designer.cs">
+      <DependentUpon>FichaAspirante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -201,6 +210,9 @@
       <Project>{e27afebc-de88-4163-a7f3-09a983f5b711}</Project>
       <Name>ClsInterface</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ASP\RptFichaAspirante.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
