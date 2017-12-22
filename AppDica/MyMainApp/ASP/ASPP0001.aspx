@@ -258,6 +258,12 @@
                                 </div>
                             </div>
                            
+                          <div class="form-group">
+                                <asp:Label class="control-label  col-sm-2" ID="Label44" runat="server" Text="PROMEDIO DE NOTAS:" Font-Bold="True"></asp:Label>
+                                <div class="col-md-3">
+                                    <asp:TextBox class="form-control" ID="TxtNotas" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                </div>
+                            </div>
                             <br />
                             <div align="center">
                                 <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary"/>

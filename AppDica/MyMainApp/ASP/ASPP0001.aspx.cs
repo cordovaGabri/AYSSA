@@ -15,6 +15,7 @@ namespace MyMainApp
     {
         private DataView dvTituloAcademico, dvPais, dvDepartamento, dvMunicipio, dvTipoDocumento, dvDestreza,
             dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion;
+        DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
@@ -22,48 +23,7 @@ namespace MyMainApp
             {
                 Response.Redirect("~/Default.aspx");
             }
-              CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
-              DataView dvAspirante = new DataView(objAspirante.Detalle(_DataSistema.Cusuario, "", "", DateTime.Today, 'X',
-           "","", "", "", "", "", 'X',0, 0, 0, 0, 0 ,0,0, "","","","","", DateTime.Today, "", DateTime.Today, 3).TB_ASPIRANTE);
-            if (dvAspirante.Count > 0)
-            {   /* CARGA DE DATOS DE EL PRIMER REGISTRO */
-                TxtNombre.Text = dvAspirante.Table.Rows[0]["DS_NOMBRE"].ToString();
-                TxtApellido.Text = dvAspirante.Table.Rows[0]["DS_APELLIDO"].ToString();
-                TxtEstado.Text = dvAspirante.Table.Rows[0]["CD_ESTADO_ASPIRANTE"].ToString();
-                TxtFechNac.Text = dvAspirante.Table.Rows[0]["FECH_NACIMIENTO"].ToString();
-                TxtEdad.Text = dvAspirante.Table.Rows[0]["EDAD"].ToString();
-                TxtNit.Text = dvAspirante.Table.Rows[0]["DS_NIT"].ToString();
-                TxtTipoAspirante.Text = dvAspirante.Table.Rows[0]["DS_TIPO_ASPIRANTE"].ToString();
-                TxtEmail.Text = dvAspirante.Table.Rows[0]["DS_EMAIL"].ToString();
-
-                /* CARGA DE DATOS DE EL POSTERIORES REGISTROS */
-
-                TxtTelCasa.Text= dvAspirante.Table.Rows[0]["DS_TELEFONO_CASA"].ToString();
-                TxtTelCel.Text = dvAspirante.Table.Rows[0]["DS_TELEFONO_CELULAR"].ToString();
-                TxtDui.Text = dvAspirante.Table.Rows[0]["DS_DUI"].ToString();
-                RadioSexo.SelectedValue = dvAspirante.Table.Rows[0]["DS_SEXO"].ToString();
-                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString()) > 0)
-                {
-                    CboTratamiento.SelectedValue = dvAspirante.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString();
-                }
-                TxtDiscapacidad1.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD1"].ToString();
-                TxtDiscapacidad2.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD2"].ToString();
-                TxtDiscapacidad3.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD3"].ToString();
-                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_PAIS"].ToString()) > 0)
-                {
-                    CboPais.SelectedValue = dvAspirante.Table.Rows[0]["ID_PAIS"].ToString();
-                }
-                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_DEPARTAMENTO"].ToString()) > 0)
-                {
-                    CboDepartamento.SelectedValue = dvAspirante.Table.Rows[0]["ID_DEPARTAMENTO"].ToString();
-                }
-                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_MUNICIPIO"].ToString()) > 0)
-                {
-                    CboMunicipio.SelectedValue = dvAspirante.Table.Rows[0]["ID_MUNICIPIO"].ToString();
-                }
-                TxtDireccion.Text = dvAspirante.Table.Rows[0]["DS_DIRECCION"].ToString();
-                 
-            }
+           
             if (!IsPostBack)
             {
                 Consultar();
@@ -83,6 +43,7 @@ namespace MyMainApp
             FillCboNivelEducativo();
             FillCboOpcionAcademica();
             FillCboInstitucion();
+            FillCamposDatosGenerales();
         }
 
         public void Adicionar() { }
@@ -215,10 +176,78 @@ namespace MyMainApp
 
         protected void BtnGuardarDatoGeneral_Click(object sender, EventArgs e)
         {
-           /* CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
-            objResultado = objAspirante.Actualizacion(nit, nombres, apellidos, Convert.ToDateTime(fechaNacimiento), 'X',
-             "", "", "", email, "", nit, 'P', Convert.ToInt32(perfil), 0, 0, 0, 0, 0, 0, nit, "", "", "", nit,
-             TipoActualizacion.Adicionar);*/
+            string telefonoCasa,telefonoCel;
+            telefonoCasa = TxtTelCasa.Text;
+            telefonoCel = TxtTelCel.Text;
+            try
+            {
+                CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objAspirante.Actualizacion(_DataSistema.Cusuario, "", "", DateTime.Now, Convert.ToChar(RadioSexo.SelectedValue),
+                 telefonoCasa, telefonoCel, TxtDireccion.Text, TxtEmail.Text, TxtDui.Text, TxtNit.Text, 'I', 0, CboPais.SelectedValue,
+                 Convert.ToInt32(CboDepartamento.SelectedValue), Convert.ToInt32(CboMunicipio.SelectedValue),
+                 Convert.ToInt32(CboTratamiento.SelectedValue),
+                 "", TxtDiscapacidad1.Text, TxtDiscapacidad2.Text, TxtDiscapacidad3.Text, _DataSistema.Cusuario,
+                 TipoActualizacion.Actualizar);
+                
+                    if (objResultado.CodigoError == 0)
+                    {
+                        FillCamposDatosGenerales();
+                    }
+                    else
+                    {
+                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensaje(ex.Message);
+            }
+        }
+
+        protected void FillCamposDatosGenerales()
+        {
+            CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
+            DataView dvAspirante = new DataView(objAspirante.Detalle(_DataSistema.Cusuario, "", "", DateTime.Today, 'X',
+         "", "", "", "", "", "", 'X', 0, "", 0, 0, 0, "", "", "", "", "", DateTime.Today, "", DateTime.Today, 3).TB_ASPIRANTE);
+            if (dvAspirante.Count > 0)
+            {   /* CARGA DE DATOS DE EL PRIMER REGISTRO */
+                TxtNombre.Text = dvAspirante.Table.Rows[0]["DS_NOMBRE"].ToString();
+                TxtApellido.Text = dvAspirante.Table.Rows[0]["DS_APELLIDO"].ToString();
+                TxtEstado.Text = dvAspirante.Table.Rows[0]["CD_ESTADO_ASPIRANTE"].ToString();
+                TxtFechNac.Text = dvAspirante.Table.Rows[0]["FECH_NACIMIENTO"].ToString();
+                TxtEdad.Text = dvAspirante.Table.Rows[0]["EDAD"].ToString();
+                TxtNit.Text = dvAspirante.Table.Rows[0]["DS_NIT"].ToString();
+                TxtTipoAspirante.Text = dvAspirante.Table.Rows[0]["DS_TIPO_ASPIRANTE"].ToString();
+                TxtEmail.Text = dvAspirante.Table.Rows[0]["DS_EMAIL"].ToString();
+
+                /* CARGA DE DATOS DE EL POSTERIORES REGISTROS */
+
+                TxtTelCasa.Text = dvAspirante.Table.Rows[0]["DS_TELEFONO_CASA"].ToString();
+                TxtTelCel.Text = dvAspirante.Table.Rows[0]["DS_TELEFONO_CELULAR"].ToString();
+                TxtDui.Text = dvAspirante.Table.Rows[0]["DS_DUI"].ToString();
+                RadioSexo.SelectedValue = dvAspirante.Table.Rows[0]["DS_SEXO"].ToString();
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString()) > 0)
+                {
+                    CboTratamiento.SelectedValue = dvAspirante.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString();
+                }
+                TxtDiscapacidad1.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD1"].ToString();
+                TxtDiscapacidad2.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD2"].ToString();
+                TxtDiscapacidad3.Text = dvAspirante.Table.Rows[0]["DS_DISCAPACIDAD3"].ToString();
+                if (dvAspirante.Table.Rows[0]["ID_PAIS"].ToString() != "")
+                {
+                    CboPais.SelectedValue = dvAspirante.Table.Rows[0]["ID_PAIS"].ToString();
+                }
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_DEPARTAMENTO"].ToString()) > 0)
+                {
+                    CboDepartamento.SelectedValue = dvAspirante.Table.Rows[0]["ID_DEPARTAMENTO"].ToString();
+                }
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["ID_MUNICIPIO"].ToString()) > 0)
+                {
+                    CboMunicipio.SelectedValue = dvAspirante.Table.Rows[0]["ID_MUNICIPIO"].ToString();
+                }
+                TxtDireccion.Text = dvAspirante.Table.Rows[0]["DS_DIRECCION"].ToString();
+
+            }
         }
 
     }

@@ -16,7 +16,7 @@ namespace ClsDataApp
 
         public ClsDataSets.DS_TB_ASP Detalle(string Id, string Nombre, string Apellido, DateTime FechaNacimiento, char Sexo,
            string TelefonoCasa,string TelefonoCelular, string Direccion, string email,string Dui, string Nit,char EstadoAspirante,int IdTipoAspirante,
-           int IdPais, int IdDepartamento, int IdMunicipio,int IdEscolaridad, int IdCentroEscolar, int IdTituloAcademico,
+           string IdPais, int IdDepartamento, int IdMunicipio, int IdTituloAcademico,
             string IdUsuario,string Discapacidad1,string Discapacidad2,string Discapacidad3
             , string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu,int OpcionConsulta)
         {
@@ -46,8 +46,6 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_PAIS", IdPais);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_DEPARTAMENTO", IdDepartamento);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_MUNICIPIO", IdMunicipio);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", IdCentroEscolar);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_TITULO_ACADEMICO", IdTituloAcademico);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_USUARIO", IdUsuario);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DISCAPACIDAD1", Discapacidad1);
@@ -80,7 +78,7 @@ namespace ClsDataApp
 
         public DataQuery Actualizacion(string Id, string Nombre, string Apellido, DateTime FechaNacimiento, char Sexo,
            string TelefonoCasa,string TelefonoCelular, string Direccion, string email,string Dui, string Nit,char EstadoAspirante,int IdTipoAspirante,
-           int IdPais, int IdDepartamento, int IdMunicipio,int IdEscolaridad, int IdCentroEscolar, int IdTituloAcademico,
+           string IdPais, int IdDepartamento, int IdMunicipio, int IdTituloAcademico,
             string IdUsuario,string Discapacidad1,string Discapacidad2,string Discapacidad3, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
@@ -96,7 +94,7 @@ namespace ClsDataApp
                         StrCommand = "SP_TB_ASPIRANTE_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_ASPIRANTE_UPDATE";
                         break;
                     case TipoActualizacion.Eliminar:
                         StrCommand = "";
@@ -131,8 +129,6 @@ namespace ClsDataApp
                 ObjCommand.Parameters.AddWithValue("@ID_PAIS", IdPais);
                 ObjCommand.Parameters.AddWithValue("@ID_DEPARTAMENTO", IdDepartamento);
                 ObjCommand.Parameters.AddWithValue("@ID_MUNICIPIO", IdMunicipio);
-                ObjCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
-                ObjCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", IdCentroEscolar);
                 ObjCommand.Parameters.AddWithValue("@ID_TITULO_ACADEMICO", IdTituloAcademico);
                 ObjCommand.Parameters.AddWithValue("@ID_USUARIO", IdUsuario);
                 ObjCommand.Parameters.AddWithValue("@DS_DISCAPACIDAD1", Discapacidad1);

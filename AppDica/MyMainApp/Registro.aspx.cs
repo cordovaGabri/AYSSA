@@ -54,10 +54,9 @@ namespace MyMainApp
                     {
                         CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
                         objResultado = objAspirante.Actualizacion(nit,nombres, apellidos, Convert.ToDateTime(fechaNacimiento), 'X',
-                         "", "", "", email, "", nit, 'P', Convert.ToInt32(perfil), 0, 0, 0, 0, 0, 0, nit, "", "", "", nit,
+                         "", "", "", email, "", nit, 'P', Convert.ToInt32(perfil), "", 0, 0, 0, nit, "", "", "", nit,
                          TipoActualizacion.Adicionar);
-                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
-                      //  DespliegaMensaje("Usuario y Contraseña enviado al correo");
+                     DespliegaMensaje("Usuario y Contraseña enviado al correo");
                     }
                     else
                     {
@@ -81,7 +80,7 @@ namespace MyMainApp
             bool resultado = true;
             CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
             DataView dvAspirante = new DataView(objAspirante.Detalle(Nit, "", "", Convert.ToDateTime(FechaNacimiento), 'X',
-           "","", "", "", "", Nit, 'X',IdTipoAspirante, 0, 0, 0, 0 ,0,0, "","","","","", DateTime.Today, "", DateTime.Today, 2).TB_ASPIRANTE);
+           "","", "", "", "", Nit, 'X',IdTipoAspirante,"", 0, 0, 0 , "","","","","", DateTime.Today, "", DateTime.Today, 2).TB_ASPIRANTE);
             if (dvAspirante.Count > 0)
             {
                 resultado = false;
