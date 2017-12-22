@@ -92,7 +92,6 @@
                                         <asp:ListItem Value="F" Selected="True">&nbsp;FEMENINO&nbsp;&nbsp;&nbsp;</asp:ListItem>
                                         <asp:ListItem Value="M">&nbsp;MASCULINO</asp:ListItem>
                                     </asp:RadioButtonList>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="RadioSexo" ForeColor="Red">Seleccionar Sexo</asp:RequiredFieldValidator>
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label31" runat="server" Text="TIPO ASPIRANTE:" Font-Bold="True"></asp:Label>
                                 <div class="col-md-3">
@@ -243,7 +242,7 @@
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label21" runat="server" Font-Bold="True" Text="OTRA INSTITUCION:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextOtra" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtOtraInstitucion" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -254,7 +253,7 @@
                                 </div>
                                 <asp:Label class="control-label  col-sm-3" ID="Label39" runat="server" Font-Bold="True" Text="AÑO DE FINALIZACION:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:TextBox class="form-control" ID="TextAnioFin" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                    <asp:TextBox class="form-control" ID="TxtAnioFin" runat="server" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
                                 </div>
                             </div>
                            
@@ -266,18 +265,18 @@
                             </div>
                             <br />
                             <div align="center">
-                                <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary"/>
+                                <asp:Button ID="BtnEscolaridadGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnEscolaridadGuardar_Click"/>&nbsp;<asp:Button ID="BtnEscolaridadCancelar" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
-                            <asp:GridView ID="GVEscolaridad" runat="server">
+                            <asp:GridView ID="GVEscolaridad" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" Width="100%">
                                 <Columns>
-                                    <asp:BoundField HeaderText="No" />
-                                    <asp:BoundField HeaderText="NIVEL EDUCATIVO" />
-                                    <asp:BoundField HeaderText="OPCION ACADEMICA" />
-                                    <asp:BoundField HeaderText="INSTITUCION EDUCATIVA" />
-                                    <asp:BoundField HeaderText="PAIS" />
-                                    <asp:BoundField HeaderText="AÑO DE FINALIZACION" />
-                                    <asp:BoundField HeaderText="PROMEDIO DE NOTA" />
+                                    <asp:BoundField DataField="DS_ESCOLARIDAD" HeaderText="Nivel Educativo" />
+                                    <asp:BoundField DataField="DS_CARRERA" HeaderText="Opción Académica" />
+                                    <asp:BoundField DataField="DS_CENTRO_ESCOLAR" HeaderText="Institución Educativa" />
+                                    <asp:BoundField DataField="DS_OTRA" HeaderText="Otra Institución" />
+                                    <asp:BoundField DataField="DS_PAIS" HeaderText="País" />
+                                    <asp:BoundField DataField="NM_ANIO_FIN" HeaderText="Año Fin" />
+                                    <asp:BoundField DataField="NM_PROMEDIO_NOTA" HeaderText="Promedio" />
                                 </Columns>
                             </asp:GridView>
                             <br />
@@ -310,14 +309,14 @@
                                 </div>
                             </div>
                             <div align="center">
-                                <asp:Button ID="Button3" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary"/>
+                                <asp:Button ID="BtnGuardarHabilidad" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarHabilidad_Click"/>&nbsp;<asp:Button ID="BtnCancelarHabilidad" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
-                            <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False">
+                            <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" Width="100%">
                                 <Columns>
-                                    <asp:BoundField HeaderText="CONOCIMIENTO" />
-                                    <asp:BoundField HeaderText="TIPO DE CONOCIMIENTO" />
-                                    <asp:BoundField HeaderText="NIVEL" />
+                                    <asp:BoundField HeaderText="CONOCIMIENTO" DataField="DS_CATEGORIA_HABILIDAD" />
+                                    <asp:BoundField HeaderText="TIPO DE CONOCIMIENTO" DataField="DS_HABILIDAD_CONOCIMIENTO" />
+                                    <asp:BoundField HeaderText="NIVEL" DataField="DS_NIVEL_CONOCIMIENTO" />
                                 </Columns>
                             </asp:GridView>
                         </asp:Panel>
@@ -337,13 +336,12 @@
                                 </div>
                             </div>
                             <div align="center">
-                                <asp:Button ID="Button7" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button8" runat="server" Text="CANCELAR" class="btn btn-primary"/>
+                                <asp:Button ID="BtnGuardarDestreza" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click"/>&nbsp;<asp:Button ID="BtnCancelarDestreza" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
-                            <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False">
+                            <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
                                 <Columns>
-                                    <asp:BoundField HeaderText="No" />
-                                    <asp:BoundField HeaderText="DESTREZA" />
+                                    <asp:BoundField HeaderText="DESTREZA" DataField="DS_DESTREZA" />
                                 </Columns>
                             </asp:GridView>
                         </asp:Panel>
@@ -384,7 +382,7 @@
                                 <asp:Button ID="Button9" runat="server" Text="GUARDAR" class="btn btn-primary"/>&nbsp;<asp:Button ID="Button10" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                             </div>
                             <br />
-                            <asp:GridView ID="GVDocumento" runat="server" AutoGenerateColumns="False">
+                            <asp:GridView ID="GVDocumento" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
                                 <Columns>
                                     <asp:BoundField HeaderText="TIPO DOCUMENTO" />
                                     <asp:BoundField HeaderText="DESCRIPCION" />

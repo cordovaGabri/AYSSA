@@ -14,7 +14,8 @@ namespace MyMainApp
     public partial class ASPP0001 : FormaSISWeb,IAcciones
     {
         private DataView dvTituloAcademico, dvPais, dvDepartamento, dvMunicipio, dvTipoDocumento, dvDestreza,
-            dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion;
+            dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion,
+            dvEscolaridad, dvHabilidad, dvDocumento;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,6 +45,9 @@ namespace MyMainApp
             FillCboOpcionAcademica();
             FillCboInstitucion();
             FillCamposDatosGenerales();
+            FillGVEscolaridad();
+            FillGVHabilidad();
+            FillGVDocumento();
         }
 
         public void Adicionar() { }
@@ -176,14 +180,11 @@ namespace MyMainApp
 
         protected void BtnGuardarDatoGeneral_Click(object sender, EventArgs e)
         {
-            string telefonoCasa,telefonoCel;
-            telefonoCasa = TxtTelCasa.Text;
-            telefonoCel = TxtTelCel.Text;
             try
             {
                 CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
                 objResultado = objAspirante.Actualizacion(_DataSistema.Cusuario, "", "", DateTime.Now, Convert.ToChar(RadioSexo.SelectedValue),
-                 telefonoCasa, telefonoCel, TxtDireccion.Text, TxtEmail.Text, TxtDui.Text, TxtNit.Text, 'I', 0, CboPais.SelectedValue,
+                 TxtTelCasa.Text, TxtTelCel.Text, TxtDireccion.Text, TxtEmail.Text, TxtDui.Text, TxtNit.Text, 'I', 0, CboPais.SelectedValue,
                  Convert.ToInt32(CboDepartamento.SelectedValue), Convert.ToInt32(CboMunicipio.SelectedValue),
                  Convert.ToInt32(CboTratamiento.SelectedValue),
                  "", TxtDiscapacidad1.Text, TxtDiscapacidad2.Text, TxtDiscapacidad3.Text, _DataSistema.Cusuario,
@@ -247,6 +248,117 @@ namespace MyMainApp
                 }
                 TxtDireccion.Text = dvAspirante.Table.Rows[0]["DS_DIRECCION"].ToString();
 
+            }
+        }
+
+
+        protected void FillGVEscolaridad()
+        {
+            CEscolaridadAspirante objEscolaridad = new CEscolaridadAspirante(_DataSistema.ConexionBaseDato);
+            dvEscolaridad = new DataView(objEscolaridad.Detalle(0, _DataSistema.Cusuario, 0, 0, 0, "", "", 0, 0, "", DateTime.Now, "", DateTime.Now, 3).TB_ESCOLARIDAD);
+
+            GVEscolaridad.DataSource = dvEscolaridad;
+            GVEscolaridad.DataBind();
+        }
+
+        protected void FillGVHabilidad()
+        {
+            CHabilidadAspirante objHabilidad = new CHabilidadAspirante(_DataSistema.ConexionBaseDato);
+            dvHabilidad = new DataView(objHabilidad.Detalle(0, 0, _DataSistema.Cusuario, 0, 0, "", DateTime.Now, "", DateTime.Now,2).TB_HABILIDAD);
+
+            GVHabilidad.DataSource = dvHabilidad;
+            GVHabilidad.DataBind();
+        }
+
+        protected void FillGVDestreza()
+        {
+            CDestrezaAspirante objDestreza = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
+            dvDestreza = new DataView(objDestreza.Detalle(0, 0, _DataSistema.Cusuario, "", DateTime.Now, "", DateTime.Now, 2).TB_DESTREZA);
+
+            GVDestreza.DataSource = dvDestreza;
+            GVDestreza.DataBind();
+        }
+
+
+        protected void FillGVDocumento()
+        {
+            CDocumentoAspirante objDocumento = new CDocumentoAspirante(_DataSistema.ConexionBaseDato);
+            dvDocumento = new DataView(objDocumento.Detalle(0, "", "", 0, 0, "", DateTime.Now, "", DateTime.Now, 0).TB_DOCUMENTO);
+
+            GVDocumento.DataSource = dvDocumento;
+            GVDocumento.DataBind();
+        }
+
+        protected void BtnEscolaridadGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal Nota = Convert.ToDecimal(TxtNotas.Text);
+                CEscolaridadAspirante objEscolaridadAspirante = new CEscolaridadAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objEscolaridadAspirante.Actualizacion(0, _DataSistema.Cusuario, Convert.ToInt32(CboNivelEducativo.SelectedValue),
+                    Convert.ToInt32(CboOpcionAcademica.SelectedValue), Convert.ToInt32(CboInstitucion.SelectedValue),
+                    CboPaisEscolaridad.SelectedValue, TxtOtraInstitucion.Text, Convert.ToInt32(TxtAnioFin.Text),Nota
+                , _DataSistema.Cusuario,  TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVEscolaridad();
+                }
+                else
+                {
+                    DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensaje(ex.Message);
+            }
+        }
+
+        protected void BtnGuardarHabilidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CHabilidadAspirante objHabilidadAspirante = new CHabilidadAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objHabilidadAspirante.Actualizacion(0, Convert.ToInt32(CboCategoriaHabilidad.Text), _DataSistema.Cusuario,
+                    Convert.ToInt32(CboConocimiento.SelectedValue),  Convert.ToInt32(CboNivel.SelectedValue) 
+                , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVHabilidad();
+                }
+                else
+                {
+                    DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensaje(ex.Message);
+            }
+        }
+
+        protected void BtnGuardarDestreza_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CDestrezaAspirante objDestrezaAspirante = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objDestrezaAspirante.Actualizacion(0, Convert.ToInt32(CboDestreza.SelectedValue), _DataSistema.Cusuario
+                , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVDestreza();
+                }
+                else
+                {
+                    DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensaje(ex.Message);
             }
         }
 

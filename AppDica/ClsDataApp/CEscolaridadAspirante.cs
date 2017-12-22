@@ -14,8 +14,8 @@ namespace ClsDataApp
         {
             _ConexionData = ConexionData;
         }
-        public ClsDataSets.DS_TB_ASP Detalle(int Id, int IdEscolaridad, int IdOpcionAcademica, int IdInstitucion, int IdPais,
-            string OtraInstitucion, int AnioFin, int Promedio,
+        public ClsDataSets.DS_TB_ASP Detalle(int Id,string IdAspirante, int IdEscolaridad, int IdOpcionAcademica, int IdInstitucion, string IdPais,
+            string OtraInstitucion, int AnioFin, double Promedio,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TB_ASP objDataSet = new ClsDataSets.DS_TB_ASP();
@@ -28,6 +28,7 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_OPCION_ACADEMICA", IdOpcionAcademica);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", IdInstitucion);
@@ -56,8 +57,8 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-        public DataQuery Actualizacion(int Id, int IdEscolaridad, int IdOpcionAcademica, int IdInstitucion, int IdPais,
-            string OtraInstitucion, int AnioFin, int Promedio, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+        public DataQuery Actualizacion(int Id, string IdAspirante, int IdEscolaridad, int IdOpcionAcademica, int IdInstitucion, string IdPais,
+            string OtraInstitucion, int AnioFin, decimal Promedio, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
             try
@@ -67,7 +68,7 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TB_ESCOLARIDAD_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";
@@ -97,6 +98,7 @@ namespace ClsDataApp
                 {
                     ObjCommand.Parameters.AddWithValue("@ID", Id);
                 }
+                ObjCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
                 ObjCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
                 ObjCommand.Parameters.AddWithValue("@ID_OPCION_ACADEMICA", IdOpcionAcademica);
                 ObjCommand.Parameters.AddWithValue("@ID_CENTRO_ESCOLAR", IdInstitucion);

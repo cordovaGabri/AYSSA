@@ -14,7 +14,7 @@ namespace ClsDataApp
         {
             _ConexionData = ConexionData;
         }
-        public ClsDataSets.DS_TB_ASP Detalle(int Id, int IdDestreza, int IdAspirante,
+        public ClsDataSets.DS_TB_ASP Detalle(int Id, int IdDestreza, string IdAspirante,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TB_ASP objDataSet = new ClsDataSets.DS_TB_ASP();
@@ -50,7 +50,7 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-        public DataQuery Actualizacion(int Id, int IdDestreza, int IdAspirante, 
+        public DataQuery Actualizacion(int Id, int IdDestreza, string IdAspirante, 
             string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
@@ -61,7 +61,7 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TB_DESTREZA_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";

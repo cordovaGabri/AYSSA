@@ -265,15 +265,6 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.RadioButtonList RadioSexo;
         
         /// <summary>
-        /// Control RequiredFieldValidator3.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
         /// Control Label31.
         /// </summary>
         /// <remarks>
@@ -733,13 +724,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label21;
         
         /// <summary>
-        /// Control TextOtra.
+        /// Control TxtOtraInstitucion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextOtra;
+        protected global::System.Web.UI.WebControls.TextBox TxtOtraInstitucion;
         
         /// <summary>
         /// Control Label27.
@@ -769,13 +760,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label39;
         
         /// <summary>
-        /// Control TextAnioFin.
+        /// Control TxtAnioFin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextAnioFin;
+        protected global::System.Web.UI.WebControls.TextBox TxtAnioFin;
         
         /// <summary>
         /// Control Label44.
@@ -796,22 +787,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.TextBox TxtNotas;
         
         /// <summary>
-        /// Control Button4.
+        /// Control BtnEscolaridadGuardar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button BtnEscolaridadGuardar;
         
         /// <summary>
-        /// Control Button5.
+        /// Control BtnEscolaridadCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button BtnEscolaridadCancelar;
         
         /// <summary>
         /// Control GVEscolaridad.
@@ -886,22 +877,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.DropDownList CboNivel;
         
         /// <summary>
-        /// Control Button3.
+        /// Control BtnGuardarHabilidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button BtnGuardarHabilidad;
         
         /// <summary>
-        /// Control Button6.
+        /// Control BtnCancelarHabilidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.Button BtnCancelarHabilidad;
         
         /// <summary>
         /// Control GVHabilidad.
@@ -940,22 +931,22 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.DropDownList CboDestreza;
         
         /// <summary>
-        /// Control Button7.
+        /// Control BtnGuardarDestreza.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button BtnGuardarDestreza;
         
         /// <summary>
-        /// Control Button8.
+        /// Control BtnCancelarDestreza.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button BtnCancelarDestreza;
         
         /// <summary>
         /// Control GVDestreza.
