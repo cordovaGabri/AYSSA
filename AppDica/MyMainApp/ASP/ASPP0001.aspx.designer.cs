@@ -958,13 +958,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.GridView GVDestreza;
         
         /// <summary>
-        /// Control Panel5.
+        /// Control ScriptManager1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel5;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
         /// Control Label43.
@@ -994,6 +994,15 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label22;
         
         /// <summary>
+        /// Control FileDocumento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileDocumento;
+        
+        /// <summary>
         /// Control Label40.
         /// </summary>
         /// <remarks>
@@ -1003,31 +1012,40 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label40;
         
         /// <summary>
-        /// Control TextDescripcion.
+        /// Control TxtDescripcionDocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextDescripcion;
+        protected global::System.Web.UI.WebControls.TextBox TxtDescripcionDocumento;
         
         /// <summary>
-        /// Control Button9.
+        /// Control BtnGuardarDocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.WebControls.Button BtnGuardarDocumento;
         
         /// <summary>
-        /// Control Button10.
+        /// Control BtnCancelarDocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button10;
+        protected global::System.Web.UI.WebControls.Button BtnCancelarDocumento;
+        
+        /// <summary>
+        /// Control UpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
         /// Control GVDocumento.

@@ -22,7 +22,7 @@ namespace ClsDataApp
             try
             {
                 ObjConnection = new SqlConnection(_ConexionData);
-                ObjAdapter = new SqlDataAdapter("SP_TB_DESTREZA_GetByAll", ObjConnection);
+                ObjAdapter = new SqlDataAdapter("SP_TB_DESTREZA_ASPIRANTE_GetByAll", ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -35,7 +35,7 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ACTU", FechActu);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
 
-                ObjAdapter.Fill(objDataSet, "TB_DESTREZA");
+                ObjAdapter.Fill(objDataSet, "TB_DESTREZA_ASPIRANTE");
 
                 ObjConnection.Close();
                 if (ObjConnection.State != ConnectionState.Closed)
@@ -61,7 +61,7 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "SP_TB_DESTREZA_INSERT";
+                        StrCommand = "SP_TB_DESTREZA_ASPIRANTE_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";

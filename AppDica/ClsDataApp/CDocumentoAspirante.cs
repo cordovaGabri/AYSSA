@@ -15,7 +15,7 @@ namespace ClsDataApp
             _ConexionData = ConexionData;
         }
 
-    public ClsDataSets.DS_TB_ASP Detalle(int Id, string Documento,string UrlDoc,int IdTipoDoc,int IdAspirante,
+    public ClsDataSets.DS_TB_ASP Detalle(int Id, string Documento,string UrlDoc,int IdTipoDoc,string IdAspirante,
             string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
             ClsDataSets.DS_TB_ASP objDataSet = new ClsDataSets.DS_TB_ASP();
@@ -23,7 +23,7 @@ namespace ClsDataApp
             try
             {
                 ObjConnection = new SqlConnection(_ConexionData);
-                ObjAdapter = new SqlDataAdapter("SP_TB_DOCUMENTO_GetByAll", ObjConnection);
+                ObjAdapter = new SqlDataAdapter("SP_TB_DOCUMENTO_ASPIRANTE_GetByAll", ObjConnection);
                 ObjParam = new SqlParameter();
                 ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
 
@@ -38,7 +38,7 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ACTU", FechActu);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
 
-                ObjAdapter.Fill(objDataSet, "TB_DOCUMENTO");
+                ObjAdapter.Fill(objDataSet, "TB_DOCUMENTO_ASPIRANTE");
 
                 ObjConnection.Close();
                 if (ObjConnection.State != ConnectionState.Closed)
@@ -53,7 +53,7 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-    public DataQuery Actualizacion(int Id, string Documento, string UrlDoc, int IdTipoDoc, int IdAspirante,
+    public DataQuery Actualizacion(int Id, string Documento, string UrlDoc, int IdTipoDoc, string IdAspirante,
             string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
@@ -64,13 +64,13 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TB_DOCUMENTO_ASPIRANTE_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";
                         break;
                     case TipoActualizacion.Eliminar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TB_DOCUMENTO_ASPIRANTE_DELETE";
                         break;
                     case TipoActualizacion.No_Definida:
                         objResultado.CodigoError = -1;

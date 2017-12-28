@@ -47,6 +47,7 @@ namespace MyMainApp
             FillCamposDatosGenerales();
             FillGVEscolaridad();
             FillGVHabilidad();
+            FillGVDestreza();
             FillGVDocumento();
         }
 
@@ -255,7 +256,7 @@ namespace MyMainApp
         protected void FillGVEscolaridad()
         {
             CEscolaridadAspirante objEscolaridad = new CEscolaridadAspirante(_DataSistema.ConexionBaseDato);
-            dvEscolaridad = new DataView(objEscolaridad.Detalle(0, _DataSistema.Cusuario, 0, 0, 0, "", "", 0, 0, "", DateTime.Now, "", DateTime.Now, 3).TB_ESCOLARIDAD);
+            dvEscolaridad = new DataView(objEscolaridad.Detalle(0, _DataSistema.Cusuario, 0, 0, 0, "", "", 0, 0, "", DateTime.Now, "", DateTime.Now, 3).TB_ESCOLARIDAD_ASPIRANTE);
 
             GVEscolaridad.DataSource = dvEscolaridad;
             GVEscolaridad.DataBind();
@@ -264,7 +265,7 @@ namespace MyMainApp
         protected void FillGVHabilidad()
         {
             CHabilidadAspirante objHabilidad = new CHabilidadAspirante(_DataSistema.ConexionBaseDato);
-            dvHabilidad = new DataView(objHabilidad.Detalle(0, 0, _DataSistema.Cusuario, 0, 0, "", DateTime.Now, "", DateTime.Now,2).TB_HABILIDAD);
+            dvHabilidad = new DataView(objHabilidad.Detalle(0, 0, _DataSistema.Cusuario, 0, 0, "", DateTime.Now, "", DateTime.Now,2).TB_HABILIDAD_ASPIRANTE);
 
             GVHabilidad.DataSource = dvHabilidad;
             GVHabilidad.DataBind();
@@ -273,7 +274,7 @@ namespace MyMainApp
         protected void FillGVDestreza()
         {
             CDestrezaAspirante objDestreza = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
-            dvDestreza = new DataView(objDestreza.Detalle(0, 0, _DataSistema.Cusuario, "", DateTime.Now, "", DateTime.Now, 2).TB_DESTREZA);
+            dvDestreza = new DataView(objDestreza.Detalle(0, 0, _DataSistema.Cusuario, "", DateTime.Now, "", DateTime.Now, 2).TB_DESTREZA_ASPIRANTE);
 
             GVDestreza.DataSource = dvDestreza;
             GVDestreza.DataBind();
@@ -283,7 +284,7 @@ namespace MyMainApp
         protected void FillGVDocumento()
         {
             CDocumentoAspirante objDocumento = new CDocumentoAspirante(_DataSistema.ConexionBaseDato);
-            dvDocumento = new DataView(objDocumento.Detalle(0, "", "", 0, 0, "", DateTime.Now, "", DateTime.Now, 0).TB_DOCUMENTO);
+            dvDocumento = new DataView(objDocumento.Detalle(0, "", "", 0, _DataSistema.Cusuario, "", DateTime.Now, "", DateTime.Now, 2).TB_DOCUMENTO_ASPIRANTE);
 
             GVDocumento.DataSource = dvDocumento;
             GVDocumento.DataBind();
@@ -361,6 +362,70 @@ namespace MyMainApp
                 DespliegaMensaje(ex.Message);
             }
         }
+
+        protected void BtnGuardarDocumento_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (FileDocumento.HasFile)
+                {
+                    string nombreArchivo = _DataSistema.Cusuario + "_" + CboTipoDocumento.SelectedValue + FileDocumento.FileName;
+                    string ruta = Server.MapPath("~/ASP/Documentos/");
+                    FileDocumento.PostedFile.SaveAs(ruta + nombreArchivo);
+
+                    CDocumentoAspirante objDocumentoAspirante = new CDocumentoAspirante(_DataSistema.ConexionBaseDato);
+                    objResultado = objDocumentoAspirante.Actualizacion(0, TxtDescripcionDocumento.Text, nombreArchivo, Convert.ToInt32(CboTipoDocumento.SelectedValue), _DataSistema.Cusuario
+                    , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                    if (objResultado.CodigoError == 0)
+                    {
+                        FillGVDocumento();
+                    }
+                    else
+                    {
+                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    }
+                }
+                else
+                {
+                    DespliegaMensaje("Adjuntar Archivo");
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensaje(ex.Message);
+            }
+        }
+
+
+        protected void GVDocumento_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                    string nombreArchivo = "";
+                    string ruta = Server.MapPath("~/ASP/Documentos/");
+                   /* var uri = new Uri("file://SERVERNAME/FOLDER$/FOLDER/image.jpg", UriKind.Absolute);
+                    System.IO.File.Delete(uri.LocalPath);*/
+                    TextBox Id = GVDocumento.Rows[e.RowIndex].FindControl("TxtIDDocumento") as TextBox;
+                    CDocumentoAspirante objDocumentoAspirante = new CDocumentoAspirante(_DataSistema.ConexionBaseDato);
+                    objResultado = objDocumentoAspirante.Actualizacion(Convert.ToInt32(Id.Text), "", "", 0, ""
+                    , _DataSistema.Cusuario, TipoActualizacion.Eliminar);
+
+                    if (objResultado.CodigoError == 0)
+                    {
+                        FillGVDocumento();
+                    }
+                    else
+                    {
+                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensaje(ex.Message);
+            }
+        }
+
 
     }
 }

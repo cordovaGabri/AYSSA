@@ -26,13 +26,13 @@ namespace ClsDataSets {
         
         private TB_ASPIRANTEDataTable tableTB_ASPIRANTE;
         
-        private TB_ESCOLARIDADDataTable tableTB_ESCOLARIDAD;
+        private TB_ESCOLARIDAD_ASPIRANTEDataTable tableTB_ESCOLARIDAD_ASPIRANTE;
         
-        private TB_HABILIDADDataTable tableTB_HABILIDAD;
+        private TB_HABILIDAD_ASPIRANTEDataTable tableTB_HABILIDAD_ASPIRANTE;
         
-        private TB_DESTREZADataTable tableTB_DESTREZA;
+        private TB_DESTREZA_ASPIRANTEDataTable tableTB_DESTREZA_ASPIRANTE;
         
-        private TB_DOCUMENTODataTable tableTB_DOCUMENTO;
+        private TB_DOCUMENTO_ASPIRANTEDataTable tableTB_DOCUMENTO_ASPIRANTE;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -65,17 +65,17 @@ namespace ClsDataSets {
                 if ((ds.Tables["TB_ASPIRANTE"] != null)) {
                     base.Tables.Add(new TB_ASPIRANTEDataTable(ds.Tables["TB_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_ESCOLARIDAD"] != null)) {
-                    base.Tables.Add(new TB_ESCOLARIDADDataTable(ds.Tables["TB_ESCOLARIDAD"]));
+                if ((ds.Tables["TB_ESCOLARIDAD_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_ESCOLARIDAD_ASPIRANTEDataTable(ds.Tables["TB_ESCOLARIDAD_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_HABILIDAD"] != null)) {
-                    base.Tables.Add(new TB_HABILIDADDataTable(ds.Tables["TB_HABILIDAD"]));
+                if ((ds.Tables["TB_HABILIDAD_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_HABILIDAD_ASPIRANTEDataTable(ds.Tables["TB_HABILIDAD_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_DESTREZA"] != null)) {
-                    base.Tables.Add(new TB_DESTREZADataTable(ds.Tables["TB_DESTREZA"]));
+                if ((ds.Tables["TB_DESTREZA_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_DESTREZA_ASPIRANTEDataTable(ds.Tables["TB_DESTREZA_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_DOCUMENTO"] != null)) {
-                    base.Tables.Add(new TB_DOCUMENTODataTable(ds.Tables["TB_DOCUMENTO"]));
+                if ((ds.Tables["TB_DOCUMENTO_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_DOCUMENTO_ASPIRANTEDataTable(ds.Tables["TB_DOCUMENTO_ASPIRANTE"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +109,9 @@ namespace ClsDataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TB_ESCOLARIDADDataTable TB_ESCOLARIDAD {
+        public TB_ESCOLARIDAD_ASPIRANTEDataTable TB_ESCOLARIDAD_ASPIRANTE {
             get {
-                return this.tableTB_ESCOLARIDAD;
+                return this.tableTB_ESCOLARIDAD_ASPIRANTE;
             }
         }
         
@@ -119,9 +119,9 @@ namespace ClsDataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TB_HABILIDADDataTable TB_HABILIDAD {
+        public TB_HABILIDAD_ASPIRANTEDataTable TB_HABILIDAD_ASPIRANTE {
             get {
-                return this.tableTB_HABILIDAD;
+                return this.tableTB_HABILIDAD_ASPIRANTE;
             }
         }
         
@@ -129,9 +129,9 @@ namespace ClsDataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TB_DESTREZADataTable TB_DESTREZA {
+        public TB_DESTREZA_ASPIRANTEDataTable TB_DESTREZA_ASPIRANTE {
             get {
-                return this.tableTB_DESTREZA;
+                return this.tableTB_DESTREZA_ASPIRANTE;
             }
         }
         
@@ -139,9 +139,9 @@ namespace ClsDataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TB_DOCUMENTODataTable TB_DOCUMENTO {
+        public TB_DOCUMENTO_ASPIRANTEDataTable TB_DOCUMENTO_ASPIRANTE {
             get {
-                return this.tableTB_DOCUMENTO;
+                return this.tableTB_DOCUMENTO_ASPIRANTE;
             }
         }
         
@@ -215,17 +215,17 @@ namespace ClsDataSets {
                 if ((ds.Tables["TB_ASPIRANTE"] != null)) {
                     base.Tables.Add(new TB_ASPIRANTEDataTable(ds.Tables["TB_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_ESCOLARIDAD"] != null)) {
-                    base.Tables.Add(new TB_ESCOLARIDADDataTable(ds.Tables["TB_ESCOLARIDAD"]));
+                if ((ds.Tables["TB_ESCOLARIDAD_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_ESCOLARIDAD_ASPIRANTEDataTable(ds.Tables["TB_ESCOLARIDAD_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_HABILIDAD"] != null)) {
-                    base.Tables.Add(new TB_HABILIDADDataTable(ds.Tables["TB_HABILIDAD"]));
+                if ((ds.Tables["TB_HABILIDAD_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_HABILIDAD_ASPIRANTEDataTable(ds.Tables["TB_HABILIDAD_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_DESTREZA"] != null)) {
-                    base.Tables.Add(new TB_DESTREZADataTable(ds.Tables["TB_DESTREZA"]));
+                if ((ds.Tables["TB_DESTREZA_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_DESTREZA_ASPIRANTEDataTable(ds.Tables["TB_DESTREZA_ASPIRANTE"]));
                 }
-                if ((ds.Tables["TB_DOCUMENTO"] != null)) {
-                    base.Tables.Add(new TB_DOCUMENTODataTable(ds.Tables["TB_DOCUMENTO"]));
+                if ((ds.Tables["TB_DOCUMENTO_ASPIRANTE"] != null)) {
+                    base.Tables.Add(new TB_DOCUMENTO_ASPIRANTEDataTable(ds.Tables["TB_DOCUMENTO_ASPIRANTE"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -266,28 +266,28 @@ namespace ClsDataSets {
                     this.tableTB_ASPIRANTE.InitVars();
                 }
             }
-            this.tableTB_ESCOLARIDAD = ((TB_ESCOLARIDADDataTable)(base.Tables["TB_ESCOLARIDAD"]));
+            this.tableTB_ESCOLARIDAD_ASPIRANTE = ((TB_ESCOLARIDAD_ASPIRANTEDataTable)(base.Tables["TB_ESCOLARIDAD_ASPIRANTE"]));
             if ((initTable == true)) {
-                if ((this.tableTB_ESCOLARIDAD != null)) {
-                    this.tableTB_ESCOLARIDAD.InitVars();
+                if ((this.tableTB_ESCOLARIDAD_ASPIRANTE != null)) {
+                    this.tableTB_ESCOLARIDAD_ASPIRANTE.InitVars();
                 }
             }
-            this.tableTB_HABILIDAD = ((TB_HABILIDADDataTable)(base.Tables["TB_HABILIDAD"]));
+            this.tableTB_HABILIDAD_ASPIRANTE = ((TB_HABILIDAD_ASPIRANTEDataTable)(base.Tables["TB_HABILIDAD_ASPIRANTE"]));
             if ((initTable == true)) {
-                if ((this.tableTB_HABILIDAD != null)) {
-                    this.tableTB_HABILIDAD.InitVars();
+                if ((this.tableTB_HABILIDAD_ASPIRANTE != null)) {
+                    this.tableTB_HABILIDAD_ASPIRANTE.InitVars();
                 }
             }
-            this.tableTB_DESTREZA = ((TB_DESTREZADataTable)(base.Tables["TB_DESTREZA"]));
+            this.tableTB_DESTREZA_ASPIRANTE = ((TB_DESTREZA_ASPIRANTEDataTable)(base.Tables["TB_DESTREZA_ASPIRANTE"]));
             if ((initTable == true)) {
-                if ((this.tableTB_DESTREZA != null)) {
-                    this.tableTB_DESTREZA.InitVars();
+                if ((this.tableTB_DESTREZA_ASPIRANTE != null)) {
+                    this.tableTB_DESTREZA_ASPIRANTE.InitVars();
                 }
             }
-            this.tableTB_DOCUMENTO = ((TB_DOCUMENTODataTable)(base.Tables["TB_DOCUMENTO"]));
+            this.tableTB_DOCUMENTO_ASPIRANTE = ((TB_DOCUMENTO_ASPIRANTEDataTable)(base.Tables["TB_DOCUMENTO_ASPIRANTE"]));
             if ((initTable == true)) {
-                if ((this.tableTB_DOCUMENTO != null)) {
-                    this.tableTB_DOCUMENTO.InitVars();
+                if ((this.tableTB_DOCUMENTO_ASPIRANTE != null)) {
+                    this.tableTB_DOCUMENTO_ASPIRANTE.InitVars();
                 }
             }
         }
@@ -302,14 +302,14 @@ namespace ClsDataSets {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTB_ASPIRANTE = new TB_ASPIRANTEDataTable();
             base.Tables.Add(this.tableTB_ASPIRANTE);
-            this.tableTB_ESCOLARIDAD = new TB_ESCOLARIDADDataTable();
-            base.Tables.Add(this.tableTB_ESCOLARIDAD);
-            this.tableTB_HABILIDAD = new TB_HABILIDADDataTable();
-            base.Tables.Add(this.tableTB_HABILIDAD);
-            this.tableTB_DESTREZA = new TB_DESTREZADataTable();
-            base.Tables.Add(this.tableTB_DESTREZA);
-            this.tableTB_DOCUMENTO = new TB_DOCUMENTODataTable();
-            base.Tables.Add(this.tableTB_DOCUMENTO);
+            this.tableTB_ESCOLARIDAD_ASPIRANTE = new TB_ESCOLARIDAD_ASPIRANTEDataTable();
+            base.Tables.Add(this.tableTB_ESCOLARIDAD_ASPIRANTE);
+            this.tableTB_HABILIDAD_ASPIRANTE = new TB_HABILIDAD_ASPIRANTEDataTable();
+            base.Tables.Add(this.tableTB_HABILIDAD_ASPIRANTE);
+            this.tableTB_DESTREZA_ASPIRANTE = new TB_DESTREZA_ASPIRANTEDataTable();
+            base.Tables.Add(this.tableTB_DESTREZA_ASPIRANTE);
+            this.tableTB_DOCUMENTO_ASPIRANTE = new TB_DOCUMENTO_ASPIRANTEDataTable();
+            base.Tables.Add(this.tableTB_DOCUMENTO_ASPIRANTE);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -320,25 +320,25 @@ namespace ClsDataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTB_ESCOLARIDAD() {
+        private bool ShouldSerializeTB_ESCOLARIDAD_ASPIRANTE() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTB_HABILIDAD() {
+        private bool ShouldSerializeTB_HABILIDAD_ASPIRANTE() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTB_DESTREZA() {
+        private bool ShouldSerializeTB_DESTREZA_ASPIRANTE() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTB_DOCUMENTO() {
+        private bool ShouldSerializeTB_DOCUMENTO_ASPIRANTE() {
             return false;
         }
         
@@ -401,16 +401,16 @@ namespace ClsDataSets {
         public delegate void TB_ASPIRANTERowChangeEventHandler(object sender, TB_ASPIRANTERowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TB_ESCOLARIDADRowChangeEventHandler(object sender, TB_ESCOLARIDADRowChangeEvent e);
+        public delegate void TB_ESCOLARIDAD_ASPIRANTERowChangeEventHandler(object sender, TB_ESCOLARIDAD_ASPIRANTERowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TB_HABILIDADRowChangeEventHandler(object sender, TB_HABILIDADRowChangeEvent e);
+        public delegate void TB_HABILIDAD_ASPIRANTERowChangeEventHandler(object sender, TB_HABILIDAD_ASPIRANTERowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TB_DESTREZARowChangeEventHandler(object sender, TB_DESTREZARowChangeEvent e);
+        public delegate void TB_DESTREZA_ASPIRANTERowChangeEventHandler(object sender, TB_DESTREZA_ASPIRANTERowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TB_DOCUMENTORowChangeEventHandler(object sender, TB_DOCUMENTORowChangeEvent e);
+        public delegate void TB_DOCUMENTO_ASPIRANTERowChangeEventHandler(object sender, TB_DOCUMENTO_ASPIRANTERowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -953,7 +953,7 @@ namespace ClsDataSets {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TB_ESCOLARIDADDataTable : global::System.Data.TypedTableBase<TB_ESCOLARIDADRow> {
+        public partial class TB_ESCOLARIDAD_ASPIRANTEDataTable : global::System.Data.TypedTableBase<TB_ESCOLARIDAD_ASPIRANTERow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -973,8 +973,8 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ESCOLARIDADDataTable() {
-                this.TableName = "TB_ESCOLARIDAD";
+            public TB_ESCOLARIDAD_ASPIRANTEDataTable() {
+                this.TableName = "TB_ESCOLARIDAD_ASPIRANTE";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -982,7 +982,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_ESCOLARIDADDataTable(global::System.Data.DataTable table) {
+            internal TB_ESCOLARIDAD_ASPIRANTEDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -999,7 +999,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TB_ESCOLARIDADDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TB_ESCOLARIDAD_ASPIRANTEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1079,34 +1079,34 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ESCOLARIDADRow this[int index] {
+            public TB_ESCOLARIDAD_ASPIRANTERow this[int index] {
                 get {
-                    return ((TB_ESCOLARIDADRow)(this.Rows[index]));
+                    return ((TB_ESCOLARIDAD_ASPIRANTERow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_ESCOLARIDADRowChangeEventHandler TB_ESCOLARIDADRowChanging;
+            public event TB_ESCOLARIDAD_ASPIRANTERowChangeEventHandler TB_ESCOLARIDAD_ASPIRANTERowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_ESCOLARIDADRowChangeEventHandler TB_ESCOLARIDADRowChanged;
+            public event TB_ESCOLARIDAD_ASPIRANTERowChangeEventHandler TB_ESCOLARIDAD_ASPIRANTERowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_ESCOLARIDADRowChangeEventHandler TB_ESCOLARIDADRowDeleting;
+            public event TB_ESCOLARIDAD_ASPIRANTERowChangeEventHandler TB_ESCOLARIDAD_ASPIRANTERowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_ESCOLARIDADRowChangeEventHandler TB_ESCOLARIDADRowDeleted;
+            public event TB_ESCOLARIDAD_ASPIRANTERowChangeEventHandler TB_ESCOLARIDAD_ASPIRANTERowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTB_ESCOLARIDADRow(TB_ESCOLARIDADRow row) {
+            public void AddTB_ESCOLARIDAD_ASPIRANTERow(TB_ESCOLARIDAD_ASPIRANTERow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ESCOLARIDADRow AddTB_ESCOLARIDADRow(string ID, string DS_ESCOLARIDAD, string DS_CARRERA, string DS_CENTRO_ESCOLAR, string DS_PAIS, string DS_OTRA, string NM_ANIO_FIN, string NM_PROMEDIO_NOTA) {
-                TB_ESCOLARIDADRow rowTB_ESCOLARIDADRow = ((TB_ESCOLARIDADRow)(this.NewRow()));
+            public TB_ESCOLARIDAD_ASPIRANTERow AddTB_ESCOLARIDAD_ASPIRANTERow(string ID, string DS_ESCOLARIDAD, string DS_CARRERA, string DS_CENTRO_ESCOLAR, string DS_PAIS, string DS_OTRA, string NM_ANIO_FIN, string NM_PROMEDIO_NOTA) {
+                TB_ESCOLARIDAD_ASPIRANTERow rowTB_ESCOLARIDAD_ASPIRANTERow = ((TB_ESCOLARIDAD_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         DS_ESCOLARIDAD,
@@ -1116,15 +1116,15 @@ namespace ClsDataSets {
                         DS_OTRA,
                         NM_ANIO_FIN,
                         NM_PROMEDIO_NOTA};
-                rowTB_ESCOLARIDADRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTB_ESCOLARIDADRow);
-                return rowTB_ESCOLARIDADRow;
+                rowTB_ESCOLARIDAD_ASPIRANTERow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_ESCOLARIDAD_ASPIRANTERow);
+                return rowTB_ESCOLARIDAD_ASPIRANTERow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TB_ESCOLARIDADDataTable cln = ((TB_ESCOLARIDADDataTable)(base.Clone()));
+                TB_ESCOLARIDAD_ASPIRANTEDataTable cln = ((TB_ESCOLARIDAD_ASPIRANTEDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1132,7 +1132,7 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TB_ESCOLARIDADDataTable();
+                return new TB_ESCOLARIDAD_ASPIRANTEDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1174,28 +1174,28 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ESCOLARIDADRow NewTB_ESCOLARIDADRow() {
-                return ((TB_ESCOLARIDADRow)(this.NewRow()));
+            public TB_ESCOLARIDAD_ASPIRANTERow NewTB_ESCOLARIDAD_ASPIRANTERow() {
+                return ((TB_ESCOLARIDAD_ASPIRANTERow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TB_ESCOLARIDADRow(builder);
+                return new TB_ESCOLARIDAD_ASPIRANTERow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TB_ESCOLARIDADRow);
+                return typeof(TB_ESCOLARIDAD_ASPIRANTERow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TB_ESCOLARIDADRowChanged != null)) {
-                    this.TB_ESCOLARIDADRowChanged(this, new TB_ESCOLARIDADRowChangeEvent(((TB_ESCOLARIDADRow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_ASPIRANTERowChanged != null)) {
+                    this.TB_ESCOLARIDAD_ASPIRANTERowChanged(this, new TB_ESCOLARIDAD_ASPIRANTERowChangeEvent(((TB_ESCOLARIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1203,8 +1203,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TB_ESCOLARIDADRowChanging != null)) {
-                    this.TB_ESCOLARIDADRowChanging(this, new TB_ESCOLARIDADRowChangeEvent(((TB_ESCOLARIDADRow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_ASPIRANTERowChanging != null)) {
+                    this.TB_ESCOLARIDAD_ASPIRANTERowChanging(this, new TB_ESCOLARIDAD_ASPIRANTERowChangeEvent(((TB_ESCOLARIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1212,8 +1212,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TB_ESCOLARIDADRowDeleted != null)) {
-                    this.TB_ESCOLARIDADRowDeleted(this, new TB_ESCOLARIDADRowChangeEvent(((TB_ESCOLARIDADRow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_ASPIRANTERowDeleted != null)) {
+                    this.TB_ESCOLARIDAD_ASPIRANTERowDeleted(this, new TB_ESCOLARIDAD_ASPIRANTERowChangeEvent(((TB_ESCOLARIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1221,14 +1221,14 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TB_ESCOLARIDADRowDeleting != null)) {
-                    this.TB_ESCOLARIDADRowDeleting(this, new TB_ESCOLARIDADRowChangeEvent(((TB_ESCOLARIDADRow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_ASPIRANTERowDeleting != null)) {
+                    this.TB_ESCOLARIDAD_ASPIRANTERowDeleting(this, new TB_ESCOLARIDAD_ASPIRANTERowChangeEvent(((TB_ESCOLARIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTB_ESCOLARIDADRow(TB_ESCOLARIDADRow row) {
+            public void RemoveTB_ESCOLARIDAD_ASPIRANTERow(TB_ESCOLARIDAD_ASPIRANTERow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1255,7 +1255,7 @@ namespace ClsDataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TB_ESCOLARIDADDataTable";
+                attribute2.FixedValue = "TB_ESCOLARIDAD_ASPIRANTEDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1301,7 +1301,7 @@ namespace ClsDataSets {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TB_HABILIDADDataTable : global::System.Data.TypedTableBase<TB_HABILIDADRow> {
+        public partial class TB_HABILIDAD_ASPIRANTEDataTable : global::System.Data.TypedTableBase<TB_HABILIDAD_ASPIRANTERow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -1313,8 +1313,8 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_HABILIDADDataTable() {
-                this.TableName = "TB_HABILIDAD";
+            public TB_HABILIDAD_ASPIRANTEDataTable() {
+                this.TableName = "TB_HABILIDAD_ASPIRANTE";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1322,7 +1322,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_HABILIDADDataTable(global::System.Data.DataTable table) {
+            internal TB_HABILIDAD_ASPIRANTEDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1339,7 +1339,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TB_HABILIDADDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TB_HABILIDAD_ASPIRANTEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1387,48 +1387,48 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_HABILIDADRow this[int index] {
+            public TB_HABILIDAD_ASPIRANTERow this[int index] {
                 get {
-                    return ((TB_HABILIDADRow)(this.Rows[index]));
+                    return ((TB_HABILIDAD_ASPIRANTERow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_HABILIDADRowChangeEventHandler TB_HABILIDADRowChanging;
+            public event TB_HABILIDAD_ASPIRANTERowChangeEventHandler TB_HABILIDAD_ASPIRANTERowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_HABILIDADRowChangeEventHandler TB_HABILIDADRowChanged;
+            public event TB_HABILIDAD_ASPIRANTERowChangeEventHandler TB_HABILIDAD_ASPIRANTERowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_HABILIDADRowChangeEventHandler TB_HABILIDADRowDeleting;
+            public event TB_HABILIDAD_ASPIRANTERowChangeEventHandler TB_HABILIDAD_ASPIRANTERowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_HABILIDADRowChangeEventHandler TB_HABILIDADRowDeleted;
+            public event TB_HABILIDAD_ASPIRANTERowChangeEventHandler TB_HABILIDAD_ASPIRANTERowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTB_HABILIDADRow(TB_HABILIDADRow row) {
+            public void AddTB_HABILIDAD_ASPIRANTERow(TB_HABILIDAD_ASPIRANTERow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_HABILIDADRow AddTB_HABILIDADRow(string ID, string DS_HABILIDAD_CONOCIMIENTO, string DS_CATEGORIA_HABILIDAD, string DS_NIVEL_CONOCIMIENTO) {
-                TB_HABILIDADRow rowTB_HABILIDADRow = ((TB_HABILIDADRow)(this.NewRow()));
+            public TB_HABILIDAD_ASPIRANTERow AddTB_HABILIDAD_ASPIRANTERow(string ID, string DS_HABILIDAD_CONOCIMIENTO, string DS_CATEGORIA_HABILIDAD, string DS_NIVEL_CONOCIMIENTO) {
+                TB_HABILIDAD_ASPIRANTERow rowTB_HABILIDAD_ASPIRANTERow = ((TB_HABILIDAD_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         DS_HABILIDAD_CONOCIMIENTO,
                         DS_CATEGORIA_HABILIDAD,
                         DS_NIVEL_CONOCIMIENTO};
-                rowTB_HABILIDADRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTB_HABILIDADRow);
-                return rowTB_HABILIDADRow;
+                rowTB_HABILIDAD_ASPIRANTERow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_HABILIDAD_ASPIRANTERow);
+                return rowTB_HABILIDAD_ASPIRANTERow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TB_HABILIDADDataTable cln = ((TB_HABILIDADDataTable)(base.Clone()));
+                TB_HABILIDAD_ASPIRANTEDataTable cln = ((TB_HABILIDAD_ASPIRANTEDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1436,7 +1436,7 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TB_HABILIDADDataTable();
+                return new TB_HABILIDAD_ASPIRANTEDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1466,28 +1466,28 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_HABILIDADRow NewTB_HABILIDADRow() {
-                return ((TB_HABILIDADRow)(this.NewRow()));
+            public TB_HABILIDAD_ASPIRANTERow NewTB_HABILIDAD_ASPIRANTERow() {
+                return ((TB_HABILIDAD_ASPIRANTERow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TB_HABILIDADRow(builder);
+                return new TB_HABILIDAD_ASPIRANTERow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TB_HABILIDADRow);
+                return typeof(TB_HABILIDAD_ASPIRANTERow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TB_HABILIDADRowChanged != null)) {
-                    this.TB_HABILIDADRowChanged(this, new TB_HABILIDADRowChangeEvent(((TB_HABILIDADRow)(e.Row)), e.Action));
+                if ((this.TB_HABILIDAD_ASPIRANTERowChanged != null)) {
+                    this.TB_HABILIDAD_ASPIRANTERowChanged(this, new TB_HABILIDAD_ASPIRANTERowChangeEvent(((TB_HABILIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1495,8 +1495,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TB_HABILIDADRowChanging != null)) {
-                    this.TB_HABILIDADRowChanging(this, new TB_HABILIDADRowChangeEvent(((TB_HABILIDADRow)(e.Row)), e.Action));
+                if ((this.TB_HABILIDAD_ASPIRANTERowChanging != null)) {
+                    this.TB_HABILIDAD_ASPIRANTERowChanging(this, new TB_HABILIDAD_ASPIRANTERowChangeEvent(((TB_HABILIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1504,8 +1504,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TB_HABILIDADRowDeleted != null)) {
-                    this.TB_HABILIDADRowDeleted(this, new TB_HABILIDADRowChangeEvent(((TB_HABILIDADRow)(e.Row)), e.Action));
+                if ((this.TB_HABILIDAD_ASPIRANTERowDeleted != null)) {
+                    this.TB_HABILIDAD_ASPIRANTERowDeleted(this, new TB_HABILIDAD_ASPIRANTERowChangeEvent(((TB_HABILIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1513,14 +1513,14 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TB_HABILIDADRowDeleting != null)) {
-                    this.TB_HABILIDADRowDeleting(this, new TB_HABILIDADRowChangeEvent(((TB_HABILIDADRow)(e.Row)), e.Action));
+                if ((this.TB_HABILIDAD_ASPIRANTERowDeleting != null)) {
+                    this.TB_HABILIDAD_ASPIRANTERowDeleting(this, new TB_HABILIDAD_ASPIRANTERowChangeEvent(((TB_HABILIDAD_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTB_HABILIDADRow(TB_HABILIDADRow row) {
+            public void RemoveTB_HABILIDAD_ASPIRANTERow(TB_HABILIDAD_ASPIRANTERow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1547,7 +1547,7 @@ namespace ClsDataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TB_HABILIDADDataTable";
+                attribute2.FixedValue = "TB_HABILIDAD_ASPIRANTEDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1593,7 +1593,7 @@ namespace ClsDataSets {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TB_DESTREZADataTable : global::System.Data.TypedTableBase<TB_DESTREZARow> {
+        public partial class TB_DESTREZA_ASPIRANTEDataTable : global::System.Data.TypedTableBase<TB_DESTREZA_ASPIRANTERow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -1601,8 +1601,8 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DESTREZADataTable() {
-                this.TableName = "TB_DESTREZA";
+            public TB_DESTREZA_ASPIRANTEDataTable() {
+                this.TableName = "TB_DESTREZA_ASPIRANTE";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1610,7 +1610,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_DESTREZADataTable(global::System.Data.DataTable table) {
+            internal TB_DESTREZA_ASPIRANTEDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1627,7 +1627,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TB_DESTREZADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TB_DESTREZA_ASPIRANTEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1659,46 +1659,46 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DESTREZARow this[int index] {
+            public TB_DESTREZA_ASPIRANTERow this[int index] {
                 get {
-                    return ((TB_DESTREZARow)(this.Rows[index]));
+                    return ((TB_DESTREZA_ASPIRANTERow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DESTREZARowChangeEventHandler TB_DESTREZARowChanging;
+            public event TB_DESTREZA_ASPIRANTERowChangeEventHandler TB_DESTREZA_ASPIRANTERowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DESTREZARowChangeEventHandler TB_DESTREZARowChanged;
+            public event TB_DESTREZA_ASPIRANTERowChangeEventHandler TB_DESTREZA_ASPIRANTERowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DESTREZARowChangeEventHandler TB_DESTREZARowDeleting;
+            public event TB_DESTREZA_ASPIRANTERowChangeEventHandler TB_DESTREZA_ASPIRANTERowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DESTREZARowChangeEventHandler TB_DESTREZARowDeleted;
+            public event TB_DESTREZA_ASPIRANTERowChangeEventHandler TB_DESTREZA_ASPIRANTERowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTB_DESTREZARow(TB_DESTREZARow row) {
+            public void AddTB_DESTREZA_ASPIRANTERow(TB_DESTREZA_ASPIRANTERow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DESTREZARow AddTB_DESTREZARow(string ID, string DS_DESTREZA) {
-                TB_DESTREZARow rowTB_DESTREZARow = ((TB_DESTREZARow)(this.NewRow()));
+            public TB_DESTREZA_ASPIRANTERow AddTB_DESTREZA_ASPIRANTERow(string ID, string DS_DESTREZA) {
+                TB_DESTREZA_ASPIRANTERow rowTB_DESTREZA_ASPIRANTERow = ((TB_DESTREZA_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         DS_DESTREZA};
-                rowTB_DESTREZARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTB_DESTREZARow);
-                return rowTB_DESTREZARow;
+                rowTB_DESTREZA_ASPIRANTERow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_DESTREZA_ASPIRANTERow);
+                return rowTB_DESTREZA_ASPIRANTERow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TB_DESTREZADataTable cln = ((TB_DESTREZADataTable)(base.Clone()));
+                TB_DESTREZA_ASPIRANTEDataTable cln = ((TB_DESTREZA_ASPIRANTEDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1706,7 +1706,7 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TB_DESTREZADataTable();
+                return new TB_DESTREZA_ASPIRANTEDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1730,28 +1730,28 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DESTREZARow NewTB_DESTREZARow() {
-                return ((TB_DESTREZARow)(this.NewRow()));
+            public TB_DESTREZA_ASPIRANTERow NewTB_DESTREZA_ASPIRANTERow() {
+                return ((TB_DESTREZA_ASPIRANTERow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TB_DESTREZARow(builder);
+                return new TB_DESTREZA_ASPIRANTERow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TB_DESTREZARow);
+                return typeof(TB_DESTREZA_ASPIRANTERow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TB_DESTREZARowChanged != null)) {
-                    this.TB_DESTREZARowChanged(this, new TB_DESTREZARowChangeEvent(((TB_DESTREZARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_ASPIRANTERowChanged != null)) {
+                    this.TB_DESTREZA_ASPIRANTERowChanged(this, new TB_DESTREZA_ASPIRANTERowChangeEvent(((TB_DESTREZA_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1759,8 +1759,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TB_DESTREZARowChanging != null)) {
-                    this.TB_DESTREZARowChanging(this, new TB_DESTREZARowChangeEvent(((TB_DESTREZARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_ASPIRANTERowChanging != null)) {
+                    this.TB_DESTREZA_ASPIRANTERowChanging(this, new TB_DESTREZA_ASPIRANTERowChangeEvent(((TB_DESTREZA_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1768,8 +1768,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TB_DESTREZARowDeleted != null)) {
-                    this.TB_DESTREZARowDeleted(this, new TB_DESTREZARowChangeEvent(((TB_DESTREZARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_ASPIRANTERowDeleted != null)) {
+                    this.TB_DESTREZA_ASPIRANTERowDeleted(this, new TB_DESTREZA_ASPIRANTERowChangeEvent(((TB_DESTREZA_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -1777,14 +1777,14 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TB_DESTREZARowDeleting != null)) {
-                    this.TB_DESTREZARowDeleting(this, new TB_DESTREZARowChangeEvent(((TB_DESTREZARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_ASPIRANTERowDeleting != null)) {
+                    this.TB_DESTREZA_ASPIRANTERowDeleting(this, new TB_DESTREZA_ASPIRANTERowChangeEvent(((TB_DESTREZA_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTB_DESTREZARow(TB_DESTREZARow row) {
+            public void RemoveTB_DESTREZA_ASPIRANTERow(TB_DESTREZA_ASPIRANTERow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1811,7 +1811,7 @@ namespace ClsDataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TB_DESTREZADataTable";
+                attribute2.FixedValue = "TB_DESTREZA_ASPIRANTEDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1857,7 +1857,7 @@ namespace ClsDataSets {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TB_DOCUMENTODataTable : global::System.Data.TypedTableBase<TB_DOCUMENTORow> {
+        public partial class TB_DOCUMENTO_ASPIRANTEDataTable : global::System.Data.TypedTableBase<TB_DOCUMENTO_ASPIRANTERow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -1869,8 +1869,8 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DOCUMENTODataTable() {
-                this.TableName = "TB_DOCUMENTO";
+            public TB_DOCUMENTO_ASPIRANTEDataTable() {
+                this.TableName = "TB_DOCUMENTO_ASPIRANTE";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1878,7 +1878,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_DOCUMENTODataTable(global::System.Data.DataTable table) {
+            internal TB_DOCUMENTO_ASPIRANTEDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1895,7 +1895,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TB_DOCUMENTODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TB_DOCUMENTO_ASPIRANTEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1943,48 +1943,48 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DOCUMENTORow this[int index] {
+            public TB_DOCUMENTO_ASPIRANTERow this[int index] {
                 get {
-                    return ((TB_DOCUMENTORow)(this.Rows[index]));
+                    return ((TB_DOCUMENTO_ASPIRANTERow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DOCUMENTORowChangeEventHandler TB_DOCUMENTORowChanging;
+            public event TB_DOCUMENTO_ASPIRANTERowChangeEventHandler TB_DOCUMENTO_ASPIRANTERowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DOCUMENTORowChangeEventHandler TB_DOCUMENTORowChanged;
+            public event TB_DOCUMENTO_ASPIRANTERowChangeEventHandler TB_DOCUMENTO_ASPIRANTERowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DOCUMENTORowChangeEventHandler TB_DOCUMENTORowDeleting;
+            public event TB_DOCUMENTO_ASPIRANTERowChangeEventHandler TB_DOCUMENTO_ASPIRANTERowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_DOCUMENTORowChangeEventHandler TB_DOCUMENTORowDeleted;
+            public event TB_DOCUMENTO_ASPIRANTERowChangeEventHandler TB_DOCUMENTO_ASPIRANTERowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTB_DOCUMENTORow(TB_DOCUMENTORow row) {
+            public void AddTB_DOCUMENTO_ASPIRANTERow(TB_DOCUMENTO_ASPIRANTERow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DOCUMENTORow AddTB_DOCUMENTORow(string ID, string DS_DOCUMENTO, string URL_DOCUMENTO, string DS_TIPO_DOCUMENTO) {
-                TB_DOCUMENTORow rowTB_DOCUMENTORow = ((TB_DOCUMENTORow)(this.NewRow()));
+            public TB_DOCUMENTO_ASPIRANTERow AddTB_DOCUMENTO_ASPIRANTERow(string ID, string DS_DOCUMENTO, string URL_DOCUMENTO, string DS_TIPO_DOCUMENTO) {
+                TB_DOCUMENTO_ASPIRANTERow rowTB_DOCUMENTO_ASPIRANTERow = ((TB_DOCUMENTO_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         DS_DOCUMENTO,
                         URL_DOCUMENTO,
                         DS_TIPO_DOCUMENTO};
-                rowTB_DOCUMENTORow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTB_DOCUMENTORow);
-                return rowTB_DOCUMENTORow;
+                rowTB_DOCUMENTO_ASPIRANTERow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_DOCUMENTO_ASPIRANTERow);
+                return rowTB_DOCUMENTO_ASPIRANTERow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TB_DOCUMENTODataTable cln = ((TB_DOCUMENTODataTable)(base.Clone()));
+                TB_DOCUMENTO_ASPIRANTEDataTable cln = ((TB_DOCUMENTO_ASPIRANTEDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1992,7 +1992,7 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TB_DOCUMENTODataTable();
+                return new TB_DOCUMENTO_ASPIRANTEDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2022,28 +2022,28 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DOCUMENTORow NewTB_DOCUMENTORow() {
-                return ((TB_DOCUMENTORow)(this.NewRow()));
+            public TB_DOCUMENTO_ASPIRANTERow NewTB_DOCUMENTO_ASPIRANTERow() {
+                return ((TB_DOCUMENTO_ASPIRANTERow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TB_DOCUMENTORow(builder);
+                return new TB_DOCUMENTO_ASPIRANTERow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TB_DOCUMENTORow);
+                return typeof(TB_DOCUMENTO_ASPIRANTERow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TB_DOCUMENTORowChanged != null)) {
-                    this.TB_DOCUMENTORowChanged(this, new TB_DOCUMENTORowChangeEvent(((TB_DOCUMENTORow)(e.Row)), e.Action));
+                if ((this.TB_DOCUMENTO_ASPIRANTERowChanged != null)) {
+                    this.TB_DOCUMENTO_ASPIRANTERowChanged(this, new TB_DOCUMENTO_ASPIRANTERowChangeEvent(((TB_DOCUMENTO_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -2051,8 +2051,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TB_DOCUMENTORowChanging != null)) {
-                    this.TB_DOCUMENTORowChanging(this, new TB_DOCUMENTORowChangeEvent(((TB_DOCUMENTORow)(e.Row)), e.Action));
+                if ((this.TB_DOCUMENTO_ASPIRANTERowChanging != null)) {
+                    this.TB_DOCUMENTO_ASPIRANTERowChanging(this, new TB_DOCUMENTO_ASPIRANTERowChangeEvent(((TB_DOCUMENTO_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -2060,8 +2060,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TB_DOCUMENTORowDeleted != null)) {
-                    this.TB_DOCUMENTORowDeleted(this, new TB_DOCUMENTORowChangeEvent(((TB_DOCUMENTORow)(e.Row)), e.Action));
+                if ((this.TB_DOCUMENTO_ASPIRANTERowDeleted != null)) {
+                    this.TB_DOCUMENTO_ASPIRANTERowDeleted(this, new TB_DOCUMENTO_ASPIRANTERowChangeEvent(((TB_DOCUMENTO_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -2069,14 +2069,14 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TB_DOCUMENTORowDeleting != null)) {
-                    this.TB_DOCUMENTORowDeleting(this, new TB_DOCUMENTORowChangeEvent(((TB_DOCUMENTORow)(e.Row)), e.Action));
+                if ((this.TB_DOCUMENTO_ASPIRANTERowDeleting != null)) {
+                    this.TB_DOCUMENTO_ASPIRANTERowDeleting(this, new TB_DOCUMENTO_ASPIRANTERowChangeEvent(((TB_DOCUMENTO_ASPIRANTERow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTB_DOCUMENTORow(TB_DOCUMENTORow row) {
+            public void RemoveTB_DOCUMENTO_ASPIRANTERow(TB_DOCUMENTO_ASPIRANTERow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2103,7 +2103,7 @@ namespace ClsDataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TB_DOCUMENTODataTable";
+                attribute2.FixedValue = "TB_DOCUMENTO_ASPIRANTEDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2724,15 +2724,15 @@ namespace ClsDataSets {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TB_ESCOLARIDADRow : global::System.Data.DataRow {
+        public partial class TB_ESCOLARIDAD_ASPIRANTERow : global::System.Data.DataRow {
             
-            private TB_ESCOLARIDADDataTable tableTB_ESCOLARIDAD;
+            private TB_ESCOLARIDAD_ASPIRANTEDataTable tableTB_ESCOLARIDAD_ASPIRANTE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_ESCOLARIDADRow(global::System.Data.DataRowBuilder rb) : 
+            internal TB_ESCOLARIDAD_ASPIRANTERow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTB_ESCOLARIDAD = ((TB_ESCOLARIDADDataTable)(this.Table));
+                this.tableTB_ESCOLARIDAD_ASPIRANTE = ((TB_ESCOLARIDAD_ASPIRANTEDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2740,14 +2740,14 @@ namespace ClsDataSets {
             public string ID {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.IDColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_ESCOLARIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.IDColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.IDColumn] = value;
                 }
             }
             
@@ -2756,14 +2756,15 @@ namespace ClsDataSets {
             public string DS_ESCOLARIDAD {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.DS_ESCOLARIDADColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_ESCOLARIDADColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_ESCOLARIDAD\' de la tabla \'TB_ESCOLARIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_ESCOLARIDAD\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' es" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.DS_ESCOLARIDADColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_ESCOLARIDADColumn] = value;
                 }
             }
             
@@ -2772,14 +2773,15 @@ namespace ClsDataSets {
             public string DS_CARRERA {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.DS_CARRERAColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CARRERAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CARRERA\' de la tabla \'TB_ESCOLARIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CARRERA\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' es DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.DS_CARRERAColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CARRERAColumn] = value;
                 }
             }
             
@@ -2788,15 +2790,15 @@ namespace ClsDataSets {
             public string DS_CENTRO_ESCOLAR {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.DS_CENTRO_ESCOLARColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CENTRO_ESCOLARColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CENTRO_ESCOLAR\' de la tabla \'TB_ESCOLARIDAD\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CENTRO_ESCOLAR\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\'" +
+                                " es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.DS_CENTRO_ESCOLARColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CENTRO_ESCOLARColumn] = value;
                 }
             }
             
@@ -2805,14 +2807,15 @@ namespace ClsDataSets {
             public string DS_PAIS {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.DS_PAISColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_PAISColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_PAIS\' de la tabla \'TB_ESCOLARIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_PAIS\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' es DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.DS_PAISColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_PAISColumn] = value;
                 }
             }
             
@@ -2821,14 +2824,15 @@ namespace ClsDataSets {
             public string DS_OTRA {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.DS_OTRAColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_OTRAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_OTRA\' de la tabla \'TB_ESCOLARIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_OTRA\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' es DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.DS_OTRAColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_OTRAColumn] = value;
                 }
             }
             
@@ -2837,14 +2841,15 @@ namespace ClsDataSets {
             public string NM_ANIO_FIN {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.NM_ANIO_FINColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_ANIO_FINColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_ANIO_FIN\' de la tabla \'TB_ESCOLARIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_ANIO_FIN\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' es DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.NM_ANIO_FINColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_ANIO_FINColumn] = value;
                 }
             }
             
@@ -2853,127 +2858,127 @@ namespace ClsDataSets {
             public string NM_PROMEDIO_NOTA {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_ESCOLARIDAD.NM_PROMEDIO_NOTAColumn]));
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_PROMEDIO_NOTAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_PROMEDIO_NOTA\' de la tabla \'TB_ESCOLARIDAD\' es DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_PROMEDIO_NOTA\' de la tabla \'TB_ESCOLARIDAD_ASPIRANTE\' " +
+                                "es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_ESCOLARIDAD.NM_PROMEDIO_NOTAColumn] = value;
+                    this[this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_PROMEDIO_NOTAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.IDColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIDNull() {
-                this[this.tableTB_ESCOLARIDAD.IDColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_ESCOLARIDADNull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.DS_ESCOLARIDADColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_ESCOLARIDADColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_ESCOLARIDADNull() {
-                this[this.tableTB_ESCOLARIDAD.DS_ESCOLARIDADColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_ESCOLARIDADColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_CARRERANull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.DS_CARRERAColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CARRERAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_CARRERANull() {
-                this[this.tableTB_ESCOLARIDAD.DS_CARRERAColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CARRERAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_CENTRO_ESCOLARNull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.DS_CENTRO_ESCOLARColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CENTRO_ESCOLARColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_CENTRO_ESCOLARNull() {
-                this[this.tableTB_ESCOLARIDAD.DS_CENTRO_ESCOLARColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_CENTRO_ESCOLARColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_PAISNull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.DS_PAISColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_PAISColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_PAISNull() {
-                this[this.tableTB_ESCOLARIDAD.DS_PAISColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_PAISColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_OTRANull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.DS_OTRAColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_OTRAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_OTRANull() {
-                this[this.tableTB_ESCOLARIDAD.DS_OTRAColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.DS_OTRAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNM_ANIO_FINNull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.NM_ANIO_FINColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_ANIO_FINColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNM_ANIO_FINNull() {
-                this[this.tableTB_ESCOLARIDAD.NM_ANIO_FINColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_ANIO_FINColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNM_PROMEDIO_NOTANull() {
-                return this.IsNull(this.tableTB_ESCOLARIDAD.NM_PROMEDIO_NOTAColumn);
+                return this.IsNull(this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_PROMEDIO_NOTAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNM_PROMEDIO_NOTANull() {
-                this[this.tableTB_ESCOLARIDAD.NM_PROMEDIO_NOTAColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_ESCOLARIDAD_ASPIRANTE.NM_PROMEDIO_NOTAColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TB_HABILIDADRow : global::System.Data.DataRow {
+        public partial class TB_HABILIDAD_ASPIRANTERow : global::System.Data.DataRow {
             
-            private TB_HABILIDADDataTable tableTB_HABILIDAD;
+            private TB_HABILIDAD_ASPIRANTEDataTable tableTB_HABILIDAD_ASPIRANTE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_HABILIDADRow(global::System.Data.DataRowBuilder rb) : 
+            internal TB_HABILIDAD_ASPIRANTERow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTB_HABILIDAD = ((TB_HABILIDADDataTable)(this.Table));
+                this.tableTB_HABILIDAD_ASPIRANTE = ((TB_HABILIDAD_ASPIRANTEDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2981,14 +2986,14 @@ namespace ClsDataSets {
             public string ID {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_HABILIDAD.IDColumn]));
+                        return ((string)(this[this.tableTB_HABILIDAD_ASPIRANTE.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_HABILIDAD\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_HABILIDAD_ASPIRANTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_HABILIDAD.IDColumn] = value;
+                    this[this.tableTB_HABILIDAD_ASPIRANTE.IDColumn] = value;
                 }
             }
             
@@ -2997,15 +3002,15 @@ namespace ClsDataSets {
             public string DS_HABILIDAD_CONOCIMIENTO {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn]));
+                        return ((string)(this[this.tableTB_HABILIDAD_ASPIRANTE.DS_HABILIDAD_CONOCIMIENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_HABILIDAD_CONOCIMIENTO\' de la tabla \'TB_HABILIDAD\' es " +
-                                "DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_HABILIDAD_CONOCIMIENTO\' de la tabla \'TB_HABILIDAD_ASPI" +
+                                "RANTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn] = value;
+                    this[this.tableTB_HABILIDAD_ASPIRANTE.DS_HABILIDAD_CONOCIMIENTOColumn] = value;
                 }
             }
             
@@ -3014,15 +3019,15 @@ namespace ClsDataSets {
             public string DS_CATEGORIA_HABILIDAD {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_HABILIDAD.DS_CATEGORIA_HABILIDADColumn]));
+                        return ((string)(this[this.tableTB_HABILIDAD_ASPIRANTE.DS_CATEGORIA_HABILIDADColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CATEGORIA_HABILIDAD\' de la tabla \'TB_HABILIDAD\' es DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CATEGORIA_HABILIDAD\' de la tabla \'TB_HABILIDAD_ASPIRAN" +
+                                "TE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_HABILIDAD.DS_CATEGORIA_HABILIDADColumn] = value;
+                    this[this.tableTB_HABILIDAD_ASPIRANTE.DS_CATEGORIA_HABILIDADColumn] = value;
                 }
             }
             
@@ -3031,79 +3036,79 @@ namespace ClsDataSets {
             public string DS_NIVEL_CONOCIMIENTO {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn]));
+                        return ((string)(this[this.tableTB_HABILIDAD_ASPIRANTE.DS_NIVEL_CONOCIMIENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NIVEL_CONOCIMIENTO\' de la tabla \'TB_HABILIDAD\' es DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NIVEL_CONOCIMIENTO\' de la tabla \'TB_HABILIDAD_ASPIRANT" +
+                                "E\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn] = value;
+                    this[this.tableTB_HABILIDAD_ASPIRANTE.DS_NIVEL_CONOCIMIENTOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
-                return this.IsNull(this.tableTB_HABILIDAD.IDColumn);
+                return this.IsNull(this.tableTB_HABILIDAD_ASPIRANTE.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIDNull() {
-                this[this.tableTB_HABILIDAD.IDColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_HABILIDAD_ASPIRANTE.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_HABILIDAD_CONOCIMIENTONull() {
-                return this.IsNull(this.tableTB_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn);
+                return this.IsNull(this.tableTB_HABILIDAD_ASPIRANTE.DS_HABILIDAD_CONOCIMIENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_HABILIDAD_CONOCIMIENTONull() {
-                this[this.tableTB_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_HABILIDAD_ASPIRANTE.DS_HABILIDAD_CONOCIMIENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_CATEGORIA_HABILIDADNull() {
-                return this.IsNull(this.tableTB_HABILIDAD.DS_CATEGORIA_HABILIDADColumn);
+                return this.IsNull(this.tableTB_HABILIDAD_ASPIRANTE.DS_CATEGORIA_HABILIDADColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_CATEGORIA_HABILIDADNull() {
-                this[this.tableTB_HABILIDAD.DS_CATEGORIA_HABILIDADColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_HABILIDAD_ASPIRANTE.DS_CATEGORIA_HABILIDADColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_NIVEL_CONOCIMIENTONull() {
-                return this.IsNull(this.tableTB_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn);
+                return this.IsNull(this.tableTB_HABILIDAD_ASPIRANTE.DS_NIVEL_CONOCIMIENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_NIVEL_CONOCIMIENTONull() {
-                this[this.tableTB_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_HABILIDAD_ASPIRANTE.DS_NIVEL_CONOCIMIENTOColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TB_DESTREZARow : global::System.Data.DataRow {
+        public partial class TB_DESTREZA_ASPIRANTERow : global::System.Data.DataRow {
             
-            private TB_DESTREZADataTable tableTB_DESTREZA;
+            private TB_DESTREZA_ASPIRANTEDataTable tableTB_DESTREZA_ASPIRANTE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_DESTREZARow(global::System.Data.DataRowBuilder rb) : 
+            internal TB_DESTREZA_ASPIRANTERow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTB_DESTREZA = ((TB_DESTREZADataTable)(this.Table));
+                this.tableTB_DESTREZA_ASPIRANTE = ((TB_DESTREZA_ASPIRANTEDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3111,14 +3116,14 @@ namespace ClsDataSets {
             public string ID {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_DESTREZA.IDColumn]));
+                        return ((string)(this[this.tableTB_DESTREZA_ASPIRANTE.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_DESTREZA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_DESTREZA_ASPIRANTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_DESTREZA.IDColumn] = value;
+                    this[this.tableTB_DESTREZA_ASPIRANTE.IDColumn] = value;
                 }
             }
             
@@ -3127,54 +3132,55 @@ namespace ClsDataSets {
             public string DS_DESTREZA {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_DESTREZA.DS_DESTREZAColumn]));
+                        return ((string)(this[this.tableTB_DESTREZA_ASPIRANTE.DS_DESTREZAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DESTREZA\' de la tabla \'TB_DESTREZA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DESTREZA\' de la tabla \'TB_DESTREZA_ASPIRANTE\' es DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_DESTREZA.DS_DESTREZAColumn] = value;
+                    this[this.tableTB_DESTREZA_ASPIRANTE.DS_DESTREZAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
-                return this.IsNull(this.tableTB_DESTREZA.IDColumn);
+                return this.IsNull(this.tableTB_DESTREZA_ASPIRANTE.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIDNull() {
-                this[this.tableTB_DESTREZA.IDColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_DESTREZA_ASPIRANTE.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_DESTREZANull() {
-                return this.IsNull(this.tableTB_DESTREZA.DS_DESTREZAColumn);
+                return this.IsNull(this.tableTB_DESTREZA_ASPIRANTE.DS_DESTREZAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_DESTREZANull() {
-                this[this.tableTB_DESTREZA.DS_DESTREZAColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_DESTREZA_ASPIRANTE.DS_DESTREZAColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TB_DOCUMENTORow : global::System.Data.DataRow {
+        public partial class TB_DOCUMENTO_ASPIRANTERow : global::System.Data.DataRow {
             
-            private TB_DOCUMENTODataTable tableTB_DOCUMENTO;
+            private TB_DOCUMENTO_ASPIRANTEDataTable tableTB_DOCUMENTO_ASPIRANTE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_DOCUMENTORow(global::System.Data.DataRowBuilder rb) : 
+            internal TB_DOCUMENTO_ASPIRANTERow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTB_DOCUMENTO = ((TB_DOCUMENTODataTable)(this.Table));
+                this.tableTB_DOCUMENTO_ASPIRANTE = ((TB_DOCUMENTO_ASPIRANTEDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3182,14 +3188,14 @@ namespace ClsDataSets {
             public string ID {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_DOCUMENTO.IDColumn]));
+                        return ((string)(this[this.tableTB_DOCUMENTO_ASPIRANTE.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_DOCUMENTO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_DOCUMENTO_ASPIRANTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_DOCUMENTO.IDColumn] = value;
+                    this[this.tableTB_DOCUMENTO_ASPIRANTE.IDColumn] = value;
                 }
             }
             
@@ -3198,14 +3204,15 @@ namespace ClsDataSets {
             public string DS_DOCUMENTO {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_DOCUMENTO.DS_DOCUMENTOColumn]));
+                        return ((string)(this[this.tableTB_DOCUMENTO_ASPIRANTE.DS_DOCUMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DOCUMENTO\' de la tabla \'TB_DOCUMENTO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DOCUMENTO\' de la tabla \'TB_DOCUMENTO_ASPIRANTE\' es DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_DOCUMENTO.DS_DOCUMENTOColumn] = value;
+                    this[this.tableTB_DOCUMENTO_ASPIRANTE.DS_DOCUMENTOColumn] = value;
                 }
             }
             
@@ -3214,14 +3221,15 @@ namespace ClsDataSets {
             public string URL_DOCUMENTO {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_DOCUMENTO.URL_DOCUMENTOColumn]));
+                        return ((string)(this[this.tableTB_DOCUMENTO_ASPIRANTE.URL_DOCUMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'URL_DOCUMENTO\' de la tabla \'TB_DOCUMENTO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'URL_DOCUMENTO\' de la tabla \'TB_DOCUMENTO_ASPIRANTE\' es DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_DOCUMENTO.URL_DOCUMENTOColumn] = value;
+                    this[this.tableTB_DOCUMENTO_ASPIRANTE.URL_DOCUMENTOColumn] = value;
                 }
             }
             
@@ -3230,63 +3238,64 @@ namespace ClsDataSets {
             public string DS_TIPO_DOCUMENTO {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_DOCUMENTO.DS_TIPO_DOCUMENTOColumn]));
+                        return ((string)(this[this.tableTB_DOCUMENTO_ASPIRANTE.DS_TIPO_DOCUMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_TIPO_DOCUMENTO\' de la tabla \'TB_DOCUMENTO\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_TIPO_DOCUMENTO\' de la tabla \'TB_DOCUMENTO_ASPIRANTE\' e" +
+                                "s DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_DOCUMENTO.DS_TIPO_DOCUMENTOColumn] = value;
+                    this[this.tableTB_DOCUMENTO_ASPIRANTE.DS_TIPO_DOCUMENTOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
-                return this.IsNull(this.tableTB_DOCUMENTO.IDColumn);
+                return this.IsNull(this.tableTB_DOCUMENTO_ASPIRANTE.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIDNull() {
-                this[this.tableTB_DOCUMENTO.IDColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_DOCUMENTO_ASPIRANTE.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_DOCUMENTONull() {
-                return this.IsNull(this.tableTB_DOCUMENTO.DS_DOCUMENTOColumn);
+                return this.IsNull(this.tableTB_DOCUMENTO_ASPIRANTE.DS_DOCUMENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_DOCUMENTONull() {
-                this[this.tableTB_DOCUMENTO.DS_DOCUMENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_DOCUMENTO_ASPIRANTE.DS_DOCUMENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsURL_DOCUMENTONull() {
-                return this.IsNull(this.tableTB_DOCUMENTO.URL_DOCUMENTOColumn);
+                return this.IsNull(this.tableTB_DOCUMENTO_ASPIRANTE.URL_DOCUMENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetURL_DOCUMENTONull() {
-                this[this.tableTB_DOCUMENTO.URL_DOCUMENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_DOCUMENTO_ASPIRANTE.URL_DOCUMENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_TIPO_DOCUMENTONull() {
-                return this.IsNull(this.tableTB_DOCUMENTO.DS_TIPO_DOCUMENTOColumn);
+                return this.IsNull(this.tableTB_DOCUMENTO_ASPIRANTE.DS_TIPO_DOCUMENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_TIPO_DOCUMENTONull() {
-                this[this.tableTB_DOCUMENTO.DS_TIPO_DOCUMENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_DOCUMENTO_ASPIRANTE.DS_TIPO_DOCUMENTOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3328,22 +3337,22 @@ namespace ClsDataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TB_ESCOLARIDADRowChangeEvent : global::System.EventArgs {
+        public class TB_ESCOLARIDAD_ASPIRANTERowChangeEvent : global::System.EventArgs {
             
-            private TB_ESCOLARIDADRow eventRow;
+            private TB_ESCOLARIDAD_ASPIRANTERow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ESCOLARIDADRowChangeEvent(TB_ESCOLARIDADRow row, global::System.Data.DataRowAction action) {
+            public TB_ESCOLARIDAD_ASPIRANTERowChangeEvent(TB_ESCOLARIDAD_ASPIRANTERow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_ESCOLARIDADRow Row {
+            public TB_ESCOLARIDAD_ASPIRANTERow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3362,22 +3371,22 @@ namespace ClsDataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TB_HABILIDADRowChangeEvent : global::System.EventArgs {
+        public class TB_HABILIDAD_ASPIRANTERowChangeEvent : global::System.EventArgs {
             
-            private TB_HABILIDADRow eventRow;
+            private TB_HABILIDAD_ASPIRANTERow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_HABILIDADRowChangeEvent(TB_HABILIDADRow row, global::System.Data.DataRowAction action) {
+            public TB_HABILIDAD_ASPIRANTERowChangeEvent(TB_HABILIDAD_ASPIRANTERow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_HABILIDADRow Row {
+            public TB_HABILIDAD_ASPIRANTERow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3396,22 +3405,22 @@ namespace ClsDataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TB_DESTREZARowChangeEvent : global::System.EventArgs {
+        public class TB_DESTREZA_ASPIRANTERowChangeEvent : global::System.EventArgs {
             
-            private TB_DESTREZARow eventRow;
+            private TB_DESTREZA_ASPIRANTERow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DESTREZARowChangeEvent(TB_DESTREZARow row, global::System.Data.DataRowAction action) {
+            public TB_DESTREZA_ASPIRANTERowChangeEvent(TB_DESTREZA_ASPIRANTERow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DESTREZARow Row {
+            public TB_DESTREZA_ASPIRANTERow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3430,22 +3439,22 @@ namespace ClsDataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TB_DOCUMENTORowChangeEvent : global::System.EventArgs {
+        public class TB_DOCUMENTO_ASPIRANTERowChangeEvent : global::System.EventArgs {
             
-            private TB_DOCUMENTORow eventRow;
+            private TB_DOCUMENTO_ASPIRANTERow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DOCUMENTORowChangeEvent(TB_DOCUMENTORow row, global::System.Data.DataRowAction action) {
+            public TB_DOCUMENTO_ASPIRANTERowChangeEvent(TB_DOCUMENTO_ASPIRANTERow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_DOCUMENTORow Row {
+            public TB_DOCUMENTO_ASPIRANTERow Row {
                 get {
                     return this.eventRow;
                 }
