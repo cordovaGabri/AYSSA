@@ -99,6 +99,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EMP\EMPP0001.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
@@ -137,6 +138,12 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMP\EMPP0001.aspx.cs">
+      <DependentUpon>EMPP0001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMP\EMPP0001.aspx.designer.cs">
+      <DependentUpon>EMPP0001.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
