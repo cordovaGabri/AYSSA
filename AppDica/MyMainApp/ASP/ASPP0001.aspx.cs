@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AjaxControlToolkit;
 using ClsDataApp;
 using ClsInterface;
 using dica;
@@ -321,8 +323,8 @@ namespace MyMainApp
             try
             {
                 CHabilidadAspirante objHabilidadAspirante = new CHabilidadAspirante(_DataSistema.ConexionBaseDato);
-                objResultado = objHabilidadAspirante.Actualizacion(0, Convert.ToInt32(CboCategoriaHabilidad.Text), _DataSistema.Cusuario,
-                    Convert.ToInt32(CboConocimiento.SelectedValue),  Convert.ToInt32(CboNivel.SelectedValue) 
+                objResultado = objHabilidadAspirante.Actualizacion(0, Convert.ToInt32(CboConocimiento.Text), _DataSistema.Cusuario,
+                    Convert.ToInt32(CboCategoriaHabilidad.SelectedValue), Convert.ToInt32(CboNivel.SelectedValue) 
                 , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
 
                 if (objResultado.CodigoError == 0)
@@ -367,11 +369,11 @@ namespace MyMainApp
         {
             try
             {
-                if (FileDocumento.HasFile)
-                {
+               /* if (FileDocumento.HasFile)
+                {*/
                     string nombreArchivo = _DataSistema.Cusuario + "_" + CboTipoDocumento.SelectedValue + FileDocumento.FileName;
-                    string ruta = Server.MapPath("~/ASP/Documentos/");
-                    FileDocumento.PostedFile.SaveAs(ruta + nombreArchivo);
+                 /*   string ruta = Server.MapPath("~/ASP/Documentos/");
+                    FileDocumento.PostedFile.SaveAs(ruta + nombreArchivo);*/
 
                     CDocumentoAspirante objDocumentoAspirante = new CDocumentoAspirante(_DataSistema.ConexionBaseDato);
                     objResultado = objDocumentoAspirante.Actualizacion(0, TxtDescripcionDocumento.Text, nombreArchivo, Convert.ToInt32(CboTipoDocumento.SelectedValue), _DataSistema.Cusuario
@@ -385,11 +387,11 @@ namespace MyMainApp
                     {
                         DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
                     }
-                }
-                else
+               /*  }
+               else
                 {
                     DespliegaMensaje("Adjuntar Archivo");
-                }
+                }*/
             }
             catch (Exception ex)
             {
@@ -424,6 +426,13 @@ namespace MyMainApp
             {
                 DespliegaMensaje(ex.Message);
             }
+        }
+
+        protected void FileDocumento_UploadedComplete(object sender, AjaxControlToolkit.AsyncFileUploadEventArgs e)
+        {
+            string ruta = Server.MapPath("~/ASP/Documentos/");
+            string savePath = MapPath("~/ASP/Documentos/" + _DataSistema.Cusuario + "_" + CboTipoDocumento.SelectedValue + Path.GetFileName(e.FileName));
+            ((AsyncFileUpload)sender).SaveAs(savePath);
         }
 
 
