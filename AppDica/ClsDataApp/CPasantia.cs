@@ -1,0 +1,165 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using ClsInterface;
+
+namespace ClsDataApp
+{
+    public class CPasantia : CSqlvars
+    {
+        public CPasantia(string ConexionData)
+        {
+            _ConexionData = ConexionData;
+        }
+
+        public ClsDataSets.DS_TB_EMP Detalle(int Id, string NombreEva, string EmailContacto, int IdEmpresa, int IdArea, string Pasantia, DateTime FechPasantia,
+            string Duracion, string HorarioDe, string HorarioA, char EstadoPasantia, int DiasDe, int DiasA, int EdadDe, int EdadA, int Vacantes,
+            int IdEscolaridad, int IdOpcionAca, string DirPasantia,
+            string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
+        {
+             ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
+             try
+             {
+                  ObjConnection = new SqlConnection(_ConexionData);
+                ObjAdapter = new SqlDataAdapter("SP_TB_PASANTIA_GetByAll", ObjConnection);
+                ObjParam = new SqlParameter();
+                ObjAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID", Id);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NOMBRE_EVAL", NombreEva);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_EMAIL_CONTACTO", EmailContacto);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_EMPRESA", IdEmpresa);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_AREA", IdArea);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_PASANTIA", Pasantia);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_INICIO_PASANTIA", FechPasantia);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DURACION", Duracion);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_HORARIO_DE", HorarioDe);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_HORARIO_A", HorarioA);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@CD_ESTADO_PASANTIA", EstadoPasantia);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_DIAS_DE", DiasDe);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_DIAS_A", DiasA);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_EDAD_DE", EdadDe);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_EDAD_A", EdadA);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_VACANTES", Vacantes);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_OPCION_ACADEMICA", IdOpcionAca);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DIRECCION_PASANTIA", DirPasantia);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ACTU", FechActu);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
+
+
+                ObjAdapter.Fill(objDataSet, "TB_PASANTIA");
+
+                ObjConnection.Close();
+
+                if (ObjConnection.State != ConnectionState.Closed)
+                {
+                    ObjConnection.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return objDataSet;
+             }
+        public DataQuery Actualizacion(int Id, string NombreEva, string EmailContacto, int IdEmpresa, int IdArea, string Pasantia, DateTime FechPasantia,
+           string Duracion, string HorarioDe, string HorarioA, char EstadoPasantia, int DiasDe, int DiasA, int EdadDe, int EdadA, int Vacantes,
+           int IdEscolaridad, int IdOpcionAca, string DirPasantia, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+        {
+            DataQuery objResultado = new DataQuery();
+
+            try
+            {
+                string StrCommand = "";
+
+                switch (OpcionActualizacion)
+                {
+                    case TipoActualizacion.Adicionar:
+                        StrCommand = "";
+                        break;
+                    case TipoActualizacion.Actualizar:
+                        StrCommand = "";
+                        break;
+                    case TipoActualizacion.Eliminar:
+                        StrCommand = "";
+                        break;
+                    case TipoActualizacion.No_Definida:
+                        objResultado.CodigoError = -1;
+                        objResultado.MensajeError = "Opcion de Actualizacion No Definida. Objeto COpcionesSistemas. Metodo Actualizacion";
+                        //return objResultado;
+                        break;
+                }
+
+                ObjConnection = new SqlConnection(_ConexionData);
+
+                ObjCommand = new SqlCommand(StrCommand, ObjConnection);
+                ObjParam = new SqlParameter();
+                ObjCommand.CommandType = CommandType.StoredProcedure;
+
+
+                ObjCommand.Parameters.AddWithValue("@ID", Id);
+                ObjCommand.Parameters.AddWithValue("@DS_NOMBRE_EVAL", NombreEva);
+                ObjCommand.Parameters.AddWithValue("@DS_EMAIL_CONTACTO",EmailContacto );
+                ObjCommand.Parameters.AddWithValue("@ID_EMPRESA", IdEmpresa);
+                ObjCommand.Parameters.AddWithValue("@ID_AREA", IdArea);
+                ObjCommand.Parameters.AddWithValue("@DS_PASANTIA", Pasantia);
+                ObjCommand.Parameters.AddWithValue("@FECH_INICIO_PASANTIA", FechPasantia);
+                ObjCommand.Parameters.AddWithValue("@DS_DURACION", Duracion);
+                ObjCommand.Parameters.AddWithValue("@DS_HORARIO_DE", HorarioDe);
+                ObjCommand.Parameters.AddWithValue("@DS_HORARIO_A", HorarioA);
+                ObjCommand.Parameters.AddWithValue("@CD_ESTADO_PASANTIA", EstadoPasantia);
+                ObjCommand.Parameters.AddWithValue("@NM_DIAS_DE", DiasDe);
+                ObjCommand.Parameters.AddWithValue("@NM_DIAS_A", DiasA);
+                ObjCommand.Parameters.AddWithValue("@NM_EDAD_DE", EdadDe);
+                ObjCommand.Parameters.AddWithValue("@NM_EDAD_A", EdadA);
+                ObjCommand.Parameters.AddWithValue("@NM_VACANTES", Vacantes);
+                ObjCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
+                ObjCommand.Parameters.AddWithValue("@ID_OPCION_ACADEMICA", IdOpcionAca);
+                ObjCommand.Parameters.AddWithValue("@DS_DIRECCION_PASANTIA", DirPasantia);
+                ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
+
+                ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);
+                ObjParam.Direction = ParameterDirection.Output;
+
+                ObjParam = ObjCommand.Parameters.Add("@NumeroError", SqlDbType.Decimal);
+                ObjParam.Precision = 38;
+                ObjParam.Scale = 0;
+                ObjParam.Direction = ParameterDirection.Output;
+
+                ObjParam = ObjCommand.Parameters.Add("@MensajeError", SqlDbType.NVarChar, 4000);
+                ObjParam.Direction = ParameterDirection.Output;
+
+                ObjConnection.Open();
+                ObjCommand.ExecuteNonQuery();
+
+                objResultado.CodigoAuxiliar = (object)ObjCommand.Parameters["@ID"].Value;
+                objResultado.FilasAfectadas = (int)ObjCommand.Parameters["@FILAS_AFECTADAS"].Value;
+                objResultado.CodigoError = (decimal)ObjCommand.Parameters["@NumeroError"].Value;
+                objResultado.MensajeError = (string)ObjCommand.Parameters["@MensajeError"].Value;
+
+                ObjConnection.Close();
+
+                if (ObjConnection.State != ConnectionState.Closed)
+                {
+                    ObjConnection.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                objResultado.CodigoError = -1;
+                objResultado.MensajeError = ex.Message;
+            }
+
+            return objResultado;
+        }
+    }
+}

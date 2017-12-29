@@ -60,6 +60,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAreaEmpresa.cs" />
     <Compile Include="CAspirante.cs" />
     <Compile Include="CCategoriaHabilidad.cs" />
     <Compile Include="CCentroEscolar.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="CNivelConocimiento.cs" />
     <Compile Include="COpcionAcademica.cs" />
     <Compile Include="CPais.cs" />
+    <Compile Include="CPasantia.cs" />
     <Compile Include="CSqlvars.cs" />
     <Compile Include="CTipoAspirante.cs" />
     <Compile Include="CTituloAcademico.cs" />
