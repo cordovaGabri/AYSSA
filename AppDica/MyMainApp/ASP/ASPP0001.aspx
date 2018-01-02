@@ -17,7 +17,7 @@
         <div class="container-fluid">
             <div id="content">
                 <asp:Panel ID="Panel1" runat="server" Width="100%">
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="2" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                 <asp:UpdatePanel ID="UpdatePanel5" runat="server">
@@ -116,14 +116,14 @@
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label38" runat="server" Text="PAIS:" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:DropDownList ID="CboPais" runat="server" class="form-control" DataTextField="DS_PAIS" DataValueField="ID">
+                                            <asp:DropDownList ID="CboPais" runat="server" class="form-control" DataTextField="DS_PAIS" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="CboPais_SelectedIndexChanged">
                                             </asp:DropDownList>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label17" runat="server" Font-Bold="True" Text="DEPARTAMENTO:"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:DropDownList ID="CboDepartamento" runat="server" class="form-control" DataTextField="DS_DEPARTAMENTO" DataValueField="ID">
+                                            <asp:DropDownList ID="CboDepartamento" runat="server" class="form-control" DataTextField="DS_DEPARTAMENTO" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="CboDepartamento_SelectedIndexChanged">
                                             </asp:DropDownList>
                                         </div>
                                         <asp:Label class="control-label  col-sm-3" ID="Label23" runat="server" Font-Bold="True" Text="MUNICIPIO:"></asp:Label>
@@ -215,7 +215,7 @@
                     <%--inicio tab informacion adicional--%>
                      <ajaxToolkit:TabPanel runat="server" HeaderText="ESCOLARIDAD" ID="TabPanel2">
                             <ContentTemplate>
-                        <asp:UpdatePanel ID="UpdatePanel4" runat="server">
+                        <asp:UpdatePanel ID="UPEscolaridad" runat="server">
                             <Triggers><asp:AsyncPostBackTrigger ControlID="BtnEscolaridadGuardar" /></Triggers>
                             <ContentTemplate>
                         <br />
@@ -265,12 +265,12 @@
                             <asp:Button ID="BtnEscolaridadGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnEscolaridadGuardar_Click" />&nbsp;<asp:Button ID="BtnEscolaridadCancelar" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                         </div>
                         <br />
-                        <asp:GridView ID="GVEscolaridad" runat="server" AutoGenerateColumns="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <asp:GridView ID="GVEscolaridad" runat="server" AutoGenerateColumns="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVEscolaridad_RowDeleting">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
-                                 <asp:TemplateField HeaderText="" Visible="false">
+                                 <asp:TemplateField HeaderText="" Visible="False">
                                             <ItemTemplate>
-                                                <asp:TextBox ID="TxtIDDocumento" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
+                                                <asp:TextBox ID="TxtIDEscolaridad" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:TextBox>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                 <asp:BoundField DataField="DS_ESCOLARIDAD" HeaderText="NIVEL EDUCATIVO" />
@@ -282,7 +282,7 @@
                                 <asp:BoundField DataField="NM_PROMEDIO_NOTA" HeaderText="PROMEDIO" />
                                  <asp:TemplateField HeaderText="Eliminar">
                                             <ItemTemplate>
-                                                <asp:Button ID="BtnEliminarDocumento" runat="server" CommandName="Delete" 
+                                                <asp:Button ID="BtnEliminarEscolaridad" runat="server" CommandName="Delete" 
                                                     Text="Eliminar" OnClientClick="return confirm('¿Desea eliminar este archivo?');" />
                                             </ItemTemplate>
                                         </asp:TemplateField>
@@ -308,14 +308,14 @@
                       <ajaxToolkit:TabPanel runat="server" HeaderText="HABILIDADES" ID="TabPanel3">
                             <ContentTemplate>
                     <div class="tab-pane" id="Habilidad">
-                            <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                            <asp:UpdatePanel ID="UPHabilidad" runat="server">
                                 <Triggers><asp:AsyncPostBackTrigger ControlID="GVHabilidad" /></Triggers>
                                 <ContentTemplate>
                             <br />
                             <div class="form-group">
                                 <asp:Label class="control-label  col-sm-2" ID="Label9" runat="server" Font-Bold="True" Text="CONOCIMIENTO EN:"></asp:Label>
                                 <div class="col-md-3">
-                                    <asp:DropDownList ID="CboCategoriaHabilidad" runat="server" class="form-control" DataTextField="DS_CATEGORIA_HABILIDAD" DataValueField="ID">
+                                    <asp:DropDownList ID="CboCategoriaHabilidad" runat="server" class="form-control" DataTextField="DS_CATEGORIA_HABILIDAD" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="CboCategoriaHabilidad_SelectedIndexChanged">
                                     </asp:DropDownList>
                                 </div>
 
@@ -337,12 +337,12 @@
                                 <asp:Button ID="BtnGuardarHabilidad" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarHabilidad_Click" />&nbsp;<asp:Button ID="BtnCancelarHabilidad" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                             </div>
                             <br />
-                            <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                            <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="GVHabilidad_RowDeleting">
                                 <AlternatingRowStyle BackColor="White" />
                                 <Columns>
                                      <asp:TemplateField HeaderText="" Visible="false">
                                             <ItemTemplate>
-                                                <asp:TextBox ID="TxtIDDocumento" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
+                                                <asp:TextBox ID="TxtIDHabilidad" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     <asp:BoundField HeaderText="CONOCIMIENTO" DataField="DS_CATEGORIA_HABILIDAD" />
@@ -350,7 +350,7 @@
                                     <asp:BoundField HeaderText="NIVEL" DataField="DS_NIVEL_CONOCIMIENTO" />
                                       <asp:TemplateField HeaderText="Eliminar">
                                             <ItemTemplate>
-                                                <asp:Button ID="BtnEliminarDocumento" runat="server" CommandName="Delete" 
+                                                <asp:Button ID="BtnEliminarConocimiento" runat="server" CommandName="Delete" 
                                                     Text="Eliminar" OnClientClick="return confirm('¿Desea eliminar este archivo?');" />
                                             </ItemTemplate>
                                         </asp:TemplateField>
@@ -376,7 +376,7 @@
                     <%--inicio tab destrezas--%>
                       <ajaxToolkit:TabPanel runat="server" HeaderText="DESTREZAS" ID="TabPanel4">
                            <ContentTemplate>
-                                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                <asp:UpdatePanel ID="UPDestreza" runat="server">
                                     <Triggers>
                                         <asp:AsyncPostBackTrigger ControlID="BtnGuardarDestreza" />
                                     </Triggers>
@@ -396,18 +396,18 @@
                             <asp:Button ID="BtnGuardarDestreza" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click" />&nbsp;<asp:Button ID="BtnCancelarDestreza" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                         </div>
                         <br />
-                        <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+                        <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnRowDeleting="GVDestreza_RowDeleting">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
                                  <asp:TemplateField HeaderText="" Visible="false">
                                             <ItemTemplate>
-                                                <asp:TextBox ID="TxtIDDocumento" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
+                                                <asp:TextBox ID="TxtIDDestreza" runat="server" Text='<%#Eval("ID")%>' Visible="False"></asp:TextBox>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                 <asp:BoundField HeaderText="DESTREZA" DataField="DS_DESTREZA" />
                                   <asp:TemplateField HeaderText="Eliminar">
                                             <ItemTemplate>
-                                                <asp:Button ID="BtnEliminarDocumento" runat="server" CommandName="Delete" 
+                                                <asp:Button ID="BtnEliminarDestreza" runat="server" CommandName="Delete" 
                                                     Text="Eliminar" OnClientClick="return confirm('¿Desea eliminar este archivo?');" />
                                             </ItemTemplate>
                                         </asp:TemplateField>
@@ -437,7 +437,7 @@
 
                         <br />
                         
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                        <asp:UpdatePanel ID="UPDocumento" runat="server" UpdateMode="Conditional">
                             <Triggers>
                                 <asp:AsyncPostBackTrigger ControlID="BtnGuardarDocumento" />
                             </Triggers>

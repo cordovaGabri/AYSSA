@@ -60,7 +60,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAreaEmpresa.cs" />
     <Compile Include="CAspirante.cs" />
     <Compile Include="CCategoriaHabilidad.cs" />
     <Compile Include="CCentroEscolar.cs" />

@@ -459,6 +459,12 @@ namespace ClsDataSets {
             
             private global::System.Data.DataColumn columnDS_DISCAPACIDAD3;
             
+            private global::System.Data.DataColumn columnID_PAIS;
+            
+            private global::System.Data.DataColumn columnID_DEPARTAMENTO;
+            
+            private global::System.Data.DataColumn columnID_MUNICIPIO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_ASPIRANTEDataTable() {
@@ -654,6 +660,30 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_PAISColumn {
+                get {
+                    return this.columnID_PAIS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_DEPARTAMENTOColumn {
+                get {
+                    return this.columnID_DEPARTAMENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_MUNICIPIOColumn {
+                get {
+                    return this.columnID_MUNICIPIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -709,7 +739,10 @@ namespace ClsDataSets {
                         string DS_TITULO, 
                         string DS_DISCAPACIDAD1, 
                         string DS_DISCAPACIDAD2, 
-                        string DS_DISCAPACIDAD3) {
+                        string DS_DISCAPACIDAD3, 
+                        string ID_PAIS, 
+                        int ID_DEPARTAMENTO, 
+                        int ID_MUNICIPIO) {
                 TB_ASPIRANTERow rowTB_ASPIRANTERow = ((TB_ASPIRANTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -731,7 +764,10 @@ namespace ClsDataSets {
                         DS_TITULO,
                         DS_DISCAPACIDAD1,
                         DS_DISCAPACIDAD2,
-                        DS_DISCAPACIDAD3};
+                        DS_DISCAPACIDAD3,
+                        ID_PAIS,
+                        ID_DEPARTAMENTO,
+                        ID_MUNICIPIO};
                 rowTB_ASPIRANTERow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTB_ASPIRANTERow);
                 return rowTB_ASPIRANTERow;
@@ -774,6 +810,9 @@ namespace ClsDataSets {
                 this.columnDS_DISCAPACIDAD1 = base.Columns["DS_DISCAPACIDAD1"];
                 this.columnDS_DISCAPACIDAD2 = base.Columns["DS_DISCAPACIDAD2"];
                 this.columnDS_DISCAPACIDAD3 = base.Columns["DS_DISCAPACIDAD3"];
+                this.columnID_PAIS = base.Columns["ID_PAIS"];
+                this.columnID_DEPARTAMENTO = base.Columns["ID_DEPARTAMENTO"];
+                this.columnID_MUNICIPIO = base.Columns["ID_MUNICIPIO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -819,6 +858,12 @@ namespace ClsDataSets {
                 base.Columns.Add(this.columnDS_DISCAPACIDAD2);
                 this.columnDS_DISCAPACIDAD3 = new global::System.Data.DataColumn("DS_DISCAPACIDAD3", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDS_DISCAPACIDAD3);
+                this.columnID_PAIS = new global::System.Data.DataColumn("ID_PAIS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_PAIS);
+                this.columnID_DEPARTAMENTO = new global::System.Data.DataColumn("ID_DEPARTAMENTO", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_DEPARTAMENTO);
+                this.columnID_MUNICIPIO = new global::System.Data.DataColumn("ID_MUNICIPIO", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_MUNICIPIO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_ASPIRANTEKey1", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
                 this.columnID.Unique = true;
@@ -2482,6 +2527,54 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_PAIS {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ASPIRANTE.ID_PAISColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_PAIS\' de la tabla \'TB_ASPIRANTE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ASPIRANTE.ID_PAISColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_DEPARTAMENTO {
+                get {
+                    try {
+                        return ((int)(this[this.tableTB_ASPIRANTE.ID_DEPARTAMENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_DEPARTAMENTO\' de la tabla \'TB_ASPIRANTE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ASPIRANTE.ID_DEPARTAMENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_MUNICIPIO {
+                get {
+                    try {
+                        return ((int)(this[this.tableTB_ASPIRANTE.ID_MUNICIPIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_MUNICIPIO\' de la tabla \'TB_ASPIRANTE\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ASPIRANTE.ID_MUNICIPIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableTB_ASPIRANTE.IDColumn);
             }
@@ -2718,6 +2811,42 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_DISCAPACIDAD3Null() {
                 this[this.tableTB_ASPIRANTE.DS_DISCAPACIDAD3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_PAISNull() {
+                return this.IsNull(this.tableTB_ASPIRANTE.ID_PAISColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_PAISNull() {
+                this[this.tableTB_ASPIRANTE.ID_PAISColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_DEPARTAMENTONull() {
+                return this.IsNull(this.tableTB_ASPIRANTE.ID_DEPARTAMENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_DEPARTAMENTONull() {
+                this[this.tableTB_ASPIRANTE.ID_DEPARTAMENTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_MUNICIPIONull() {
+                return this.IsNull(this.tableTB_ASPIRANTE.ID_MUNICIPIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_MUNICIPIONull() {
+                this[this.tableTB_ASPIRANTE.ID_MUNICIPIOColumn] = global::System.Convert.DBNull;
             }
         }
         

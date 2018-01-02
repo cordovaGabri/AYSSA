@@ -679,13 +679,13 @@ namespace MyMainApp {
         protected global::AjaxControlToolkit.TabPanel TabPanel2;
         
         /// <summary>
-        /// Control UpdatePanel4.
+        /// Control UPEscolaridad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel4;
+        protected global::System.Web.UI.UpdatePanel UPEscolaridad;
         
         /// <summary>
         /// Control Label19.
@@ -850,13 +850,13 @@ namespace MyMainApp {
         protected global::AjaxControlToolkit.TabPanel TabPanel3;
         
         /// <summary>
-        /// Control UpdatePanel3.
+        /// Control UPHabilidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
+        protected global::System.Web.UI.UpdatePanel UPHabilidad;
         
         /// <summary>
         /// Control Label9.
@@ -949,13 +949,13 @@ namespace MyMainApp {
         protected global::AjaxControlToolkit.TabPanel TabPanel4;
         
         /// <summary>
-        /// Control UpdatePanel2.
+        /// Control UPDestreza.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        protected global::System.Web.UI.UpdatePanel UPDestreza;
         
         /// <summary>
         /// Control Label42.
@@ -1021,13 +1021,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Panel Panel5;
         
         /// <summary>
-        /// Control UpdatePanel1.
+        /// Control UPDocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdatePanel UPDocumento;
         
         /// <summary>
         /// Control Label43.

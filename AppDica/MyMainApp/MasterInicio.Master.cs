@@ -104,6 +104,17 @@ namespace dica
             Page.ClientScript.RegisterStartupScript(Page.GetType(), "MessageBox", "<script language='javascript'>alert('" + Mensaje + "');</script>");
         }
 
+
+        protected void DespliegaMensajeUpdatePanel(string Mensaje,UpdatePanel panel)
+        {
+            Mensaje = Mensaje.Replace("'", "");
+            Mensaje = Mensaje.Replace("\n", "");
+            Mensaje = Mensaje.Replace("\r", "");
+            string Script;
+            Script = "alert('"+Mensaje+"')";
+            ScriptManager.RegisterStartupScript(panel, panel.GetType(), "Script", Script, true);
+        }
+
         protected void EstableceStatus(Label lblStatus, string Mensaje)
         {
             lblStatus.Text = Mensaje;

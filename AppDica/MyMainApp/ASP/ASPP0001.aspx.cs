@@ -33,7 +33,9 @@ namespace MyMainApp
             }
         }
 
-        public void Consultar() {
+        public void Consultar()
+        {
+            FillCamposDatosGenerales();
             FillCboTratamiento();
             FillCboPais();
             FillCboDepartamento();
@@ -46,7 +48,6 @@ namespace MyMainApp
             FillCboNivelEducativo();
             FillCboOpcionAcademica();
             FillCboInstitucion();
-            FillCamposDatosGenerales();
             FillGVEscolaridad();
             FillGVHabilidad();
             FillGVDestreza();
@@ -90,7 +91,7 @@ namespace MyMainApp
         protected void FillCboDepartamento()
         {
             CDepartamento objDepartamento = new CDepartamento(_DataSistema.ConexionBaseDato);
-            dvDepartamento = new DataView(objDepartamento.Detalle(0,0, "", "", DateTime.Now, "", DateTime.Now, 0).TBC_DEPARTAMENTO);
+            dvDepartamento = new DataView(objDepartamento.Detalle(0,CboPais.SelectedValue, "", "", DateTime.Now, "", DateTime.Now, 2).TBC_DEPARTAMENTO);
 
             CboDepartamento.DataSource = dvDepartamento;
             CboDepartamento.DataBind();
@@ -99,7 +100,7 @@ namespace MyMainApp
         protected void FillCboMunicipio()
         {
             CMunicipio objMunicipio = new CMunicipio(_DataSistema.ConexionBaseDato);
-            dvMunicipio = new DataView(objMunicipio.Detalle(0, Convert.ToInt32(CboDepartamento.SelectedValue),  "", DateTime.Now, "", DateTime.Now, 0).TBC_MUNICIPIO);
+            dvMunicipio = new DataView(objMunicipio.Detalle(0, Convert.ToInt32(CboDepartamento.SelectedValue),  "", DateTime.Now, "", DateTime.Now,2).TBC_MUNICIPIO);
 
             CboMunicipio.DataSource = dvMunicipio;
             CboMunicipio.DataBind();
@@ -139,7 +140,7 @@ namespace MyMainApp
         protected void FillCboConocimiento()
         {
             CHabilidadConocimiento objConocimiento = new CHabilidadConocimiento(_DataSistema.ConexionBaseDato);
-            dvConocimiento = new DataView(objConocimiento.Detalle(0, "", "", 'A', 0, "", DateTime.Now, "", DateTime.Now, 0).TBC_HABILIDAD_CONOCIMIENTO);
+            dvConocimiento = new DataView(objConocimiento.Detalle(0, "", "", 'A', Convert.ToInt32(CboCategoriaHabilidad.SelectedValue), "", DateTime.Now, "", DateTime.Now, 2).TBC_HABILIDAD_CONOCIMIENTO);
 
             CboConocimiento.DataSource = dvConocimiento;
             CboConocimiento.DataBind();
@@ -199,7 +200,7 @@ namespace MyMainApp
                     }
                     else
                     {
-                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                        DespliegaMensaje(objResultado.MensajeError);
                     }
             }
             catch (Exception ex)
@@ -309,12 +310,12 @@ namespace MyMainApp
                 }
                 else
                 {
-                    DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError,UPEscolaridad);
                 }
             }
             catch (Exception ex)
             {
-                DespliegaMensaje(ex.Message);
+                DespliegaMensajeUpdatePanel(ex.Message, UPEscolaridad);
             }
         }
 
@@ -333,12 +334,12 @@ namespace MyMainApp
                 }
                 else
                 {
-                    DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError,UPDestreza);
                 }
             }
             catch (Exception ex)
             {
-                DespliegaMensaje(ex.Message);
+                DespliegaMensajeUpdatePanel(ex.Message, UPDestreza);
             }
         }
 
@@ -356,12 +357,12 @@ namespace MyMainApp
                 }
                 else
                 {
-                    DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError,UPDestreza);
                 }
             }
             catch (Exception ex)
             {
-                DespliegaMensaje(ex.Message);
+                DespliegaMensajeUpdatePanel(ex.Message, UPDestreza);
             }
         }
 
@@ -385,7 +386,7 @@ namespace MyMainApp
                     }
                     else
                     {
-                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                        DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDocumento);
                     }
                /*  }
                else
@@ -395,7 +396,7 @@ namespace MyMainApp
             }
             catch (Exception ex)
             {
-                DespliegaMensaje(ex.Message);
+                DespliegaMensajeUpdatePanel(ex.Message,UPDocumento);
             }
         }
 
@@ -404,7 +405,6 @@ namespace MyMainApp
         {
             try
             {
-                    string nombreArchivo = "";
                     string ruta = Server.MapPath("~/ASP/Documentos/");
                    /* var uri = new Uri("file://SERVERNAME/FOLDER$/FOLDER/image.jpg", UriKind.Absolute);
                     System.IO.File.Delete(uri.LocalPath);*/
@@ -419,12 +419,12 @@ namespace MyMainApp
                     }
                     else
                     {
-                        DespliegaMensaje(objResultado.MensajeError.Replace("'", ""));
+                        DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDocumento);
                     }
             }
             catch (Exception ex)
             {
-                DespliegaMensaje(ex.Message);
+                DespliegaMensajeUpdatePanel(ex.Message, UPDocumento);
             }
         }
 
@@ -435,6 +435,93 @@ namespace MyMainApp
             ((AsyncFileUpload)sender).SaveAs(savePath);
         }
 
+        protected void GVDestreza_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                TextBox Id = GVDestreza.Rows[e.RowIndex].FindControl("TxtIDDestreza") as TextBox;
+                CDestrezaAspirante objDestrezaAspirante = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objDestrezaAspirante.Actualizacion(Convert.ToInt32(Id.Text), 0, _DataSistema.Cusuario
+                , _DataSistema.Cusuario, TipoActualizacion.Eliminar);
 
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVDestreza();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDestreza);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPDestreza);
+            }
+        }
+
+        protected void GVHabilidad_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                TextBox Id = GVHabilidad.Rows[e.RowIndex].FindControl("TxtIDHabilidad") as TextBox;
+                CHabilidadAspirante objHabilidadAspirante = new CHabilidadAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objHabilidadAspirante.Actualizacion(Convert.ToInt32(Id.Text), 0, _DataSistema.Cusuario,
+                    0, 0
+                , _DataSistema.Cusuario, TipoActualizacion.Eliminar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVHabilidad();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPHabilidad);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPHabilidad);
+            }
+        }
+
+        protected void GVEscolaridad_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                TextBox Id = GVEscolaridad.Rows[e.RowIndex].FindControl("TxtIDEscolaridad") as TextBox;
+                CEscolaridadAspirante objEscolaridadAspirante = new CEscolaridadAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objEscolaridadAspirante.Actualizacion(Convert.ToInt32(Id.Text), _DataSistema.Cusuario, 0,
+                    0, 0, "", "", 0, 0
+                , _DataSistema.Cusuario, TipoActualizacion.Eliminar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVEscolaridad();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPEscolaridad);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message,UPEscolaridad);
+            }
+        }
+
+        protected void CboPais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillCboDepartamento();
+        }
+
+        protected void CboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillCboMunicipio();
+        }
+
+        protected void CboCategoriaHabilidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillCboConocimiento();
+        }
     }
 }
