@@ -235,6 +235,75 @@
                                 </div>
                             </div>
                                 <div class="form-group">
+                                <asp:Label class="control-label  col-sm-3" ID="Label42" runat="server" Font-Bold="True" Text="CONOCIMIENTO EN:"></asp:Label>
+                                <div class="col-md-3">
+                                    <asp:DropDownList ID="CboCategoriaHabilidad" runat="server" class="form-control" DataTextField="DS_CATEGORIA_HABILIDAD" DataValueField="ID">
+                                    </asp:DropDownList>
+                                </div>
+
+                                <asp:Label class="control-label  col-sm-3" ID="Label43" runat="server" Font-Bold="True" Text="TIPO DE CONOCIMIENTO:"></asp:Label>
+                                <div class="col-md-3">
+                                    <asp:DropDownList ID="CboConocimiento" runat="server" class="form-control" DataTextField="DS_HABILIDAD_CONOCIMIENTO" DataValueField="ID">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                <asp:Label class="control-label  col-sm-3" ID="Label44" runat="server" Font-Bold="True" Text="NIVEL:"></asp:Label>
+                                <div class="col-md-3">
+                                    <asp:DropDownList ID="CboNivel" runat="server" class="form-control" DataTextField="DS_NIVEL_CONOCIMIENTO" DataValueField="ID">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                                 <div align="center">
+                                <asp:Button ID="BtnGuardarHabilidad" runat="server" Text="GUARDAR" class="btn btn-primary" />&nbsp;<asp:Button ID="BtnCancelarHabilidad" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                            </div>
+                                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:BoundField HeaderText="Conocimiento" />
+                                        <asp:BoundField HeaderText="Tipo de conocimiento" />
+                                        <asp:BoundField HeaderText="Nivel" />
+                                    </Columns>
+                                    <EditRowStyle BackColor="#2461BF" />
+                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#EFF3FB" />
+                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                </asp:GridView>
+                                <br/>
+                                <div class="form-group">
+                            <asp:Label class="control-label  col-sm-3" ID="Label45" runat="server" Font-Bold="True" Text="DESTREZA:"></asp:Label>
+                            <div class="col-md-3">
+                                <asp:DropDownList ID="CboDestreza" runat="server" class="form-control" DataTextField="DS_DESTREZA" DataValueField="ID">
+                                </asp:DropDownList>
+                            </div>
+                        </div>
+                                <div align="center">
+                            <asp:Button ID="BtnGuardarDestreza" runat="server" Text="GUARDAR" class="btn btn-primary" />&nbsp;<asp:Button ID="BtnCancelarDestreza" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                        </div>
+                                <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:BoundField HeaderText="Destreza" />
+                                    </Columns>
+                                    <EditRowStyle BackColor="#2461BF" />
+                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="#EFF3FB" />
+                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                </asp:GridView>
+<br/>
+                                <div class="form-group">
                                     <asp:Label class="control-label  col-sm-3" ID="Label36" runat="server" Font-Bold="True" Text="SUCURSAL:"></asp:Label>
                                     <div class="col-md-3">
                                         <asp:TextBox class="form-control" ID="TxtSucursal" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
