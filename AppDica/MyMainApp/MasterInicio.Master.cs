@@ -29,7 +29,7 @@ namespace dica
         protected bool _CamposEnlazados = false;
         protected static string _Ejercicio = "";
         protected static string _Periodo = "";
-
+        protected DataQuery objResultado = new DataQuery();
         public FormaSISWeb()
         {
             _DataSistema = new ClsSistema();
