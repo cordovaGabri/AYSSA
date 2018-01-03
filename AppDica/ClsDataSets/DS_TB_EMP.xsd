@@ -68,6 +68,15 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TB_PROYECTO_EMPRESA" msprop:Generator_TableClassName="TB_PROYECTO_EMPRESADataTable" msprop:Generator_TableVarName="tableTB_PROYECTO_EMPRESA" msprop:Generator_TablePropName="TB_PROYECTO_EMPRESA" msprop:Generator_RowDeletingName="TB_PROYECTO_EMPRESARowDeleting" msprop:Generator_RowChangingName="TB_PROYECTO_EMPRESARowChanging" msprop:Generator_RowEvHandlerName="TB_PROYECTO_EMPRESARowChangeEventHandler" msprop:Generator_RowDeletedName="TB_PROYECTO_EMPRESARowDeleted" msprop:Generator_UserTableName="TB_PROYECTO_EMPRESA" msprop:Generator_RowChangedName="TB_PROYECTO_EMPRESARowChanged" msprop:Generator_RowEvArgName="TB_PROYECTO_EMPRESARowChangeEvent" msprop:Generator_RowClassName="TB_PROYECTO_EMPRESARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE_PROYECTO" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_PROYECTO" msprop:Generator_ColumnPropNameInRow="NOMBRE_PROYECTO" msprop:Generator_ColumnPropNameInTable="NOMBRE_PROYECTOColumn" msprop:Generator_UserColumnName="NOMBRE_PROYECTO" type="xs:string" minOccurs="0" />
+              <xs:element name="FECHA_CONTRATO" msprop:Generator_ColumnVarNameInTable="columnFECHA_CONTRATO" msprop:Generator_ColumnPropNameInRow="FECHA_CONTRATO" msprop:Generator_ColumnPropNameInTable="FECHA_CONTRATOColumn" msprop:Generator_UserColumnName="FECHA_CONTRATO" type="xs:string" minOccurs="0" />
+              <xs:element name="DURACION_CONTRATO" msprop:Generator_ColumnVarNameInTable="columnDURACION_CONTRATO" msprop:Generator_ColumnPropNameInRow="DURACION_CONTRATO" msprop:Generator_ColumnPropNameInTable="DURACION_CONTRATOColumn" msprop:Generator_UserColumnName="DURACION_CONTRATO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="TB_EMPRESAKey1">
