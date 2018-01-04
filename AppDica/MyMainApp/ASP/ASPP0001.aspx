@@ -70,7 +70,7 @@
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label29" runat="server" Text="DUI:" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtDui" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtDui" runat="server" AutoCompleteType="Disabled" TargetControlID="TxtDui"></asp:TextBox>
                                         </div>
                                         <asp:Label class="control-label  col-sm-3" ID="Label30" runat="server" Text="EMAIL:" Font-Bold="True" readonly></asp:Label>
                                         <div class="col-md-3">
@@ -257,8 +257,8 @@
                         <div class="form-group">
                             <asp:Label class="control-label  col-sm-2" ID="Label44" runat="server" Text="PROMEDIO DE NOTAS:" Font-Bold="True"></asp:Label>
                             <div class="col-md-3">
-                                <asp:TextBox class="form-control" ID="TxtNotas" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                            </div>
+                                <asp:TextBox class="form-control" ID="TxtNotas" runat="server" AutoCompleteType="Disabled" ControlToValidate="TxtNotas"></asp:TextBox>
+                             </div>
                         </div>
                         <br />
                         <div align="center">

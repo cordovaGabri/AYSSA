@@ -197,10 +197,11 @@ namespace MyMainApp
                     if (objResultado.CodigoError == 0)
                     {
                         FillCamposDatosGenerales();
+                        DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPDatoGeneral);
                     }
                     else
                     {
-                        DespliegaMensaje(objResultado.MensajeError);
+                        DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDatoGeneral);
                     }
             }
             catch (Exception ex)

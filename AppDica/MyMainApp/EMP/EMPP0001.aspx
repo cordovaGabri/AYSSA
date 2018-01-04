@@ -24,6 +24,7 @@
                                      <ContentTemplate>
                                          <%--inicio contenido tab--%><%--inicio tab datos--%>
                                           <%--inicio tab datos--%>
+                                         <asp:TextBox ID="TxtIDEmpresa" runat="server" Visible="False"></asp:TextBox>
                                         <br />
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label1" runat="server" Text="NOMBRE DE EMPRESA:" Font-Bold="True"></asp:Label>
