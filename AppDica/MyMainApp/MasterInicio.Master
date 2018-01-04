@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>MINEC</title>
-    
 
+  
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,24 +55,107 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
+                                <%if (_DataSistema.Cusuario == null)
+                                  {%>
                                 <li><a href="<%= Page.ResolveUrl("~/Registro.aspx")%>">Registro de Aspirantes </a></li>
                                 <li><a href="http://www.innovacion.gob.sv/pixels/index.php/inicio">Regresar a Pixels</a></li>
+                                <%
+                                  }
+                                  else
+                                  {
+                                      String Menu, SubMenu, SSubMenu, linkMenu, IdMenu;
+                                      String UltimoMenu = "";
+                                      String UltimoSubMenu = "";
+                                      String UltimoSSubMenu = "";
+                                      System.Data.DataSet dt, dt1, dt2, dt3;
+                                      dt = Nivel1();
+                                      dt1 = Nivel1();
+                                      dt2 = Nivel1();
+                                      dt3 = Nivel1();
 
-                                <%--<li class="dropdown">
-				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				          <ul class="dropdown-menu">
-					        <li><a href="#">Action</a></li>
-					        <li><a href="#">Another action</a></li>
-					        <li><a href="#">Something else here</a></li>
-					        <li role="separator" class="divider"></li>
-					        <li><a href="#">Separated link</a></li>
-					        <li role="separator" class="divider"></li>
-					        <li><a href="#">One more separated link</a></li>
-				          </ul>
-				        </li>--%>
+                                      foreach (System.Data.DataRow dr in dt.Tables["Table"].Rows)
+                                      {
+                                          IdMenu = dr["ID"].ToString();
+                                          Menu = dr["DS_NOMB_SIST"].ToString();
+                                            
+                                            
+                                                %><li class="dropdown">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                    <%
+                                          if (Menu != UltimoMenu)
+                                          {  %>
+                                                        <%= Menu%>  
+                                                    <%
+                                              UltimoMenu = Menu;
+                                          } %> 
+                                                    <span class="caret"></span>
+                                                    </a>
+                                                    <%
+                                          ClsDataApp.CMenu OpcionesMenu = new ClsDataApp.CMenu(_DataSistema.ConexionBaseDato);
+                                          dt1 = OpcionesMenu.DetalleOpciones("06143003911036", IdMenu, "", 2);
+                                          foreach (System.Data.DataRow dr1 in dt1.Tables["Table"].Rows)
+                                          {
+                                              SubMenu = dr1["DS_DESC_MENU"].ToString();
+                                                     %>
+                                                    <ul class="dropdown-menu multi-level" role="menu">
+                                                        
+                                                          <li class="dropdown-submenu">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                                              <%
+                                              if (SubMenu != UltimoSubMenu)
+                                              {  %>
+                                                                <%= SubMenu%>  
+                                                                
+                                                              <%
+                                                  UltimoSubMenu = SubMenu;
+                                              } %> 
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                            <% 
+                                              dt2 = OpcionesMenu.DetalleOpciones("06143003911036", IdMenu, SubMenu, 3);
+                                              foreach (System.Data.DataRow dr2 in dt2.Tables["Table"].Rows)
+                                              {
+                                                  SSubMenu = dr2["DS_NOMBRE_FORMA"].ToString();
+                                                  linkMenu = dr2["DS_RUTA_FORMA"].ToString();
+                                                  if (SSubMenu != UltimoSSubMenu)
+                                                  { 
+                                                                %>
+                                                                    <li><a href="<%= Page.ResolveUrl(linkMenu)%>"><%= SSubMenu%></a></li>
+                                                                <%
+                                                      linkMenu = null;
+                                                      UltimoSSubMenu = SSubMenu;
+                                                  }
+                                              }
+                                                            %>
+                                                            </ul>
+                                                          </li>
+                                                        
+                                                    </ul>
+                                                    <%} %>
+                                                  </li>
+                                                <% 
+                                                
+                                                                         
+                                      }
+                                  }
+                                        %>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="<%= Page.ResolveUrl("~/login.aspx")%>">Inicio de Sesión</a></li>
+                                <%
+                                if(_DataSistema.Cusuario==null){
+                                   %> <li><a href="<%= Page.ResolveUrl("~/Login.aspx")%>">Iniciar Sesión</a></li><%
+                                }else{ 
+                                    %>
+                                
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <%= _DataSistema.NombreUsuario%><span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu multi-level" role="menu">
+                                        <li><a href="<%= Page.ResolveUrl("~/Logout.aspx")%>">Cerrar Sesión</a></li>
+                                    </ul>
+                                </li>
+                                <%} %>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->
@@ -91,6 +174,7 @@
                     <div align="center">
                         <asp:Label ID="LblTitulo" runat="server" Text="Titulo" Font-Bold="True" Font-Size="20pt"></asp:Label>
                     </div>
+                  
                 </asp:ContentPlaceHolder>
                 <!-- FIN CONTENTPLACEHOLDER -->
         </div>
@@ -113,8 +197,8 @@
     <script src="<%= Page.ResolveUrl("~/js/jquery.min.js")%>"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<%= Page.ResolveUrl("~/js/bootstrap.min.js")%>"></script>
-    
-    <!-- Bootstrap -->
+      <!-- Bootstrap -->
     <link href="<%= Page.ResolveUrl("~/css/bootstrap.css")%>" rel="stylesheet">
+    <link href="<%= Page.ResolveUrl("~/css/menu.css")%>" rel="stylesheet">
 </body>
 </html>

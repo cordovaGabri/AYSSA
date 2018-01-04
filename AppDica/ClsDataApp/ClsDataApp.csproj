@@ -75,6 +75,7 @@
     <Compile Include="CEscolaridadAspirante.cs" />
     <Compile Include="CHabilidadAspirante.cs" />
     <Compile Include="CHabilidadConocimiento.cs" />
+    <Compile Include="CMenu.cs" />
     <Compile Include="CMunicipio.cs" />
     <Compile Include="CNivelConocimiento.cs" />
     <Compile Include="COpcionAcademica.cs" />

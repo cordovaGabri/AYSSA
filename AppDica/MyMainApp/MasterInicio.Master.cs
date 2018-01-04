@@ -1,23 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClsDataApp;
 using ClsInterface;
 
 namespace dica
 {
     public partial class MasterInicio : System.Web.UI.MasterPage
     {
+        protected ClsInterface.ClsSistema _DataSistema;
         protected void Page_Load(object sender, EventArgs e)
+        {  
+        _DataSistema = (ClsSistema)Session["MyDataSistema"];
+        }
+        public DataSet Nivel1()
         {
-
+            String usuario = null;
+            DataSet dt = null;
+            _DataSistema = (ClsSistema)Session["MyDataSistema"];
+            usuario = _DataSistema.Cusuario;
+            try
+            {
+                if (usuario != null) {
+                    CMenu OpcionesMenu = new CMenu(_DataSistema.ConexionBaseDato);
+                    dt = OpcionesMenu.DetalleOpciones(usuario, "", "", 1);
+                   
+                }
+            }
+            catch (Exception ex) {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "MessageBox", "<script language='javascript'>alert('" + ex + "');</script>");
+    
+            }
+             return dt;
         }
     }
 
     public partial class FormaSISWeb : System.Web.UI.Page
     {
+
+        protected DataQuery objResultado = new DataQuery();
         protected ClsInterface.ClsSistema _DataSistema;
         protected string _ConexionBaseDato;
         protected string _RefrescaCamposEnCarga;
@@ -29,7 +54,7 @@ namespace dica
         protected bool _CamposEnlazados = false;
         protected static string _Ejercicio = "";
         protected static string _Periodo = "";
-        protected DataQuery objResultado = new DataQuery();
+
         public FormaSISWeb()
         {
             _DataSistema = new ClsSistema();
@@ -104,14 +129,13 @@ namespace dica
             Page.ClientScript.RegisterStartupScript(Page.GetType(), "MessageBox", "<script language='javascript'>alert('" + Mensaje + "');</script>");
         }
 
-
-        protected void DespliegaMensajeUpdatePanel(string Mensaje,UpdatePanel panel)
+        protected void DespliegaMensajeUpdatePanel(string Mensaje, UpdatePanel panel)
         {
             Mensaje = Mensaje.Replace("'", "");
             Mensaje = Mensaje.Replace("\n", "");
             Mensaje = Mensaje.Replace("\r", "");
             string Script;
-            Script = "alert('"+Mensaje+"')";
+            Script = "alert('" + Mensaje + "')";
             ScriptManager.RegisterStartupScript(panel, panel.GetType(), "Script", Script, true);
         }
 
@@ -134,6 +158,8 @@ namespace dica
         {
 
         }
+
+       
 
         public string EmparejaNumeros(int Valor, int DigitosNecesarios, string Caracter)
         {

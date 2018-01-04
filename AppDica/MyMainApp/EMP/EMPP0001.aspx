@@ -29,62 +29,62 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label1" runat="server" Text="NOMBRE DE EMPRESA:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-9">
                                                 <asp:TextBox class="form-control" ID="TxtEmpresa" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmpresa">Llenar Nombre de Empresa</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmpresa" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Nombre de Empresa</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="ACTIVIDAD ECONÓMICA:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:DropDownList ID="CboActEcono" runat="server" class="form-control">
+                                                <asp:DropDownList ID="CboActEcono" runat="server" class="form-control" DataTextField="DS_ACT_ECO" DataValueField="ID">
                                                 </asp:DropDownList>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label41" runat="server" Text="NOMBRE DE CONTACTO:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtNombreContact" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombreContact">Llenar Nombre de contacto</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombreContact" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Nombre de contacto</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="EMAIL DE CONTACTO:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtEmailC" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmailC">Llenar email de contacto</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtEmailC" runat="server" AutoCompleteType="Disabled" TextMode="Email"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmailC" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar email de contacto</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="TELÉFONO DE CONTACTO:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtTelC" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtTelC">Llenar Telefono de contacto</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtTelC" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Telefono de contacto</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="NIT DE EMPESA:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtNitEmpresa" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNitEmpresa">Llenar Nit de empresa</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNitEmpresa" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Nit de empresa</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label6" runat="server" Text="TELÉFONO EMPRESA:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtTelEmpresa" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtTelEmpresa">Llenar Telefono de empresa</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtTelEmpresa" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Telefono de empresa</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label7" runat="server" Font-Bold="True" Text="DIRECCIÓN EMPRESA:"></asp:Label>
                                             <div class="col-md-9">
                                                 <asp:TextBox class="form-control" ID="TxtDirEmpresa" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDirEmpresa">Llenar Direccion de empresa</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDirEmpresa" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Direccion de empresa</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label8" runat="server" Font-Bold="True" Text="DEPARTAMENTO:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:DropDownList ID="CboDepartamento" runat="server" class="form-control">
+                                                <asp:DropDownList ID="CboDepartamento" runat="server" class="form-control" AutoPostBack="True" DataTextField="DS_DEPARTAMENTO" DataValueField="ID" OnSelectedIndexChanged="CboDepartamento_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label10" runat="server" Font-Bold="True" Text="MUNICIPIO:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:DropDownList ID="CboMunicipio" runat="server" class="form-control">
+                                                <asp:DropDownList ID="CboMunicipio" runat="server" class="form-control" DataTextField="DS_MUNICIPIO" DataValueField="ID">
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
@@ -92,29 +92,29 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label11" runat="server" Text="NOMBRE REPRESENTANTE LEGAL:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtNombRepre" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombRepre">Llenar Nombre de representante legal</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombRepre" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Nombre de representante legal</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label13" runat="server" Text="EMAIL DE REPRESENTANTE LEGAL:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtEmailRep" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmailRep">Llenar email de representante legal</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtEmailRep" runat="server" AutoCompleteType="Disabled" TextMode="Email"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmailRep" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar email de representante legal</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label14" runat="server" Text="NIT REPRESENTANTE LEGAL:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtNitRep" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNitRep">Llenar Nit de representante legal</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNitRep" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Nit de representante legal</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label15" runat="server" Text="DUI REPRESENTANTE LEGAL:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtDuiRep" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuiRep">Llenar Dui de representante legal</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuiRep" SetFocusOnError="True" ValidationGroup="DatoGeneral">Llenar Dui de representante legal</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <br />
                                         <div align="center">
-                                            <asp:Button ID="BtnGuardarDatosGenerales" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarDatosGenerales_Click" />
+                                            <asp:Button ID="BtnGuardarDatosGenerales" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarDatosGenerales_Click" ValidationGroup="DatoGeneral" />
                                             &nbsp;</div>
                                         <br />
                                      </ContentTemplate>

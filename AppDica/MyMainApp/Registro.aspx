@@ -33,6 +33,8 @@
                 </ol><%--fin numerales--%><br />
                 <p>
                 </p>
+                <p>
+                </p>
                 </p></div>
             <div  class="col-md-6">
                 <div class="form-group">
@@ -47,35 +49,35 @@
                      <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
                     <asp:TextBox class="form-control" ID="TxtNIT" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Llenar NIT" ControlToValidate="TxtNIT" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Llenar NIT" ControlToValidate="TxtNIT" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </div>
                     </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label6" runat="server" Text="FECHA NACIMIENTO:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TxtFechaNacimiento" runat="server" TextMode="Date" AutoCompleteType="Disabled"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Llenar Fecha Nacimiento" ControlToValidate="TxtFechaNacimiento" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Llenar Fecha Nacimiento" ControlToValidate="TxtFechaNacimiento" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     </div>                
                  </div>
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label3" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
                     <asp:TextBox class="form-control" ID="TxtNombres" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Llenar Nombres" ControlToValidate="TxtNombres" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Llenar Nombres" ControlToValidate="TxtNombres" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </div>
                      </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label4" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TxtApellidos" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Llenar Apellidos" ControlToValidate="TxtApellidos" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Llenar Apellidos" ControlToValidate="TxtApellidos" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     </div>               
                 </div>
                 <div class="form-group">
                     <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EMAIL:" Font-Bold="True"></asp:Label>
                     <div class="col-md-8">
                         <asp:TextBox class="form-control" ID="TxtEmail" runat="server" TextMode="Email" AutoCompleteType="Disabled"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Llenar Email" ControlToValidate="TxtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Llenar Email" ControlToValidate="TxtEmail" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     </div>
                     </div>
                 </div>

@@ -34,7 +34,8 @@ namespace MyMainApp
                     _DataSistema.Autenticado = true;
                     Session["MyDataSistema"] = _DataSistema;
                     FormsAuthentication.RedirectFromLoginPage(txtUsuario.Text, false);
-                    Response.Redirect("ASP/ASPP0001.aspx");
+                 //   Response.Redirect("ASP/ASPP0001.aspx");
+                    Response.Redirect("~/Default.aspx");
                 }
                 else
                 {
