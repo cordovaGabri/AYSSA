@@ -119,6 +119,7 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="js\validaciones.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Registro.aspx" />
