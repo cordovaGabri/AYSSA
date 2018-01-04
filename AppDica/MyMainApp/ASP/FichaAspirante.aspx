@@ -10,18 +10,19 @@
     <title></title>
 </head>
 <body>
+    <center>
     <form id="form1" runat="server">
-    <div style="height: 1243px">
+    <div>
     
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        <br /><center>
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="546px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1059px">
+        <br />
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="827px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="757px" style="margin-right: 0px">
             <LocalReport ReportPath="ASP\RptFichaAspirante.rdlc">
             </LocalReport>
-        </rsweb:ReportViewer></center>
+        </rsweb:ReportViewer>
     
     </div>
-    </form>
+    </form></center>
 </body>
 </html>

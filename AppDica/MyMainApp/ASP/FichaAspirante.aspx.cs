@@ -22,7 +22,7 @@ namespace MyMainApp.ASP
                DataTable dt;
 
                CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
-               DataView dvAspirante = new DataView(objAspirante.Detalle("06143003911036", "", "", DateTime.Today, 'X',
+               DataView dvAspirante = new DataView(objAspirante.Detalle(_DataSistema.Cusuario, "", "", DateTime.Today, 'X',
             "", "", "", "", "", "", 'X', 0, "", 0, 0, 0, "", "", "", "", "", DateTime.Today, "", DateTime.Today, 4).TB_ASPIRANTE);
 
                dt = dvAspirante.ToTable();

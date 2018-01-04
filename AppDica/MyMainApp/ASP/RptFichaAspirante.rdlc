@@ -6,12 +6,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>25.53547cm</Width>
+              <Width>18.54726cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>12.49715cm</Height>
+              <Height>14.94606cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -32,10 +32,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
-                          <Top>0.82585cm</Top>
-                          <Left>1.19062cm</Left>
+                          <Top>1.75189cm</Top>
+                          <Left>0.88195cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>2.78222cm</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -61,10 +61,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_NOMBRE</rd:DefaultName>
-                          <Top>0.82585cm</Top>
-                          <Left>4.55493cm</Left>
+                          <Top>1.75189cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>3.84938cm</Width>
+                          <Width>4.0875cm</Width>
                           <ZIndex>1</ZIndex>
                           <Style>
                             <Border>
@@ -91,10 +91,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
-                          <Top>0.82585cm</Top>
-                          <Left>9.78958cm</Left>
+                          <Top>1.75189cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>3.18792cm</Width>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -121,10 +121,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_APELLIDO</rd:DefaultName>
-                          <Top>0.82585cm</Top>
-                          <Left>12.88931cm</Left>
+                          <Top>1.75189cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.0875cm</Width>
+                          <Width>3.84938cm</Width>
                           <ZIndex>3</ZIndex>
                           <Style>
                             <Border>
@@ -151,8 +151,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
-                          <Top>2.09585cm</Top>
-                          <Left>1.19062cm</Left>
+                          <Top>2.70439cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
                           <Width>3.18792cm</Width>
                           <ZIndex>4</ZIndex>
@@ -181,8 +181,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>FECH_NACIMIENTO</rd:DefaultName>
-                          <Top>2.09585cm</Top>
-                          <Left>4.55493cm</Left>
+                          <Top>2.70439cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
                           <Width>3.84938cm</Width>
                           <ZIndex>5</ZIndex>
@@ -211,10 +211,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox9</rd:DefaultName>
-                          <Top>0.82585cm</Top>
-                          <Left>17.64771cm</Left>
+                          <Top>2.70439cm</Top>
+                          <Left>0.88194cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>2.76458cm</Width>
                           <ZIndex>6</ZIndex>
                           <Style>
                             <Border>
@@ -241,10 +241,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_SEXO</rd:DefaultName>
-                          <Top>0.82585cm</Top>
-                          <Left>20.3241cm</Left>
+                          <Top>2.70439cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.69604cm</Width>
+                          <Width>4.0875cm</Width>
                           <ZIndex>7</ZIndex>
                           <Style>
                             <Border>
@@ -271,10 +271,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox13</rd:DefaultName>
-                          <Top>2.09585cm</Top>
-                          <Left>9.78958cm</Left>
+                          <Top>5.58835cm</Top>
+                          <Left>0.88195cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.92333cm</Width>
+                          <Width>2.76457cm</Width>
                           <ZIndex>8</ZIndex>
                           <Style>
                             <Border>
@@ -301,8 +301,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_TELEFONO_CASA</rd:DefaultName>
-                          <Top>2.09585cm</Top>
-                          <Left>12.88931cm</Left>
+                          <Top>5.58835cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
                           <Width>4.0875cm</Width>
                           <ZIndex>9</ZIndex>
@@ -331,10 +331,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox15</rd:DefaultName>
-                          <Top>2.09585cm</Top>
-                          <Left>17.64771cm</Left>
+                          <Top>5.58835cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>3.18792cm</Width>
                           <ZIndex>10</ZIndex>
                           <Style>
                             <Border>
@@ -361,10 +361,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_TELEFONO_CELULAR</rd:DefaultName>
-                          <Top>2.09585cm</Top>
-                          <Left>20.3241cm</Left>
+                          <Top>5.58835cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.69604cm</Width>
+                          <Width>3.84938cm</Width>
                           <ZIndex>11</ZIndex>
                           <Style>
                             <Border>
@@ -391,10 +391,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox17</rd:DefaultName>
-                          <Top>6.83189cm</Top>
-                          <Left>1.08069cm</Left>
+                          <Top>10.32439cm</Top>
+                          <Left>0.88194cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>2.76458cm</Width>
                           <ZIndex>12</ZIndex>
                           <Style>
                             <Border>
@@ -421,10 +421,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_DIRECCION</rd:DefaultName>
-                          <Top>6.83189cm</Top>
-                          <Left>4.445cm</Left>
+                          <Top>10.32439cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>20.46521cm</Width>
+                          <Width>12.12334cm</Width>
                           <ZIndex>13</ZIndex>
                           <Style>
                             <Border>
@@ -451,10 +451,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
-                          <Top>5.7471cm</Top>
-                          <Left>1.08069cm</Left>
+                          <Top>7.81085cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>3.18792cm</Width>
                           <ZIndex>14</ZIndex>
                           <Style>
                             <Border>
@@ -481,10 +481,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_PAIS</rd:DefaultName>
-                          <Top>5.7471cm</Top>
-                          <Left>4.445cm</Left>
+                          <Top>7.81085cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>3.84938cm</Width>
                           <ZIndex>15</ZIndex>
                           <Style>
                             <Border>
@@ -511,10 +511,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox21</rd:DefaultName>
-                          <Top>5.7471cm</Top>
-                          <Left>9.67965cm</Left>
+                          <Top>8.86918cm</Top>
+                          <Left>0.88194cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>2.76458cm</Width>
                           <ZIndex>16</ZIndex>
                           <Style>
                             <Border>
@@ -541,10 +541,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_DEPARTAMENTO</rd:DefaultName>
-                          <Top>5.7471cm</Top>
-                          <Left>12.77938cm</Left>
+                          <Top>8.86918cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.51083cm</Width>
+                          <Width>4.0875cm</Width>
                           <ZIndex>17</ZIndex>
                           <Style>
                             <Border>
@@ -571,10 +571,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox23</rd:DefaultName>
-                          <Top>5.7471cm</Top>
-                          <Left>17.53778cm</Left>
+                          <Top>8.86918cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>3.18792cm</Width>
                           <ZIndex>18</ZIndex>
                           <Style>
                             <Border>
@@ -601,10 +601,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_MUNICIPIO</rd:DefaultName>
-                          <Top>5.7471cm</Top>
-                          <Left>20.21416cm</Left>
+                          <Top>8.86918cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.69604cm</Width>
+                          <Width>3.84938cm</Width>
                           <ZIndex>19</ZIndex>
                           <Style>
                             <Border>
@@ -631,10 +631,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox25</rd:DefaultName>
-                          <Top>3.33939cm</Top>
-                          <Left>1.19062cm</Left>
+                          <Top>3.68335cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>3.18792cm</Width>
                           <ZIndex>20</ZIndex>
                           <Style>
                             <Border>
@@ -661,8 +661,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_DUI</rd:DefaultName>
-                          <Top>3.33939cm</Top>
-                          <Left>4.55493cm</Left>
+                          <Top>3.68335cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
                           <Width>3.84938cm</Width>
                           <ZIndex>21</ZIndex>
@@ -691,10 +691,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox27</rd:DefaultName>
-                          <Top>3.33939cm</Top>
-                          <Left>9.78958cm</Left>
+                          <Top>3.68335cm</Top>
+                          <Left>0.88194cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>2.76458cm</Width>
                           <ZIndex>22</ZIndex>
                           <Style>
                             <Border>
@@ -721,8 +721,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_NIT</rd:DefaultName>
-                          <Top>3.33939cm</Top>
-                          <Left>12.88931cm</Left>
+                          <Top>3.68335cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
                           <Width>4.0875cm</Width>
                           <ZIndex>23</ZIndex>
@@ -751,10 +751,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox29</rd:DefaultName>
-                          <Top>3.33939cm</Top>
-                          <Left>17.64771cm</Left>
+                          <Top>4.66231cm</Top>
+                          <Left>0.88194cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.5cm</Width>
+                          <Width>2.76458cm</Width>
                           <ZIndex>24</ZIndex>
                           <Style>
                             <Border>
@@ -781,10 +781,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_EMAIL</rd:DefaultName>
-                          <Top>3.33939cm</Top>
-                          <Left>20.3241cm</Left>
+                          <Top>4.66231cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.69604cm</Width>
+                          <Width>4.0875cm</Width>
                           <ZIndex>25</ZIndex>
                           <Style>
                             <Border>
@@ -811,10 +811,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
-                          <Top>4.60939cm</Top>
-                          <Left>1.19062cm</Left>
+                          <Top>6.75252cm</Top>
+                          <Left>0.88195cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>3.18792cm</Width>
+                          <Width>2.78222cm</Width>
                           <ZIndex>26</ZIndex>
                           <Style>
                             <Border>
@@ -841,10 +841,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_DISCAPACIDAD1</rd:DefaultName>
-                          <Top>4.60939cm</Top>
-                          <Left>4.55493cm</Left>
+                          <Top>6.75252cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>3.84938cm</Width>
+                          <Width>4.0875cm</Width>
                           <ZIndex>27</ZIndex>
                           <Style>
                             <Border>
@@ -871,10 +871,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox33</rd:DefaultName>
-                          <Top>4.60939cm</Top>
-                          <Left>9.78958cm</Left>
+                          <Top>6.75252cm</Top>
+                          <Left>8.60778cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.92333cm</Width>
+                          <Width>3.18792cm</Width>
                           <ZIndex>28</ZIndex>
                           <Style>
                             <Border>
@@ -901,10 +901,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_DISCAPACIDAD2</rd:DefaultName>
-                          <Top>4.60939cm</Top>
-                          <Left>12.88931cm</Left>
+                          <Top>6.75252cm</Top>
+                          <Left>11.97209cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.0875cm</Width>
+                          <Width>3.84938cm</Width>
                           <ZIndex>29</ZIndex>
                           <Style>
                             <Border>
@@ -931,10 +931,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox35</rd:DefaultName>
-                          <Top>4.60939cm</Top>
-                          <Left>17.64771cm</Left>
+                          <Top>7.81085cm</Top>
+                          <Left>0.88194cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>2.76458cm</Width>
+                          <Width>2.78223cm</Width>
                           <ZIndex>30</ZIndex>
                           <Style>
                             <Border>
@@ -961,10 +961,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DS_DISCAPACIDAD3</rd:DefaultName>
-                          <Top>4.60939cm</Top>
-                          <Left>20.3241cm</Left>
+                          <Top>7.81085cm</Top>
+                          <Left>3.80527cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>4.69604cm</Width>
+                          <Width>4.0875cm</Width>
                           <ZIndex>31</ZIndex>
                           <Style>
                             <Border>
@@ -1004,23 +1004,24 @@
         </TablixRowHierarchy>
         <DataSetName>TB_ASPIRANTE</DataSetName>
         <Top>0.07056cm</Top>
-        <Left>0.28787cm</Left>
-        <Height>12.49715cm</Height>
-        <Width>25.53547cm</Width>
+        <Left>0.7112cm</Left>
+        <Height>14.94606cm</Height>
+        <Width>18.54726cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <TextAlign>Center</TextAlign>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>5.16667in</Height>
+    <Height>5.91206in</Height>
     <Style />
   </Body>
-  <Width>10.375in</Width>
+  <Width>7.75568in</Width>
   <Page>
     <PageHeader>
-      <Height>2.68745cm</Height>
+      <Height>3.54935cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1042,8 +1043,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>1.18745cm</Top>
-          <Left>8.51641cm</Left>
+          <Top>1.82245cm</Top>
+          <Left>4.81224cm</Left>
           <Height>0.83812cm</Height>
           <Width>7.55354cm</Width>
           <Style>
@@ -1061,7 +1062,7 @@
           <Value>escudoNacional</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.52557cm</Top>
-          <Left>21.63974cm</Left>
+          <Left>13.91391cm</Left>
           <Height>1.8175cm</Height>
           <Width>1.97625cm</Width>
           <ZIndex>1</ZIndex>
@@ -1076,7 +1077,7 @@
           <Value>dica</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.52557cm</Top>
-          <Left>2.36856cm</Left>
+          <Left>1.73356cm</Left>
           <Height>1.8175cm</Height>
           <Width>1.94979cm</Width>
           <ZIndex>2</ZIndex>
@@ -1161,7 +1162,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>0.65828cm</Top>
-          <Left>5.68537cm</Left>
+          <Left>3.04495cm</Left>
           <Height>1.235cm</Height>
           <Width>11.89271cm</Width>
           <Style>

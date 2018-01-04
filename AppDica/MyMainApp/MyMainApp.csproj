@@ -105,8 +105,10 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EMP\DetalleAspirante.aspx" />
     <Content Include="EMP\DetallePasantia.aspx" />
     <Content Include="EMP\EMPP0001.aspx" />
+    <Content Include="EMP\RegistroEntregable.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
@@ -146,6 +148,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EMP\DetalleAspirante.aspx.cs">
+      <DependentUpon>DetalleAspirante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMP\DetalleAspirante.aspx.designer.cs">
+      <DependentUpon>DetalleAspirante.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EMP\DetallePasantia.aspx.cs">
       <DependentUpon>DetallePasantia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -159,6 +168,13 @@
     </Compile>
     <Compile Include="EMP\EMPP0001.aspx.designer.cs">
       <DependentUpon>EMPP0001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMP\RegistroEntregable.aspx.cs">
+      <DependentUpon>RegistroEntregable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMP\RegistroEntregable.aspx.designer.cs">
+      <DependentUpon>RegistroEntregable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
