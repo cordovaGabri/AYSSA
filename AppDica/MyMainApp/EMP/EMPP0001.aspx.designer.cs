@@ -10,7 +10,7 @@
 namespace MyMainApp.EMP {
     
     
-    public partial class EMP0001 {
+    public partial class EMPP0001 {
         
         /// <summary>
         /// Control Panel1.
@@ -40,13 +40,40 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.Label LblTitulo;
         
         /// <summary>
-        /// Control PanDatos.
+        /// Control ScriptManager1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanDatos;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// Control TabContainer1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabContainer TabContainer1;
+        
+        /// <summary>
+        /// Control TabPanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TabPanel TabPanel1;
+        
+        /// <summary>
+        /// Control UPDatoGeneral.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UPDatoGeneral;
         
         /// <summary>
         /// Control Label1.
@@ -400,31 +427,31 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator11;
         
         /// <summary>
-        /// Control Button1.
+        /// Control BtnGuardarDatosGenerales.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button BtnGuardarDatosGenerales;
         
         /// <summary>
-        /// Control Button2.
+        /// Control TabPanel2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::AjaxControlToolkit.TabPanel TabPanel2;
         
         /// <summary>
-        /// Control PanInfor.
+        /// Control UPPasantia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanInfor;
+        protected global::System.Web.UI.UpdatePanel UPPasantia;
         
         /// <summary>
         /// Control Label17.
@@ -886,6 +913,24 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.DropDownList CboNivel;
         
         /// <summary>
+        /// Control BtnGuardarPasantia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnGuardarPasantia;
+        
+        /// <summary>
+        /// Control BtnCancelarHabilidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCancelarHabilidad;
+        
+        /// <summary>
         /// Control GridView2.
         /// </summary>
         /// <remarks>
@@ -1012,13 +1057,22 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.GridView GVPasantia;
         
         /// <summary>
-        /// Control Panel3.
+        /// Control TabPanel3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel3;
+        protected global::AjaxControlToolkit.TabPanel TabPanel3;
+        
+        /// <summary>
+        /// Control UPProyecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UPProyecto;
         
         /// <summary>
         /// Control Label9.
@@ -1174,13 +1228,13 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator27;
         
         /// <summary>
-        /// Control Button3.
+        /// Control BtnProyectoGuardar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button BtnProyectoGuardar;
         
         /// <summary>
         /// Control Button6.

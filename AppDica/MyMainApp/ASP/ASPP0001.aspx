@@ -17,10 +17,10 @@
         <div class="container-fluid">
             <div id="content">
                 <asp:Panel ID="Panel1" runat="server" Width="100%">
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="2" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
-                                <asp:UpdatePanel ID="UpdatePanel5" runat="server">
+                                <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
                                     <Triggers><asp:AsyncPostBackTrigger ControlID="BtnGuardarDatoGeneral" /></Triggers>
                                     <ContentTemplate>
                                 <br />
@@ -58,7 +58,7 @@
                                         <asp:Label class="control-label  col-sm-3" ID="Label41" runat="server" Text="TELÉFONO (CELULAR):" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
                                             <asp:TextBox class="form-control" ID="TxtTelCel" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtTelCel" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Telefono Celular</asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtTelCel" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="DatoGeneral">Llenar Telefono Celular</asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -75,7 +75,7 @@
                                         <asp:Label class="control-label  col-sm-3" ID="Label30" runat="server" Text="EMAIL:" Font-Bold="True" readonly></asp:Label>
                                         <div class="col-md-3">
                                             <asp:TextBox class="form-control" ID="TxtEmail" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TxtEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar email</asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TxtEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="DatoGeneral">Llenar email</asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -136,7 +136,7 @@
                                         <asp:Label class="control-label  col-sm-2" ID="Label18" runat="server" Font-Bold="True" Text="DIRECCIÓN:"></asp:Label>
                                         <div class="col-md-8">
                                             <asp:TextBox class="form-control" ID="TxtDireccion" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TxtDireccion" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Llenar Direccion</asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TxtDireccion" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="DatoGeneral">Llenar Direccion</asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <asp:Panel ID="Panel2" runat="server" Visible="False">
@@ -203,7 +203,7 @@
                                     </asp:Panel>
                                     <br />
                                     <div align="center">
-                                        <asp:Button ID="BtnGuardarDatoGeneral" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarDatoGeneral_Click" />&nbsp;</div>
+                                        <asp:Button ID="BtnGuardarDatoGeneral" runat="server" class="btn btn-primary" Text="GUARDAR" OnClick="BtnGuardarDatoGeneral_Click" ValidationGroup="DatoGeneral" />&nbsp;</div>
                                     <br />
                                     </ContentTemplate>
                                 </asp:UpdatePanel>

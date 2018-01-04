@@ -17,7 +17,7 @@ namespace ClsDataApp
 
         public ClsDataSets.DS_TB_EMP Detalle(int Id, string NombreEmpresa, string NombreContacto, string EmailContacto, string TelContacto, string NitEmpresa,
             string TelEmpresa, string DirEmpresa, int IdDepartamento, int IdMunicipio, string NombreRepre, string EmailRepresentante,string NitRepre,
-            string DuiRepre, int IdActEco, string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu,int OpcionConsulta)
+            string DuiRepre, int IdActEco,string IdUsuario, string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu,int OpcionConsulta)
         {
             ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
             try
@@ -42,6 +42,7 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NIT_REPRESENTANTE", NitRepre);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DUI_REPRESENTANTE", DuiRepre);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ACT_ECO", IdActEco);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_USUARIO", IdUsuario);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
@@ -69,7 +70,7 @@ namespace ClsDataApp
 
         public DataQuery Actualizacion(int Id, string NombreEmpresa, string NombreContacto, string EmailContacto, string TelContacto, string NitEmpresa,
             string TelEmpresa, string DirEmpresa, int IdDepartamento, int IdMunicipio, string NombreRepre, string EmailRepresentante, string NitRepre,
-            string DuiRepre, int IdActEco, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+            string DuiRepre, int IdActEco, string IdUsuario, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
 
@@ -81,10 +82,10 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_EMPRESA_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_EMPRESA_UPDATE";
                         break;
                     case TipoActualizacion.Eliminar:
                         StrCommand = "";
@@ -118,6 +119,7 @@ namespace ClsDataApp
                 ObjCommand.Parameters.AddWithValue("@DS_NIT_REPRESENTANTE", NitRepre);
                 ObjCommand.Parameters.AddWithValue("@DS_DUI_REPRESENTANTE", DuiRepre);
                 ObjCommand.Parameters.AddWithValue("@ID_ACT_ECO", IdActEco);
+                ObjCommand.Parameters.AddWithValue("@ID_USUARIO", IdUsuario);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
                 ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);

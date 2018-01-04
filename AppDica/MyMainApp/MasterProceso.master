@@ -1,31 +1,31 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/MasterInicio.Master" AutoEventWireup="true" CodeBehind="MasterProceso.master.cs" Inherits="MyMainApp.MasterProceso" %>
 
-<asp:Content ID="Content1" runat="server" contentplaceholderid="CPHPrincipal">
-     
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="CPHPrincipal">
+
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
+
         <asp:Panel ID="Panel1" runat="server" Width="100%">
             <form id="form1" runat="server" class="form-horizontal">
                 <%--inicio formulario--%>
                 <div class="text-center">
                     <%--  div titulo--%>
-                    <asp:Label ID="LblTitulo" runat="server" Text="Registro Aspirante" Font-Bold="True" Font-Size="20pt"></asp:Label>
+                    <asp:Label ID="LblTitulo" runat="server" Text="Registro Aspirante" Font-Bold="True" Font-Size="18pt"></asp:Label>
                 </div>
                 <%--fin div titulo--%>
                 <div class="container-fluid">
                     <div id="content">
                         <%--inicio container-fluid--%>
-                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                            <li  class="active"><a href="#Datos" data-toggle="tab">DATOS GENERALES</a></li>
-                            <li><a href="#Infor" data-toggle="tab">INFORMACIÓN ADICIONAL</a></li>
-                            <li  ><a href="#Habilidad" data-toggle="tab">HABILIDADES</a></li>
-                        </ul>
-                        <div id="my-tab-content" class="tab-content ">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                        <ajaxtoolkit:tabcontainer id="TabContainer1" runat="server" activetabindex="0" bordercolor="#66CCFF" scrollbars="Vertical" height="375px" width="100%">
+                        <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
+                            <ContentTemplate>
+                                 <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
+                                    <Triggers><asp:AsyncPostBackTrigger ControlID="BtnGuardarDatoGeneral" /></Triggers>
+                                    <ContentTemplate>
                             <%--inicio contenido tab--%>
-                            <div id="Datos" class="tab-pane active">
                                 <%--inicio tab datos--%>
                                 <br />
-                                <asp:Panel ID="PanDatos" runat="server">
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label1" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
@@ -72,16 +72,20 @@
                                     </div>
                                     <br />
                                     <div align="center">
-                                        <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="GUARDAR" />
+                                        <asp:Button ID="BtnGuardarDatoGeneral" runat="server" class="btn btn-primary" Text="GUARDAR" />
                                         &nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                                     </div>
                                     <br />
-                                </asp:Panel>
-                            </div>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </ContentTemplate>
+                             </ajaxToolkit:TabPanel>
                             <%--fin tab datos--%>
-                            <div class="tab-pane " id="Infor">
-                                <%--inicio tab informacion adicional--%>
-                                <asp:Panel ID="PanInfor" runat="server">
+                            <ajaxToolkit:TabPanel runat="server" HeaderText="INFO" ID="TabPanel2">
+                            <ContentTemplate>
+                        <asp:UpdatePanel ID="UPInfo" runat="server">
+                            <Triggers><asp:AsyncPostBackTrigger ControlID="BtnInfoGuardar" /></Triggers>
+                            <ContentTemplate>
                                     <br />
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label17" runat="server" Font-Bold="True" Text="DEPARTAMENTO:"></asp:Label>
@@ -139,64 +143,66 @@
                                             <input type="button" value="Adjuntar" onclick="open_win_doc">
                                         </div>
                                     </div>
-                                    <script type="text/javascript">
-
-
-
-
-                                function open_win_doc() {
-                                    alert("hola");
-                                    var myWindow = window.open("DetalleSolicitud.aspx", "Dates", "scrollbars=yes,resizable=yes", "width=950,height=650");
-                                }
-                            </script>
                                     <br />
                                     <div align="center">
-                                        <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary"/>
+                                        <asp:Button ID="BtnInfoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary"/>
                                         &nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary"/>
                                     </div>
                                     <br />
-                                </asp:Panel>
-                            </div>
+      
                             <%--fin tab informacion adicional--%>
-                            <div class="tab-pane" id="Habilidad">
-                                <%--inicio tab habilidades--%>
-                                <asp:Panel ID="Panel3" runat="server">
-                                    <br />
-                                    <div class="form-group">
-                                        <asp:Label class="control-label  col-sm-2" ID="Label9" runat="server" Font-Bold="True" Text="CONOCIMIENTO:"></asp:Label>
-                                        <div class="col-md-3">
-                                            <asp:DropDownList ID="DropDownList5" runat="server" class="form-control">
-                                            </asp:DropDownList>
-                                        </div>
-                                        <asp:Label class="control-label  col-sm-2" ID="Label12" runat="server" Font-Bold="True" Text="HABILIDAD:"></asp:Label>
-                                        <div class="col-md-3">
-                                            <asp:DropDownList ID="DropDownList6" runat="server" class="form-control">
-                                            </asp:DropDownList>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <asp:Label class="control-label  col-sm-2" ID="Label33" runat="server" Font-Bold="True" Text="NIVEL:"></asp:Label>
-                                        <div class="col-md-3">
-                                            <asp:DropDownList ID="DropDownList7" runat="server" class="form-control">
-                                            </asp:DropDownList>
-                                        </div>
-                                    </div>
-                                    <div align="center">
-                                        <asp:Button ID="Button3" runat="server" Text="GUARDAR" class="btn btn-primary"/>
-                                        &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary"/>
-                                    </div>
-                                    <br />
-                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
-                                        <Columns>
-                                            <asp:BoundField HeaderText="Conocimientos" />
-                                            <asp:BoundField HeaderText="Habilidades" />
-                                            <asp:BoundField HeaderText="Nivel" />
-                                        </Columns>
-                                    </asp:GridView>
-                                </asp:Panel>
-                            </div>
-                            <%--fin tab habilidades--%>
-                        </div>
+     
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </ContentTemplate>
+                             </ajaxToolkit:TabPanel>
+                            <%--fin tab datos--%>
+                            <ajaxToolkit:TabPanel runat="server" HeaderText="DETALLE" ID="TabPanel3">
+                            <ContentTemplate>
+                        <asp:UpdatePanel ID="UPDetalle" runat="server">
+                            <Triggers><asp:AsyncPostBackTrigger ControlID="BtnDetalleGuardar" /></Triggers>
+                            <ContentTemplate>
+            <%--inicio tab habilidades--%>
+                <br />
+                <div class="form-group">
+                    <asp:Label class="control-label  col-sm-2" ID="Label9" runat="server" Font-Bold="True" Text="CONOCIMIENTO:"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:DropDownList ID="DropDownList5" runat="server" class="form-control">
+                        </asp:DropDownList>
+                    </div>
+                    <asp:Label class="control-label  col-sm-2" ID="Label12" runat="server" Font-Bold="True" Text="HABILIDAD:"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:DropDownList ID="DropDownList6" runat="server" class="form-control">
+                        </asp:DropDownList>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <asp:Label class="control-label  col-sm-2" ID="Label33" runat="server" Font-Bold="True" Text="NIVEL:"></asp:Label>
+                    <div class="col-md-3">
+                        <asp:DropDownList ID="DropDownList7" runat="server" class="form-control">
+                        </asp:DropDownList>
+                    </div>
+                </div>
+                <div align="center">
+                    <asp:Button ID="BtnDetalleGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" />
+                    &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" />
+                </div>
+                <br />
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField HeaderText="Conocimientos" />
+                        <asp:BoundField HeaderText="Habilidades" />
+                        <asp:BoundField HeaderText="Nivel" />
+                    </Columns>
+                </asp:GridView>
+                
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </ContentTemplate>
+                             </ajaxToolkit:TabPanel>
+                            
+                    </ajaxtoolkit:tabcontainer>
+                        <%--fin tab habilidades--%>
                     </div>
                     <%--fin contenido tab--%>
                 </div>
@@ -205,7 +211,7 @@
             <%--fin formulario--%>
         </asp:Panel>
     </asp:ContentPlaceHolder>
-     
+
 </asp:Content>
 
 
