@@ -242,7 +242,7 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label36" runat="server" Font-Bold="True" Text="SUCURSAL:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtSucursal" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtSucursal">Llenar Sucursal </asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtSucursal" ValidationGroup="info">Llenar Sucursal </asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -267,6 +267,29 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
+                                         <div align="center">
+                                            <asp:Button ID="Button1" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarHabilidad_Click" />
+                                            &nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                                        </div>
+                                        <br />
+                                        <asp:GridView ID="GVNivelEducativo" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+                                            <AlternatingRowStyle BackColor="White" />
+                                            <Columns>
+                                                <asp:BoundField HeaderText="NIVEL EDUCATIVO" />
+                                                <asp:BoundField HeaderText="OPCIÓN ACADÉMICA" />
+                                            </Columns>
+                                            <EditRowStyle BackColor="#2461BF" />
+                                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#EFF3FB" />
+                                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        </asp:GridView>
+                                        <br />
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label42" runat="server" Font-Bold="True" Text="CONOCIMIENTO EN:"></asp:Label>
                                             <div class="col-md-3">
@@ -289,8 +312,8 @@
                                         </div>
                                         
                                         <div align="center">
-                                            <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary" />
-                                            &nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary" />
+                                            <asp:Button ID="BtnGuardarHabilidad" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarHabilidad_Click" />
+                                            &nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
                                         <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
@@ -319,8 +342,9 @@
                                             </div>
                                         </div>
                                         <div align="center">
-                                            <asp:Button ID="BtnGuardarDestreza" runat="server" Text="GUARDAR" class="btn btn-primary" />&nbsp;<asp:Button ID="BtnCancelarDestreza" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                                            <asp:Button ID="BtnGuardarDestreza" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarDestreza_Click" />&nbsp;<asp:Button ID="BtnCancelarDestreza" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
+                                        <br />
                                         <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
@@ -339,13 +363,24 @@
                                         </asp:GridView>
                                         
                                         <br />
-                                        <asp:GridView ID="GVPasantia" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
+                                        <asp:GridView ID="GVPasantia" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnRowUpdating="GVPasantia_RowUpdating">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
+                                                <asp:TemplateField HeaderText="" Visible="true">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="TxtIDPasantiaGV" runat="server" Text='<%#Eval("ID")%>' Visible="true"></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
                                                 <asp:BoundField HeaderText="PASANTÍA" DataField="DS_PASANTIA" />
                                                 <asp:BoundField HeaderText="ÁREA DE PASANTÍA" DataField="DS_AREA" />
                                                 <asp:BoundField HeaderText="DURACIÓN DE PASANTÍA" DataField="DS_DURACION" />
                                                 <asp:BoundField HeaderText="ESTADO" DataField="Estado" />
+                                                  <asp:TemplateField HeaderText="Actualizar">
+                                            <ItemTemplate>
+                                                <asp:Button ID="BtnActualizarPasantia" runat="server" CommandName="Update"
+                                                    Text="Editar" OnClientClick="return confirm('¿Desea editar este registro?');" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -378,26 +413,26 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label9" runat="server" Font-Bold="True" Text="No CONTRATO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtContrato" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator23" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtContrato">Llenar No de contrato</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator23" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtContrato" ValidationGroup="proyecto">Llenar No de contrato</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label12" runat="server" Font-Bold="True" Text="DURACIÓN DE CONTRATO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtDuracionC" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator24" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuracionC">Llenar duracion de contrato</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator24" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuracionC" ValidationGroup="proyecto">Llenar duracion de contrato</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label33" runat="server" Font-Bold="True" Text="NOMBRE DE PROYECTO:"></asp:Label>
                                             <div class="col-md-9">
                                                 <asp:TextBox class="form-control" ID="TxtNombProyecto" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombProyecto">Llenar nombre de proyecto</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombProyecto" ValidationGroup="proyecto">Llenar nombre de proyecto</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label38" runat="server" Font-Bold="True" Text="FECHA DE INICIO DE CONTRATO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtFechIniCont" runat="server" TextMode="Date" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator26" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtFechIniCont">Llenar fecha de inicio de contrato</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator26" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtFechIniCont" ValidationGroup="proyecto">Llenar fecha de inicio de contrato</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label39" runat="server" Font-Bold="True" Text="ESTADO"></asp:Label>
                                             <div class="col-md-3">
@@ -411,12 +446,12 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label40" runat="server" Font-Bold="True" Text="MONTO DE PROYECTO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtMontoPro" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator27" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtMontoPro">Llenar monto de proyecto</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator27" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtMontoPro" ValidationGroup="proyecto">Llenar monto de proyecto</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div align="center">
-                                            <asp:Button ID="BtnProyectoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" />
-                                            &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" />
+                                            <asp:Button ID="BtnProyectoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" ValidationGroup="proyecto" />
+                                            &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
                                         <br />
                                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">

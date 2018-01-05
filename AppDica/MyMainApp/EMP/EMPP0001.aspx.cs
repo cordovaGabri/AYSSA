@@ -141,8 +141,8 @@ namespace MyMainApp.EMP
 
         protected void FillGVHabilidad()
         {
-            CHabilidadAspirante objHabilidad = new CHabilidadAspirante(_DataSistema.ConexionBaseDato);
-            dvHabilidad = new DataView(objHabilidad.Detalle(0, 0, "", 0, 0, "", DateTime.Now, "", DateTime.Now, 0).TB_HABILIDAD_ASPIRANTE);
+            CHabilidadPasantia objHabilidad = new CHabilidadPasantia(_DataSistema.ConexionBaseDato);
+            dvHabilidad = new DataView(objHabilidad.Detalle(0, Convert.ToInt32(TxtIDPasantia.Text), 0, 0, "", DateTime.Now, "", DateTime.Now, 0).TB_PASANTIA_HABILIDAD);
 
             GVHabilidad.DataSource = dvHabilidad;
             GVHabilidad.DataBind();
@@ -207,7 +207,7 @@ namespace MyMainApp.EMP
             }
             catch (Exception ex)
             {
-                DespliegaMensajeUpdatePanel(ex.Message, UPDatoGeneral);
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
             }
         }
 
@@ -247,6 +247,67 @@ namespace MyMainApp.EMP
             }
         }
 
-	
+        protected void BtnGuardarHabilidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CHabilidadPasantia objHabilidadPasantia = new CHabilidadPasantia(_DataSistema.ConexionBaseDato);
+                objResultado = objHabilidadPasantia.Actualizacion(0, Convert.ToInt32(TxtIDPasantia.Text), Convert.ToInt32(CboConocimiento.SelectedValue),
+                    Convert.ToInt32(CboNivel.SelectedValue)
+                , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVHabilidad();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPPasantia);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
+        }
+
+        protected void BtnGuardarDestreza_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CDestrezaAspirante objDestrezaAspirante = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objDestrezaAspirante.Actualizacion(0, Convert.ToInt32(CboDestreza.SelectedValue), _DataSistema.Cusuario
+                , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVDestreza();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPPasantia);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
+        }
+
+
+        protected void GVPasantia_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            try
+            {
+                TextBox Id = GVPasantia.Rows[e.RowIndex].FindControl("TxtIDPasantiaGV") as TextBox;
+                TxtIDPasantia.Text = Id.Text;
+                FillCamposPasantia();
+                FillGVHabilidad();
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
+        }
     }
 }

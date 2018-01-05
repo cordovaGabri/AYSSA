@@ -940,6 +940,33 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.DropDownList CboOpcionAcademica;
         
         /// <summary>
+        /// Control Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Control Button2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+        
+        /// <summary>
+        /// Control GVNivelEducativo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVNivelEducativo;
+        
+        /// <summary>
         /// Control Label42.
         /// </summary>
         /// <remarks>
@@ -994,13 +1021,13 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.DropDownList CboNivel;
         
         /// <summary>
-        /// Control Button4.
+        /// Control BtnGuardarHabilidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button BtnGuardarHabilidad;
         
         /// <summary>
         /// Control Button5.
