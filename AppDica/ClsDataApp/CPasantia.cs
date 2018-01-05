@@ -17,8 +17,7 @@ namespace ClsDataApp
 
         public ClsDataSets.DS_TB_EMP Detalle(int Id, string NombreEva, string EmailContacto, int IdEmpresa, int IdArea, string Pasantia, DateTime FechPasantia,
             string Duracion, string HorarioDe, string HorarioA, char EstadoPasantia, int DiasDe, int DiasA, int EdadDe, int EdadA, int Vacantes,
-            int IdEscolaridad, int IdOpcionAca, string DirPasantia,
-            string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
+           string Sucursal, string SucursalDireccion, string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
              ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
              try
@@ -44,9 +43,9 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_EDAD_DE", EdadDe);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_EDAD_A", EdadA);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@NM_VACANTES", Vacantes);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_OPCION_ACADEMICA", IdOpcionAca);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DIRECCION_PASANTIA", DirPasantia);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_SUCURSAL", Sucursal);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DIRECCION_SUCURSAL", SucursalDireccion);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_ACTU", FechActu);
@@ -72,7 +71,7 @@ namespace ClsDataApp
              }
         public DataQuery Actualizacion(int Id, string NombreEva, string EmailContacto, int IdEmpresa, int IdArea, string Pasantia, DateTime FechPasantia,
            string Duracion, string HorarioDe, string HorarioA, char EstadoPasantia, int DiasDe, int DiasA, int EdadDe, int EdadA, int Vacantes,
-           int IdEscolaridad, int IdOpcionAca, string DirPasantia, string LoginUsuario, TipoActualizacion OpcionActualizacion)
+            string Sucursal,string SucursalDireccion, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
 
@@ -83,10 +82,10 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_PASANTIA_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_PASANTIA_UPDATE";
                         break;
                     case TipoActualizacion.Eliminar:
                         StrCommand = "";
@@ -104,8 +103,15 @@ namespace ClsDataApp
                 ObjParam = new SqlParameter();
                 ObjCommand.CommandType = CommandType.StoredProcedure;
 
-
-                ObjCommand.Parameters.AddWithValue("@ID", Id);
+                if (OpcionActualizacion == TipoActualizacion.Adicionar)
+                {
+                    ObjParam = ObjCommand.Parameters.Add("@ID", SqlDbType.Int, 0);
+                    ObjParam.Direction = ParameterDirection.Output;
+                }
+                else
+                {
+                    ObjCommand.Parameters.AddWithValue("@ID", Id);
+                }
                 ObjCommand.Parameters.AddWithValue("@DS_NOMBRE_EVAL", NombreEva);
                 ObjCommand.Parameters.AddWithValue("@DS_EMAIL_CONTACTO",EmailContacto );
                 ObjCommand.Parameters.AddWithValue("@ID_EMPRESA", IdEmpresa);
@@ -121,9 +127,8 @@ namespace ClsDataApp
                 ObjCommand.Parameters.AddWithValue("@NM_EDAD_DE", EdadDe);
                 ObjCommand.Parameters.AddWithValue("@NM_EDAD_A", EdadA);
                 ObjCommand.Parameters.AddWithValue("@NM_VACANTES", Vacantes);
-                ObjCommand.Parameters.AddWithValue("@ID_ESCOLARIDAD", IdEscolaridad);
-                ObjCommand.Parameters.AddWithValue("@ID_OPCION_ACADEMICA", IdOpcionAca);
-                ObjCommand.Parameters.AddWithValue("@DS_DIRECCION_PASANTIA", DirPasantia);
+                ObjCommand.Parameters.AddWithValue("@DS_SUCURSAL", Sucursal);
+                ObjCommand.Parameters.AddWithValue("@DS_DIRECCION_SUCURSAL", SucursalDireccion);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
                 ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);
