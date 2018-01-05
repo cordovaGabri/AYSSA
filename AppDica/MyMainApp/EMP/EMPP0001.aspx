@@ -14,7 +14,7 @@
                     <div id="content">
                         <%--inicio container-fluid--%>
                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                        <ajaxtoolkit:tabcontainer id="TabContainer1" runat="server" activetabindex="0" bordercolor="#66CCFF" scrollbars="Vertical" height="375px" width="100%">
+                        <ajaxtoolkit:tabcontainer id="TabContainer1" runat="server" activetabindex="1" bordercolor="#66CCFF" scrollbars="Vertical" height="375px" width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                  <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
@@ -24,7 +24,7 @@
                                      <ContentTemplate>
                                          <%--inicio contenido tab--%><%--inicio tab datos--%>
                                           <%--inicio tab datos--%>
-                                         <asp:TextBox ID="TxtIDEmpresa" runat="server" Visible="False"></asp:TextBox>
+                                         <asp:TextBox ID="TxtIDEmpresa" runat="server" Visible="False">0</asp:TextBox>
                                         <br />
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label1" runat="server" Text="NOMBRE DE EMPRESA:" Font-Bold="True"></asp:Label>
@@ -131,23 +131,24 @@
                                     </Triggers>
                                     <ContentTemplate>
                                         <%--inicio tab Pasantia--%>
+                                        <asp:TextBox ID="TxtIDPasantia" runat="server" Visible="False">0</asp:TextBox>
                                         <br />
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label17" runat="server" Font-Bold="True" Text="NOMBRE DEL EVALUADOR:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtNombEva" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombEva">Llenar Nombre de evaluador</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtNombEva" ValidationGroup="info">Llenar Nombre de evaluador</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label23" runat="server" Font-Bold="True" Text="EMAIL DE CONTACTO:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtEmailEva" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmailEva">Llenar email de contacto</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtEmailEva" runat="server" AutoCompleteType="Disabled" TextMode="Email"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEmailEva" ValidationGroup="info">Llenar email de contacto</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label16" runat="server" Font-Bold="True" Text="AREA DE PASANTIA:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:DropDownList ID="CboAreaPasantia" runat="server" class="form-control">
+                                                <asp:DropDownList ID="CboAreaPasantia" runat="server" class="form-control" DataTextField="DS_AREA" DataValueField="ID">
                                                 </asp:DropDownList>
 
                                             </div>
@@ -163,36 +164,40 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label18" runat="server" Font-Bold="True" Text="DESCRIPCIÓN DE PASANTÍA:"></asp:Label>
                                             <div class="col-md-9">
                                                 <asp:TextBox class="form-control" ID="TxtDescPasantia" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDescPasantia">Llenar Descripcion de pasantia</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDescPasantia" ValidationGroup="info">Llenar Descripcion de pasantia</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label19" runat="server" Font-Bold="True" Text="FECHA INICIO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtFechInicio" runat="server" TextMode="Date" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtFechInicio">Llenar Fecha de inicio de pasantia</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtFechInicio" ValidationGroup="info">Llenar Fecha de inicio de pasantia</asp:RequiredFieldValidator>
                                             </div>
-                                            <asp:Label class="control-label  col-sm-3" ID="Label25" runat="server" Font-Bold="True" Text="DURACIÓN DE PASANTIA:"></asp:Label>
+                                            <asp:Label class="control-label  col-sm-3" ID="Label25" runat="server" Font-Bold="True" Text="DURACIÓN DE PASANTIA(DÍAS):"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtDuracion" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuracion">Llenar Duración de pasantia</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtDuracion" runat="server" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuracion" ValidationGroup="info">Llenar Duración de pasantia</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-2" ID="Label20" runat="server" Font-Bold="True" Text="HORARIO:"></asp:Label>
                                             <asp:Label class="control-label  col-sm-1" ID="Label28" runat="server" Font-Bold="True" Text="DE:"></asp:Label>
-                                            <div class="col-md-1">
-                                                <asp:TextBox class="form-control" ID="TxtDe" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDe">Llenar Horario de pasantia</asp:RequiredFieldValidator>
+                                            <div class="col-md-2">
+                                                <asp:TextBox class="form-control" ID="TxtDe" runat="server" AutoCompleteType="Disabled" TextMode="Time"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDe" ValidationGroup="info">Llenar Horario de pasantia</asp:RequiredFieldValidator>
                                             </div>
+                                             <div class="col-md-3"></div>
                                             <asp:Label class="control-label  col-sm-1" ID="Label26" runat="server" Font-Bold="True" Text="A:"></asp:Label>
-                                            <div class="col-md-1">
-                                                <asp:TextBox class="form-control" ID="TxtA" runat="server" TextMode="Email" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtA">Llenar Horario de pasantia</asp:RequiredFieldValidator>
+                                            <div class="col-md-2">
+                                                <asp:TextBox class="form-control" ID="TxtA" runat="server" TextMode="Time" AutoCompleteType="Disabled"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtA" ValidationGroup="info">Llenar Horario de pasantia</asp:RequiredFieldValidator>
                                             </div>
+                                             <div class="col-md-1"></div>
+                                             </div>
+                                        <div class="form-group">
                                             <asp:Label class="control-label  col-sm-2" ID="Label29" runat="server" Font-Bold="True" Text="DÍAS:"></asp:Label>
                                             <asp:Label class="control-label  col-sm-1" ID="Label30" runat="server" Font-Bold="True" Text="DE:"></asp:Label>
-                                            <div class="col-md-1">
+                                            <div class="col-md-3">
                                                 <asp:DropDownList ID="CboDias1" runat="server" class="form-control">
                                                     <asp:ListItem Value="1">Lunes</asp:ListItem>
                                                     <asp:ListItem Value="2">Martes</asp:ListItem>
@@ -202,8 +207,9 @@
                                                 </asp:DropDownList>
 
                                             </div>
+                                             <div class="col-md-2"></div>
                                             <asp:Label class="control-label  col-sm-1" ID="Label31" runat="server" Font-Bold="True" Text="A:"></asp:Label>
-                                            <div class="col-md-1">
+                                            <div class="col-md-3">
                                                 <asp:DropDownList ID="CboDias2" runat="server" class="form-control">
                                                     <asp:ListItem Value="1">Lunes</asp:ListItem>
                                                     <asp:ListItem Value="2">Martes</asp:ListItem>
@@ -218,21 +224,38 @@
                                             <asp:Label class="control-label  col-sm-2" ID="Label21" runat="server" Font-Bold="True" Text="RANGO DE EDAD:"></asp:Label>
                                             <asp:Label class="control-label  col-sm-1" ID="Label34" runat="server" Font-Bold="True" Text="DE:"></asp:Label>
                                             <div class="col-md-1">
-                                                <asp:TextBox class="form-control" ID="TxtEdadDe" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEdadDe">Llenar Rango de edad</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtEdadDe" runat="server" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEdadDe" ValidationGroup="info">Llenar Rango de edad</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-1" ID="Label35" runat="server" Font-Bold="True" Text="A:"></asp:Label>
                                             <div class="col-md-1">
-                                                <asp:TextBox class="form-control" ID="TxtEdadA" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEdadA">Llenar Rango de edad</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtEdadA" runat="server" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtEdadA" ValidationGroup="info">Llenar Rango de edad</asp:RequiredFieldValidator>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label32" runat="server" Font-Bold="True" Text="CANTIDAD DE VACANTES:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtCantVacantes" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtCantVacantes">Llenar cantidad de vacantes</asp:RequiredFieldValidator>
+                                                <asp:TextBox class="form-control" ID="TxtCantVacantes" runat="server" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtCantVacantes" ValidationGroup="info">Llenar cantidad de vacantes</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <asp:Label class="control-label  col-sm-3" ID="Label36" runat="server" Font-Bold="True" Text="SUCURSAL:"></asp:Label>
+                                            <div class="col-md-3">
+                                                <asp:TextBox class="form-control" ID="TxtSucursal" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtSucursal">Llenar Sucursal </asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <asp:Label class="control-label  col-sm-3" ID="Label37" runat="server" Font-Bold="True" Text="DIRECCIÓN DE SUCURSAL:"></asp:Label>
+                                            <div class="col-md-9">
+                                                <asp:TextBox class="form-control" ID="TxtDireccion" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div align="center">
+                                            <asp:Button ID="BtnGuardarPasantia" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarPasantia_Click" ValidationGroup="info" />&nbsp;<asp:Button ID="BtnCancelarHabilidad" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                                        </div>
+                                        <br />
+                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label22" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID">
@@ -264,15 +287,17 @@
                                                 </asp:DropDownList>
                                             </div>
                                         </div>
+                                        
                                         <div align="center">
-                                            <asp:Button ID="BtnGuardarPasantia" runat="server" Text="GUARDAR" class="btn btn-primary" />&nbsp;<asp:Button ID="BtnCancelarHabilidad" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                                            <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary" />
+                                            &nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary" />
                                         </div>
-                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                        <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="Conocimiento" />
-                                                <asp:BoundField HeaderText="Tipo de conocimiento" />
-                                                <asp:BoundField HeaderText="Nivel" />
+                                                <asp:BoundField HeaderText="CONOCIMIENTO" />
+                                                <asp:BoundField HeaderText="TIPO DE CONOCIMIENTO" />
+                                                <asp:BoundField HeaderText="NIVEL" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -296,10 +321,10 @@
                                         <div align="center">
                                             <asp:Button ID="BtnGuardarDestreza" runat="server" Text="GUARDAR" class="btn btn-primary" />&nbsp;<asp:Button ID="BtnCancelarDestreza" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
-                                        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                        <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="Destreza" />
+                                                <asp:BoundField HeaderText="DESTREZA" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -312,32 +337,15 @@
                                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                         </asp:GridView>
+                                        
                                         <br />
-                                        <div class="form-group">
-                                            <asp:Label class="control-label  col-sm-3" ID="Label36" runat="server" Font-Bold="True" Text="SUCURSAL:"></asp:Label>
-                                            <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtSucursal" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtSucursal">Llenar Sucursal </asp:RequiredFieldValidator>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <asp:Label class="control-label  col-sm-3" ID="Label37" runat="server" Font-Bold="True" Text="DIRECCIÓN DE SUCURSAL:"></asp:Label>
-                                            <div class="col-md-9">
-                                                <asp:TextBox class="form-control" ID="TxtDireccion" runat="server" TextMode="MultiLine" AutoCompleteType="Disabled"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <br />
-                                        <div align="center">
-                                            <asp:Button ID="Button4" runat="server" Text="GUARDAR" class="btn btn-primary" />
-                                            &nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary" />
-                                        </div>
-                                        <asp:GridView ID="GVPasantia" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                        <asp:GridView ID="GVPasantia" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="Nombre de Pasantía" />
-                                                <asp:BoundField HeaderText="Área de pasantía" />
-                                                <asp:BoundField HeaderText="Duración de pasantía" />
-                                                <asp:BoundField HeaderText="Estado" />
+                                                <asp:BoundField HeaderText="PASANTÍA" DataField="DS_PASANTIA" />
+                                                <asp:BoundField HeaderText="ÁREA DE PASANTÍA" DataField="DS_AREA" />
+                                                <asp:BoundField HeaderText="DURACIÓN DE PASANTÍA" DataField="DS_DURACION" />
+                                                <asp:BoundField HeaderText="ESTADO" DataField="Estado" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
