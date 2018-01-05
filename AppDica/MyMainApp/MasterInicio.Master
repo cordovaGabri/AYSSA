@@ -197,6 +197,7 @@
     <script src="<%= Page.ResolveUrl("~/js/jquery.min.js")%>"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<%= Page.ResolveUrl("~/js/bootstrap.min.js")%>"></script>
+    <script src="<%= Page.ResolveUrl("~/js/validaciones.js")%>"></script>
       <!-- Bootstrap -->
     <link href="<%= Page.ResolveUrl("~/css/bootstrap.css")%>" rel="stylesheet">
     <link href="<%= Page.ResolveUrl("~/css/menu.css")%>" rel="stylesheet">

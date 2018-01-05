@@ -39,7 +39,7 @@ namespace MyMainApp.EMP
             {
                 if (dvEmpresa.Count > 0)
                 {
-                    objResultado = objEmpresa.Actualizacion(0, TxtEmpresa.Text, TxtNombreContact.Text, TxtEmailC.Text, TxtTelC.Text, TxtNitEmpresa.Text,
+                    objResultado = objEmpresa.Actualizacion(Convert.ToInt32(TxtIDEmpresa.Text), TxtEmpresa.Text, TxtNombreContact.Text, TxtEmailC.Text, TxtTelC.Text, TxtNitEmpresa.Text,
                    TxtTelEmpresa.Text, TxtDirEmpresa.Text, Convert.ToInt32(CboDepartamento.SelectedValue), Convert.ToInt32(CboMunicipio.SelectedValue),
                     TxtNombRepre.Text, TxtEmailRep.Text, TxtNitRep.Text, TxtDuiRep.Text, Convert.ToInt32(CboActEcono.SelectedValue), _DataSistema.Cusuario, _DataSistema.Cusuario, TipoActualizacion.Actualizar);
                 }
@@ -48,8 +48,9 @@ namespace MyMainApp.EMP
                     objResultado = objEmpresa.Actualizacion(0, TxtEmpresa.Text, TxtNombreContact.Text, TxtEmailC.Text, TxtTelC.Text, TxtNitEmpresa.Text,
                    TxtTelEmpresa.Text, TxtDirEmpresa.Text, Convert.ToInt32(CboDepartamento.SelectedValue), Convert.ToInt32(CboMunicipio.SelectedValue),
                     TxtNombRepre.Text, TxtEmailRep.Text, TxtNitRep.Text, TxtDuiRep.Text, Convert.ToInt32(CboActEcono.SelectedValue), _DataSistema.Cusuario, _DataSistema.Cusuario, TipoActualizacion.Adicionar);
-
+                    TxtIDEmpresa.Text = Convert.ToString(objResultado.CodigoAuxiliar);
                 }
+                FillCamposDatosGenerales();
             }
             catch (Exception ex)
             {
@@ -82,6 +83,7 @@ namespace MyMainApp.EMP
             TxtNombRepre.Text, TxtEmailRep.Text, TxtNitRep.Text, TxtDuiRep.Text,0, _DataSistema.Cusuario, _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 2).TB_EMPRESA);
             if (dvEmpresa.Count > 0)
             {
+                TxtIDEmpresa.Text = dvEmpresa.Table.Rows[0]["ID"].ToString();
                 TxtEmpresa.Text = dvEmpresa.Table.Rows[0]["DS_NOMBRE_EMPRESA"].ToString();
                 CboActEcono.SelectedValue=dvEmpresa.Table.Rows[0]["ID_ACT_ECO"].ToString();
                 TxtNombreContact.Text=dvEmpresa.Table.Rows[0]["DS_NOMBRE_CONTACTO"].ToString();
