@@ -18,6 +18,7 @@ namespace MyMainApp
         private DataView dvTituloAcademico, dvPais, dvDepartamento, dvMunicipio, dvTipoDocumento, dvDestreza,
             dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion,
             dvEscolaridad, dvHabilidad, dvDocumento;
+        private DataSet dsEscolaridad;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -167,7 +168,7 @@ namespace MyMainApp
         protected void FillCboOpcionAcademica()
         {
             COpcionAcademica objOpcionAcademica = new COpcionAcademica(_DataSistema.ConexionBaseDato);
-            dvOpcionAcademica = new DataView(objOpcionAcademica.Detalle(0, 0, "", "", 'A', "", DateTime.Now, "", DateTime.Now, 0).TBC_OPCION_ACADEMICA);
+            dvOpcionAcademica = new DataView(objOpcionAcademica.Detalle(0, Convert.ToInt32(CboNivelEducativo.SelectedValue), "", "", 'A', "", DateTime.Now, "", DateTime.Now,2).TBC_OPCION_ACADEMICA);
 
             CboOpcionAcademica.DataSource = dvOpcionAcademica;
             CboOpcionAcademica.DataBind();
@@ -299,19 +300,50 @@ namespace MyMainApp
             try
             {
                 decimal Nota = Convert.ToDecimal(TxtNotas.Text);
+                String datoEscolaridad, datoCarrera, datoCEscolar, datoPais, datoOtra, datoAnio;
+                Boolean existe = false;
+                String datoInserEscolaridad, datoInserCarrera, datoInserCEscolar, datoInserPais, datoInserOtra, datoInserAnio;
                 CEscolaridadAspirante objEscolaridadAspirante = new CEscolaridadAspirante(_DataSistema.ConexionBaseDato);
-                objResultado = objEscolaridadAspirante.Actualizacion(0, _DataSistema.Cusuario, Convert.ToInt32(CboNivelEducativo.SelectedValue),
-                    Convert.ToInt32(CboOpcionAcademica.SelectedValue), Convert.ToInt32(CboInstitucion.SelectedValue),
-                    CboPaisEscolaridad.SelectedValue, TxtOtraInstitucion.Text, Convert.ToInt32(TxtAnioFin.Text),Nota
-                , _DataSistema.Cusuario,  TipoActualizacion.Adicionar);
+                dsEscolaridad = objEscolaridadAspirante.Detalle(0, _DataSistema.Cusuario, 0, 0, 0, "", "", 0, 0, "", DateTime.Now, "", DateTime.Now, 4);
+                foreach (System.Data.DataRow dr1 in dsEscolaridad.Tables["TB_ESCOLARIDAD_ASPIRANTE"].Rows)
+                {
+                    datoEscolaridad = dr1["DS_ESCOLARIDAD"].ToString();
+                    datoCarrera = dr1["DS_CARRERA"].ToString();
+                    datoCEscolar = dr1["DS_CENTRO_ESCOLAR"].ToString();
+                    datoPais = dr1["DS_PAIS"].ToString();
+                    datoOtra = dr1["DS_OTRA"].ToString();
+                    datoAnio = dr1["NM_ANIO_FIN"].ToString();
 
-                if (objResultado.CodigoError == 0)
-                {
-                    FillGVEscolaridad();
+                    datoInserEscolaridad = CboNivelEducativo.SelectedValue;
+                    datoInserCarrera = CboOpcionAcademica.SelectedValue;
+                    datoInserCEscolar = CboInstitucion.SelectedValue;
+                    datoInserPais = CboPais.SelectedValue;
+                    datoInserOtra = TxtOtraInstitucion.Text;
+                    datoInserAnio = TxtAnioFin.Text;
+
+                    if ((datoEscolaridad == datoInserEscolaridad) && (datoCarrera == datoInserCarrera) && (datoCEscolar == datoInserCEscolar) && (datoPais == datoInserPais) && (datoOtra == datoInserOtra) && (datoAnio == datoInserAnio))
+                    {
+                        existe = true;
+                    }
                 }
-                else
+                if (existe == true)
                 {
-                    DespliegaMensajeUpdatePanel(objResultado.MensajeError,UPEscolaridad);
+                    DespliegaMensajeUpdatePanel("Escolaridad ya registrada", UPEscolaridad);
+                }
+                else {
+                    objResultado = objEscolaridadAspirante.Actualizacion(0, _DataSistema.Cusuario, Convert.ToInt32(CboNivelEducativo.SelectedValue),
+                        Convert.ToInt32(CboOpcionAcademica.SelectedValue), Convert.ToInt32(CboInstitucion.SelectedValue),
+                        CboPaisEscolaridad.SelectedValue, TxtOtraInstitucion.Text, Convert.ToInt32(TxtAnioFin.Text), Nota
+                    , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                    if (objResultado.CodigoError == 0)
+                    {
+                        FillGVEscolaridad();
+                    }
+                    else
+                    {
+                        DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPEscolaridad);
+                    }
                 }
             }
             catch (Exception ex)
@@ -523,6 +555,15 @@ namespace MyMainApp
         protected void CboCategoriaHabilidad_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillCboConocimiento();
+        }
+
+        protected void TxtEdad_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        protected void CboNivelEducativo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillCboOpcionAcademica();
         }
     }
 }

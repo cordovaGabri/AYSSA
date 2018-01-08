@@ -17,7 +17,7 @@
         <div class="container-fluid">
             <div id="content">
                 <asp:Panel ID="Panel1" runat="server" Width="100%">
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                 <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
@@ -47,24 +47,24 @@
                                         </div>
                                         <asp:Label class="control-label  col-sm-3" ID="Label5" runat="server" Text="EDAD:" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtEdad" runat="server" ReadOnly="True"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtEdad" runat="server" ReadOnly="True" OnTextChanged="TxtEdad_TextChanged"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label4" runat="server" Text="TELÉFONO (CASA):" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtTelCasa" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtTelCasa" runat="server" onPaste="return Documentos(event);" onkeypress="return Documentos(event);" AutoCompleteType="Disabled"></asp:TextBox>
                                         </div>
                                         <asp:Label class="control-label  col-sm-3" ID="Label41" runat="server" Text="TELÉFONO (CELULAR):" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtTelCel" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtTelCel" runat="server" onPaste="return Documentos(event);" onkeypress="return Documentos(event);" AutoCompleteType="Disabled"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TxtTelCel" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="DatoGeneral">Llenar Telefono Celular</asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label6" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtNit" runat="server" ReadOnly="True"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtNit" runat="server" onPaste="return Documentos(event);" onkeypress="return Documentos(event);" ReadOnly="True"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -99,17 +99,17 @@
                                         </div>
                                         <asp:Label class="control-label  col-sm-3" ID="Label26" runat="server" Font-Bold="True" Text="DISCAPACIDAD 1:"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtDiscapacidad1" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtDiscapacidad1" runat="server" onPaste="return soloLetras(event);" onkeypress="return soloLetras(event);" AutoCompleteType="Disabled"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <asp:Label class="control-label  col-sm-2" ID="Label32" runat="server" Font-Bold="True" Text="DISCAPACIDAD 2:"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtDiscapacidad2" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtDiscapacidad2" runat="server" onPaste="return soloLetras(event);" onkeypress="return soloLetras(event);"  AutoCompleteType="Disabled"></asp:TextBox>
                                         </div>
                                         <asp:Label class="control-label  col-sm-3" ID="Label34" runat="server" Font-Bold="True" Text="DISCAPACIDAD 3:"></asp:Label>
                                         <div class="col-md-3">
-                                            <asp:TextBox class="form-control" ID="TxtDiscapacidad3" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                            <asp:TextBox class="form-control" ID="TxtDiscapacidad3" runat="server" onPaste="return soloLetras(event);" onkeypress="return soloLetras(event);"  AutoCompleteType="Disabled"></asp:TextBox>
                                         </div>
                                     </div>
 
@@ -222,7 +222,7 @@
                         <div class="form-group">
                             <asp:Label class="control-label  col-sm-2" ID="Label19" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
                             <div class="col-md-3">
-                                <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID">
+                                <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="CboNivelEducativo_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
                             <asp:Label class="control-label  col-sm-3" ID="Label28" runat="server" Font-Bold="True" Text="OPCION ACADEMICA:"></asp:Label>
