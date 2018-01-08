@@ -28,9 +28,13 @@ namespace ClsDataSets {
         
         private TB_PASANTIADataTable tableTB_PASANTIA;
         
-        private TB_PASANTIA_EMPRESADataTable tableTB_PASANTIA_EMPRESA;
+        private TB_DESTREZA_PASANTIADataTable tableTB_DESTREZA_PASANTIA;
         
-        private TB_PROYECTO_EMPRESADataTable tableTB_PROYECTO_EMPRESA;
+        private TB_ESCOLARIDAD_PASANTIADataTable tableTB_ESCOLARIDAD_PASANTIA;
+        
+        private TB_PASANTIA_HABILIDADDataTable tableTB_PASANTIA_HABILIDAD;
+        
+        private TB_CONSULTORIADataTable tableTB_CONSULTORIA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -66,11 +70,17 @@ namespace ClsDataSets {
                 if ((ds.Tables["TB_PASANTIA"] != null)) {
                     base.Tables.Add(new TB_PASANTIADataTable(ds.Tables["TB_PASANTIA"]));
                 }
-                if ((ds.Tables["TB_PASANTIA_EMPRESA"] != null)) {
-                    base.Tables.Add(new TB_PASANTIA_EMPRESADataTable(ds.Tables["TB_PASANTIA_EMPRESA"]));
+                if ((ds.Tables["TB_DESTREZA_PASANTIA"] != null)) {
+                    base.Tables.Add(new TB_DESTREZA_PASANTIADataTable(ds.Tables["TB_DESTREZA_PASANTIA"]));
                 }
-                if ((ds.Tables["TB_PROYECTO_EMPRESA"] != null)) {
-                    base.Tables.Add(new TB_PROYECTO_EMPRESADataTable(ds.Tables["TB_PROYECTO_EMPRESA"]));
+                if ((ds.Tables["TB_ESCOLARIDAD_PASANTIA"] != null)) {
+                    base.Tables.Add(new TB_ESCOLARIDAD_PASANTIADataTable(ds.Tables["TB_ESCOLARIDAD_PASANTIA"]));
+                }
+                if ((ds.Tables["TB_PASANTIA_HABILIDAD"] != null)) {
+                    base.Tables.Add(new TB_PASANTIA_HABILIDADDataTable(ds.Tables["TB_PASANTIA_HABILIDAD"]));
+                }
+                if ((ds.Tables["TB_CONSULTORIA"] != null)) {
+                    base.Tables.Add(new TB_CONSULTORIADataTable(ds.Tables["TB_CONSULTORIA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -114,9 +124,9 @@ namespace ClsDataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TB_PASANTIA_EMPRESADataTable TB_PASANTIA_EMPRESA {
+        public TB_DESTREZA_PASANTIADataTable TB_DESTREZA_PASANTIA {
             get {
-                return this.tableTB_PASANTIA_EMPRESA;
+                return this.tableTB_DESTREZA_PASANTIA;
             }
         }
         
@@ -124,9 +134,29 @@ namespace ClsDataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TB_PROYECTO_EMPRESADataTable TB_PROYECTO_EMPRESA {
+        public TB_ESCOLARIDAD_PASANTIADataTable TB_ESCOLARIDAD_PASANTIA {
             get {
-                return this.tableTB_PROYECTO_EMPRESA;
+                return this.tableTB_ESCOLARIDAD_PASANTIA;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TB_PASANTIA_HABILIDADDataTable TB_PASANTIA_HABILIDAD {
+            get {
+                return this.tableTB_PASANTIA_HABILIDAD;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TB_CONSULTORIADataTable TB_CONSULTORIA {
+            get {
+                return this.tableTB_CONSULTORIA;
             }
         }
         
@@ -203,11 +233,17 @@ namespace ClsDataSets {
                 if ((ds.Tables["TB_PASANTIA"] != null)) {
                     base.Tables.Add(new TB_PASANTIADataTable(ds.Tables["TB_PASANTIA"]));
                 }
-                if ((ds.Tables["TB_PASANTIA_EMPRESA"] != null)) {
-                    base.Tables.Add(new TB_PASANTIA_EMPRESADataTable(ds.Tables["TB_PASANTIA_EMPRESA"]));
+                if ((ds.Tables["TB_DESTREZA_PASANTIA"] != null)) {
+                    base.Tables.Add(new TB_DESTREZA_PASANTIADataTable(ds.Tables["TB_DESTREZA_PASANTIA"]));
                 }
-                if ((ds.Tables["TB_PROYECTO_EMPRESA"] != null)) {
-                    base.Tables.Add(new TB_PROYECTO_EMPRESADataTable(ds.Tables["TB_PROYECTO_EMPRESA"]));
+                if ((ds.Tables["TB_ESCOLARIDAD_PASANTIA"] != null)) {
+                    base.Tables.Add(new TB_ESCOLARIDAD_PASANTIADataTable(ds.Tables["TB_ESCOLARIDAD_PASANTIA"]));
+                }
+                if ((ds.Tables["TB_PASANTIA_HABILIDAD"] != null)) {
+                    base.Tables.Add(new TB_PASANTIA_HABILIDADDataTable(ds.Tables["TB_PASANTIA_HABILIDAD"]));
+                }
+                if ((ds.Tables["TB_CONSULTORIA"] != null)) {
+                    base.Tables.Add(new TB_CONSULTORIADataTable(ds.Tables["TB_CONSULTORIA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -254,16 +290,28 @@ namespace ClsDataSets {
                     this.tableTB_PASANTIA.InitVars();
                 }
             }
-            this.tableTB_PASANTIA_EMPRESA = ((TB_PASANTIA_EMPRESADataTable)(base.Tables["TB_PASANTIA_EMPRESA"]));
+            this.tableTB_DESTREZA_PASANTIA = ((TB_DESTREZA_PASANTIADataTable)(base.Tables["TB_DESTREZA_PASANTIA"]));
             if ((initTable == true)) {
-                if ((this.tableTB_PASANTIA_EMPRESA != null)) {
-                    this.tableTB_PASANTIA_EMPRESA.InitVars();
+                if ((this.tableTB_DESTREZA_PASANTIA != null)) {
+                    this.tableTB_DESTREZA_PASANTIA.InitVars();
                 }
             }
-            this.tableTB_PROYECTO_EMPRESA = ((TB_PROYECTO_EMPRESADataTable)(base.Tables["TB_PROYECTO_EMPRESA"]));
+            this.tableTB_ESCOLARIDAD_PASANTIA = ((TB_ESCOLARIDAD_PASANTIADataTable)(base.Tables["TB_ESCOLARIDAD_PASANTIA"]));
             if ((initTable == true)) {
-                if ((this.tableTB_PROYECTO_EMPRESA != null)) {
-                    this.tableTB_PROYECTO_EMPRESA.InitVars();
+                if ((this.tableTB_ESCOLARIDAD_PASANTIA != null)) {
+                    this.tableTB_ESCOLARIDAD_PASANTIA.InitVars();
+                }
+            }
+            this.tableTB_PASANTIA_HABILIDAD = ((TB_PASANTIA_HABILIDADDataTable)(base.Tables["TB_PASANTIA_HABILIDAD"]));
+            if ((initTable == true)) {
+                if ((this.tableTB_PASANTIA_HABILIDAD != null)) {
+                    this.tableTB_PASANTIA_HABILIDAD.InitVars();
+                }
+            }
+            this.tableTB_CONSULTORIA = ((TB_CONSULTORIADataTable)(base.Tables["TB_CONSULTORIA"]));
+            if ((initTable == true)) {
+                if ((this.tableTB_CONSULTORIA != null)) {
+                    this.tableTB_CONSULTORIA.InitVars();
                 }
             }
         }
@@ -280,10 +328,14 @@ namespace ClsDataSets {
             base.Tables.Add(this.tableTB_EMPRESA);
             this.tableTB_PASANTIA = new TB_PASANTIADataTable();
             base.Tables.Add(this.tableTB_PASANTIA);
-            this.tableTB_PASANTIA_EMPRESA = new TB_PASANTIA_EMPRESADataTable();
-            base.Tables.Add(this.tableTB_PASANTIA_EMPRESA);
-            this.tableTB_PROYECTO_EMPRESA = new TB_PROYECTO_EMPRESADataTable();
-            base.Tables.Add(this.tableTB_PROYECTO_EMPRESA);
+            this.tableTB_DESTREZA_PASANTIA = new TB_DESTREZA_PASANTIADataTable();
+            base.Tables.Add(this.tableTB_DESTREZA_PASANTIA);
+            this.tableTB_ESCOLARIDAD_PASANTIA = new TB_ESCOLARIDAD_PASANTIADataTable();
+            base.Tables.Add(this.tableTB_ESCOLARIDAD_PASANTIA);
+            this.tableTB_PASANTIA_HABILIDAD = new TB_PASANTIA_HABILIDADDataTable();
+            base.Tables.Add(this.tableTB_PASANTIA_HABILIDAD);
+            this.tableTB_CONSULTORIA = new TB_CONSULTORIADataTable();
+            base.Tables.Add(this.tableTB_CONSULTORIA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -300,13 +352,25 @@ namespace ClsDataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTB_PASANTIA_EMPRESA() {
+        private bool ShouldSerializeTB_DESTREZA_PASANTIA() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTB_PROYECTO_EMPRESA() {
+        private bool ShouldSerializeTB_ESCOLARIDAD_PASANTIA() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTB_PASANTIA_HABILIDAD() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTB_CONSULTORIA() {
             return false;
         }
         
@@ -372,10 +436,16 @@ namespace ClsDataSets {
         public delegate void TB_PASANTIARowChangeEventHandler(object sender, TB_PASANTIARowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TB_PASANTIA_EMPRESARowChangeEventHandler(object sender, TB_PASANTIA_EMPRESARowChangeEvent e);
+        public delegate void TB_DESTREZA_PASANTIARowChangeEventHandler(object sender, TB_DESTREZA_PASANTIARowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TB_PROYECTO_EMPRESARowChangeEventHandler(object sender, TB_PROYECTO_EMPRESARowChangeEvent e);
+        public delegate void TB_ESCOLARIDAD_PASANTIARowChangeEventHandler(object sender, TB_ESCOLARIDAD_PASANTIARowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TB_PASANTIA_HABILIDADRowChangeEventHandler(object sender, TB_PASANTIA_HABILIDADRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TB_CONSULTORIARowChangeEventHandler(object sender, TB_CONSULTORIARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1350,20 +1420,16 @@ namespace ClsDataSets {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TB_PASANTIA_EMPRESADataTable : global::System.Data.TypedTableBase<TB_PASANTIA_EMPRESARow> {
+        public partial class TB_DESTREZA_PASANTIADataTable : global::System.Data.TypedTableBase<TB_DESTREZA_PASANTIARow> {
             
-            private global::System.Data.DataColumn columnDS_PASANTIA;
+            private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnAREA_PASANTIA;
-            
-            private global::System.Data.DataColumn columnDURACION_PASANTIA;
-            
-            private global::System.Data.DataColumn columnDS_ESTADO;
+            private global::System.Data.DataColumn columnDS_DESTREZA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_EMPRESADataTable() {
-                this.TableName = "TB_PASANTIA_EMPRESA";
+            public TB_DESTREZA_PASANTIADataTable() {
+                this.TableName = "TB_DESTREZA_PASANTIA";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1371,7 +1437,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_PASANTIA_EMPRESADataTable(global::System.Data.DataTable table) {
+            internal TB_DESTREZA_PASANTIADataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1388,40 +1454,24 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TB_PASANTIA_EMPRESADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TB_DESTREZA_PASANTIADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DS_PASANTIAColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnDS_PASANTIA;
+                    return this.columnID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AREA_PASANTIAColumn {
+            public global::System.Data.DataColumn DS_DESTREZAColumn {
                 get {
-                    return this.columnAREA_PASANTIA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DURACION_PASANTIAColumn {
-                get {
-                    return this.columnDURACION_PASANTIA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DS_ESTADOColumn {
-                get {
-                    return this.columnDS_ESTADO;
+                    return this.columnDS_DESTREZA;
                 }
             }
             
@@ -1436,48 +1486,46 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_EMPRESARow this[int index] {
+            public TB_DESTREZA_PASANTIARow this[int index] {
                 get {
-                    return ((TB_PASANTIA_EMPRESARow)(this.Rows[index]));
+                    return ((TB_DESTREZA_PASANTIARow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PASANTIA_EMPRESARowChangeEventHandler TB_PASANTIA_EMPRESARowChanging;
+            public event TB_DESTREZA_PASANTIARowChangeEventHandler TB_DESTREZA_PASANTIARowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PASANTIA_EMPRESARowChangeEventHandler TB_PASANTIA_EMPRESARowChanged;
+            public event TB_DESTREZA_PASANTIARowChangeEventHandler TB_DESTREZA_PASANTIARowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PASANTIA_EMPRESARowChangeEventHandler TB_PASANTIA_EMPRESARowDeleting;
+            public event TB_DESTREZA_PASANTIARowChangeEventHandler TB_DESTREZA_PASANTIARowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PASANTIA_EMPRESARowChangeEventHandler TB_PASANTIA_EMPRESARowDeleted;
+            public event TB_DESTREZA_PASANTIARowChangeEventHandler TB_DESTREZA_PASANTIARowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTB_PASANTIA_EMPRESARow(TB_PASANTIA_EMPRESARow row) {
+            public void AddTB_DESTREZA_PASANTIARow(TB_DESTREZA_PASANTIARow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_EMPRESARow AddTB_PASANTIA_EMPRESARow(string DS_PASANTIA, string AREA_PASANTIA, string DURACION_PASANTIA, string DS_ESTADO) {
-                TB_PASANTIA_EMPRESARow rowTB_PASANTIA_EMPRESARow = ((TB_PASANTIA_EMPRESARow)(this.NewRow()));
+            public TB_DESTREZA_PASANTIARow AddTB_DESTREZA_PASANTIARow(string ID, string DS_DESTREZA) {
+                TB_DESTREZA_PASANTIARow rowTB_DESTREZA_PASANTIARow = ((TB_DESTREZA_PASANTIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        DS_PASANTIA,
-                        AREA_PASANTIA,
-                        DURACION_PASANTIA,
-                        DS_ESTADO};
-                rowTB_PASANTIA_EMPRESARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTB_PASANTIA_EMPRESARow);
-                return rowTB_PASANTIA_EMPRESARow;
+                        ID,
+                        DS_DESTREZA};
+                rowTB_DESTREZA_PASANTIARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_DESTREZA_PASANTIARow);
+                return rowTB_DESTREZA_PASANTIARow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TB_PASANTIA_EMPRESADataTable cln = ((TB_PASANTIA_EMPRESADataTable)(base.Clone()));
+                TB_DESTREZA_PASANTIADataTable cln = ((TB_DESTREZA_PASANTIADataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1485,55 +1533,52 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TB_PASANTIA_EMPRESADataTable();
+                return new TB_DESTREZA_PASANTIADataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnDS_PASANTIA = base.Columns["DS_PASANTIA"];
-                this.columnAREA_PASANTIA = base.Columns["AREA_PASANTIA"];
-                this.columnDURACION_PASANTIA = base.Columns["DURACION_PASANTIA"];
-                this.columnDS_ESTADO = base.Columns["DS_ESTADO"];
+                this.columnID = base.Columns["ID"];
+                this.columnDS_DESTREZA = base.Columns["DS_DESTREZA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnDS_PASANTIA = new global::System.Data.DataColumn("DS_PASANTIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDS_PASANTIA);
-                this.columnAREA_PASANTIA = new global::System.Data.DataColumn("AREA_PASANTIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAREA_PASANTIA);
-                this.columnDURACION_PASANTIA = new global::System.Data.DataColumn("DURACION_PASANTIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDURACION_PASANTIA);
-                this.columnDS_ESTADO = new global::System.Data.DataColumn("DS_ESTADO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDS_ESTADO);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDS_DESTREZA = new global::System.Data.DataColumn("DS_DESTREZA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_DESTREZA);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_DESTREZA_PASANTIAKey1", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_EMPRESARow NewTB_PASANTIA_EMPRESARow() {
-                return ((TB_PASANTIA_EMPRESARow)(this.NewRow()));
+            public TB_DESTREZA_PASANTIARow NewTB_DESTREZA_PASANTIARow() {
+                return ((TB_DESTREZA_PASANTIARow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TB_PASANTIA_EMPRESARow(builder);
+                return new TB_DESTREZA_PASANTIARow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TB_PASANTIA_EMPRESARow);
+                return typeof(TB_DESTREZA_PASANTIARow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TB_PASANTIA_EMPRESARowChanged != null)) {
-                    this.TB_PASANTIA_EMPRESARowChanged(this, new TB_PASANTIA_EMPRESARowChangeEvent(((TB_PASANTIA_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_PASANTIARowChanged != null)) {
+                    this.TB_DESTREZA_PASANTIARowChanged(this, new TB_DESTREZA_PASANTIARowChangeEvent(((TB_DESTREZA_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -1541,8 +1586,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TB_PASANTIA_EMPRESARowChanging != null)) {
-                    this.TB_PASANTIA_EMPRESARowChanging(this, new TB_PASANTIA_EMPRESARowChangeEvent(((TB_PASANTIA_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_PASANTIARowChanging != null)) {
+                    this.TB_DESTREZA_PASANTIARowChanging(this, new TB_DESTREZA_PASANTIARowChangeEvent(((TB_DESTREZA_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -1550,8 +1595,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TB_PASANTIA_EMPRESARowDeleted != null)) {
-                    this.TB_PASANTIA_EMPRESARowDeleted(this, new TB_PASANTIA_EMPRESARowChangeEvent(((TB_PASANTIA_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_PASANTIARowDeleted != null)) {
+                    this.TB_DESTREZA_PASANTIARowDeleted(this, new TB_DESTREZA_PASANTIARowChangeEvent(((TB_DESTREZA_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -1559,14 +1604,14 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TB_PASANTIA_EMPRESARowDeleting != null)) {
-                    this.TB_PASANTIA_EMPRESARowDeleting(this, new TB_PASANTIA_EMPRESARowChangeEvent(((TB_PASANTIA_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_DESTREZA_PASANTIARowDeleting != null)) {
+                    this.TB_DESTREZA_PASANTIARowDeleting(this, new TB_DESTREZA_PASANTIARowChangeEvent(((TB_DESTREZA_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTB_PASANTIA_EMPRESARow(TB_PASANTIA_EMPRESARow row) {
+            public void RemoveTB_DESTREZA_PASANTIARow(TB_DESTREZA_PASANTIARow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1593,7 +1638,7 @@ namespace ClsDataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TB_PASANTIA_EMPRESADataTable";
+                attribute2.FixedValue = "TB_DESTREZA_PASANTIADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1639,18 +1684,18 @@ namespace ClsDataSets {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TB_PROYECTO_EMPRESADataTable : global::System.Data.TypedTableBase<TB_PROYECTO_EMPRESARow> {
+        public partial class TB_ESCOLARIDAD_PASANTIADataTable : global::System.Data.TypedTableBase<TB_ESCOLARIDAD_PASANTIARow> {
             
-            private global::System.Data.DataColumn columnNOMBRE_PROYECTO;
+            private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnFECHA_CONTRATO;
+            private global::System.Data.DataColumn columnDS_ESCOLARIDAD;
             
-            private global::System.Data.DataColumn columnDURACION_CONTRATO;
+            private global::System.Data.DataColumn columnDS_CARRERA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PROYECTO_EMPRESADataTable() {
-                this.TableName = "TB_PROYECTO_EMPRESA";
+            public TB_ESCOLARIDAD_PASANTIADataTable() {
+                this.TableName = "TB_ESCOLARIDAD_PASANTIA";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1658,7 +1703,7 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_PROYECTO_EMPRESADataTable(global::System.Data.DataTable table) {
+            internal TB_ESCOLARIDAD_PASANTIADataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1675,32 +1720,32 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TB_PROYECTO_EMPRESADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TB_ESCOLARIDAD_PASANTIADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NOMBRE_PROYECTOColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnNOMBRE_PROYECTO;
+                    return this.columnID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FECHA_CONTRATOColumn {
+            public global::System.Data.DataColumn DS_ESCOLARIDADColumn {
                 get {
-                    return this.columnFECHA_CONTRATO;
+                    return this.columnDS_ESCOLARIDAD;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DURACION_CONTRATOColumn {
+            public global::System.Data.DataColumn DS_CARRERAColumn {
                 get {
-                    return this.columnDURACION_CONTRATO;
+                    return this.columnDS_CARRERA;
                 }
             }
             
@@ -1715,47 +1760,47 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PROYECTO_EMPRESARow this[int index] {
+            public TB_ESCOLARIDAD_PASANTIARow this[int index] {
                 get {
-                    return ((TB_PROYECTO_EMPRESARow)(this.Rows[index]));
+                    return ((TB_ESCOLARIDAD_PASANTIARow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PROYECTO_EMPRESARowChangeEventHandler TB_PROYECTO_EMPRESARowChanging;
+            public event TB_ESCOLARIDAD_PASANTIARowChangeEventHandler TB_ESCOLARIDAD_PASANTIARowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PROYECTO_EMPRESARowChangeEventHandler TB_PROYECTO_EMPRESARowChanged;
+            public event TB_ESCOLARIDAD_PASANTIARowChangeEventHandler TB_ESCOLARIDAD_PASANTIARowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PROYECTO_EMPRESARowChangeEventHandler TB_PROYECTO_EMPRESARowDeleting;
+            public event TB_ESCOLARIDAD_PASANTIARowChangeEventHandler TB_ESCOLARIDAD_PASANTIARowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TB_PROYECTO_EMPRESARowChangeEventHandler TB_PROYECTO_EMPRESARowDeleted;
+            public event TB_ESCOLARIDAD_PASANTIARowChangeEventHandler TB_ESCOLARIDAD_PASANTIARowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTB_PROYECTO_EMPRESARow(TB_PROYECTO_EMPRESARow row) {
+            public void AddTB_ESCOLARIDAD_PASANTIARow(TB_ESCOLARIDAD_PASANTIARow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PROYECTO_EMPRESARow AddTB_PROYECTO_EMPRESARow(string NOMBRE_PROYECTO, string FECHA_CONTRATO, string DURACION_CONTRATO) {
-                TB_PROYECTO_EMPRESARow rowTB_PROYECTO_EMPRESARow = ((TB_PROYECTO_EMPRESARow)(this.NewRow()));
+            public TB_ESCOLARIDAD_PASANTIARow AddTB_ESCOLARIDAD_PASANTIARow(string ID, string DS_ESCOLARIDAD, string DS_CARRERA) {
+                TB_ESCOLARIDAD_PASANTIARow rowTB_ESCOLARIDAD_PASANTIARow = ((TB_ESCOLARIDAD_PASANTIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NOMBRE_PROYECTO,
-                        FECHA_CONTRATO,
-                        DURACION_CONTRATO};
-                rowTB_PROYECTO_EMPRESARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTB_PROYECTO_EMPRESARow);
-                return rowTB_PROYECTO_EMPRESARow;
+                        ID,
+                        DS_ESCOLARIDAD,
+                        DS_CARRERA};
+                rowTB_ESCOLARIDAD_PASANTIARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_ESCOLARIDAD_PASANTIARow);
+                return rowTB_ESCOLARIDAD_PASANTIARow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TB_PROYECTO_EMPRESADataTable cln = ((TB_PROYECTO_EMPRESADataTable)(base.Clone()));
+                TB_ESCOLARIDAD_PASANTIADataTable cln = ((TB_ESCOLARIDAD_PASANTIADataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1763,52 +1808,55 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TB_PROYECTO_EMPRESADataTable();
+                return new TB_ESCOLARIDAD_PASANTIADataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNOMBRE_PROYECTO = base.Columns["NOMBRE_PROYECTO"];
-                this.columnFECHA_CONTRATO = base.Columns["FECHA_CONTRATO"];
-                this.columnDURACION_CONTRATO = base.Columns["DURACION_CONTRATO"];
+                this.columnID = base.Columns["ID"];
+                this.columnDS_ESCOLARIDAD = base.Columns["DS_ESCOLARIDAD"];
+                this.columnDS_CARRERA = base.Columns["DS_CARRERA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNOMBRE_PROYECTO = new global::System.Data.DataColumn("NOMBRE_PROYECTO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOMBRE_PROYECTO);
-                this.columnFECHA_CONTRATO = new global::System.Data.DataColumn("FECHA_CONTRATO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFECHA_CONTRATO);
-                this.columnDURACION_CONTRATO = new global::System.Data.DataColumn("DURACION_CONTRATO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDURACION_CONTRATO);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDS_ESCOLARIDAD = new global::System.Data.DataColumn("DS_ESCOLARIDAD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_ESCOLARIDAD);
+                this.columnDS_CARRERA = new global::System.Data.DataColumn("DS_CARRERA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_CARRERA);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_ESCOLARIDAD_PASANTIAKey1", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PROYECTO_EMPRESARow NewTB_PROYECTO_EMPRESARow() {
-                return ((TB_PROYECTO_EMPRESARow)(this.NewRow()));
+            public TB_ESCOLARIDAD_PASANTIARow NewTB_ESCOLARIDAD_PASANTIARow() {
+                return ((TB_ESCOLARIDAD_PASANTIARow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TB_PROYECTO_EMPRESARow(builder);
+                return new TB_ESCOLARIDAD_PASANTIARow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TB_PROYECTO_EMPRESARow);
+                return typeof(TB_ESCOLARIDAD_PASANTIARow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TB_PROYECTO_EMPRESARowChanged != null)) {
-                    this.TB_PROYECTO_EMPRESARowChanged(this, new TB_PROYECTO_EMPRESARowChangeEvent(((TB_PROYECTO_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_PASANTIARowChanged != null)) {
+                    this.TB_ESCOLARIDAD_PASANTIARowChanged(this, new TB_ESCOLARIDAD_PASANTIARowChangeEvent(((TB_ESCOLARIDAD_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -1816,8 +1864,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TB_PROYECTO_EMPRESARowChanging != null)) {
-                    this.TB_PROYECTO_EMPRESARowChanging(this, new TB_PROYECTO_EMPRESARowChangeEvent(((TB_PROYECTO_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_PASANTIARowChanging != null)) {
+                    this.TB_ESCOLARIDAD_PASANTIARowChanging(this, new TB_ESCOLARIDAD_PASANTIARowChangeEvent(((TB_ESCOLARIDAD_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -1825,8 +1873,8 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TB_PROYECTO_EMPRESARowDeleted != null)) {
-                    this.TB_PROYECTO_EMPRESARowDeleted(this, new TB_PROYECTO_EMPRESARowChangeEvent(((TB_PROYECTO_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_PASANTIARowDeleted != null)) {
+                    this.TB_ESCOLARIDAD_PASANTIARowDeleted(this, new TB_ESCOLARIDAD_PASANTIARowChangeEvent(((TB_ESCOLARIDAD_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -1834,14 +1882,14 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TB_PROYECTO_EMPRESARowDeleting != null)) {
-                    this.TB_PROYECTO_EMPRESARowDeleting(this, new TB_PROYECTO_EMPRESARowChangeEvent(((TB_PROYECTO_EMPRESARow)(e.Row)), e.Action));
+                if ((this.TB_ESCOLARIDAD_PASANTIARowDeleting != null)) {
+                    this.TB_ESCOLARIDAD_PASANTIARowDeleting(this, new TB_ESCOLARIDAD_PASANTIARowChangeEvent(((TB_ESCOLARIDAD_PASANTIARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTB_PROYECTO_EMPRESARow(TB_PROYECTO_EMPRESARow row) {
+            public void RemoveTB_ESCOLARIDAD_PASANTIARow(TB_ESCOLARIDAD_PASANTIARow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1868,7 +1916,619 @@ namespace ClsDataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TB_PROYECTO_EMPRESADataTable";
+                attribute2.FixedValue = "TB_ESCOLARIDAD_PASANTIADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TB_PASANTIA_HABILIDADDataTable : global::System.Data.TypedTableBase<TB_PASANTIA_HABILIDADRow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnDS_HABILIDAD_CONOCIMIENTO;
+            
+            private global::System.Data.DataColumn columnDS_NIVEL_CONOCIMIENTO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_PASANTIA_HABILIDADDataTable() {
+                this.TableName = "TB_PASANTIA_HABILIDAD";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_PASANTIA_HABILIDADDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TB_PASANTIA_HABILIDADDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_HABILIDAD_CONOCIMIENTOColumn {
+                get {
+                    return this.columnDS_HABILIDAD_CONOCIMIENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_NIVEL_CONOCIMIENTOColumn {
+                get {
+                    return this.columnDS_NIVEL_CONOCIMIENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_PASANTIA_HABILIDADRow this[int index] {
+                get {
+                    return ((TB_PASANTIA_HABILIDADRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_PASANTIA_HABILIDADRowChangeEventHandler TB_PASANTIA_HABILIDADRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_PASANTIA_HABILIDADRowChangeEventHandler TB_PASANTIA_HABILIDADRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_PASANTIA_HABILIDADRowChangeEventHandler TB_PASANTIA_HABILIDADRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_PASANTIA_HABILIDADRowChangeEventHandler TB_PASANTIA_HABILIDADRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTB_PASANTIA_HABILIDADRow(TB_PASANTIA_HABILIDADRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_PASANTIA_HABILIDADRow AddTB_PASANTIA_HABILIDADRow(string ID, string DS_HABILIDAD_CONOCIMIENTO, string DS_NIVEL_CONOCIMIENTO) {
+                TB_PASANTIA_HABILIDADRow rowTB_PASANTIA_HABILIDADRow = ((TB_PASANTIA_HABILIDADRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID,
+                        DS_HABILIDAD_CONOCIMIENTO,
+                        DS_NIVEL_CONOCIMIENTO};
+                rowTB_PASANTIA_HABILIDADRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_PASANTIA_HABILIDADRow);
+                return rowTB_PASANTIA_HABILIDADRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TB_PASANTIA_HABILIDADDataTable cln = ((TB_PASANTIA_HABILIDADDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TB_PASANTIA_HABILIDADDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnDS_HABILIDAD_CONOCIMIENTO = base.Columns["DS_HABILIDAD_CONOCIMIENTO"];
+                this.columnDS_NIVEL_CONOCIMIENTO = base.Columns["DS_NIVEL_CONOCIMIENTO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDS_HABILIDAD_CONOCIMIENTO = new global::System.Data.DataColumn("DS_HABILIDAD_CONOCIMIENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_HABILIDAD_CONOCIMIENTO);
+                this.columnDS_NIVEL_CONOCIMIENTO = new global::System.Data.DataColumn("DS_NIVEL_CONOCIMIENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_NIVEL_CONOCIMIENTO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_PASANTIA_HABILIDADKey1", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_PASANTIA_HABILIDADRow NewTB_PASANTIA_HABILIDADRow() {
+                return ((TB_PASANTIA_HABILIDADRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TB_PASANTIA_HABILIDADRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TB_PASANTIA_HABILIDADRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TB_PASANTIA_HABILIDADRowChanged != null)) {
+                    this.TB_PASANTIA_HABILIDADRowChanged(this, new TB_PASANTIA_HABILIDADRowChangeEvent(((TB_PASANTIA_HABILIDADRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TB_PASANTIA_HABILIDADRowChanging != null)) {
+                    this.TB_PASANTIA_HABILIDADRowChanging(this, new TB_PASANTIA_HABILIDADRowChangeEvent(((TB_PASANTIA_HABILIDADRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TB_PASANTIA_HABILIDADRowDeleted != null)) {
+                    this.TB_PASANTIA_HABILIDADRowDeleted(this, new TB_PASANTIA_HABILIDADRowChangeEvent(((TB_PASANTIA_HABILIDADRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TB_PASANTIA_HABILIDADRowDeleting != null)) {
+                    this.TB_PASANTIA_HABILIDADRowDeleting(this, new TB_PASANTIA_HABILIDADRowChangeEvent(((TB_PASANTIA_HABILIDADRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTB_PASANTIA_HABILIDADRow(TB_PASANTIA_HABILIDADRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS_TB_EMP ds = new DS_TB_EMP();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TB_PASANTIA_HABILIDADDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TB_CONSULTORIADataTable : global::System.Data.TypedTableBase<TB_CONSULTORIARow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnDS_NUMERO_CONTRATO;
+            
+            private global::System.Data.DataColumn columnDS_NOMBRE_CONSULTORIA;
+            
+            private global::System.Data.DataColumn columnFECH_INICIO_CONTRATO;
+            
+            private global::System.Data.DataColumn columnNM_MONTO_CONSULTORIA;
+            
+            private global::System.Data.DataColumn columnDS_CONTRATO_DURACION;
+            
+            private global::System.Data.DataColumn columnDS_ESTADO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_CONSULTORIADataTable() {
+                this.TableName = "TB_CONSULTORIA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_CONSULTORIADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TB_CONSULTORIADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_NUMERO_CONTRATOColumn {
+                get {
+                    return this.columnDS_NUMERO_CONTRATO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_NOMBRE_CONSULTORIAColumn {
+                get {
+                    return this.columnDS_NOMBRE_CONSULTORIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FECH_INICIO_CONTRATOColumn {
+                get {
+                    return this.columnFECH_INICIO_CONTRATO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NM_MONTO_CONSULTORIAColumn {
+                get {
+                    return this.columnNM_MONTO_CONSULTORIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_CONTRATO_DURACIONColumn {
+                get {
+                    return this.columnDS_CONTRATO_DURACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_ESTADOColumn {
+                get {
+                    return this.columnDS_ESTADO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_CONSULTORIARow this[int index] {
+                get {
+                    return ((TB_CONSULTORIARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_CONSULTORIARowChangeEventHandler TB_CONSULTORIARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_CONSULTORIARowChangeEventHandler TB_CONSULTORIARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_CONSULTORIARowChangeEventHandler TB_CONSULTORIARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TB_CONSULTORIARowChangeEventHandler TB_CONSULTORIARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTB_CONSULTORIARow(TB_CONSULTORIARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_CONSULTORIARow AddTB_CONSULTORIARow(string ID, string DS_NUMERO_CONTRATO, string DS_NOMBRE_CONSULTORIA, string FECH_INICIO_CONTRATO, string NM_MONTO_CONSULTORIA, string DS_CONTRATO_DURACION, string DS_ESTADO) {
+                TB_CONSULTORIARow rowTB_CONSULTORIARow = ((TB_CONSULTORIARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID,
+                        DS_NUMERO_CONTRATO,
+                        DS_NOMBRE_CONSULTORIA,
+                        FECH_INICIO_CONTRATO,
+                        NM_MONTO_CONSULTORIA,
+                        DS_CONTRATO_DURACION,
+                        DS_ESTADO};
+                rowTB_CONSULTORIARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTB_CONSULTORIARow);
+                return rowTB_CONSULTORIARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TB_CONSULTORIADataTable cln = ((TB_CONSULTORIADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TB_CONSULTORIADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnDS_NUMERO_CONTRATO = base.Columns["DS_NUMERO_CONTRATO"];
+                this.columnDS_NOMBRE_CONSULTORIA = base.Columns["DS_NOMBRE_CONSULTORIA"];
+                this.columnFECH_INICIO_CONTRATO = base.Columns["FECH_INICIO_CONTRATO"];
+                this.columnNM_MONTO_CONSULTORIA = base.Columns["NM_MONTO_CONSULTORIA"];
+                this.columnDS_CONTRATO_DURACION = base.Columns["DS_CONTRATO_DURACION"];
+                this.columnDS_ESTADO = base.Columns["DS_ESTADO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDS_NUMERO_CONTRATO = new global::System.Data.DataColumn("DS_NUMERO_CONTRATO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_NUMERO_CONTRATO);
+                this.columnDS_NOMBRE_CONSULTORIA = new global::System.Data.DataColumn("DS_NOMBRE_CONSULTORIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_NOMBRE_CONSULTORIA);
+                this.columnFECH_INICIO_CONTRATO = new global::System.Data.DataColumn("FECH_INICIO_CONTRATO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECH_INICIO_CONTRATO);
+                this.columnNM_MONTO_CONSULTORIA = new global::System.Data.DataColumn("NM_MONTO_CONSULTORIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNM_MONTO_CONSULTORIA);
+                this.columnDS_CONTRATO_DURACION = new global::System.Data.DataColumn("DS_CONTRATO_DURACION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_CONTRATO_DURACION);
+                this.columnDS_ESTADO = new global::System.Data.DataColumn("DS_ESTADO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_ESTADO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_CONSULTORIAKey1", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_CONSULTORIARow NewTB_CONSULTORIARow() {
+                return ((TB_CONSULTORIARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TB_CONSULTORIARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TB_CONSULTORIARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TB_CONSULTORIARowChanged != null)) {
+                    this.TB_CONSULTORIARowChanged(this, new TB_CONSULTORIARowChangeEvent(((TB_CONSULTORIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TB_CONSULTORIARowChanging != null)) {
+                    this.TB_CONSULTORIARowChanging(this, new TB_CONSULTORIARowChangeEvent(((TB_CONSULTORIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TB_CONSULTORIARowDeleted != null)) {
+                    this.TB_CONSULTORIARowDeleted(this, new TB_CONSULTORIARowChangeEvent(((TB_CONSULTORIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TB_CONSULTORIARowDeleting != null)) {
+                    this.TB_CONSULTORIARowDeleting(this, new TB_CONSULTORIARowChangeEvent(((TB_CONSULTORIARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTB_CONSULTORIARow(TB_CONSULTORIARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS_TB_EMP ds = new DS_TB_EMP();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TB_CONSULTORIADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2886,65 +3546,389 @@ namespace ClsDataSets {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TB_PASANTIA_EMPRESARow : global::System.Data.DataRow {
+        public partial class TB_DESTREZA_PASANTIARow : global::System.Data.DataRow {
             
-            private TB_PASANTIA_EMPRESADataTable tableTB_PASANTIA_EMPRESA;
+            private TB_DESTREZA_PASANTIADataTable tableTB_DESTREZA_PASANTIA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_PASANTIA_EMPRESARow(global::System.Data.DataRowBuilder rb) : 
+            internal TB_DESTREZA_PASANTIARow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTB_PASANTIA_EMPRESA = ((TB_PASANTIA_EMPRESADataTable)(this.Table));
+                this.tableTB_DESTREZA_PASANTIA = ((TB_DESTREZA_PASANTIADataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DS_PASANTIA {
+            public string ID {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_PASANTIA_EMPRESA.DS_PASANTIAColumn]));
+                        return ((string)(this[this.tableTB_DESTREZA_PASANTIA.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_PASANTIA\' de la tabla \'TB_PASANTIA_EMPRESA\' es DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_DESTREZA_PASANTIA\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_PASANTIA_EMPRESA.DS_PASANTIAColumn] = value;
+                    this[this.tableTB_DESTREZA_PASANTIA.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string AREA_PASANTIA {
+            public string DS_DESTREZA {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_PASANTIA_EMPRESA.AREA_PASANTIAColumn]));
+                        return ((string)(this[this.tableTB_DESTREZA_PASANTIA.DS_DESTREZAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'AREA_PASANTIA\' de la tabla \'TB_PASANTIA_EMPRESA\' es DBNul" +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DESTREZA\' de la tabla \'TB_DESTREZA_PASANTIA\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_DESTREZA_PASANTIA.DS_DESTREZAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTB_DESTREZA_PASANTIA.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableTB_DESTREZA_PASANTIA.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_DESTREZANull() {
+                return this.IsNull(this.tableTB_DESTREZA_PASANTIA.DS_DESTREZAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_DESTREZANull() {
+                this[this.tableTB_DESTREZA_PASANTIA.DS_DESTREZAColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TB_ESCOLARIDAD_PASANTIARow : global::System.Data.DataRow {
+            
+            private TB_ESCOLARIDAD_PASANTIADataTable tableTB_ESCOLARIDAD_PASANTIA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_ESCOLARIDAD_PASANTIARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTB_ESCOLARIDAD_PASANTIA = ((TB_ESCOLARIDAD_PASANTIADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_PASANTIA.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_ESCOLARIDAD_PASANTIA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ESCOLARIDAD_PASANTIA.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_ESCOLARIDAD {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_PASANTIA.DS_ESCOLARIDADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_ESCOLARIDAD\' de la tabla \'TB_ESCOLARIDAD_PASANTIA\' es " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ESCOLARIDAD_PASANTIA.DS_ESCOLARIDADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_CARRERA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_ESCOLARIDAD_PASANTIA.DS_CARRERAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CARRERA\' de la tabla \'TB_ESCOLARIDAD_PASANTIA\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_ESCOLARIDAD_PASANTIA.DS_CARRERAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTB_ESCOLARIDAD_PASANTIA.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableTB_ESCOLARIDAD_PASANTIA.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_ESCOLARIDADNull() {
+                return this.IsNull(this.tableTB_ESCOLARIDAD_PASANTIA.DS_ESCOLARIDADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_ESCOLARIDADNull() {
+                this[this.tableTB_ESCOLARIDAD_PASANTIA.DS_ESCOLARIDADColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_CARRERANull() {
+                return this.IsNull(this.tableTB_ESCOLARIDAD_PASANTIA.DS_CARRERAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_CARRERANull() {
+                this[this.tableTB_ESCOLARIDAD_PASANTIA.DS_CARRERAColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TB_PASANTIA_HABILIDADRow : global::System.Data.DataRow {
+            
+            private TB_PASANTIA_HABILIDADDataTable tableTB_PASANTIA_HABILIDAD;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_PASANTIA_HABILIDADRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTB_PASANTIA_HABILIDAD = ((TB_PASANTIA_HABILIDADDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_PASANTIA_HABILIDAD.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_PASANTIA_HABILIDAD\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_PASANTIA_HABILIDAD.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_HABILIDAD_CONOCIMIENTO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_PASANTIA_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_HABILIDAD_CONOCIMIENTO\' de la tabla \'TB_PASANTIA_HABIL" +
+                                "IDAD\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_PASANTIA_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_NIVEL_CONOCIMIENTO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_PASANTIA_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NIVEL_CONOCIMIENTO\' de la tabla \'TB_PASANTIA_HABILIDAD" +
+                                "\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_PASANTIA_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTB_PASANTIA_HABILIDAD.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableTB_PASANTIA_HABILIDAD.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_HABILIDAD_CONOCIMIENTONull() {
+                return this.IsNull(this.tableTB_PASANTIA_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_HABILIDAD_CONOCIMIENTONull() {
+                this[this.tableTB_PASANTIA_HABILIDAD.DS_HABILIDAD_CONOCIMIENTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_NIVEL_CONOCIMIENTONull() {
+                return this.IsNull(this.tableTB_PASANTIA_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_NIVEL_CONOCIMIENTONull() {
+                this[this.tableTB_PASANTIA_HABILIDAD.DS_NIVEL_CONOCIMIENTOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TB_CONSULTORIARow : global::System.Data.DataRow {
+            
+            private TB_CONSULTORIADataTable tableTB_CONSULTORIA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TB_CONSULTORIARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTB_CONSULTORIA = ((TB_CONSULTORIADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TB_CONSULTORIA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_NUMERO_CONTRATO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA.DS_NUMERO_CONTRATOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NUMERO_CONTRATO\' de la tabla \'TB_CONSULTORIA\' es DBNul" +
                                 "l.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_PASANTIA_EMPRESA.AREA_PASANTIAColumn] = value;
+                    this[this.tableTB_CONSULTORIA.DS_NUMERO_CONTRATOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DURACION_PASANTIA {
+            public string DS_NOMBRE_CONSULTORIA {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_PASANTIA_EMPRESA.DURACION_PASANTIAColumn]));
+                        return ((string)(this[this.tableTB_CONSULTORIA.DS_NOMBRE_CONSULTORIAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DURACION_PASANTIA\' de la tabla \'TB_PASANTIA_EMPRESA\' es D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NOMBRE_CONSULTORIA\' de la tabla \'TB_CONSULTORIA\' es DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_PASANTIA_EMPRESA.DURACION_PASANTIAColumn] = value;
+                    this[this.tableTB_CONSULTORIA.DS_NOMBRE_CONSULTORIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FECH_INICIO_CONTRATO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA.FECH_INICIO_CONTRATOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECH_INICIO_CONTRATO\' de la tabla \'TB_CONSULTORIA\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA.FECH_INICIO_CONTRATOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NM_MONTO_CONSULTORIA {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA.NM_MONTO_CONSULTORIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_MONTO_CONSULTORIA\' de la tabla \'TB_CONSULTORIA\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA.NM_MONTO_CONSULTORIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_CONTRATO_DURACION {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_CONSULTORIA.DS_CONTRATO_DURACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_CONTRATO_DURACION\' de la tabla \'TB_CONSULTORIA\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_CONSULTORIA.DS_CONTRATO_DURACIONColumn] = value;
                 }
             }
             
@@ -2953,165 +3937,99 @@ namespace ClsDataSets {
             public string DS_ESTADO {
                 get {
                     try {
-                        return ((string)(this[this.tableTB_PASANTIA_EMPRESA.DS_ESTADOColumn]));
+                        return ((string)(this[this.tableTB_CONSULTORIA.DS_ESTADOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_ESTADO\' de la tabla \'TB_PASANTIA_EMPRESA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_ESTADO\' de la tabla \'TB_CONSULTORIA\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTB_PASANTIA_EMPRESA.DS_ESTADOColumn] = value;
+                    this[this.tableTB_CONSULTORIA.DS_ESTADOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDS_PASANTIANull() {
-                return this.IsNull(this.tableTB_PASANTIA_EMPRESA.DS_PASANTIAColumn);
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDS_PASANTIANull() {
-                this[this.tableTB_PASANTIA_EMPRESA.DS_PASANTIAColumn] = global::System.Convert.DBNull;
+            public void SetIDNull() {
+                this[this.tableTB_CONSULTORIA.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAREA_PASANTIANull() {
-                return this.IsNull(this.tableTB_PASANTIA_EMPRESA.AREA_PASANTIAColumn);
+            public bool IsDS_NUMERO_CONTRATONull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.DS_NUMERO_CONTRATOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAREA_PASANTIANull() {
-                this[this.tableTB_PASANTIA_EMPRESA.AREA_PASANTIAColumn] = global::System.Convert.DBNull;
+            public void SetDS_NUMERO_CONTRATONull() {
+                this[this.tableTB_CONSULTORIA.DS_NUMERO_CONTRATOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDURACION_PASANTIANull() {
-                return this.IsNull(this.tableTB_PASANTIA_EMPRESA.DURACION_PASANTIAColumn);
+            public bool IsDS_NOMBRE_CONSULTORIANull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.DS_NOMBRE_CONSULTORIAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDURACION_PASANTIANull() {
-                this[this.tableTB_PASANTIA_EMPRESA.DURACION_PASANTIAColumn] = global::System.Convert.DBNull;
+            public void SetDS_NOMBRE_CONSULTORIANull() {
+                this[this.tableTB_CONSULTORIA.DS_NOMBRE_CONSULTORIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFECH_INICIO_CONTRATONull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.FECH_INICIO_CONTRATOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFECH_INICIO_CONTRATONull() {
+                this[this.tableTB_CONSULTORIA.FECH_INICIO_CONTRATOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNM_MONTO_CONSULTORIANull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.NM_MONTO_CONSULTORIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNM_MONTO_CONSULTORIANull() {
+                this[this.tableTB_CONSULTORIA.NM_MONTO_CONSULTORIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_CONTRATO_DURACIONNull() {
+                return this.IsNull(this.tableTB_CONSULTORIA.DS_CONTRATO_DURACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_CONTRATO_DURACIONNull() {
+                this[this.tableTB_CONSULTORIA.DS_CONTRATO_DURACIONColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_ESTADONull() {
-                return this.IsNull(this.tableTB_PASANTIA_EMPRESA.DS_ESTADOColumn);
+                return this.IsNull(this.tableTB_CONSULTORIA.DS_ESTADOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_ESTADONull() {
-                this[this.tableTB_PASANTIA_EMPRESA.DS_ESTADOColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class TB_PROYECTO_EMPRESARow : global::System.Data.DataRow {
-            
-            private TB_PROYECTO_EMPRESADataTable tableTB_PROYECTO_EMPRESA;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TB_PROYECTO_EMPRESARow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableTB_PROYECTO_EMPRESA = ((TB_PROYECTO_EMPRESADataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NOMBRE_PROYECTO {
-                get {
-                    try {
-                        return ((string)(this[this.tableTB_PROYECTO_EMPRESA.NOMBRE_PROYECTOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NOMBRE_PROYECTO\' de la tabla \'TB_PROYECTO_EMPRESA\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTB_PROYECTO_EMPRESA.NOMBRE_PROYECTOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FECHA_CONTRATO {
-                get {
-                    try {
-                        return ((string)(this[this.tableTB_PROYECTO_EMPRESA.FECHA_CONTRATOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_CONTRATO\' de la tabla \'TB_PROYECTO_EMPRESA\' es DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tableTB_PROYECTO_EMPRESA.FECHA_CONTRATOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DURACION_CONTRATO {
-                get {
-                    try {
-                        return ((string)(this[this.tableTB_PROYECTO_EMPRESA.DURACION_CONTRATOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DURACION_CONTRATO\' de la tabla \'TB_PROYECTO_EMPRESA\' es D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTB_PROYECTO_EMPRESA.DURACION_CONTRATOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNOMBRE_PROYECTONull() {
-                return this.IsNull(this.tableTB_PROYECTO_EMPRESA.NOMBRE_PROYECTOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNOMBRE_PROYECTONull() {
-                this[this.tableTB_PROYECTO_EMPRESA.NOMBRE_PROYECTOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFECHA_CONTRATONull() {
-                return this.IsNull(this.tableTB_PROYECTO_EMPRESA.FECHA_CONTRATOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFECHA_CONTRATONull() {
-                this[this.tableTB_PROYECTO_EMPRESA.FECHA_CONTRATOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDURACION_CONTRATONull() {
-                return this.IsNull(this.tableTB_PROYECTO_EMPRESA.DURACION_CONTRATOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDURACION_CONTRATONull() {
-                this[this.tableTB_PROYECTO_EMPRESA.DURACION_CONTRATOColumn] = global::System.Convert.DBNull;
+                this[this.tableTB_CONSULTORIA.DS_ESTADOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3187,22 +4105,22 @@ namespace ClsDataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TB_PASANTIA_EMPRESARowChangeEvent : global::System.EventArgs {
+        public class TB_DESTREZA_PASANTIARowChangeEvent : global::System.EventArgs {
             
-            private TB_PASANTIA_EMPRESARow eventRow;
+            private TB_DESTREZA_PASANTIARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_EMPRESARowChangeEvent(TB_PASANTIA_EMPRESARow row, global::System.Data.DataRowAction action) {
+            public TB_DESTREZA_PASANTIARowChangeEvent(TB_DESTREZA_PASANTIARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PASANTIA_EMPRESARow Row {
+            public TB_DESTREZA_PASANTIARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3221,22 +4139,90 @@ namespace ClsDataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TB_PROYECTO_EMPRESARowChangeEvent : global::System.EventArgs {
+        public class TB_ESCOLARIDAD_PASANTIARowChangeEvent : global::System.EventArgs {
             
-            private TB_PROYECTO_EMPRESARow eventRow;
+            private TB_ESCOLARIDAD_PASANTIARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PROYECTO_EMPRESARowChangeEvent(TB_PROYECTO_EMPRESARow row, global::System.Data.DataRowAction action) {
+            public TB_ESCOLARIDAD_PASANTIARowChangeEvent(TB_ESCOLARIDAD_PASANTIARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_PROYECTO_EMPRESARow Row {
+            public TB_ESCOLARIDAD_PASANTIARow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TB_PASANTIA_HABILIDADRowChangeEvent : global::System.EventArgs {
+            
+            private TB_PASANTIA_HABILIDADRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_PASANTIA_HABILIDADRowChangeEvent(TB_PASANTIA_HABILIDADRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_PASANTIA_HABILIDADRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TB_CONSULTORIARowChangeEvent : global::System.EventArgs {
+            
+            private TB_CONSULTORIARow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_CONSULTORIARowChangeEvent(TB_CONSULTORIARow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TB_CONSULTORIARow Row {
                 get {
                     return this.eventRow;
                 }

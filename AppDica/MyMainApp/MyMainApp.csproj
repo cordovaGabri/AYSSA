@@ -109,6 +109,7 @@
     <Content Include="EMP\DetallePasantia.aspx" />
     <Content Include="EMP\EMPP0001.aspx" />
     <Content Include="EMP\RegistroEntregable.aspx" />
+    <Content Include="EMP\WebForm1.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="EMP\RegistroEntregable.aspx.designer.cs">
       <DependentUpon>RegistroEntregable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMP\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMP\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

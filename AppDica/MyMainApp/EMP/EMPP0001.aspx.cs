@@ -13,7 +13,8 @@ namespace MyMainApp.EMP
 {
     public partial class EMPP0001 : FormaSISWeb, IAcciones
     {
-        private DataView dvActividadEconomica, dvEmpresa, dvDepartamento,dvMunicipio;
+        private DataView dvActividadEconomica, dvEmpresa, dvDepartamento, dvMunicipio, dvHabilidad, dvDestreza, dvPasantia,
+            dvAreaPasantia;
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
@@ -60,9 +61,14 @@ namespace MyMainApp.EMP
 
         public void Consultar() {
             FillCamposDatosGenerales();
+            FillCamposPasantia();
             FillCboActEcono();
             FillCboDepartamento();
             FillCboMunicipio();
+            FillCboAreaPasantia();
+            FillGVPasantia();
+            FillGVHabilidad();
+            FillGVDestreza();
         }
 
         public void Adicionar() { }
@@ -130,6 +136,178 @@ namespace MyMainApp.EMP
         protected void CboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillCboMunicipio();
+        }
+
+
+        protected void FillGVHabilidad()
+        {
+            CHabilidadPasantia objHabilidad = new CHabilidadPasantia(_DataSistema.ConexionBaseDato);
+            dvHabilidad = new DataView(objHabilidad.Detalle(0, Convert.ToInt32(TxtIDPasantia.Text), 0, 0, "", DateTime.Now, "", DateTime.Now, 0).TB_PASANTIA_HABILIDAD);
+
+            GVHabilidad.DataSource = dvHabilidad;
+            GVHabilidad.DataBind();
+        }
+
+        protected void FillGVDestreza()
+        {
+            CDestrezaAspirante objDestreza = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
+            dvDestreza = new DataView(objDestreza.Detalle(0, 0, "", "", DateTime.Now, "", DateTime.Now, 0).TB_DESTREZA_ASPIRANTE);
+
+            GVDestreza.DataSource = dvDestreza;
+            GVDestreza.DataBind();
+        }
+
+        protected void FillGVPasantia()
+        {
+            CPasantia objPasantia = new CPasantia(_DataSistema.ConexionBaseDato);
+            dvPasantia = new DataView(objPasantia.Detalle(0, "", "", Convert.ToInt32(TxtIDEmpresa.Text), 0, "", DateTime.Now,
+            "", "", "", 'A', 0, 0, 0, 0, 0,"",  "", "", DateTime.Now, "", DateTime.Now, 3).TB_PASANTIA);
+
+            GVPasantia.DataSource = dvPasantia;
+            GVPasantia.DataBind();
+        }
+
+        protected void BtnGuardarPasantia_Click(object sender, EventArgs e)
+        {
+            CPasantia objPasantia = new CPasantia(_DataSistema.ConexionBaseDato);
+            dvPasantia = new DataView(objPasantia.Detalle(Convert.ToInt32(TxtIDPasantia.Text), "", "", 0, 0, "", DateTime.Now,
+             "", "", "", 'A', 0, 0, 0, 0, 0, "", "", "", DateTime.Now, "", DateTime.Now, 1).TB_PASANTIA);
+
+            try
+            {
+                if (dvPasantia.Count > 0)
+                {
+                    objResultado = objPasantia.Actualizacion(Convert.ToInt32(TxtIDPasantia.Text), TxtNombEva.Text , TxtEmailEva.Text
+                        , Convert.ToInt32(TxtIDEmpresa.Text), Convert.ToInt32(CboAreaPasantia.SelectedValue), TxtDescPasantia.Text, Convert.ToDateTime(TxtFechInicio.Text),
+          TxtDuracion.Text, TxtDe.Text, TxtA.Text, Convert.ToChar(CboEstadoPasantia.SelectedValue), Convert.ToInt32(CboDias1.SelectedValue), Convert.ToInt32(CboDias2.SelectedValue), Convert.ToInt32(TxtEdadDe.Text), Convert.ToInt32(TxtEdadA.Text), Convert.ToInt32(TxtCantVacantes.Text),
+             TxtSucursal.Text, TxtDireccion.Text, _DataSistema.Cusuario, TipoActualizacion.Actualizar);
+                }
+                else
+                {
+                    objResultado = objPasantia.Actualizacion(Convert.ToInt32(TxtIDPasantia.Text), TxtNombEva.Text, TxtEmailEva.Text
+                        , Convert.ToInt32(TxtIDEmpresa.Text), Convert.ToInt32(CboAreaPasantia.SelectedValue), TxtDescPasantia.Text, Convert.ToDateTime(TxtFechInicio.Text),
+          TxtDuracion.Text, TxtDe.Text, TxtA.Text, Convert.ToChar(CboEstadoPasantia.SelectedValue), Convert.ToInt32(CboDias1.SelectedValue), Convert.ToInt32(CboDias2.SelectedValue), Convert.ToInt32(TxtEdadDe.Text), Convert.ToInt32(TxtEdadA.Text), Convert.ToInt32(TxtCantVacantes.Text),
+             TxtSucursal.Text, TxtDireccion.Text, _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+                    if (objResultado.CodigoError == 0)
+                    {
+                        TxtIDPasantia.Text = Convert.ToString(objResultado.CodigoAuxiliar);
+                    }
+                }
+                if (objResultado.CodigoError == 0)
+                {
+                    FillCamposPasantia();
+                    FillGVPasantia();
+                    DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPPasantia);
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPPasantia);
+                }
+              
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
+        }
+
+
+        protected void FillCboAreaPasantia()
+        {
+            CAreaPasantia objAreaPasantia = new CAreaPasantia(_DataSistema.ConexionBaseDato);
+            dvAreaPasantia = new DataView(objAreaPasantia.Detalle(0, "", "", DateTime.Now, "", DateTime.Now, 0).TBC_AREA_EMPRESA);
+
+            CboAreaPasantia.DataSource = dvAreaPasantia;
+            CboAreaPasantia.DataBind();
+        }
+
+        protected void FillCamposPasantia()
+        {
+            CPasantia objPasantia = new CPasantia(_DataSistema.ConexionBaseDato);
+            dvPasantia = new DataView(objPasantia.Detalle(Convert.ToInt32(TxtIDPasantia.Text), "", "", 0, 0, "", DateTime.Now,
+             "", "", "", 'A', 0, 0, 0, 0, 0, "", "", "", DateTime.Now, "", DateTime.Now, 1).TB_PASANTIA);
+            if (dvPasantia.Count > 0)
+            {
+                TxtIDPasantia.Text = dvPasantia.Table.Rows[0]["ID"].ToString();
+                TxtNombEva.Text = dvPasantia.Table.Rows[0]["DS_NOMBRE_EVAL"].ToString();
+                TxtEmailEva.Text = dvPasantia.Table.Rows[0]["DS_EMAIL_CONTACTO"].ToString();
+                TxtIDEmpresa.Text = dvPasantia.Table.Rows[0]["ID_EMPRESA"].ToString();
+                CboAreaPasantia.SelectedValue = dvPasantia.Table.Rows[0]["ID_AREA"].ToString();
+                TxtDescPasantia.Text = dvPasantia.Table.Rows[0]["DS_PASANTIA"].ToString();
+                TxtFechInicio.Text = dvPasantia.Table.Rows[0]["FECH_INICIO_PASANTIA"].ToString();
+                TxtDuracion.Text = dvPasantia.Table.Rows[0]["DS_DURACION"].ToString();
+                TxtDe.Text = dvPasantia.Table.Rows[0]["DS_HORARIO_DE"].ToString();
+                TxtA.Text = dvPasantia.Table.Rows[0]["DS_HORARIO_A"].ToString();
+                CboEstadoPasantia.SelectedValue = dvPasantia.Table.Rows[0]["CD_ESTADO_PASANTIA"].ToString();
+                CboDias1.SelectedValue = dvPasantia.Table.Rows[0]["NM_DIAS_DE"].ToString();
+                CboDias2.SelectedValue = dvPasantia.Table.Rows[0]["NM_DIAS_A"].ToString();
+                TxtCantVacantes.Text = dvPasantia.Table.Rows[0]["NM_VACANTES"].ToString();
+                TxtSucursal.Text = dvPasantia.Table.Rows[0]["DS_SUCURSAL"].ToString();
+                TxtDireccion.Text = dvPasantia.Table.Rows[0]["DS_DIRECCION_SUCURSAL"].ToString();
+            }
+        }
+
+        protected void BtnGuardarHabilidad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CHabilidadPasantia objHabilidadPasantia = new CHabilidadPasantia(_DataSistema.ConexionBaseDato);
+                objResultado = objHabilidadPasantia.Actualizacion(0, Convert.ToInt32(TxtIDPasantia.Text), Convert.ToInt32(CboConocimiento.SelectedValue),
+                    Convert.ToInt32(CboNivel.SelectedValue)
+                , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVHabilidad();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPPasantia);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
+        }
+
+        protected void BtnGuardarDestreza_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CDestrezaAspirante objDestrezaAspirante = new CDestrezaAspirante(_DataSistema.ConexionBaseDato);
+                objResultado = objDestrezaAspirante.Actualizacion(0, Convert.ToInt32(CboDestreza.SelectedValue), _DataSistema.Cusuario
+                , _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+
+                if (objResultado.CodigoError == 0)
+                {
+                    FillGVDestreza();
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPPasantia);
+                }
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
+        }
+
+
+        protected void GVPasantia_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            try
+            {
+                TextBox Id = GVPasantia.Rows[e.RowIndex].FindControl("TxtIDPasantiaGV") as TextBox;
+                TxtIDPasantia.Text = Id.Text;
+                FillCamposPasantia();
+                FillGVHabilidad();
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPPasantia);
+            }
         }
     }
 }
