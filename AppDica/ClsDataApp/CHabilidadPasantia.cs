@@ -62,7 +62,7 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_PASANTIA_HABILIDAD_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";

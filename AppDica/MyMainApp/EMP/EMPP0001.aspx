@@ -123,7 +123,7 @@
                             </ContentTemplate>
                              </ajaxToolkit:TabPanel>
                             <%--fin tab datos--%>
-                            <ajaxToolkit:TabPanel runat="server" HeaderText="INFO" ID="TabPanel2">
+                            <ajaxToolkit:TabPanel runat="server" HeaderText="PASANTIA" ID="TabPanel2">
                             <ContentTemplate>
                        <asp:UpdatePanel ID="UPPasantia" runat="server">
                                     <Triggers>
@@ -242,7 +242,6 @@
                                             <asp:Label class="control-label  col-sm-3" ID="Label36" runat="server" Font-Bold="True" Text="SUCURSAL:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtSucursal" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtSucursal" ValidationGroup="info">Llenar Sucursal </asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -255,10 +254,13 @@
                                             <asp:Button ID="BtnGuardarPasantia" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarPasantia_Click" ValidationGroup="info" />&nbsp;<asp:Button ID="BtnCancelarHabilidad" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
                                         <br />
+                                    <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender2" runat="server" TargetControlID="PanelNivelEducativo" BorderColor="Orange" />
+                                        <asp:Panel ID="PanelNivelEducativo" runat="server">
+                                        <div align="center"><asp:Label ID="Label47" runat="server" Text="Nivel Educativo" Font-Size="14pt"></asp:Label></div> 
                                          <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label22" runat="server" Font-Bold="True" Text="NIVEL EDUCATIVO:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID">
+                                                <asp:DropDownList ID="CboNivelEducativo" runat="server" class="form-control" DataTextField="DS_ESCOLARIDAD" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="CboNivelEducativo_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label27" runat="server" Font-Bold="True" Text="OPCIÓN ACADÉMICA:"></asp:Label>
@@ -268,15 +270,15 @@
                                             </div>
                                         </div>
                                          <div align="center">
-                                            <asp:Button ID="Button1" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarHabilidad_Click" />
-                                            &nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
+                                            <asp:Button ID="BtnGuardarNivel" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarNivel_Click"  />
+                                            &nbsp;<asp:Button ID="BtnCancelarNivel" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
                                         <br />
                                         <asp:GridView ID="GVNivelEducativo" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="NIVEL EDUCATIVO" />
-                                                <asp:BoundField HeaderText="OPCIÓN ACADÉMICA" />
+                                                <asp:BoundField HeaderText="NIVEL EDUCATIVO" DataField="DS_ESCOLARIDAD" />
+                                                <asp:BoundField HeaderText="OPCIÓN ACADÉMICA" DataField="DS_CARRERA" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -289,11 +291,14 @@
                                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                         </asp:GridView>
-                                        <br />
+                                        </asp:Panel>
+                                        <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender1" runat="server" TargetControlID="PanelHabilidades" BorderColor="Orange" />
+                                        <asp:Panel ID="PanelHabilidades" runat="server">
+                                        <div align="center"><asp:Label ID="Label46" runat="server" Text="Habilidades" Font-Size="14"></asp:Label></div> 
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label42" runat="server" Font-Bold="True" Text="CONOCIMIENTO EN:"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:DropDownList ID="CboCategoriaHabilidad" runat="server" class="form-control" DataTextField="DS_CATEGORIA_HABILIDAD" DataValueField="ID">
+                                                <asp:DropDownList ID="CboCategoriaHabilidad" runat="server" class="form-control" DataTextField="DS_CATEGORIA_HABILIDAD" DataValueField="ID" AutoPostBack="True" OnSelectedIndexChanged="CboCategoriaHabilidad_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                             </div>
 
@@ -315,12 +320,13 @@
                                             <asp:Button ID="BtnGuardarHabilidad" runat="server" Text="GUARDAR" class="btn btn-primary" OnClick="BtnGuardarHabilidad_Click" />
                                             &nbsp;<asp:Button ID="Button5" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
+                                        <br />
                                         <asp:GridView ID="GVHabilidad" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="CONOCIMIENTO" />
-                                                <asp:BoundField HeaderText="TIPO DE CONOCIMIENTO" />
-                                                <asp:BoundField HeaderText="NIVEL" />
+                                                <asp:BoundField HeaderText="CONOCIMIENTO" DataField="DS_CATEGORIA_HABILIDAD" />
+                                                <asp:BoundField HeaderText="TIPO DE CONOCIMIENTO" DataField="DS_HABILIDAD_CONOCIMIENTO" />
+                                                <asp:BoundField HeaderText="NIVEL" DataField="DS_NIVEL_CONOCIMIENTO" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -332,8 +338,11 @@
                                             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
                                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                                        </asp:GridView>
-                                        <br />
+                                        </asp:GridView></asp:Panel>
+                                        <ajaxToolkit:RoundedCornersExtender ID="RoundedCornersExtender3" runat="server" TargetControlID="PanelDestreza" BorderColor="Orange" />
+                                        <asp:Panel ID="PanelDestreza" runat="server">
+                                        <div align="center"><asp:Label ID="Label48" runat="server" Text="Destrezas" Font-Size="14pt"></asp:Label></div> 
+                                       
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label45" runat="server" Font-Bold="True" Text="DESTREZA:"></asp:Label>
                                             <div class="col-md-3">
@@ -348,7 +357,7 @@
                                         <asp:GridView ID="GVDestreza" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="DESTREZA" />
+                                                <asp:BoundField HeaderText="DESTREZA" DataField="DS_DESTREZA" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -361,14 +370,14 @@
                                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                         </asp:GridView>
-                                        
+                                        </asp:Panel>
                                         <br />
                                         <asp:GridView ID="GVPasantia" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnRowUpdating="GVPasantia_RowUpdating">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:TemplateField HeaderText="" Visible="true">
+                                                <asp:TemplateField HeaderText="" Visible="false">
                                             <ItemTemplate>
-                                                <asp:TextBox ID="TxtIDPasantiaGV" runat="server" Text='<%#Eval("ID")%>' Visible="true"></asp:TextBox>
+                                                <asp:TextBox ID="TxtIDPasantiaGV" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:TextBox>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                                 <asp:BoundField HeaderText="PASANTÍA" DataField="DS_PASANTIA" />
@@ -450,7 +459,7 @@
                                             </div>
                                         </div>
                                         <div align="center">
-                                            <asp:Button ID="BtnProyectoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" ValidationGroup="proyecto" />
+                                            <asp:Button ID="BtnProyectoGuardar" runat="server" Text="GUARDAR" class="btn btn-primary" ValidationGroup="proyecto" OnClick="BtnProyectoGuardar_Click" />
                                             &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
                                         <br />
