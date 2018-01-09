@@ -463,13 +463,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
         
         /// <summary>
-        /// Control Panel2.
+        /// Control PanelRepresentante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
+        protected global::System.Web.UI.WebControls.Panel PanelRepresentante;
         
         /// <summary>
         /// Control LblTitulo0.
@@ -490,13 +490,13 @@ namespace MyMainApp {
         protected global::System.Web.UI.WebControls.Label Label15;
         
         /// <summary>
-        /// Control TextNombreR.
+        /// Control TxtNombreR.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextNombreR;
+        protected global::System.Web.UI.WebControls.TextBox TxtNombreR;
         
         /// <summary>
         /// Control Label16.
