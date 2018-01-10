@@ -60,12 +60,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CActividadAspirante.cs" />
     <Compile Include="CActividadEconomica.cs" />
     <Compile Include="CAreaPasantia.cs" />
     <Compile Include="CAspirante.cs" />
     <Compile Include="CCategoriaHabilidad.cs" />
     <Compile Include="CCentroEscolar.cs" />
     <Compile Include="CConsultoria.cs" />
+    <Compile Include="CConsultoriaEntregable.cs" />
     <Compile Include="CDepartamento.cs" />
     <Compile Include="CDestreza.cs" />
     <Compile Include="CDestrezaAspirante.cs" />
@@ -82,10 +84,10 @@
     <Compile Include="CMenu.cs" />
     <Compile Include="CMunicipio.cs" />
     <Compile Include="CNivelConocimiento.cs" />
-    <Compile Include="CNivelConocimientoPasantia.cs" />
     <Compile Include="COpcionAcademica.cs" />
     <Compile Include="CPais.cs" />
     <Compile Include="CPasantia.cs" />
+    <Compile Include="CRepresentanteLegal.cs" />
     <Compile Include="CSqlvars.cs" />
     <Compile Include="CTipoAspirante.cs" />
     <Compile Include="CTituloAcademico.cs" />

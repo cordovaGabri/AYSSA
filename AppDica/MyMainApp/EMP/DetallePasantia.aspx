@@ -51,11 +51,8 @@
                     </div>
                 </div>
                 <br />
-                <div align="center">
-                    <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="GUARDAR" />
-                    &nbsp;<asp:Button ID="Button2" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
-                </div><br />
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <br />
+                <asp:GridView ID="GVAspirantes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField HeaderText="Nombre Aspirante" />
