@@ -14,7 +14,8 @@ namespace MyMainApp.EMP
     public partial class EMPP0001 : FormaSISWeb, IAcciones
     {
         private DataView dvActividadEconomica, dvEmpresa, dvDepartamento, dvMunicipio, dvHabilidad, dvDestreza, dvPasantia,
-            dvAreaPasantia, dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvEscolaridadPasantia;
+            dvAreaPasantia, dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvEscolaridadPasantia,
+            dvConsultoria;
         protected void Page_Load(object sender, EventArgs e)
         {
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
@@ -76,6 +77,7 @@ namespace MyMainApp.EMP
             FillCboConocimiento();
             FillCboDestreza();
             FillGVNivelEducativo();
+            FillGVContrato();
         }
 
         public void Adicionar() { }
@@ -198,13 +200,13 @@ namespace MyMainApp.EMP
                     if (objResultado.CodigoError == 0)
                     {
                         TxtIDPasantia.Text = Convert.ToString(objResultado.CodigoAuxiliar);
+                        Consultar();
                         DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPPasantia);
                     }
                 }
                 if (objResultado.CodigoError == 0)
                 {
-                    FillCamposPasantia();
-                    FillGVPasantia();
+                    Consultar();
                     DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPPasantia);
                 }
                 else
@@ -442,7 +444,55 @@ namespace MyMainApp.EMP
 
         protected void BtnProyectoGuardar_Click(object sender, EventArgs e)
         {
+            CConsultoria objConsultoria = new CConsultoria(_DataSistema.ConexionBaseDato);
+            dvConsultoria = new DataView(objConsultoria.Detalle(Convert.ToInt32(TxtIdProyecto.Text), TxtContrato.Text, TxtNombProyecto.Text, DateTime.Now, 0, TxtDuracionC.Text,
+               Convert.ToChar(CboEstadoPro.SelectedValue),Convert.ToInt32(TxtIDEmpresa.Text), _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 1).TB_PASANTIA);
 
+            try
+            {
+                  double Monto = Convert.ToDouble(TxtMontoPro.Text);
+                if (dvConsultoria.Count > 0)
+                {
+                    objResultado = objConsultoria.Actualizacion(Convert.ToInt32(TxtIdProyecto.Text), TxtContrato.Text, TxtNombProyecto.Text, DateTime.Now, Monto, TxtDuracionC.Text,
+               Convert.ToChar(CboEstadoPro.SelectedValue),Convert.ToInt32(TxtIDEmpresa.Text), _DataSistema.Cusuario, TipoActualizacion.Actualizar);
+                }
+                else
+                {
+                    objResultado = objConsultoria.Actualizacion(Convert.ToInt32(TxtIdProyecto.Text), TxtContrato.Text, TxtNombProyecto.Text, DateTime.Now, Monto, TxtDuracionC.Text,
+               Convert.ToChar(CboEstadoPro.SelectedValue),Convert.ToInt32(TxtIDEmpresa.Text), _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+                    if (objResultado.CodigoError == 0)
+                    {
+                        TxtIdProyecto.Text = Convert.ToString(objResultado.CodigoAuxiliar);
+                        Consultar();
+                        DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPProyecto);
+                    }
+                }
+                if (objResultado.CodigoError == 0)
+                {
+                    Consultar();
+                    DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPProyecto);
+                }
+                else
+                {
+                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPProyecto);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                DespliegaMensajeUpdatePanel(ex.Message, UPProyecto);
+            }
+        }
+
+
+        protected void FillGVContrato()
+        {
+            CConsultoria objConsultoria = new CConsultoria(_DataSistema.ConexionBaseDato);
+            dvConsultoria = new DataView(objConsultoria.Detalle(0, TxtContrato.Text, TxtNombProyecto.Text, DateTime.Now, 0, TxtDuracionC.Text,
+                Convert.ToChar(CboEstadoPro.SelectedValue), Convert.ToInt32(TxtIDEmpresa.Text), _DataSistema.Cusuario, DateTime.Now, "", DateTime.Now, 2).TB_CONSULTORIA);
+
+            GVContrato.DataSource = dvConsultoria;
+            GVContrato.DataBind();
         }
 
     }

@@ -14,7 +14,7 @@
                     <div id="content">
                         <%--inicio container-fluid--%>
                         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                        <ajaxtoolkit:tabcontainer id="TabContainer1" runat="server" activetabindex="1" bordercolor="#66CCFF" scrollbars="Vertical" height="375px" width="100%">
+                        <ajaxtoolkit:tabcontainer id="TabContainer1" runat="server" activetabindex="2" bordercolor="#66CCFF" scrollbars="Vertical" height="375px" width="100%">
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
                                  <asp:UpdatePanel ID="UPDatoGeneral" runat="server">
@@ -409,7 +409,7 @@
                             </ContentTemplate>
                              </ajaxToolkit:TabPanel>
                             <%--fin tab datos--%>
-                            <ajaxToolkit:TabPanel runat="server" HeaderText="DETALLE" ID="TabPanel3">
+                            <ajaxToolkit:TabPanel runat="server" HeaderText="PROYECTO" ID="TabPanel3">
                             <ContentTemplate>
                         <asp:UpdatePanel ID="UPProyecto" runat="server">
                                     <Triggers>
@@ -418,15 +418,16 @@
                                     <ContentTemplate>
                                         <%--inicio tab proyecto--%>
                                         <br />
+                                        <asp:TextBox ID="TxtIdProyecto" runat="server" Text="0" Visible="False"></asp:TextBox>
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-3" ID="Label9" runat="server" Font-Bold="True" Text="No CONTRATO:"></asp:Label>
                                             <div class="col-md-3">
                                                 <asp:TextBox class="form-control" ID="TxtContrato" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator23" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtContrato" ValidationGroup="proyecto">Llenar No de contrato</asp:RequiredFieldValidator>
                                             </div>
-                                            <asp:Label class="control-label  col-sm-3" ID="Label12" runat="server" Font-Bold="True" Text="DURACIÓN DE CONTRATO:"></asp:Label>
+                                            <asp:Label class="control-label  col-sm-3" ID="Label12" runat="server" Font-Bold="True" Text="DURACIÓN DE CONTRATO (DÍAS):"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TxtDuracionC" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="TxtDuracionC" runat="server" AutoCompleteType="Disabled" TextMode="Number"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator24" runat="server" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ControlToValidate="TxtDuracionC" ValidationGroup="proyecto">Llenar duracion de contrato</asp:RequiredFieldValidator>
                                             </div>
                                         </div>
@@ -463,12 +464,17 @@
                                             &nbsp;<asp:Button ID="Button6" runat="server" Text="CANCELAR" class="btn btn-primary" CausesValidation="False" />
                                         </div>
                                         <br />
-                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                        <asp:GridView ID="GVContrato" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="Nombre de proyecto" />
-                                                <asp:BoundField HeaderText="Fecha de contrato" />
-                                                <asp:BoundField HeaderText="Duración de contrato" />
+                                                <asp:TemplateField HeaderText="" Visible="false">
+                                            <ItemTemplate>
+                                                <asp:TextBox ID="TxtIDPasantiaGV" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:TextBox>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                                <asp:BoundField HeaderText="NOMBRE DE PROYECTO" DataField="DS_NOMBRE_CONSULTORIA" />
+                                                <asp:BoundField HeaderText="FECHA DE CONTRATO" DataField="FECH_INICIO_CONTRATO" />
+                                                <asp:BoundField HeaderText="DURACIÓN DE CONTRATO" DataField="DS_CONTRATO_DURACION" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

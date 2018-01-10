@@ -1192,6 +1192,15 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.UpdatePanel UPProyecto;
         
         /// <summary>
+        /// Control TxtIdProyecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtIdProyecto;
+        
+        /// <summary>
         /// Control Label9.
         /// </summary>
         /// <remarks>
@@ -1363,12 +1372,12 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// Control GridView1.
+        /// Control GVContrato.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView GVContrato;
     }
 }

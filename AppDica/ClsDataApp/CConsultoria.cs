@@ -67,7 +67,7 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "";
+                        StrCommand = "SP_TB_CONSULTORIA_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
                         StrCommand = " ";
