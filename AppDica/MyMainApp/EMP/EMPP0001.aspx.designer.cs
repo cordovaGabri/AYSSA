@@ -859,15 +859,6 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.TextBox TxtSucursal;
         
         /// <summary>
-        /// Control RequiredFieldValidator22.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator22;
-        
-        /// <summary>
         /// Control Label37.
         /// </summary>
         /// <remarks>
@@ -902,6 +893,33 @@ namespace MyMainApp.EMP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnCancelarHabilidad;
+        
+        /// <summary>
+        /// Control RoundedCornersExtender2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.RoundedCornersExtender RoundedCornersExtender2;
+        
+        /// <summary>
+        /// Control PanelNivelEducativo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelNivelEducativo;
+        
+        /// <summary>
+        /// Control Label47.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label47;
         
         /// <summary>
         /// Control Label22.
@@ -940,22 +958,22 @@ namespace MyMainApp.EMP {
         protected global::System.Web.UI.WebControls.DropDownList CboOpcionAcademica;
         
         /// <summary>
-        /// Control Button1.
+        /// Control BtnGuardarNivel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button BtnGuardarNivel;
         
         /// <summary>
-        /// Control Button2.
+        /// Control BtnCancelarNivel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button BtnCancelarNivel;
         
         /// <summary>
         /// Control GVNivelEducativo.
@@ -965,6 +983,33 @@ namespace MyMainApp.EMP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GVNivelEducativo;
+        
+        /// <summary>
+        /// Control RoundedCornersExtender1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.RoundedCornersExtender RoundedCornersExtender1;
+        
+        /// <summary>
+        /// Control PanelHabilidades.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelHabilidades;
+        
+        /// <summary>
+        /// Control Label46.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label46;
         
         /// <summary>
         /// Control Label42.
@@ -1046,6 +1091,33 @@ namespace MyMainApp.EMP {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GVHabilidad;
+        
+        /// <summary>
+        /// Control RoundedCornersExtender3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.RoundedCornersExtender RoundedCornersExtender3;
+        
+        /// <summary>
+        /// Control PanelDestreza.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelDestreza;
+        
+        /// <summary>
+        /// Control Label48.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label48;
         
         /// <summary>
         /// Control Label45.

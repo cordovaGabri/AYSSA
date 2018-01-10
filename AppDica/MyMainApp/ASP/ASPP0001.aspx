@@ -17,7 +17,7 @@
         <div class="container-fluid">
             <div id="content">
                 <asp:Panel ID="Panel1" runat="server" Width="100%">
-                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
+                    <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" BorderColor="#66CCFF" ScrollBars="Vertical" Height="375px" Width="100%">
 
                         <ajaxToolkit:TabPanel runat="server" HeaderText="DATOS GENERALES" ID="TabPanel1" Width="100%">
                             <ContentTemplate>
@@ -140,7 +140,8 @@
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TxtDireccion" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="DatoGeneral">Llenar Direccion</asp:RequiredFieldValidator>
                                         </div>
                                     </div>
-                                    <asp:Panel ID="Panel2" runat="server" Visible="False">
+                                      
+                                    <asp:Panel ID="PanelRepresentante" runat="server" Visible="false">
                                         <div align="center">
                                             <asp:Label ID="LblTitulo0" runat="server" Font-Bold="True" Font-Size="14pt" Text="DATOS REPRESENTANTE LEGAL"></asp:Label>
                                         </div>
@@ -148,7 +149,7 @@
                                         <div class="form-group">
                                             <asp:Label class="control-label  col-sm-2" ID="Label15" runat="server" Text="NOMBRES:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">
-                                                <asp:TextBox class="form-control" ID="TextNombreR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="TxtNombreR" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
                                             </div>
                                             <asp:Label class="control-label  col-sm-3" ID="Label16" runat="server" Text="APELLIDOS:" Font-Bold="True"></asp:Label>
                                             <div class="col-md-3">

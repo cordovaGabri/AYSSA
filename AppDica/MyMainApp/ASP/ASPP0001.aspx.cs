@@ -226,6 +226,9 @@ namespace MyMainApp
                 TxtNit.Text = dvAspirante.Table.Rows[0]["DS_NIT"].ToString();
                 TxtTipoAspirante.Text = dvAspirante.Table.Rows[0]["DS_TIPO_ASPIRANTE"].ToString();
                 TxtEmail.Text = dvAspirante.Table.Rows[0]["DS_EMAIL"].ToString();
+                if (Convert.ToInt32(dvAspirante.Table.Rows[0]["EDAD"].ToString())<18) {
+                    PanelRepresentante.Visible = true;
+                }
 
                 /* CARGA DE DATOS DE EL POSTERIORES REGISTROS */
 
