@@ -87,6 +87,7 @@
     <Compile Include="COpcionAcademica.cs" />
     <Compile Include="CPais.cs" />
     <Compile Include="CPasantia.cs" />
+    <Compile Include="CPasantiaActividad.cs" />
     <Compile Include="CRepresentanteLegal.cs" />
     <Compile Include="CSqlvars.cs" />
     <Compile Include="CTipoAspirante.cs" />
