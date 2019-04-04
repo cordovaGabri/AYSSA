@@ -92,7 +92,7 @@
                                                     </a>
                                                     <%
                                           ClsDataApp.CMenu OpcionesMenu = new ClsDataApp.CMenu(_DataSistema.ConexionBaseDato);
-                                          dt1 = OpcionesMenu.DetalleOpciones("06143003911036", IdMenu, "", 2);
+                                          dt1 = OpcionesMenu.DetalleOpciones(_DataSistema.Cusuario, IdMenu, "", "", 2);
                                           foreach (System.Data.DataRow dr1 in dt1.Tables["Table"].Rows)
                                           {
                                               SubMenu = dr1["DS_DESC_MENU"].ToString();
@@ -112,7 +112,7 @@
                                                             </a>
                                                             <ul class="dropdown-menu">
                                                             <% 
-                                              dt2 = OpcionesMenu.DetalleOpciones("06143003911036", IdMenu, SubMenu, 3);
+                                              dt2 = OpcionesMenu.DetalleOpciones(_DataSistema.Cusuario, IdMenu, SubMenu,"", 3);
                                               foreach (System.Data.DataRow dr2 in dt2.Tables["Table"].Rows)
                                               {
                                                   SSubMenu = dr2["DS_NOMBRE_FORMA"].ToString();

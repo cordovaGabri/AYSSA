@@ -27,7 +27,7 @@ namespace dica
             {
                 if (usuario != null) {
                     CMenu OpcionesMenu = new CMenu(_DataSistema.ConexionBaseDato);
-                    dt = OpcionesMenu.DetalleOpciones(usuario, "", "", 1);
+                    dt = OpcionesMenu.DetalleOpciones(usuario, "", "","", 1);
                    
                 }
             }

@@ -589,6 +589,10 @@ namespace ClsDataSets {
             
             private global::System.Data.DataColumn columnDS_ACT_ECO;
             
+            private global::System.Data.DataColumn columnNM_PASANTIA;
+            
+            private global::System.Data.DataColumn columnNM_PROYECTO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_EMPRESADataTable() {
@@ -744,6 +748,22 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NM_PASANTIAColumn {
+                get {
+                    return this.columnNM_PASANTIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NM_PROYECTOColumn {
+                get {
+                    return this.columnNM_PROYECTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -779,7 +799,24 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TB_EMPRESARow AddTB_EMPRESARow(string ID, string DS_NOMBRE_EMPRESA, string DS_NOMBRE_CONTACTO, string DS_EMAIL_CONTACTO, string DS_TELEFONO_CONTACTO, string DS_NIT_EMPRESA, string DS_TELEFONO_EMPRESA, string DS_DIRECCION_EMPRESA, string DS_DEPARTAMENTO, string DS_MUNICIPIO, string DS_NOMBRE_REPRESENTANTE, string DS_EMAIL_REPRESENTATE, string DS_NIT_REPRESENTANTE, string DS_DUI_REPRESENTANTE, string DS_ACT_ECO) {
+            public TB_EMPRESARow AddTB_EMPRESARow(
+                        string ID, 
+                        string DS_NOMBRE_EMPRESA, 
+                        string DS_NOMBRE_CONTACTO, 
+                        string DS_EMAIL_CONTACTO, 
+                        string DS_TELEFONO_CONTACTO, 
+                        string DS_NIT_EMPRESA, 
+                        string DS_TELEFONO_EMPRESA, 
+                        string DS_DIRECCION_EMPRESA, 
+                        string DS_DEPARTAMENTO, 
+                        string DS_MUNICIPIO, 
+                        string DS_NOMBRE_REPRESENTANTE, 
+                        string DS_EMAIL_REPRESENTATE, 
+                        string DS_NIT_REPRESENTANTE, 
+                        string DS_DUI_REPRESENTANTE, 
+                        string DS_ACT_ECO, 
+                        int NM_PASANTIA, 
+                        string NM_PROYECTO) {
                 TB_EMPRESARow rowTB_EMPRESARow = ((TB_EMPRESARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -796,7 +833,9 @@ namespace ClsDataSets {
                         DS_EMAIL_REPRESENTATE,
                         DS_NIT_REPRESENTANTE,
                         DS_DUI_REPRESENTANTE,
-                        DS_ACT_ECO};
+                        DS_ACT_ECO,
+                        NM_PASANTIA,
+                        NM_PROYECTO};
                 rowTB_EMPRESARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTB_EMPRESARow);
                 return rowTB_EMPRESARow;
@@ -834,6 +873,8 @@ namespace ClsDataSets {
                 this.columnDS_NIT_REPRESENTANTE = base.Columns["DS_NIT_REPRESENTANTE"];
                 this.columnDS_DUI_REPRESENTANTE = base.Columns["DS_DUI_REPRESENTANTE"];
                 this.columnDS_ACT_ECO = base.Columns["DS_ACT_ECO"];
+                this.columnNM_PASANTIA = base.Columns["NM_PASANTIA"];
+                this.columnNM_PROYECTO = base.Columns["NM_PROYECTO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -869,6 +910,10 @@ namespace ClsDataSets {
                 base.Columns.Add(this.columnDS_DUI_REPRESENTANTE);
                 this.columnDS_ACT_ECO = new global::System.Data.DataColumn("DS_ACT_ECO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDS_ACT_ECO);
+                this.columnNM_PASANTIA = new global::System.Data.DataColumn("NM_PASANTIA", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNM_PASANTIA);
+                this.columnNM_PROYECTO = new global::System.Data.DataColumn("NM_PROYECTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNM_PROYECTO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("TB_EMPRESAKey1", new global::System.Data.DataColumn[] {
                                 this.columnID}, false));
                 this.columnID.AllowDBNull = false;
@@ -3933,6 +3978,38 @@ namespace ClsDataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int NM_PASANTIA {
+                get {
+                    try {
+                        return ((int)(this[this.tableTB_EMPRESA.NM_PASANTIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_PASANTIA\' de la tabla \'TB_EMPRESA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_EMPRESA.NM_PASANTIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NM_PROYECTO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTB_EMPRESA.NM_PROYECTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NM_PROYECTO\' de la tabla \'TB_EMPRESA\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTB_EMPRESA.NM_PROYECTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDS_NOMBRE_EMPRESANull() {
                 return this.IsNull(this.tableTB_EMPRESA.DS_NOMBRE_EMPRESAColumn);
             }
@@ -4097,6 +4174,30 @@ namespace ClsDataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDS_ACT_ECONull() {
                 this[this.tableTB_EMPRESA.DS_ACT_ECOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNM_PASANTIANull() {
+                return this.IsNull(this.tableTB_EMPRESA.NM_PASANTIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNM_PASANTIANull() {
+                this[this.tableTB_EMPRESA.NM_PASANTIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNM_PROYECTONull() {
+                return this.IsNull(this.tableTB_EMPRESA.NM_PROYECTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNM_PROYECTONull() {
+                this[this.tableTB_EMPRESA.NM_PROYECTOColumn] = global::System.Convert.DBNull;
             }
         }
         

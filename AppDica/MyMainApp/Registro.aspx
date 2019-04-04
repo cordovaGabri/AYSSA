@@ -48,8 +48,8 @@
                 <div class="form-group">
                      <asp:Label class="control-label  col-sm-3" ID="Label2" runat="server" Text="NIT:" Font-Bold="True"></asp:Label>
                 <div class="col-md-8">
-                    <asp:TextBox class="form-control" ID="TxtNIT" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Llenar NIT" ControlToValidate="TxtNIT" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:TextBox class="form-control" ID="TxtNIT" runat="server" onPaste="return soloNumeros(event);" onkeypress="return soloNumeros(event);" AutoCompleteType="Disabled"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Llenar NIT sin guiones" ControlToValidate="TxtNIT" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </div>
                     </div>
                 <div class="form-group">

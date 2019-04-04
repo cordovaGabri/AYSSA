@@ -20,7 +20,7 @@
 
 
         function soloNumeros(e){
-       key = e.keyCode || e.which;
+            key = e.keyCode || e.which;
        tecla = String.fromCharCode(key).toLowerCase();
        letras = "-+0123456789";
        especiales = "";
@@ -41,7 +41,9 @@
 
 
             function Documentos(e){
-       key = e.keyCode || e.which;
+                key = e.keyCode || e.which;
+                 //alert(key);
+                 if (key === 8 || key === 173) { return true; }
        tecla = String.fromCharCode(key).toLowerCase();
        letras = "-0123456789";
        especiales = "";

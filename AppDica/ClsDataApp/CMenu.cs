@@ -79,7 +79,7 @@ namespace ClsDataApp
              }
          }
 
-         public DataSet DetalleOpciones(string CodigoUsuario, string Menu, string SubMenu, int OpcionConsulta)
+         public DataSet DetalleOpciones(string CodigoUsuario, string Menu, string SubMenu, string Pantalla, int OpcionConsulta)
          {
              DataSet objDataset = new DataSet();
              try
@@ -91,6 +91,7 @@ namespace ClsDataApp
                  ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_USUARIO", CodigoUsuario);
                  ObjAdapter.SelectCommand.Parameters.AddWithValue("@MENU", Menu);
                  ObjAdapter.SelectCommand.Parameters.AddWithValue("@SUBMENU", SubMenu);
+                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@PANTALLA", Pantalla);
                  ObjAdapter.SelectCommand.Parameters.AddWithValue("@OPCI_CONS", OpcionConsulta);
 
                  ObjAdapter.Fill(objDataset);

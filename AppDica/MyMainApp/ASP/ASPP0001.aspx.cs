@@ -17,12 +17,37 @@ namespace MyMainApp
     {
         private DataView dvTituloAcademico, dvPais, dvDepartamento, dvMunicipio, dvTipoDocumento, dvDestreza,
             dvCategoriaHabilidad, dvConocimiento, dvNivel, dvNivelEducativo, dvOpcionAcademica, dvInstitucion,
-            dvEscolaridad, dvHabilidad, dvDocumento;
-        private DataSet dsEscolaridad;
+            dvEscolaridad, dvHabilidad, dvDocumento, dvPantallas;
+        private DataSet dsEscolaridad, dsPantalla;
         DataQuery objResultado = new DataQuery();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+                
             _DataSistema = (ClsSistema)Session["MyDataSistema"];
+
+            /*
+                Se Declara la constante Pantalla con la que se evaluara si el perfil de la persona posee privilegios
+                para Abrir esta Pantalla
+            */
+            String Pantalla = "ASPP0001";
+            String accesoPantalla;
+            Boolean booleanPantalla = false;
+            CMenu pantallasPermitidas = new CMenu(_DataSistema.ConexionBaseDato);
+            if (_DataSistema.Cusuario != null)
+            {
+                dsPantalla = pantallasPermitidas.DetalleOpciones(_DataSistema.Cusuario, "", "", Pantalla, 4);
+                foreach (System.Data.DataRow dr in dsPantalla.Tables["Table"].Rows)
+                {
+                    accesoPantalla = dr["ID_OPCION_SISTEMA"].ToString();
+                    if (booleanPantalla=(accesoPantalla != null)) {
+                        booleanPantalla = true;
+                    }
+                }
+                if (booleanPantalla == false) {
+                    Response.Redirect("~/Default.aspx");
+                }
+            }
             if (_DataSistema.Cusuario == null)
             {
                 Response.Redirect("~/Default.aspx");
@@ -53,6 +78,7 @@ namespace MyMainApp
             FillGVHabilidad();
             FillGVDestreza();
             FillGVDocumento();
+            FillRepresentanteLegal();
         }
 
         public void Adicionar() { }
@@ -188,22 +214,67 @@ namespace MyMainApp
             try
             {
                 CAspirante objAspirante = new CAspirante(_DataSistema.ConexionBaseDato);
-                objResultado = objAspirante.Actualizacion(_DataSistema.Cusuario, "", "", DateTime.Now, Convert.ToChar(RadioSexo.SelectedValue),
-                 TxtTelCasa.Text, TxtTelCel.Text, TxtDireccion.Text, TxtEmail.Text, TxtDui.Text, TxtNit.Text, 'I', 0, CboPais.SelectedValue,
-                 Convert.ToInt32(CboDepartamento.SelectedValue), Convert.ToInt32(CboMunicipio.SelectedValue),
-                 Convert.ToInt32(CboTratamiento.SelectedValue),
-                 "", TxtDiscapacidad1.Text, TxtDiscapacidad2.Text, TxtDiscapacidad3.Text, _DataSistema.Cusuario,
-                 TipoActualizacion.Actualizar);
-                
-                    if (objResultado.CodigoError == 0)
-                    {
+                DataView dvAspirante = new DataView(objAspirante.Detalle(_DataSistema.Cusuario, "", "", DateTime.Today, 'X',
+                "", "", "", "", "", "", 'X', 0, "", 0, 0, 0, "", "", "", "", "", DateTime.Today, "", DateTime.Today, 3).TB_ASPIRANTE);
+                /*
+                    Este If se encarga de comprobar si el aspirante ya existe 
+                */
+                if (dvAspirante.Count > 0){
+                    /*
+                            Si estudiante es mayor a cero actualiza la informacion del estudiante 
+                    */
+                    objResultado = objAspirante.Actualizacion(_DataSistema.Cusuario, "", "", DateTime.Now, Convert.ToChar(RadioSexo.SelectedValue),
+                     TxtTelCasa.Text, TxtTelCel.Text, TxtDireccion.Text, TxtEmail.Text, TxtDui.Text, TxtNit.Text, 'I', 0, CboPais.SelectedValue,
+                     Convert.ToInt32(CboDepartamento.SelectedValue), Convert.ToInt32(CboMunicipio.SelectedValue),
+                     Convert.ToInt32(CboTratamiento.SelectedValue), "", TxtDiscapacidad1.Text, TxtDiscapacidad2.Text, TxtDiscapacidad3.Text, _DataSistema.Cusuario,
+                     TipoActualizacion.Actualizar);
+                    int edad = Convert.ToInt32(TxtEdad.Text);
+
+                    /*
+                        If Para Comprobar que la consulta se desarrollo satisfactoriamente 
+                    */
+                    if (objResultado.CodigoError == 0){ // if resultado de consulta actualizar                    
                         FillCamposDatosGenerales();
-                        DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPDatoGeneral);
-                    }
-                    else
-                    {
+                        /*
+                            Observa si el estudiante es mayor a 18 años si este lo es despliega la informacion del representante legal.|                         
+                        */
+                        if (edad < 18){
+                            CRepresentanteLegal objRepresentanteLegal = new CRepresentanteLegal(_DataSistema.ConexionBaseDato);
+                            DataView dvRepresentanteLegal = new DataView(objRepresentanteLegal.Detalle(0,"","","","",'X',"",DateTime.Today,"","",_DataSistema.Cusuario,0,"",DateTime.Today,"",DateTime.Today,2).TBC_REPRESENTANTE_LEGAL);
+                            if (dvRepresentanteLegal.Count > 0) {
+                                objResultado = objRepresentanteLegal.Actualizacion(0, TxtNombreR.Text, TextApellidoR.Text, TextDuiR.Text, TextNitR.Text,
+                                    Convert.ToChar(RadioSexoR.SelectedValue), TextEmailR.Text, Convert.ToDateTime(TextFechNacR.Text), TextTelR.Text,
+                                    TextDireccionR.Text, _DataSistema.Cusuario, Convert.ToInt32(CboTratamientoRepresentante.SelectedValue),
+                                    _DataSistema.Cusuario, TipoActualizacion.Actualizar);
+                                if (objResultado.CodigoError == 0)
+                                {
+                                    FillRepresentanteLegal();
+                                    DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPDatoGeneral);
+                                }else{
+                                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDatoGeneral);
+                                } // Termina IF (objResultado.CodigoError == 0)
+                               
+                            }else{
+                                objResultado = objRepresentanteLegal.Actualizacion(0, TxtNombreR.Text, TextApellidoR.Text, TextDuiR.Text, TextNitR.Text,
+                                    Convert.ToChar(RadioSexoR.SelectedValue), TextEmailR.Text, Convert.ToDateTime(TextFechNacR.Text), TextTelR.Text,
+                                    TextDireccionR.Text, _DataSistema.Cusuario, Convert.ToInt32(CboTratamientoRepresentante.SelectedValue),
+                                    _DataSistema.Cusuario, TipoActualizacion.Adicionar);
+                                if (objResultado.CodigoError == 0)
+                                {
+
+                                    FillRepresentanteLegal();
+                                    DespliegaMensajeUpdatePanel("Registro Guardado Correctamente", UPDatoGeneral);
+                                }
+                                else
+                                {
+                                    DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDatoGeneral);
+                                } // Termina IF (objResultado.CodigoError == 0)
+                            }// Termina IF (dvRepresentanteLegal.Count > 0)                            
+                        }// Termina IF (edad < 18)
+                    }else{
                         DespliegaMensajeUpdatePanel(objResultado.MensajeError, UPDatoGeneral);
-                    }
+                    }// Termina IF (objResultado.CodigoError == 0)
+                }
             }
             catch (Exception ex)
             {
@@ -260,6 +331,29 @@ namespace MyMainApp
             }
         }
 
+        protected void FillRepresentanteLegal() {
+            CRepresentanteLegal objRepresentanteLegal = new CRepresentanteLegal(_DataSistema.ConexionBaseDato);
+            DataView dvRepresentanteLegal = new DataView(objRepresentanteLegal.Detalle(0,"","","","",'X',"",DateTime.Today,"","",_DataSistema.Cusuario,0,"",DateTime.Today,"",DateTime.Today,2).TBC_REPRESENTANTE_LEGAL);
+            if (dvRepresentanteLegal.Count > 0) {
+                TxtNombreR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_NOMBRE"].ToString();
+                TextApellidoR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_APELLIDO"].ToString();
+                TextDuiR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_DUI"].ToString();
+                RadioSexoR.SelectedValue = dvRepresentanteLegal.Table.Rows[0]["DS_SEXO"].ToString();
+                TextNitR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_NIT"].ToString();
+                TextEmailR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_EMAIL"].ToString();
+                //TextFechNacR.Text = (dvRepresentanteLegal.Table.Rows[0]["FECH_NACIMIENTO"].ToString());
+                DateTime fecha = Convert.ToDateTime((dvRepresentanteLegal.Table.Rows[0]["FECH_NACIMIENTO"].ToString()));
+                string fechaFormateada = fecha.ToString("dd/MM/yyyy");
+                TextFechNacR.Text = fechaFormateada;
+                TextTelR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_TELEFONO"].ToString();
+                TextDireccionR.Text = dvRepresentanteLegal.Table.Rows[0]["DS_DIRECCION"].ToString();
+                if (Convert.ToInt32(dvRepresentanteLegal.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString()) > 0)
+                {
+                    CboTratamientoRepresentante.SelectedValue = dvRepresentanteLegal.Table.Rows[0]["ID_TITULO_ACADEMICO"].ToString();
+                }
+                
+            }
+        }
 
         protected void FillGVEscolaridad()
         {

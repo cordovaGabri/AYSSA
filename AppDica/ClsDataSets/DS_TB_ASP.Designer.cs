@@ -34,6 +34,8 @@ namespace ClsDataSets {
         
         private TB_DOCUMENTO_ASPIRANTEDataTable tableTB_DOCUMENTO_ASPIRANTE;
         
+        private TBC_REPRESENTANTE_LEGALDataTable tableTBC_REPRESENTANTE_LEGAL;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -76,6 +78,9 @@ namespace ClsDataSets {
                 }
                 if ((ds.Tables["TB_DOCUMENTO_ASPIRANTE"] != null)) {
                     base.Tables.Add(new TB_DOCUMENTO_ASPIRANTEDataTable(ds.Tables["TB_DOCUMENTO_ASPIRANTE"]));
+                }
+                if ((ds.Tables["TBC_REPRESENTANTE_LEGAL"] != null)) {
+                    base.Tables.Add(new TBC_REPRESENTANTE_LEGALDataTable(ds.Tables["TBC_REPRESENTANTE_LEGAL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -142,6 +147,16 @@ namespace ClsDataSets {
         public TB_DOCUMENTO_ASPIRANTEDataTable TB_DOCUMENTO_ASPIRANTE {
             get {
                 return this.tableTB_DOCUMENTO_ASPIRANTE;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TBC_REPRESENTANTE_LEGALDataTable TBC_REPRESENTANTE_LEGAL {
+            get {
+                return this.tableTBC_REPRESENTANTE_LEGAL;
             }
         }
         
@@ -227,6 +242,9 @@ namespace ClsDataSets {
                 if ((ds.Tables["TB_DOCUMENTO_ASPIRANTE"] != null)) {
                     base.Tables.Add(new TB_DOCUMENTO_ASPIRANTEDataTable(ds.Tables["TB_DOCUMENTO_ASPIRANTE"]));
                 }
+                if ((ds.Tables["TBC_REPRESENTANTE_LEGAL"] != null)) {
+                    base.Tables.Add(new TBC_REPRESENTANTE_LEGALDataTable(ds.Tables["TBC_REPRESENTANTE_LEGAL"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -290,6 +308,12 @@ namespace ClsDataSets {
                     this.tableTB_DOCUMENTO_ASPIRANTE.InitVars();
                 }
             }
+            this.tableTBC_REPRESENTANTE_LEGAL = ((TBC_REPRESENTANTE_LEGALDataTable)(base.Tables["TBC_REPRESENTANTE_LEGAL"]));
+            if ((initTable == true)) {
+                if ((this.tableTBC_REPRESENTANTE_LEGAL != null)) {
+                    this.tableTBC_REPRESENTANTE_LEGAL.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +334,8 @@ namespace ClsDataSets {
             base.Tables.Add(this.tableTB_DESTREZA_ASPIRANTE);
             this.tableTB_DOCUMENTO_ASPIRANTE = new TB_DOCUMENTO_ASPIRANTEDataTable();
             base.Tables.Add(this.tableTB_DOCUMENTO_ASPIRANTE);
+            this.tableTBC_REPRESENTANTE_LEGAL = new TBC_REPRESENTANTE_LEGALDataTable();
+            base.Tables.Add(this.tableTBC_REPRESENTANTE_LEGAL);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -339,6 +365,12 @@ namespace ClsDataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeTB_DOCUMENTO_ASPIRANTE() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTBC_REPRESENTANTE_LEGAL() {
             return false;
         }
         
@@ -411,6 +443,9 @@ namespace ClsDataSets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void TB_DOCUMENTO_ASPIRANTERowChangeEventHandler(object sender, TB_DOCUMENTO_ASPIRANTERowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TBC_REPRESENTANTE_LEGALRowChangeEventHandler(object sender, TBC_REPRESENTANTE_LEGALRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2190,6 +2225,410 @@ namespace ClsDataSets {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TBC_REPRESENTANTE_LEGALDataTable : global::System.Data.TypedTableBase<TBC_REPRESENTANTE_LEGALRow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnDS_NOMBRE;
+            
+            private global::System.Data.DataColumn columnDS_APELLIDO;
+            
+            private global::System.Data.DataColumn columnDS_DUI;
+            
+            private global::System.Data.DataColumn columnDS_NIT;
+            
+            private global::System.Data.DataColumn columnDS_SEXO;
+            
+            private global::System.Data.DataColumn columnDS_EMAIL;
+            
+            private global::System.Data.DataColumn columnFECH_NACIMIENTO;
+            
+            private global::System.Data.DataColumn columnDS_TELEFONO;
+            
+            private global::System.Data.DataColumn columnDS_DIRECCION;
+            
+            private global::System.Data.DataColumn columnID_ASPIRANTE;
+            
+            private global::System.Data.DataColumn columnDS_TITULO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBC_REPRESENTANTE_LEGALDataTable() {
+                this.TableName = "TBC_REPRESENTANTE_LEGAL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TBC_REPRESENTANTE_LEGALDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TBC_REPRESENTANTE_LEGALDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_NOMBREColumn {
+                get {
+                    return this.columnDS_NOMBRE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_APELLIDOColumn {
+                get {
+                    return this.columnDS_APELLIDO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_DUIColumn {
+                get {
+                    return this.columnDS_DUI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_NITColumn {
+                get {
+                    return this.columnDS_NIT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_SEXOColumn {
+                get {
+                    return this.columnDS_SEXO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_EMAILColumn {
+                get {
+                    return this.columnDS_EMAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FECH_NACIMIENTOColumn {
+                get {
+                    return this.columnFECH_NACIMIENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_TELEFONOColumn {
+                get {
+                    return this.columnDS_TELEFONO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_DIRECCIONColumn {
+                get {
+                    return this.columnDS_DIRECCION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_ASPIRANTEColumn {
+                get {
+                    return this.columnID_ASPIRANTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DS_TITULOColumn {
+                get {
+                    return this.columnDS_TITULO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBC_REPRESENTANTE_LEGALRow this[int index] {
+                get {
+                    return ((TBC_REPRESENTANTE_LEGALRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TBC_REPRESENTANTE_LEGALRowChangeEventHandler TBC_REPRESENTANTE_LEGALRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TBC_REPRESENTANTE_LEGALRowChangeEventHandler TBC_REPRESENTANTE_LEGALRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TBC_REPRESENTANTE_LEGALRowChangeEventHandler TBC_REPRESENTANTE_LEGALRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TBC_REPRESENTANTE_LEGALRowChangeEventHandler TBC_REPRESENTANTE_LEGALRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTBC_REPRESENTANTE_LEGALRow(TBC_REPRESENTANTE_LEGALRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBC_REPRESENTANTE_LEGALRow AddTBC_REPRESENTANTE_LEGALRow(string ID, string DS_NOMBRE, string DS_APELLIDO, string DS_DUI, string DS_NIT, string DS_SEXO, string DS_EMAIL, string FECH_NACIMIENTO, string DS_TELEFONO, string DS_DIRECCION, string ID_ASPIRANTE, string DS_TITULO) {
+                TBC_REPRESENTANTE_LEGALRow rowTBC_REPRESENTANTE_LEGALRow = ((TBC_REPRESENTANTE_LEGALRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID,
+                        DS_NOMBRE,
+                        DS_APELLIDO,
+                        DS_DUI,
+                        DS_NIT,
+                        DS_SEXO,
+                        DS_EMAIL,
+                        FECH_NACIMIENTO,
+                        DS_TELEFONO,
+                        DS_DIRECCION,
+                        ID_ASPIRANTE,
+                        DS_TITULO};
+                rowTBC_REPRESENTANTE_LEGALRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTBC_REPRESENTANTE_LEGALRow);
+                return rowTBC_REPRESENTANTE_LEGALRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TBC_REPRESENTANTE_LEGALDataTable cln = ((TBC_REPRESENTANTE_LEGALDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TBC_REPRESENTANTE_LEGALDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnDS_NOMBRE = base.Columns["DS_NOMBRE"];
+                this.columnDS_APELLIDO = base.Columns["DS_APELLIDO"];
+                this.columnDS_DUI = base.Columns["DS_DUI"];
+                this.columnDS_NIT = base.Columns["DS_NIT"];
+                this.columnDS_SEXO = base.Columns["DS_SEXO"];
+                this.columnDS_EMAIL = base.Columns["DS_EMAIL"];
+                this.columnFECH_NACIMIENTO = base.Columns["FECH_NACIMIENTO"];
+                this.columnDS_TELEFONO = base.Columns["DS_TELEFONO"];
+                this.columnDS_DIRECCION = base.Columns["DS_DIRECCION"];
+                this.columnID_ASPIRANTE = base.Columns["ID_ASPIRANTE"];
+                this.columnDS_TITULO = base.Columns["DS_TITULO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDS_NOMBRE = new global::System.Data.DataColumn("DS_NOMBRE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_NOMBRE);
+                this.columnDS_APELLIDO = new global::System.Data.DataColumn("DS_APELLIDO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_APELLIDO);
+                this.columnDS_DUI = new global::System.Data.DataColumn("DS_DUI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_DUI);
+                this.columnDS_NIT = new global::System.Data.DataColumn("DS_NIT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_NIT);
+                this.columnDS_SEXO = new global::System.Data.DataColumn("DS_SEXO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_SEXO);
+                this.columnDS_EMAIL = new global::System.Data.DataColumn("DS_EMAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_EMAIL);
+                this.columnFECH_NACIMIENTO = new global::System.Data.DataColumn("FECH_NACIMIENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECH_NACIMIENTO);
+                this.columnDS_TELEFONO = new global::System.Data.DataColumn("DS_TELEFONO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_TELEFONO);
+                this.columnDS_DIRECCION = new global::System.Data.DataColumn("DS_DIRECCION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_DIRECCION);
+                this.columnID_ASPIRANTE = new global::System.Data.DataColumn("ID_ASPIRANTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_ASPIRANTE);
+                this.columnDS_TITULO = new global::System.Data.DataColumn("DS_TITULO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDS_TITULO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("TBC_REPRESENTANTE_LEGALKey1", new global::System.Data.DataColumn[] {
+                                this.columnID}, false));
+                this.columnID.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBC_REPRESENTANTE_LEGALRow NewTBC_REPRESENTANTE_LEGALRow() {
+                return ((TBC_REPRESENTANTE_LEGALRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TBC_REPRESENTANTE_LEGALRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TBC_REPRESENTANTE_LEGALRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TBC_REPRESENTANTE_LEGALRowChanged != null)) {
+                    this.TBC_REPRESENTANTE_LEGALRowChanged(this, new TBC_REPRESENTANTE_LEGALRowChangeEvent(((TBC_REPRESENTANTE_LEGALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TBC_REPRESENTANTE_LEGALRowChanging != null)) {
+                    this.TBC_REPRESENTANTE_LEGALRowChanging(this, new TBC_REPRESENTANTE_LEGALRowChangeEvent(((TBC_REPRESENTANTE_LEGALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TBC_REPRESENTANTE_LEGALRowDeleted != null)) {
+                    this.TBC_REPRESENTANTE_LEGALRowDeleted(this, new TBC_REPRESENTANTE_LEGALRowChangeEvent(((TBC_REPRESENTANTE_LEGALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TBC_REPRESENTANTE_LEGALRowDeleting != null)) {
+                    this.TBC_REPRESENTANTE_LEGALRowDeleting(this, new TBC_REPRESENTANTE_LEGALRowChangeEvent(((TBC_REPRESENTANTE_LEGALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTBC_REPRESENTANTE_LEGALRow(TBC_REPRESENTANTE_LEGALRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS_TB_ASP ds = new DS_TB_ASP();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TBC_REPRESENTANTE_LEGALDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class TB_ASPIRANTERow : global::System.Data.DataRow {
@@ -3429,6 +3868,366 @@ namespace ClsDataSets {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TBC_REPRESENTANTE_LEGALRow : global::System.Data.DataRow {
+            
+            private TBC_REPRESENTANTE_LEGALDataTable tableTBC_REPRESENTANTE_LEGAL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TBC_REPRESENTANTE_LEGALRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTBC_REPRESENTANTE_LEGAL = ((TBC_REPRESENTANTE_LEGALDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_NOMBRE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_NOMBREColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NOMBRE\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_NOMBREColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_APELLIDO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_APELLIDOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_APELLIDO\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_APELLIDOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_DUI {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_DUIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DUI\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_DUIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_NIT {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_NITColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_NIT\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_NITColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_SEXO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_SEXOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_SEXO\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_SEXOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_EMAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_EMAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_EMAIL\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_EMAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FECH_NACIMIENTO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.FECH_NACIMIENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECH_NACIMIENTO\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.FECH_NACIMIENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_TELEFONO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_TELEFONOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_TELEFONO\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_TELEFONOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_DIRECCION {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_DIRECCIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_DIRECCION\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_DIRECCIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ID_ASPIRANTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.ID_ASPIRANTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_ASPIRANTE\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.ID_ASPIRANTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DS_TITULO {
+                get {
+                    try {
+                        return ((string)(this[this.tableTBC_REPRESENTANTE_LEGAL.DS_TITULOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DS_TITULO\' de la tabla \'TBC_REPRESENTANTE_LEGAL\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableTBC_REPRESENTANTE_LEGAL.DS_TITULOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIDNull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_NOMBRENull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_NOMBREColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_NOMBRENull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_NOMBREColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_APELLIDONull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_APELLIDOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_APELLIDONull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_APELLIDOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_DUINull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_DUIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_DUINull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_DUIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_NITNull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_NITColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_NITNull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_NITColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_SEXONull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_SEXOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_SEXONull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_SEXOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_EMAILNull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_EMAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_EMAILNull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_EMAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFECH_NACIMIENTONull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.FECH_NACIMIENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFECH_NACIMIENTONull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.FECH_NACIMIENTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_TELEFONONull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_TELEFONOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_TELEFONONull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_TELEFONOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_DIRECCIONNull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_DIRECCIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_DIRECCIONNull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_DIRECCIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_ASPIRANTENull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.ID_ASPIRANTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_ASPIRANTENull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.ID_ASPIRANTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDS_TITULONull() {
+                return this.IsNull(this.tableTBC_REPRESENTANTE_LEGAL.DS_TITULOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDS_TITULONull() {
+                this[this.tableTBC_REPRESENTANTE_LEGAL.DS_TITULOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -3584,6 +4383,40 @@ namespace ClsDataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TB_DOCUMENTO_ASPIRANTERow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TBC_REPRESENTANTE_LEGALRowChangeEvent : global::System.EventArgs {
+            
+            private TBC_REPRESENTANTE_LEGALRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBC_REPRESENTANTE_LEGALRowChangeEvent(TBC_REPRESENTANTE_LEGALRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBC_REPRESENTANTE_LEGALRow Row {
                 get {
                     return this.eventRow;
                 }

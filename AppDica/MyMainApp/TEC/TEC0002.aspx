@@ -36,8 +36,10 @@
                                         <asp:GridView ID="GVListaEmpresa" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%">
                                             <AlternatingRowStyle BackColor="White" />
                                             <Columns>
-                                                <asp:BoundField HeaderText="NOMBRE EMPRESA" />
-                                                <asp:BoundField HeaderText="DEPARTAMENTO" />
+                                                <asp:BoundField HeaderText="NOMBRE EMPRESA" DataField="DS_NOMBRE_EMPRESA" />
+                                                <asp:BoundField HeaderText="DEPARTAMENTO" DataField="DS_DEPARTAMENTO" />
+                                                <asp:BoundField DataField="NM_PASANTIA" HeaderText="PASANTIAS DISPONIBLES" />
+                                                <asp:BoundField DataField="NM_PROYECTO" HeaderText="PROYECTOS ADJUDICADOS" />
                                             </Columns>
                                             <EditRowStyle BackColor="#2461BF" />
                                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

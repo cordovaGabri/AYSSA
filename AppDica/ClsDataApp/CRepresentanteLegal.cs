@@ -15,10 +15,10 @@ namespace ClsDataApp
             _ConexionData = ConexcionData;
         }
 
-        public ClsDataSets.DS_TB_EMP Detalle(int Id, string NombreR, string ApellidoR, string DuiR, string NitR, string EmailR,
-            string TelefonoR, string Descripcion, string IdAspirante, string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
+        public ClsDataSets.DS_TB_ASP Detalle(int Id, string NombreR, string ApellidoR, string DuiR, string NitR, char SexoR, string EmailR, DateTime FechaNacimientoR,
+            string TelefonoR, string Direccion, string IdAspirante, int IdTituloAcademico, string UsuaCrea, DateTime FechCrea, string UsuaActu, DateTime FechActu, int OpcionConsulta)
         {
-            ClsDataSets.DS_TB_EMP objDataSet = new ClsDataSets.DS_TB_EMP();
+            ClsDataSets.DS_TB_ASP objDataSet = new ClsDataSets.DS_TB_ASP();
             try
             {
                 ObjConnection = new SqlConnection(_ConexionData);
@@ -31,10 +31,13 @@ namespace ClsDataApp
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_APELLIDO", ApellidoR);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DUI", DuiR);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_NIT", NitR);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_SEXO", SexoR);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_EMAIL", EmailR);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_NACIMIENTO", FechaNacimientoR);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_TELEFONO", TelefonoR);
-                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@DS_DIRECCION", Direccion);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
+                ObjAdapter.SelectCommand.Parameters.AddWithValue("@ID_TITULO_ACADEMICO", IdTituloAcademico);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_CREA", UsuaCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@FECH_CREA", FechCrea);
                 ObjAdapter.SelectCommand.Parameters.AddWithValue("@USUA_ACTU", UsuaActu);
@@ -56,8 +59,8 @@ namespace ClsDataApp
 
             return objDataSet;
         }
-         public DataQuery Actualizacion(int Id, string NombreR, string ApellidoR, string DuiR, string NitR, string EmailR,
-            string TelefonoR, string Descripcion, string IdAspirante,string LoginUsuario, TipoActualizacion OpcionActualizacion)
+        public DataQuery Actualizacion(int Id, string NombreR, string ApellidoR, string DuiR, string NitR, char SexoR, string EmailR, DateTime FechaNacimientoR,
+            string TelefonoR, string Direccion, string IdAspirante, int IdTituloAcademico, string LoginUsuario, TipoActualizacion OpcionActualizacion)
         {
             DataQuery objResultado = new DataQuery();
             try
@@ -67,10 +70,10 @@ namespace ClsDataApp
                 switch (OpcionActualizacion)
                 {
                     case TipoActualizacion.Adicionar:
-                        StrCommand = "";
+                        StrCommand = "SP_TBC_REPRESENTANTE_LEGAL_INSERT";
                         break;
                     case TipoActualizacion.Actualizar:
-                        StrCommand = " ";
+                        StrCommand = "SP_TBC_REPRESENTANTE_LEGAL_UPDATE";
                         break;
                     case TipoActualizacion.Eliminar:
                         StrCommand = "";
@@ -101,10 +104,13 @@ namespace ClsDataApp
                 ObjCommand.Parameters.AddWithValue("@DS_APELLIDO", ApellidoR);
                 ObjCommand.Parameters.AddWithValue("@DS_DUI", DuiR);
                 ObjCommand.Parameters.AddWithValue("@DS_NIT", NitR);
+                ObjCommand.Parameters.AddWithValue("@DS_SEXO", SexoR);
                 ObjCommand.Parameters.AddWithValue("@DS_EMAIL", EmailR);
+                ObjCommand.Parameters.AddWithValue("@FECH_NACIMIENTO", FechaNacimientoR);
                 ObjCommand.Parameters.AddWithValue("@DS_TELEFONO", TelefonoR);
-                ObjCommand.Parameters.AddWithValue("@DS_DESCRIPCION", Descripcion);
+                ObjCommand.Parameters.AddWithValue("@DS_DIRECCION", Direccion);
                 ObjCommand.Parameters.AddWithValue("@ID_ASPIRANTE", IdAspirante);
+                ObjCommand.Parameters.AddWithValue("@ID_TITULO_ACADEMICO", IdTituloAcademico);
                 ObjCommand.Parameters.AddWithValue("@LOGIN_USUARIO", LoginUsuario);
 
                 ObjParam = ObjCommand.Parameters.Add("@FILAS_AFECTADAS", SqlDbType.Int, 0);

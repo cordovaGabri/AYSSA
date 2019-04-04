@@ -260,6 +260,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="MasterProceso.master" />
+    <None Include="Properties\PublishProfiles\Administrador.pubxml" />
     <None Include="Properties\PublishProfiles\DICA.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
